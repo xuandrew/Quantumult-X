@@ -1,0 +1,4 @@
+#解锁网易云音乐节点
+http=106.52.127.72:19951, fast-open=false, udp-relay=false, tag= 解锁节点一 
+shadowsocks=music.desperadoj.com:30003, method=aes-128-gcm, password=desperadoj.com_free_proxy_emx2, fast-open=false, udp-relay=false, tag=解锁节点二
+shadowsocks=127.0.0.1:8080, method=aes-128-gcm, password=This_proxy_is_for_free, fast-open=false, udp-relay=false, tag=解锁节点三
