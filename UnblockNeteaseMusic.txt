@@ -4,4 +4,3 @@ proxies:
   - {name: 解锁节点一, server: 106.52.127.72, port: 19951, type: http, tls: false, skip-cert-verify: false}
   - {name: 解锁节点二, server: music.desperadoj.com, port: 30003, type: ss, cipher: aes-128-gcm, password: desperadoj.com_free_proxy_emx2}
   - {name: 解锁节点三, server: 127.0.0.1, port: 8080, type: ss, cipher: aes-128-gcm, password: This_proxy_is_for_free}
-type: ss, cipher:
