@@ -1,3 +1,7 @@
 # 百度网盘 解锁倍率/清晰度
 https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/bdcloud.js
-hostname = *.baidu.com
+
+#百度贴吧去开屏广告
+^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule url reject
+
+hostname = *.baidu.com, *.tieba.baidu.com
