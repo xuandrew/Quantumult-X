@@ -3,5 +3,13 @@ https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body
 
 #百度贴吧去开屏广告
 ^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule url reject
+^https?:\/\/c\.tieba\.baidu\.com\/c\/f\/forum\/getAdInfo url reject
+^https?:\/\/c\.tieba\.baidu\.com\/\w+\/\w+\/(sync|newRnSync|mlog) url reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/\w+\/\w+\/(sync|newRnSync|mlog) url reject
+^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\/c\/s\/splashSchedule url reject
+#mine
+^https:\/\/pn\.baidu\.com\/iad\/.+\.json url reject
+^https:\/\/feed-image\.baidu\.com\/0\/pic\/ url reject
+^http:\/\/.+\/c\/s\/(trackConfig|dashengVideo|splashSchedule) url reject
 
 hostname = *.baidu.com, *.tieba.baidu.com
