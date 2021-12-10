@@ -4,11 +4,6 @@
 ^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get url reject
 ^https?:\//m\.ads\.8le8le\.com\/adShow url reject
 
-#腾讯视频广告屏蔽
-^http:\/\/video\.dispatch\.tc\.qq\.com\/.+\.mp4 url reject
-^http:\/\/.+\/vmind\.qqvideo\.tc\.qq\.com\/.+\.mp4 url reject
-^http:\/\/wa\.gtimg\.com\/adxcdn\/.+\.jpg url reject
-
 #爱奇艺广告屏蔽
 ^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg url reject
 ^http:\/\/static-s\.iqiyi\.com\/common\/.+\/Small_video\/a2\/af\/.+\.png url reject
