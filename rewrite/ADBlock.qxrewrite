@@ -20,6 +20,11 @@ hostname=m.ads.8le8le.com,iadmusicmat.music.com
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do url reject
 ^https?:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v\d\/show url reject
 
+#腾讯视频广告屏蔽
+^http:\/\/video\.dispatch\.tc\.qq\.com\/.+\.mp4 url reject
+^http:\/\/.+\/vmind\.qqvideo\.tc\.qq\.com\/.+\.mp4 url reject
+^http:\/\/wa\.gtimg\.com\/adxcdn\/.+\.jpg url reject
+
 #微博广告屏蔽(by yichahucha)
 #hostname=api.weibo.cn, mapi.weibo.com, *.uve.weibo.com
 ^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/yichahucha/surge/master/wb_launch.js
@@ -36,4 +41,4 @@ hostname=m.ads.8le8le.com,iadmusicmat.music.com
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/.+\.jpg_(9\d{2}|\d{4}) url reject-dict
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject-dict
 
-hostname = gw.alicdn.com,heic.alicdn.com,mp.weixin.qq.com,api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,analytics.163.com,act.vip.iqiyi.com,*.iqiyipic.com, *.iqiyi.com,m.ads.8le8le.com,iadmusicmat.music.com
+hostname = gw.alicdn.com,heic.alicdn.com,mp.weixin.qq.com,api.m.jd.com,api.weibo.cn, mapi.weibo.com, *.uve.weibo.com,analytics.163.com,act.vip.iqiyi.com,*.iqiyipic.com, *.iqiyi.com,m.ads.8le8le.com,iadmusicmat.music.com, mi.gdt.qq.com
