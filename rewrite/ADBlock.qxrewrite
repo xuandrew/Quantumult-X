@@ -1,8 +1,8 @@
 #网易云广告
 #hostname=m.ads.8le8le.com,iadmusicmat.music.com
 ^https?:\/\/iadmusicmat\.music\.126\.net\/.+\.jpg url reject
-^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get url reject
-#^https?:\//m\.ads\.8le8le\.com\/adShow url reject
+#^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get url reject
+^https?:\//m\.ads\.8le8le\.com\/adShow url reject
 
 #爱奇艺广告屏蔽
 ^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg url reject
