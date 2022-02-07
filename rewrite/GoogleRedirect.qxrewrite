@@ -1,0 +1,6 @@
+hostname = *.google.com.hk
+
+# 阻止google.com 跳转到google.com.hk
+^https?:\/\/(www\.)?g\.cn url 302 https://www.google.com
+^https?:\/\/(www\.)?google\.cn url 302 https://www.google.com
+
