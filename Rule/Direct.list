@@ -26,6 +26,7 @@ HOST,cache.video.iqiyi.com,Direct
 HOST,amdc.m.taobao.com,Direct
 HOST,ilce.alicdn.com,Direct
 HOST,msg.qy.net,Direct
+HOST,act.vip.iqiyi.com, Direct
 HOST-SUFFIX,dizhensubao.getui.com,Direct
 HOST-SUFFIX,f.video.weibocdn.com,Direct
 HOST-SUFFIX,fus.cdn.krcom.cn,Direct
