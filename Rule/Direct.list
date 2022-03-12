@@ -8,4 +8,5 @@ HOST,feed.baidu.com,Direct
 #HOST,feed-image.baidu.com,Direct
 #HOST,als.baidu.com,Direct
 #HOST,hpd.baidu.com,Direct
-HOST,b.bdstatic.com,Direct
+#HOST,b.bdstatic.com,Direct
+HOST,f10.baidu.com,Direct
