@@ -5,4 +5,4 @@ HOST,msg.qy.net,Direct
 HOST,act.vip.iqiyi.com,Direct
 HOST,iadsdk.apple.com,Direct
 HOST,feed.baidu.com,Direct
-HOST,feed-image.baidu.com,Direct
+;HOST,feed-image.baidu.com,Direct
