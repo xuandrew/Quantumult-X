@@ -16,4 +16,4 @@ HOST,t11.baidu.com,Direct
 HOST,t12.baidu.com,Direct
 #HOST,cstm.baidu.com,Direct
 #HOST,baikebcs.bding.com,Direct
-HOST.bj.bcebos.com,Direct
+HOST,bj.bcebos.com,Direct
