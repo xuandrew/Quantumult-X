@@ -29,4 +29,4 @@
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash url reject-dict
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash url reject-dict
 
-hostname = ap?.bilibili.com,manga.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com
+hostname = api.bilibili.com,app.bilibili.com,manga.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com
