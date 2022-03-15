@@ -17,3 +17,9 @@ HOST,t12.baidu.com,Direct
 #HOST,cstm.baidu.com,Direct
 HOST,baikebcs.bdimg.com,Direct
 HOST,bj.bcebos.com,Direct
+HOST,metrics.icloud.com,Direct
+HOST,crashlytics.com,Direct
+HOST,stocks-analytics-events.apple.com,Direct
+HOST,notes-analytics-events.apple.com,Direct
+HOST,weather-analytics-events.apple.com,Direct
+HOST,securemetrics.apple.com,Direct
