@@ -28,8 +28,8 @@ HOST,pingma.qq.com,Direct
 #HOST,itsdata.map.baidu.com,Direct
 #HOST,qchannel01.cn,Direct
 HOST,map-mobile-opnimg.cdn.bcebos.com,Direct
-#HOST,rp.hpplay.cn,Direct
-HOST,hubble.netease.com,Direct
+HOST,rp.hpplay.cn,Direct
+#HOST,hubble.netease.com,Direct
 HOST,oimagea2.ydstatic.com,Direct
 HOST,oimagea3.ydstatic.com,Direct
 HOST,oimagea4.ydstatic.com,Direct
