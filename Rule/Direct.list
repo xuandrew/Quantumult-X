@@ -45,4 +45,7 @@ HOST,oimagec2.ydstatic.com,Direct
 HOST,oimagec3.ydstatic.com,Direct
 HOST,oimagec4.ydstatic.com,Direct
 HOST,oimagec8.ydstatic.com,Direct
+HOST,msg.umeng.com,Direct
+HOST,msg.umengcloud.com,Direct
+HOST,errlog.umeng.com,Direct
 
