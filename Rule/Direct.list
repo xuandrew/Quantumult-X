@@ -51,5 +51,5 @@ HOST,errlog.umeng.com,Direct
 HOST,comm.app.autohome.com.cn,Direct
 #HOST,al.autohome.com.cn,Direct
 #HOST,applogapi.autohome.com.cn,Direct
-HOST,fengkongcloud.com,Direct
-
+#HOST,fengkongcloud.com,Direct
+HOST,stats.cn.ronghub.con,Direct
