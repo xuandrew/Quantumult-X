@@ -53,4 +53,5 @@ HOST,comm.app.autohome.com.cn,Direct
 #HOST,applogapi.autohome.com.cn,Direct
 #HOST,fengkongcloud.com,Direct
 #HOST,stats.cn.ronghub.con,Direct
-HOST,activity.app.autohome.com.cn,Direct
+#HOST,activity.app.autohome.com.cn,Direct
+HOST,pcmx.autohome.com.cn,Direct
