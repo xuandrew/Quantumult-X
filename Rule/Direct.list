@@ -9,7 +9,7 @@ HOST,feed.baidu.com,Direct
 HOST,update.pan.baidu.com,Direct
 HOST,als.baidu.com,Direct
 #HOST,hpd.baidu.com,Direct
-HOST,staticsns.cdn.bcebos.con,Direct
+HOST,staticsns.cdn.bcebos.com,Direct
 HOST,tcbox.baidu.com,Direct
 HOST,b.bdstatic.com,Direct
 HOST,hmma.baidu.com,Direct
