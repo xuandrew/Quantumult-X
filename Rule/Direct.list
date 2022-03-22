@@ -14,7 +14,7 @@ HOST,tcbox.baidu.com,Direct
 HOST,b.bdstatic.com,Direct
 HOST,hmma.baidu.com,Direct
 HOST,pimlog.baidu.com,Direct
-#HOST,issuecdn.baidupcs.com,Direct
+HOST,issuecdn.baidupcs.com,Direct
 HOST,ada.baidu.com,Direct
 HOST,rp.hpplay.cn,Direct
 HOST,sofire.baidu.com,Direct
