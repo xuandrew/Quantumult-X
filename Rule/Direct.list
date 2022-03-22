@@ -51,4 +51,4 @@ HOST,msg.umeng.com,Direct
 HOST,msg.umengcloud.com,Direct
 HOST,errlog.umeng.com,Direct
 HOST,comm.app.autohome.com.cn,Direct
-HOST,applogapi.autohome.com.cn,Direct
+#HOST,applogapi.autohome.com.cn,Direct
