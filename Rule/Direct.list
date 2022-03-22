@@ -11,6 +11,7 @@ HOST,feed.baidu.com,Direct
 #HOST,hpd.baidu.com,Direct
 #HOST,staticsns.cdn.bcebos.con,Direct
 HOST,b.bdstatic.com,Direct
+HOST,hmma.baidu.com,Direct
 HOST,f10.baidu.com,Direct
 HOST,u.api.look.360.cn,Direct
 HOST,t10.baidu.com,Direct
