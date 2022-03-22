@@ -7,7 +7,7 @@ HOST,act.vip.iqiyi.com,Direct
 HOST,feed.baidu.com,Direct
 #HOST,feed-image.baidu.com,Direct
 #HOST,update.pan.baidu.com,Direct
-HOST,als.baidu.com,Direct
+#HOST,als.baidu.com,Direct
 #HOST,hpd.baidu.com,Direct
 #HOST,staticsns.cdn.bcebos.con,Direct
 #HOST,tcbox.baidu.com,Direct
@@ -18,7 +18,9 @@ HOST,b.bdstatic.com,Direct
 #HOST,ada.baidu.com,Direct
 #HOST,rp.hpplay.cn,Direct
 #HOST,sofire.baidu.com,Direct
-HOST,afd.baidu.com,Direct
+#HOST,afd.baidu.com,Direct
+HOST,nsclick.baidu.com,Direct
+HOST,nj.t.bcsp2p.baidu.com,Direct
 HOST,f10.baidu.com,Direct
 HOST,u.api.look.360.cn,Direct
 HOST,t10.baidu.com,Direct
