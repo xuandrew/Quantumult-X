@@ -60,10 +60,10 @@ HOST,oimagec2.ydstatic.com,Direct
 HOST,oimagec3.ydstatic.com,Direct
 HOST,oimagec4.ydstatic.com,Direct
 HOST,oimagec8.ydstatic.com,Direct
-HOST,umeng.com,Direct
-HOST,umengcloud.com,Direct
-HOST,msg.umeng.com,Direct
-HOST,msg.umengcloud.com,Direct
-HOST,errlog.umeng.com,Direct
+#HOST,umeng.com,Direct
+#HOST,umengcloud.com,Direct
+#HOST,msg.umeng.com,Direct
+#HOST,msg.umengcloud.com,Direct
+#HOST,errlog.umeng.com,Direct
 HOST,comm.app.autohome.com.cn,Direct
 #HOST,applogapi.autohome.com.cn,Direct
