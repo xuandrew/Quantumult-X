@@ -62,11 +62,11 @@ HOST-SUFFIX,oimagec2.ydstatic.com,Direct
 HOST-SUFFIX,oimagec3.ydstatic.com,Direct
 HOST-SUFFIX,oimagec4.ydstatic.com,Direct
 HOST-SUFFIX,oimagec8.ydstatic.com,Direct
-#HOST-SUFFIX,umeng.com,Direct
-#HOST-SUFFIX,umengcloud.com,Direct
-#HOST-SUFFIX,msg.umeng.com,Direct
-#HOST-SUFFIX,msg.umengcloud.com,Direct
-#HOST-SUFFIX,errlog.umeng.com,Direct
+HOST-SUFFIX,umeng.com,Direct
+HOST-SUFFIX,umengcloud.com,Direct
+HOST-SUFFIX,msg.umeng.com,Direct
+HOST-SUFFIX,msg.umengcloud.com,Direct
+HOST-SUFFIX,errlog.umeng.com,Direct
 #HOST-SUFFIX,comm.app.autohome.com.cn,Direct
 #HOST-SUFFIX,applogapi.autohome.com.cn,Direct
 #HOST-SUFFIX,miaozhen.com,Direct
