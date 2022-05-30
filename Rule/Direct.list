@@ -1,12 +1,12 @@
+HOST,amdc.m.taobao.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
+HOST,ilce.alicdn.com,Direct
 HOST,pingma.qq.com,Direct
-HOST,u.api.look.360.cn,Direct
 HOST,qhupdate.com,Direct
 HOST,s.360.cn,Direct
+HOST,u.api.look.360.cn,Direct
 HOST-SUFFIX,iadsdk.apple.com,Direct
 HOST-SUFFIX,cache.video.iqiyi.com,Direct
-HOST-SUFFIX,amdc.m.taobao.com,Direct
-HOST-SUFFIX,ilce.alicdn.com,Direct
 HOST-SUFFIX,msg.qy.net,Direct
 HOST-SUFFIX,act.vip.iqiyi.com,Direct
 HOST-SUFFIX,feed.baidu.com,Direct
