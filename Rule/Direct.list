@@ -40,7 +40,7 @@ HOST-SUFFIX,stocks-analytics-events.apple.com,Direct
 HOST-SUFFIX,notes-analytics-events.apple.com,Direct
 HOST-SUFFIX,weather-analytics-events.apple.com,Direct
 HOST-SUFFIX,securemetrics.apple.com,Direct
-HOST-SUFFIX,api.micloud.xiaomi.net,Direct
+HOST,api.micloud.xiaomi.net,Direct
 HOST,pingma.qq.com,Direct
 #HOST-SUFFIX,itsdata.map.baidu.com,Direct
 #HOST-SUFFIX,qchannel01.cn,Direct
