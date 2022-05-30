@@ -1,5 +1,8 @@
 HOST,api.micloud.xiaomi.net,Direct
 HOST,pingma.qq.com,Direct
+HOST,u.api.look.360.cn,Direct
+HOST,qhupdate.com,Direct
+HOST,s.360.cn,Direct
 HOST-SUFFIX,iadsdk.apple.com,Direct
 HOST-SUFFIX,cache.video.iqiyi.com,Direct
 HOST-SUFFIX,amdc.m.taobao.com,Direct
@@ -27,9 +30,6 @@ HOST-SUFFIX,b.bdstatic.com,Direct
 #HOST-SUFFIX,nsclick.baidu.com,Direct
 #HOST-SUFFIX,nj.t.bcsp2p.baidu.com,Direct
 HOST-SUFFIX,f10.baidu.com,Direct
-HOST-SUFFIX,u.api.look.360.cn,Direct
-HOST-SUFFIX,qhupdate.com,Direct
-HOST-SUFFIX,s.360.cn,Direct
 HOST-SUFFIX,t10.baidu.com,Direct
 HOST-SUFFIX,t11.baidu.com,Direct
 HOST-SUFFIX,t12.baidu.com,Direct
