@@ -33,6 +33,7 @@ HOST-SUFFIX,f10.baidu.com,Direct
 HOST-SUFFIX,t10.baidu.com,Direct
 HOST-SUFFIX,t11.baidu.com,Direct
 HOST-SUFFIX,t12.baidu.com,Direct
+HOST-SUFFIX,sp0.baidu.com,Direct
 #HOST-SUFFIX,cstm.baidu.com,Direct
 HOST-SUFFIX,baikebcs.bdimg.com,Direct
 HOST-SUFFIX,bj.bcebos.com,Direct
