@@ -1,6 +1,7 @@
 HOST,a.stat.xiaomi.com,Direct
 HOST,amdc.m.taobao.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
+HOST,collector.github.com,Direct
 HOST,ilce.alicdn.com,Direct
 HOST,pingma.qq.com,Direct
 HOST,qhupdate.com,Direct
