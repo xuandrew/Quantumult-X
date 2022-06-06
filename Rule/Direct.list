@@ -5,6 +5,7 @@ HOST,browser.mi-img.com,Direct
 HOST,collector.github.com,Direct
 HOST,fengkongcloud.com,Direct
 HOST,ilce.alicdn.com,Direct
+HOST,ocsp.godaddy.com,Direct
 HOST,pingma.qq.com,Direct
 HOST,qhupdate.com,Direct
 HOST,s.360.cn,Direct
