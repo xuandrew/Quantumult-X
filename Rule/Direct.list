@@ -3,7 +3,7 @@ HOST,amdc.m.taobao.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
 HOST,collector.github.com,Direct
 HOST,ilce.alicdn.com,Direct
-HOST,issuecdn.baidupcs.com,Direct
+#HOST,issuecdn.baidupcs.com,Direct
 HOST,pingma.qq.com,Direct
 HOST,qhupdate.com,Direct
 HOST,s.360.cn,Direct
