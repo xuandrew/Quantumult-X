@@ -3,7 +3,7 @@ HOST,amdc.m.taobao.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
 HOST,collector.github.com,Direct
 HOST,h5.sinaimg.cn,Direct
-HOST,wbapp.uve.weibo.com,Direct
+#HOST,wbapp.uve.weibo.com,Direct
 #HOST,sdkapp.uve.weibo.com,Direct
 #HOST,gw.im.weibo.cn,Direct
 #HOST,gw1.im.weibo.cn,Direct
