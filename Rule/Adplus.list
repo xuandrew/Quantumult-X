@@ -47,4 +47,5 @@ HOST,grpc.biliapi.net,reject
 # 起点阅读
 host,qdgame.qidian.com,reject
 
-# 
+# 微博
+host,jieqian.sc.weibo.com,reject
