@@ -13,7 +13,7 @@ HOST,pingma.qq.com,Direct
 HOST,qhupdate.com,Direct
 HOST,s.360.cn,Direct
 HOST,u.api.look.360.cn,Direct
-HOST-SUFFIX,iadsdk.apple.com,Direct
+#HOST-SUFFIX,iadsdk.apple.com,Direct
 HOST-SUFFIX,cache.video.iqiyi.com,Direct
 HOST-SUFFIX,msg.qy.net,Direct
 HOST-SUFFIX,act.vip.iqiyi.com,Direct
@@ -45,12 +45,12 @@ HOST-SUFFIX,sp0.baidu.com,Direct
 #HOST-SUFFIX,cstm.baidu.com,Direct
 HOST-SUFFIX,baikebcs.bdimg.com,Direct
 HOST-SUFFIX,bj.bcebos.com,Direct
-HOST-SUFFIX,metrics.icloud.com,Direct
+#HOST-SUFFIX,metrics.icloud.com,Direct
 HOST-SUFFIX,crashlytics.com,Direct
-HOST-SUFFIX,stocks-analytics-events.apple.com,Direct
-HOST-SUFFIX,notes-analytics-events.apple.com,Direct
-HOST-SUFFIX,weather-analytics-events.apple.com,Direct
-HOST-SUFFIX,securemetrics.apple.com,Direct
+#HOST-SUFFIX,stocks-analytics-events.apple.com,Direct
+#HOST-SUFFIX,notes-analytics-events.apple.com,Direct
+#HOST-SUFFIX,weather-analytics-events.apple.com,Direct
+#HOST-SUFFIX,securemetrics.apple.com,Direct
 #HOST-SUFFIX,itsdata.map.baidu.com,Direct
 #HOST-SUFFIX,qchannel01.cn,Direct
 HOST-SUFFIX,map-mobile-opnimg.cdn.bcebos.com,Direct
