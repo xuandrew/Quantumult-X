@@ -4,10 +4,9 @@ host-suffix,afdback.ppsimg.com,reject
 host-suffix,fanqianxs.com,direct
 
 # 番茄小说
-host,p6-novel.byteimg.com,reject
 host,p6-ad-sign.byteimg.com,reject
 host,p9-ad-sign.byteimg.com,reject
-host-suffix,byteimg.com,direct
+#host-suffix,byteimg.com,direct
 host,dig.bdurl.net,reject
 host-keyword,zijieapi,reject
 host,mcs.snssdk.com,reject
