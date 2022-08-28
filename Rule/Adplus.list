@@ -48,4 +48,5 @@ HOST,grpc.biliapi.net,reject
 host,qdgame.qidian.com,reject
 
 # 微博
-host,jieqian.sc.weibo.com,reject
+
+
