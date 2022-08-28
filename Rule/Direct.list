@@ -84,4 +84,5 @@ HOST-SUFFIX,uyunad.com,Direct
 #HOST-SUFFIX,cnzz.com,Direct
 #HOST-SUFFIX,sf3-ttcdn-tos.pstatp.com,Direct
 #HOST-SUFFIX,sf6-ttcdn-tos.pstatp.com,Direct
-
+host,gw.im.weibo.cn,direct
+host,gw1.im.weibo.cn,direct
