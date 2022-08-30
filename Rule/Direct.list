@@ -89,6 +89,6 @@ HOST-SUFFIX,uyunad.com,Direct
 #host,dp.im.weibo.cn,direct
 host,mo.res.wpscdn.cn,direct
 host,dl.op.wpscdn.cn,direct
-HOST-SUFFIX,rqd.qq.com,direct
-HOST-SUFFIX,bugly.qq.com,direct
-HOST-SUFFIX,trace.qq.com,direct
+#HOST-SUFFIX,rqd.qq.com,direct
+#HOST-SUFFIX,bugly.qq.com,direct
+#HOST-SUFFIX,trace.qq.com,direct
