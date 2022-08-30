@@ -91,3 +91,4 @@ host,mo.res.wpscdn.cn,direct
 host,dl.op.wpscdn.cn,direct
 HOST-SUFFIX,rqd.qq.com,direct
 HOST-SUFFIX,bugly.qq.com,direct
+HOSTw-SUFFIX,trace.qq.com,direct
