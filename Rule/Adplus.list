@@ -60,9 +60,5 @@ ip-cidr,180.96.2.114/32,reject,no-resolve
 # Bilibili
 HOST,grpc.biliapi.net,reject
 
-# 起点阅读
-host,qdgame.qidian.com,reject
-
-# 微博
 
 
