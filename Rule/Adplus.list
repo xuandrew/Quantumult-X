@@ -8,7 +8,6 @@ HOST,grpc.biliapi.net,reject
 # 番茄小说
 host,p6-ad-sign.byteimg.com,reject
 host,p9-ad-sign.byteimg.com,reject
-host-suffix,byteimg.com,direct
 host,dig.bdurl.net,reject
 host-keyword,zijieapi,reject
 host,mcs.snssdk.com,reject
