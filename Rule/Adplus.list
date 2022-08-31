@@ -1,7 +1,6 @@
 # 米读
 host,bid.adview.cn,reject
 host-suffix,afdback.ppsimg.com,reject
-host-suffix,fanqianxs.com,direct
 
 # Bilibili
 HOST,grpc.biliapi.net,reject
@@ -60,3 +59,13 @@ ip-cidr,180.96.2.114/32,reject,no-resolve
 #host,i-hl.snssdk.com,reject
 #host,mon-lq.snssdk.com,reject
 
+host, ads3-normal-lq.zijieapi.com, reject
+host, toutiao-frontier.snssdk.com, reject
+host, feedback-c.zijieapi.com, reject
+host, rtlog5-applog-lq.fqnovel.com, reject
+host, rtlog3-applog-lq.fqnovel.com, reject
+host, ads5-normal-lq.zijieapi.com, reject
+host, polaris3-normal-lq.zijieapi.com, reject
+host, mon.toutiaocloud.net, reject
+host, ichannel.snssdk.com, reject
+host, mon.toutiaocloud.com, reject
