@@ -1,7 +1,7 @@
 # 小米多看
 HOST,pingma.qq.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
-host-suffix, tracking.mini.com ,direct
+#host-suffix, tracking.mini.com ,direct
 #HOST,a.stat.xiaomi.com,Direct
 
 HOST,amdc.m.taobao.com,Direct
