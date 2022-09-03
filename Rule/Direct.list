@@ -92,3 +92,4 @@ host,dl.op.wpscdn.cn,direct
 #HOST-SUFFIX,rqd.qq.com,direct
 #HOST-SUFFIX,bugly.qq.com,direct
 #HOST-SUFFIX,trace.qq.com,direct
+host, lf-webcast-sourcecdn-tos.bytegecko.com, direct
