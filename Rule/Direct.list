@@ -4,6 +4,9 @@ HOST,api.micloud.xiaomi.net,Direct
 #host-suffix, tracking.mini.com ,direct
 #HOST,a.stat.xiaomi.com,Direct
 
+# 网易云登陆验证
+host, id6.me, direct
+
 HOST,amdc.m.taobao.com,Direct
 HOST,collector.github.com,Direct
 HOST,h5.sinaimg.cn,Direct
