@@ -5,6 +5,9 @@ host-suffix,afdback.ppsimg.com,reject
 # Bilibili
 HOST,grpc.biliapi.net,reject
 
+# 贴吧 屏蔽域名dns查询
+IP-CIDR,180.76.76.200/32,REJECT
+
 # 番茄小说
 host,p6-ad-sign.byteimg.com,reject
 host,p9-ad-sign.byteimg.com,reject
