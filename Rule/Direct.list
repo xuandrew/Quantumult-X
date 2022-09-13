@@ -7,6 +7,13 @@ HOST,api.micloud.xiaomi.net,Direct
 # 网易云登陆验证
 host, id6.me, direct
 
+# iQiyi
+
+HOST-SUFFIX,cache.video.iqiyi.com,Direct
+HOST-SUFFIX,msg.qy.net,Direct
+HOST-SUFFIX,act.vip.iqiyi.com,Direct
+host-suffix, cupid.iqiyi.com, direct
+
 HOST,amdc.m.taobao.com,Direct
 HOST,collector.github.com,Direct
 HOST,h5.sinaimg.cn,Direct
@@ -20,9 +27,6 @@ HOST,qhupdate.com,Direct
 HOST,s.360.cn,Direct
 HOST,u.api.look.360.cn,Direct
 #HOST-SUFFIX,iadsdk.apple.com,Direct
-HOST-SUFFIX,cache.video.iqiyi.com,Direct
-HOST-SUFFIX,msg.qy.net,Direct
-HOST-SUFFIX,act.vip.iqiyi.com,Direct
 HOST-SUFFIX,feed.baidu.com,Direct
 #HOST-SUFFIX,feed-image.baidu.com,Direct
 #HOST-SUFFIX,update.pan.baidu.com,Direct
