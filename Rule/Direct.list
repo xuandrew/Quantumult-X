@@ -11,8 +11,7 @@ host, id6.me, direct
 
 #HOST-SUFFIX,cache.video.iqiyi.com,Direct
 #HOST-SUFFIX,msg.qy.net,Direct
-#HOST-SUFFIX,act.vip.iqiyi.com,Direct
-#host-suffix, ifacelog.iqiyi.com, direct
+host-suffix, act.vip.iqiyi.com, direct
 
 HOST,amdc.m.taobao.com,Direct
 HOST,collector.github.com,Direct
