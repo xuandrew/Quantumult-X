@@ -12,6 +12,9 @@ host, id6.me, direct
 #HOST-SUFFIX, msg.qy.net, Direct
 #host-suffix, act.vip.iqiyi.com, direct
 
+# 汽车之家登陆验证码
+comm.app.autohome.com.cn
+
 HOST,amdc.m.taobao.com,Direct
 HOST,collector.github.com,Direct
 HOST,h5.sinaimg.cn,Direct
