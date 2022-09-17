@@ -18,19 +18,8 @@ host, id6.me, direct
 # Sina
 host-suffix, gk.sina.cn, direct
 
-HOST,amdc.m.taobao.com,Direct
-HOST,collector.github.com,Direct
-HOST,h5.sinaimg.cn,Direct
-#HOST,wbapp.uve.weibo.com,Direct
-#HOST,sdkapp.uve.weibo.com,Direct
-#HOST,gw.im.weibo.cn,Direct
-#HOST,gw1.im.weibo.cn,Direct
-HOST,ilce.alicdn.com,Direct
-#HOST,issuecdn.baidupcs.com,Direct
-HOST,qhupdate.com,Direct
-HOST,s.360.cn,Direct
-HOST,u.api.look.360.cn,Direct
-#HOST-SUFFIX,iadsdk.apple.com,Direct
+# 百度
+
 HOST-SUFFIX,feed.baidu.com,Direct
 #HOST-SUFFIX,feed-image.baidu.com,Direct
 #HOST-SUFFIX,update.pan.baidu.com,Direct
@@ -48,6 +37,7 @@ HOST-SUFFIX,b.bdstatic.com,Direct
 #HOST-SUFFIX,afd.baidu.com,Direct
 #HOST-SUFFIX,vipauth.hpplay.cn,Direct
 #HOST-SUFFIX,ufosdk.baidu.com,Direct
+
 #HOST-SUFFIX,list.z.qingting.fm,Direct
 #HOST-SUFFIX,nsclick.baidu.com,Direct
 #HOST-SUFFIX,nj.t.bcsp2p.baidu.com,Direct
@@ -66,6 +56,20 @@ HOST-SUFFIX,crashlytics.com,Direct
 #HOST-SUFFIX,weather-analytics-events.apple.com,Direct
 #HOST-SUFFIX,securemetrics.apple.com,Direct
 #HOST-SUFFIX,itsdata.map.baidu.com,Direct
+
+HOST,amdc.m.taobao.com,Direct
+HOST,collector.github.com,Direct
+HOST,h5.sinaimg.cn,Direct
+#HOST,wbapp.uve.weibo.com,Direct
+#HOST,sdkapp.uve.weibo.com,Direct
+#HOST,gw.im.weibo.cn,Direct
+#HOST,gw1.im.weibo.cn,Direct
+HOST,ilce.alicdn.com,Direct
+#HOST,issuecdn.baidupcs.com,Direct
+HOST,qhupdate.com,Direct
+HOST,s.360.cn,Direct
+HOST,u.api.look.360.cn,Direct
+#HOST-SUFFIX,iadsdk.apple.com,Direct
 #HOST-SUFFIX,qchannel01.cn,Direct
 HOST-SUFFIX,map-mobile-opnimg.cdn.bcebos.com,Direct
 #HOST-SUFFIX,rp.hpplay.cn,Direct
