@@ -15,6 +15,9 @@ host, id6.me, direct
 # 汽车之家登陆验证码
 #comm.app.autohome.com.cn
 
+# Sina
+host-suffix, gk.sina.cn, direct
+
 HOST,amdc.m.taobao.com,Direct
 HOST,collector.github.com,Direct
 HOST,h5.sinaimg.cn,Direct
