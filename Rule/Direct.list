@@ -22,7 +22,7 @@ host-suffix, gk.sina.cn, direct
 
 HOST-SUFFIX,feed.baidu.com,Direct
 #HOST-SUFFIX,feed-image.baidu.com,Direct
-#HOST-SUFFIX,update.pan.baidu.com,Direct
+HOST-SUFFIX,update.pan.baidu.com,Direct
 #HOST-SUFFIX,als.baidu.com,Direct
 #HOST-SUFFIX,hpd.baidu.com,Direct
 HOST-SUFFIX,staticsns.cdn.bcebos.com,Direct
