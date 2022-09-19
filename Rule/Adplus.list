@@ -1,5 +1,5 @@
 # 瑞幸去开屏广告
-host, capi.lkcoffee.com, reject
+host-suffix, capi.lkcoffee.com, reject
 
 # 米读
 host,bid.adview.cn,reject
