@@ -8,9 +8,6 @@ host-suffix,afdback.ppsimg.com,reject
 # Bilibili
 HOST,grpc.biliapi.net,reject
 
-# 贴吧 屏蔽域名dns查询
-IP-CIDR,180.76.76.200/32,REJECT
-
 # ～ 爱奇艺广告屏蔽
 ip-cidr, 203.107.63.154/32, reject
 
