@@ -1,3 +1,6 @@
+# 瑞幸去开屏广告
+host, capi.lkcoffee.com, reject
+
 # 米读
 host,bid.adview.cn,reject
 host-suffix,afdback.ppsimg.com,reject
