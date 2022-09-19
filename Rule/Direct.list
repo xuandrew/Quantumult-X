@@ -19,6 +19,7 @@ host, comm.app.autohome.com.cn, direct
 host-suffix, gk.sina.cn, direct
 
 # 百度
+HOST-SUFFIX,map-mobile-opnimg.cdn.bcebos.com,Direct
 HOST-SUFFIX,feed.baidu.com,Direct
 #HOST-SUFFIX,feed-image.baidu.com,Direct
 host, update.pan.baidu.com, direct
@@ -75,7 +76,6 @@ HOST,u.api.look.360.cn,Direct
 
 #HOST-SUFFIX,iadsdk.apple.com,Direct
 #HOST-SUFFIX,qchannel01.cn,Direct
-HOST-SUFFIX,map-mobile-opnimg.cdn.bcebos.com,Direct
 #HOST-SUFFIX,rp.hpplay.cn,Direct
 #HOST-SUFFIX,hubble.netease.com,Direct
 #HOST-SUFFIX,oimagea2.ydstatic.com,Direct
