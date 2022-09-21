@@ -3,13 +3,19 @@ host-suffix, capi.lkcoffee.com, reject
 
 # 米读
 host,bid.adview.cn,reject
-host-suffix,afdback.ppsimg.com,reject
+host-suffix, afdback.ppsimg.com, reject
 
 # Bilibili
 HOST,grpc.biliapi.net,reject
 
 # 贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32,REJECT
+
+# 优酷
+host-suffix, data6.video.iqiyi.com, reject
+
+# iQiyi
+host-suffix, data6.video.iqiyi.com, reject
 
 # 知乎
 IP-CIDR,118.89.204.198/32,REJECT
