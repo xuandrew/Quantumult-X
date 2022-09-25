@@ -6,7 +6,7 @@ host,bid.adview.cn,reject
 host-suffix, afdback.ppsimg.com, reject
 
 # Bilibili
-HOST,grpc.biliapi.net,reject
+#HOST,grpc.biliapi.net,reject
 
 # 贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32,REJECT
