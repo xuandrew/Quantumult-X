@@ -1,12 +1,14 @@
+# Bilibili
+host,grpc.biliapi.net,reject
+ip-cidr, 203.107.0.0/17, reject
+ip-cidr, 47.96.0.0/11, reject
+
 # 瑞幸去开屏广告
 host-suffix, capi.lkcoffee.com, reject
 
 # 米读
 host, bid.adview.cn, reject
 host-suffix, afdback.ppsimg.com, reject
-
-# Bilibili
-host,grpc.biliapi.net,reject
 
 # 贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32,REJECT
