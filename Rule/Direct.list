@@ -1,5 +1,5 @@
 # 华为智慧生活
-host, metrics1.data.hicloud.com, direct
+host-suffix, metrics1.data.hicloud.com, direct
 
 # 小米多看
 HOST,pingma.qq.com,Direct
@@ -62,7 +62,7 @@ HOST-SUFFIX,crashlytics.com,Direct
 # 淘宝
 HOST,amdc.m.taobao.com,Direct
 
-#host, collector.github.com, direcrt
+host- suffix, collector.github.com, direcrt
 
 # 微博
 HOST,h5.sinaimg.cn,Direct
