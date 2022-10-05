@@ -1,3 +1,6 @@
+# 华为智慧生活
+host, metrics1.data.hicloud.com, direct
+
 # 小米多看
 HOST,pingma.qq.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
