@@ -1,7 +1,7 @@
 # 七猫小说
-host-suffix, t-qmad.qm989.com, reject
-host-suffix, a-qmad.qm989.com, reject
-host-suffix, a-qmad.qimao.com, reject
+#host-suffix, t-qmad.qm989.com, reject
+#host-suffix, a-qmad.qm989.com, reject
+#host-suffix, a-qmad.qimao.com, reject
 
 # Bilibili
 host,grpc.biliapi.net,reject
