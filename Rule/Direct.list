@@ -1,6 +1,7 @@
 # 华为智慧生活
 host-suffix, metrics1.data.hicloud.com, direct
 host-suffix, logservice.hicloud.com, direct
+host-suffix, logservice1.hicloud.com, direct
 
 # 小米多看
 HOST,pingma.qq.com,Direct
