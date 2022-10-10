@@ -1,4 +1,3 @@
-host-suffix, miniapp.bilibili.com, direct
 
 # 华为智慧生活
 host-suffix, metrics1.data.hicloud.com, direct
