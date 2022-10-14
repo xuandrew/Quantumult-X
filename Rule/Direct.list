@@ -1,5 +1,4 @@
 # 百度
-
 host, ms.bdimg.com, direct
 host-suffix, paimgcdn.baidu.com, direct
 host-suffix, als.baidu.com, direct
