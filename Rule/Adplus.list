@@ -1,3 +1,37 @@
+# 番茄小说
+host-suffix, i.snssdk.com, reject
+host-suffix, m.ykimg.com, reject
+host-suffix, tnc3-alisc1.zijieapi.com, reject
+host-suffix, rtlog3-applog-lq.fqnovel.com, reject
+host-suffix, gecko3-lq.zijieapi.com, reject
+host-suffix, growth.ecombdapi.com, reject
+host-suffix, isaas.ecombdapi.com, reject
+host-suffix, mon.toutiaocloud.com, reject
+host-suffix, mon.toutiaocloud.net, reject
+host-suffix, rtlog5-applog-lq.fqnovel.com, reject
+host-suffix, mon3-misc-lq.fqnovel.com, reject
+host-suffix, log3-applog-lq.fqnovel.com, reject
+host-suffix, saveu5-normal-lq.zijieapi.com, reject
+host-suffix, security-lq.snssdk.com, reject
+-host-suffix, api3-normal-lq.fqnovel.com, reject
+host-suffix, tnc3-aliec2.snssdk.com, reject
+host-suffix, webcast5-open-lq.douyin.com, reject
+host-suffix, log5-applog-lq.fqnovel.com, reject
+host-suffix, gecko5-lq.zijieapi.com, reject
+host-suffix, bsync3-normal-lq.zijieapi.com, reject
+host-suffix, mssdk3-normal-lq.zijieapi.com, reject
+host-suffix, polaris3-normal-lq.zijieapi.com, reject
+host-suffix, vcs-lq.snssdk.com, reject
+host-suffix, mon11-misc-lq.fqnovel.com, reject
+host-suffix, ads3-normal-lq.zijieapi.com, reject
+host-suffix, toutiao-frontier.snssdk.com, reject
+host-suffix, abtest3-misc-lq.zijieapi.com, reject
+host-suffix, is-lq.snssdk.com, reject
+host-suffix, i-lq.snssdk.com, reject
+host-suffix, api5-normal-lq.fqnovel.com, reject
+-host-suffix, p6-novel.byteimg.com, reject
+host-suffix, ads5-normal-lq.zijieapi.com, reject
+
 # 七猫小说
 #host-suffix, t-qmad.qm989.com, reject
 #host-suffix, a-qmad.qm989.com, reject
