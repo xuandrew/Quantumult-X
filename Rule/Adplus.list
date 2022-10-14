@@ -13,7 +13,6 @@ host-suffix, mon3-misc-lq.fqnovel.com, reject
 host-suffix, log3-applog-lq.fqnovel.com, reject
 host-suffix, saveu5-normal-lq.zijieapi.com, reject
 host-suffix, security-lq.snssdk.com, reject
--host-suffix, api3-normal-lq.fqnovel.com, reject
 host-suffix, tnc3-aliec2.snssdk.com, reject
 host-suffix, webcast5-open-lq.douyin.com, reject
 host-suffix, log5-applog-lq.fqnovel.com, reject
@@ -29,8 +28,9 @@ host-suffix, abtest3-misc-lq.zijieapi.com, reject
 host-suffix, is-lq.snssdk.com, reject
 host-suffix, i-lq.snssdk.com, reject
 host-suffix, api5-normal-lq.fqnovel.com, reject
--host-suffix, p6-novel.byteimg.com, reject
 host-suffix, ads5-normal-lq.zijieapi.com, reject
+host-suffix, tnc3-aliec2.zijieapi.com, reject
+host-suffix, tnc3-alisc1.snssdk.com, reject
 
 # 七猫小说
 #host-suffix, t-qmad.qm989.com, reject
