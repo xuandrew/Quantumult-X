@@ -1,3 +1,12 @@
+# 百度
+
+host, ms.bdimg.com, direct
+host-suffix, paimgcdn.baidu.com, direct
+host-suffix, als.baidu.com, direct
+-host-suffix, hm.baidu.com, direct
+-host-suffix, hpd.baidu.com, direct
+host, ada.baidu.com, direct
+-host-suffix, fclick.baidu.com, direct
 
 # 华为智慧生活
 host-suffix, metrics1.data.hicloud.com, direct
