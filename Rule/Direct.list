@@ -12,9 +12,9 @@ HOST,api.micloud.xiaomi.net,Direct
 host, id6.me, direct
 
 # iQiyi
-#HOST-SUFFIX,cache.video.iqiyi.com,Direct
-#HOST-SUFFIX, msg.qy.net, Direct
-#host-suffix, act.vip.iqiyi.com, direct
+HOST-SUFFIX,cache.video.iqiyi.com,Direct
+HOST-SUFFIX, msg.qy.net, Direct
+host-suffix, act.vip.iqiyi.com, direct
 
 # 汽车之家登陆验证码
 host, comm.app.autohome.com.cn, direct
@@ -23,6 +23,7 @@ host, comm.app.autohome.com.cn, direct
 host-suffix, gk.sina.cn, direct
 
 # 百度
+host, issuecdn.baidupcs.com, direct
 host, ms.bdimg.com, direct
 host-suffix, paimgcdn.baidu.com, direct
 host-suffix, als.baidu.com, direct
