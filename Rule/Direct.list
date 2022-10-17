@@ -25,6 +25,7 @@ host-suffix, gk.sina.cn, direct
 # 百度
 host, issuecdn.baidupcs.com, direct
 host, ms.bdimg.com, direct
+host-suffix, ufosdk.baidu.com, direct
 host-suffix, paimgcdn.baidu.com, direct
 host-suffix, als.baidu.com, direct
 host, ada.baidu.com, direct
