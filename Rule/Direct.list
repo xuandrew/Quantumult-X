@@ -2,10 +2,7 @@
 host, ms.bdimg.com, direct
 host-suffix, paimgcdn.baidu.com, direct
 host-suffix, als.baidu.com, direct
--host-suffix, hm.baidu.com, direct
--host-suffix, hpd.baidu.com, direct
 host, ada.baidu.com, direct
--host-suffix, fclick.baidu.com, direct
 
 # 华为智慧生活
 host-suffix, metrics1.data.hicloud.com, direct
@@ -15,8 +12,6 @@ host-suffix, logservice1.hicloud.com, direct
 # 小米多看
 HOST,pingma.qq.com,Direct
 HOST,api.micloud.xiaomi.net,Direct
-#host-suffix, tracking.mini.com ,direct
-#HOST,a.stat.xiaomi.com,Direct
 
 # 网易云登陆验证
 host, id6.me, direct
@@ -35,94 +30,30 @@ host-suffix, gk.sina.cn, direct
 # 百度
 HOST-SUFFIX,map-mobile-opnimg.cdn.bcebos.com,Direct
 HOST-SUFFIX,feed.baidu.com,Direct
-#HOST-SUFFIX,feed-image.baidu.com,Direct
-host, update.pan.baidu.com, direct
-#HOST-SUFFIX,als.baidu.com,Direct
-#HOST-SUFFIX,hpd.baidu.com,Direct
 HOST-SUFFIX,staticsns.cdn.bcebos.com,Direct
-#HOST-SUFFIX,tcbox.baidu.com,Direct
 HOST-SUFFIX,b.bdstatic.com,Direct
-#HOST-SUFFIX,hmma.baidu.com,Direct
-#HOST-SUFFIX,pimlog.baidu.com,Direct
-#HOST-SUFFIX,issuecdn.baidupcs.com,Direct
-#HOST-SUFFIX,ada.baidu.com,Direct
-#HOST-SUFFIX,rp.hpplay.cn,Direct
-#HOST-SUFFIX,sofire.baidu.com,Direct
-#HOST-SUFFIX,afd.baidu.com,Direct
-#HOST-SUFFIX,vipauth.hpplay.cn,Direct
-#HOST-SUFFIX,ufosdk.baidu.com,Direct
-#HOST-SUFFIX,list.z.qingting.fm,Direct
-#HOST-SUFFIX,nsclick.baidu.com,Direct
-#HOST-SUFFIX,nj.t.bcsp2p.baidu.com,Direct
 HOST-SUFFIX,f10.baidu.com,Direct
 HOST-SUFFIX,t10.baidu.com,Direct
 HOST-SUFFIX,t11.baidu.com,Direct
 HOST-SUFFIX,t12.baidu.com,Direct
 HOST-SUFFIX,sp0.baidu.com,Direct
-#HOST-SUFFIX,cstm.baidu.com,Direct
 HOST-SUFFIX,baikebcs.bdimg.com,Direct
 HOST-SUFFIX,bj.bcebos.com,Direct
-#HOST-SUFFIX,metrics.icloud.com,Direct
 HOST-SUFFIX,crashlytics.com,Direct
-#HOST-SUFFIX,stocks-analytics-events.apple.com,Direct
-#HOST-SUFFIX,notes-analytics-events.apple.com,Direct
-#HOST-SUFFIX,weather-analytics-events.apple.com,Direct
-#HOST-SUFFIX,securemetrics.apple.com,Direct
-#HOST-SUFFIX,itsdata.map.baidu.com,Direct
 
 # 淘宝
 HOST,amdc.m.taobao.com,Direct
 
-host-suffix, collector.github.com, direcrt
+host-suffix, collector.github.com, direct
 
 # 微博
 HOST,h5.sinaimg.cn,Direct
-#HOST,wbapp.uve.weibo.com,Direct
-#HOST,sdkapp.uve.weibo.com,Direct
-#HOST,gw.im.weibo.cn,Direct
-#HOST,gw1.im.weibo.cn,Direct
 HOST,ilce.alicdn.com,Direct
 
 # 360
 HOST,qhupdate.com,Direct
 HOST,s.360.cn,Direct
 HOST,u.api.look.360.cn,Direct
-
-#HOST-SUFFIX,iadsdk.apple.com,Direct
-#HOST-SUFFIX,qchannel01.cn,Direct
-#HOST-SUFFIX,rp.hpplay.cn,Direct
-#HOST-SUFFIX,hubble.netease.com,Direct
-#HOST-SUFFIX,oimagea2.ydstatic.com,Direct
-#HOST-SUFFIX,oimagea3.ydstatic.com,Direct
-#HOST-SUFFIX,oimagea4.ydstatic.com,Direct
-#HOST-SUFFIX,oimagea5.ydstatic.com,Direct
-#HOST-SUFFIX,oimagea7.ydstatic.com,Direct
-#HOST-SUFFIX,oimagea8.ydstatic.com,Direct
-#HOST-SUFFIX,oimageb1.ydstatic.com,Direct
-#HOST-SUFFIX,oimageb2.ydstatic.com,Direct
-#HOST-SUFFIX,oimageb4.ydstatic.com,Direct
-#HOST-SUFFIX,oimageb6.ydstatic.com,Direct
-#HOST-SUFFIX,oimageb8.ydstatic.com,Direct
-#HOST-SUFFIX,oimagec2.ydstatic.com,Direct
-#HOST-SUFFIX,oimagec3.ydstatic.com,Direct
-#HOST-SUFFIX,oimagec4.ydstatic.com,Direct
-#HOST-SUFFIX,oimagec8.ydstatic.com,Direct
-#HOST-SUFFIX,umeng.com,Direct
-#HOST-SUFFIX,umengcloud.com,Direct
-#HOST-SUFFIX,msg.umeng.com,Direct
-#HOST-SUFFIX,msg.umengcloud.com,Direct
-#HOST-SUFFIX,errlog.umeng.com,Direct
-#HOST-SUFFIX,comm.app.autohome.com.cn,Direct
-#HOST-SUFFIX,applogapi.autohome.com.cn,Direct
-#HOST-SUFFIX,miaozhen.com,Direct
-#HOST-SUFFIX,shuzilm.cn,Direct
-#HOST-SUFFIX,uyunad.com,Direct
-#HOST-SUFFIX,cnzz.com,Direct
-#HOST-SUFFIX,sf3-ttcdn-tos.pstatp.com,Direct
-#HOST-SUFFIX,sf6-ttcdn-tos.pstatp.com,Direct
-#host,gw.im.weibo.cn,direct
-#host,gw1.im.weibo.cn,direct
-#host,dp.im.weibo.cn,direct
 
 # WPS
 host, mo.res.wpscdn.cn, direct
