@@ -54,7 +54,7 @@ host-suffix, afdback.ppsimg.com, reject
 IP-CIDR,180.76.76.200/32,REJECT
 
 # 优酷
-#host-suffix, data6.video.iqiyi.com, reject
+host-suffix, data6.video.iqiyi.com, reject
 
 # iQiyi
 host-suffix, data6.video.iqiyi.com, reject
