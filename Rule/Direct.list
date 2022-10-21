@@ -24,7 +24,7 @@ host, comm.app.autohome.com.cn, direct
 host-suffix, gk.sina.cn, direct
 
 # 百度
-host, issuecdn.baidupcs.com, direct
+#host, issuecdn.baidupcs.com, direct
 host, ms.bdimg.com, direct
 host-suffix, ufosdk.baidu.com, direct
 host-suffix, paimgcdn.baidu.com, direct
