@@ -53,9 +53,6 @@ host-suffix, afdback.ppsimg.com, reject
 # 贴吧 屏蔽域名dns查询
 IP-CIDR,180.76.76.200/32,REJECT
 
-# 优酷
-host-suffix, data6.video.iqiyi.com, reject
-
 # iQiyi
 host-suffix, data6.video.iqiyi.com, reject
 
