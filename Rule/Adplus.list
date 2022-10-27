@@ -1,5 +1,3 @@
-# 优酷
-host-suffix, ossgw.alicdn.com, reject
 
 # 番茄小说
 host-suffix, i.snssdk.com, reject
