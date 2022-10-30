@@ -1,66 +1,6 @@
 
 # 番茄小说
 
-host-suffix, api5-normal-lf.fqnovel.com, reject
-host-suffix, ads3-normal-lf.zijieapi.com, reject
-host-suffix, tnc11-bjlgy.zijieapi.com, reject
-host-suffix, gecko3-lf.zijieapi.com, reject
-host-suffix, applog.snssdk.com, reject
-host-suffix, praisewindow.ugsdk.cn, reject
-host-suffix, p6-sign.douyinpic.com, reject
-host-suffix, p3-sign.douyinpic.com, reject
-host-suffix, log3-applog-lf.fqnovel.com, reject
-host-suffix, ads5-normal-lf.zijieapi.com, reject
-host-suffix, tnc3-bjlgy.zijieapi.com, reject
-host-suffix, abtest3-misc-lf.zijieapi.com, reject
-host-suffix, gecko5-lf.zijieapi.com, reject
-host-suffix, log5-applog-lf.fqnovel.com, reject
-host-suffix, webcast5-open-lf.douyin.com, reject
-host-suffix, rtlog3-applog-lf.fqnovel.com, reject
-host-suffix, mon3-misc-lf.fqnovel.com, reject
-host-suffix, vcs.snssdk.com, reject
-host-suffix, mon11-misc-lf.fqnovel.com, reject
-host-suffix, rtlog5-applog-lf.fqnovel.com, reject
-host-suffix, ichannel.snssdk.com, reject
-host-suffix, lf3-reading.fqnovelstatic.com, reject
-host-suffix, bsync3-normal-lf.zijieapi.com, reject
-host-suffix, mssdk3-normal-lf.zijieapi.com, reject
-host-suffix, saveu5-normal-lf.zijieapi.com, reject
-host-suffix, feedback-c.zijieapi.com, reject
-host-suffix, security.snssdk.com, reject
-
-#host-suffix, m.ykimg.com, reject
-host-suffix, tnc3-alisc1.zijieapi.com, reject
-host-suffix, rtlog3-applog-lq.fqnovel.com, reject
-host-suffix, gecko3-lq.zijieapi.com, reject
-host-suffix, growth.ecombdapi.com, reject
-host-suffix, isaas.ecombdapi.com, reject
-host-suffix, mon.toutiaocloud.com, reject
-host-suffix, mon.toutiaocloud.net, reject
-host-suffix, rtlog5-applog-lq.fqnovel.com, reject
-host-suffix, mon3-misc-lq.fqnovel.com, reject
-host-suffix, log3-applog-lq.fqnovel.com, reject
-host-suffix, saveu5-normal-lq.zijieapi.com, reject
-host-suffix, security-lq.snssdk.com, reject
-host-suffix, tnc3-aliec2.snssdk.com, reject
-host-suffix, webcast5-open-lq.douyin.com, reject
-host-suffix, log5-applog-lq.fqnovel.com, reject
-host-suffix, gecko5-lq.zijieapi.com, reject
-host-suffix, bsync3-normal-lq.zijieapi.com, reject
-host-suffix, mssdk3-normal-lq.zijieapi.com, reject
-host-suffix, polaris3-normal-lq.zijieapi.com, reject
-host-suffix, vcs-lq.snssdk.com, reject
-host-suffix, mon11-misc-lq.fqnovel.com, reject
-host-suffix, ads3-normal-lq.zijieapi.com, reject
-host-suffix, toutiao-frontier.snssdk.com, reject
-host-suffix, abtest3-misc-lq.zijieapi.com, reject
-host-suffix, is-lq.snssdk.com, reject
-host-suffix, i-lq.snssdk.com, reject
-host-suffix, api5-normal-lq.fqnovel.com, reject
-host-suffix, ads5-normal-lq.zijieapi.com, reject
-host-suffix, tnc3-aliec2.zijieapi.com, reject
-host-suffix, tnc3-alisc1.snssdk.com, reject
-
 host,p6-ad-sign.byteimg.com,reject
 host,p9-ad-sign.byteimg.com,reject
 host,dig.bdurl.net,reject
