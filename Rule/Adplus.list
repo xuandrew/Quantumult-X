@@ -29,7 +29,6 @@ host-suffix, saveu5-normal-lf.zijieapi.com, reject
 host-suffix, feedback-c.zijieapi.com, reject
 host-suffix, security.snssdk.com, reject
 
-host-suffix, i.snssdk.com, reject
 #host-suffix, m.ykimg.com, reject
 host-suffix, tnc3-alisc1.zijieapi.com, reject
 host-suffix, rtlog3-applog-lq.fqnovel.com, reject
@@ -70,7 +69,7 @@ host,mcs.snssdk.com,reject
 host,tnc3-alisc1.snssdk.com,reject
 host,security-lq.snssdk.com,reject
 host,tnc3-aliec2.snssdk.com,reject
-host,i.snssdk.com,reject
+#host,i.snssdk.com,reject
 host,i-lq.snssdk.com,reject
 host,is.snssdk.com,reject
 # 番茄小说福利页
