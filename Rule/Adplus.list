@@ -51,11 +51,6 @@ ip-cidr,180.96.2.114/32,reject,no-resolve
 #host,i-hl.snssdk.com,reject
 #host,mon-lq.snssdk.com,reject
 
-# 七猫小说
-#host-suffix, t-qmad.qm989.com, reject
-#host-suffix, a-qmad.qm989.com, reject
-#host-suffix, a-qmad.qimao.com, reject
-
 # Bilibili
 host,grpc.biliapi.net,reject
 #ip-cidr, 203.107.0.0/17, reject
