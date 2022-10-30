@@ -1,5 +1,34 @@
 
 # 番茄小说
+
+host-suffix, api5-normal-lf.fqnovel.com, reject
+host-suffix, ads3-normal-lf.zijieapi.com, reject
+host-suffix, tnc11-bjlgy.zijieapi.com, reject
+host-suffix, gecko3-lf.zijieapi.com, reject
+host-suffix, applog.snssdk.com, reject
+host-suffix, praisewindow.ugsdk.cn, reject
+host-suffix, p6-sign.douyinpic.com, reject
+host-suffix, p3-sign.douyinpic.com, reject
+host-suffix, log3-applog-lf.fqnovel.com, reject
+host-suffix, ads5-normal-lf.zijieapi.com, reject
+host-suffix, tnc3-bjlgy.zijieapi.com, reject
+host-suffix, abtest3-misc-lf.zijieapi.com, reject
+host-suffix, gecko5-lf.zijieapi.com, reject
+host-suffix, log5-applog-lf.fqnovel.com, reject
+host-suffix, webcast5-open-lf.douyin.com, reject
+host-suffix, rtlog3-applog-lf.fqnovel.com, reject
+host-suffix, mon3-misc-lf.fqnovel.com, reject
+host-suffix, vcs.snssdk.com, reject
+host-suffix, mon11-misc-lf.fqnovel.com, reject
+host-suffix, rtlog5-applog-lf.fqnovel.com, reject
+host-suffix, ichannel.snssdk.com, reject
+host-suffix, lf3-reading.fqnovelstatic.com, reject
+host-suffix, bsync3-normal-lf.zijieapi.com, reject
+host-suffix, mssdk3-normal-lf.zijieapi.com, reject
+host-suffix, saveu5-normal-lf.zijieapi.com, reject
+host-suffix, feedback-c.zijieapi.com, reject
+host-suffix, security.snssdk.com, reject
+
 host-suffix, i.snssdk.com, reject
 #host-suffix, m.ykimg.com, reject
 host-suffix, tnc3-alisc1.zijieapi.com, reject
