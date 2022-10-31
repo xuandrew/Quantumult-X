@@ -3,6 +3,16 @@ host-suffix, growth.ecombdapi.com, reject
 host-suffix, isaas.ecombdapi.com, reject
 host-suffix, p6-ad-sign.byteimg.com, reject
 host-suffix, p9-ad-sign.byteimg.com, reject
+host-suffix, ads3-normal-lf.zijieapi.com, reject
+host-suffix, ads5-normal-lf.zijieapi.com, reject
+host-suffix, adim.pinduoduo.com, reject
+ip-cidr, 36.96.0.0/11, reject
+host-suffix, toutiao-frontier.snssdk.com, reject
+host-suffix, polaris3-normal-lf.zijieapi.com, reject
+host-suffix, tnc3-aliec2.snssdk.com, reject
+host-suffix, mon11-misc-lf.fqnovel.com, reject
+host-suffix, bsync3-normal-lf.zijieapi.com, reject
+host-suffix, saveu5-normal-lf.zijieapi.com, reject
 
 # Bilibili
 host,grpc.biliapi.net,reject
