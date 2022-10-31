@@ -1,6 +1,6 @@
 # 番茄小说
-host,p6-ad-sign.byteimg.com,reject
-host,p9-ad-sign.byteimg.com,reject
+host-suffix, p6-ad-sign.byteimg.com, reject
+host-suffix, p9-ad-sign.byteimg.com, reject
 
 # Bilibili
 host,grpc.biliapi.net,reject
