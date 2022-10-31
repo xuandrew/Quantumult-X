@@ -1,4 +1,6 @@
 # 番茄小说
+host-suffix, growth.ecombdapi.com, reject
+host-suffix, isaas.ecombdapi.com, reject
 host-suffix, p6-ad-sign.byteimg.com, reject
 host-suffix, p9-ad-sign.byteimg.com, reject
 
