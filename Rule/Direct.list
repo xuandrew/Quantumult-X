@@ -25,9 +25,6 @@ host-suffix, static-s.iqiyi.com, direct
 # 汽车之家登陆验证码
 host, comm.app.autohome.com.cn, direct
 
-# Sina
-host-suffix, gk.sina.cn, direct
-
 # 百度
 host, ada.baidu.com, direct
 host, issuecdn.baidupcs.com, direct
@@ -60,6 +57,7 @@ host-suffix, collector.github.com, direct
 # 微博
 HOST,h5.sinaimg.cn,Direct
 HOST,ilce.alicdn.com,Direct
+host-suffix, gk.sina.cn, direct
 
 # 360
 HOST,qhupdate.com,Direct
