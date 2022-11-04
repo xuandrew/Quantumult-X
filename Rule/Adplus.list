@@ -14,6 +14,17 @@ host-suffix, mon11-misc-lf.fqnovel.com, reject
 host-suffix, bsync3-normal-lf.zijieapi.com, reject
 host-suffix, saveu5-normal-lf.zijieapi.com, reject
 
+host-suffix, log3-applog-lf.fqnovel.com, reject
+host-suffix, rtlog3-applog-lf.fqnovel.com, reject
+host-suffix, rtlog5-applog-lf.fqnovel.com, reject
+ip-cidr, 58.192.0.0/11, reject
+host-suffix, log5-applog-lf.fqnovel.com, reject
+ip-cidr, 150.138.0.0/15, reject
+ip-cidr, 220.160.0.0/11, reject
+ip-cidr, 121.224.0.0/12, reject
+host-suffix, mon3-misc-lf.fqnovel.com, reject
+ip-cidr, 117.21.0.0/16, reject
+
 # Bilibili
 host,grpc.biliapi.net,reject
 #ip-cidr, 203.107.0.0/17, reject
@@ -40,4 +51,7 @@ host, mqtt.zhihu.com,reject
 IP-CIDR, 118.89.204.198/32, REJECT
 IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 USER-AGENT, AVOS*, reject
+
+# 抖音
+host-suffix, api26-normal-lq.amemv.com, reject
 
