@@ -13,7 +13,6 @@ host-suffix, tnc3-aliec2.snssdk.com, reject
 host-suffix, mon11-misc-lf.fqnovel.com, reject
 host-suffix, bsync3-normal-lf.zijieapi.com, reject
 host-suffix, saveu5-normal-lf.zijieapi.com, reject
-
 host-suffix, log3-applog-lf.fqnovel.com, reject
 host-suffix, rtlog3-applog-lf.fqnovel.com, reject
 host-suffix, rtlog5-applog-lf.fqnovel.com, reject
