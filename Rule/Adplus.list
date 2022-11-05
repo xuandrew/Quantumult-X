@@ -16,7 +16,7 @@ host-suffix, saveu5-normal-lf.zijieapi.com, reject
 host-suffix, log3-applog-lf.fqnovel.com, reject
 host-suffix, rtlog3-applog-lf.fqnovel.com, reject
 host-suffix, rtlog5-applog-lf.fqnovel.com, reject
-ip-cidr, 58.192.0.0/11, reject
+#ip-cidr, 58.192.0.0/11, reject
 host-suffix, log5-applog-lf.fqnovel.com, reject
 ip-cidr, 150.138.0.0/15, reject
 ip-cidr, 220.160.0.0/11, reject
