@@ -27,8 +27,8 @@ ip-cidr, 117.21.0.0/16, reject
 # Bilibili
 host,grpc.biliapi.net,reject
 #ip-cidr, 203.107.0.0/17, reject
-#ip-cidr, 47.96.0.0/11, reject
-#IP-CIDR, 203.107.1.1/24, REJECT
+ip-cidr, 47.96.0.0/11, reject
+IP-CIDR, 203.107.1.1/24, REJECT
 
 # 瑞幸去开屏广告
 ;host-suffix, capi.lkcoffee.com, reject
