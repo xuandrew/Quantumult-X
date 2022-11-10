@@ -10,7 +10,7 @@ ip-cidr, 109.239.140.0/24, telegram
 ip-cidr, 5.28.195.163/32, telegram
 ip-cidr, 5.28.195.205/32, telegram
 ip-cidr, 91.108.0.0/16, telegram
-ip-cidr6, 2a0a:f280::/32, telegram
+;ip-cidr6, 2a0a:f280::/32, telegram
 ip-asn, 44907, telegram
 ip-asn, 62014, telegram
 ip-asn, 62041, telegram
