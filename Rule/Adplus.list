@@ -23,6 +23,21 @@ ip-cidr, 220.160.0.0/11, reject
 ip-cidr, 121.224.0.0/12, reject
 host-suffix, mon3-misc-lf.fqnovel.com, reject
 ip-cidr, 117.21.0.0/16, reject
+host-suffix, tnc3-bjlgy.bytedance.com, reject
+host-suffix, is.snssdk.com, reject
+host-suffix, tnc11-bjlgy.zijieapi.com, reject
+host-suffix, abtest3-misc-lf.zijieapi.com, reject
+host-suffix, mssdk3-normal-lf.zijieapi.com, reject
+host-suffix, gecko3-lf.zijieapi.com, reject
+host-suffix, tnc3-alisc1.zijieapi.com, reject
+host-suffix, gecko5-lf.zijieapi.com, reject
+host-suffix, tnc3-aliec2.zijieapi.com, reject
+host-suffix, webcast5-open-lf.douyin.com, reject
+host-suffix, tnc3-bjlgy.zijieapi.com, reject
+host-suffix, feedback-c.zijieapi.com, reject
+host-suffix, mon.toutiaocloud.net, reject
+host-suffix, praisewindow.ugsdk.cn, reject
+host-suffix, mon.toutiaocloud.com, reject
 
 # Bilibili
 host,grpc.biliapi.net,reject
