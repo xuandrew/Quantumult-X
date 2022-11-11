@@ -18,13 +18,13 @@ host-suffix, rtlog3-applog-lf.fqnovel.com, reject
 host-suffix, rtlog5-applog-lf.fqnovel.com, reject
 #ip-cidr, 58.192.0.0/11, reject
 host-suffix, log5-applog-lf.fqnovel.com, reject
-ip-cidr, 150.138.0.0/15, reject
+#ip-cidr, 150.138.0.0/15, reject
 ip-cidr, 220.160.0.0/11, reject
 ip-cidr, 121.224.0.0/12, reject
 host-suffix, mon3-misc-lf.fqnovel.com, reject
 ip-cidr, 117.21.0.0/16, reject
 host-suffix, tnc3-bjlgy.bytedance.com, reject
-host-suffix, is.snssdk.com, reject
+#host-suffix, is.snssdk.com, reject
 host-suffix, tnc11-bjlgy.zijieapi.com, reject
 host-suffix, abtest3-misc-lf.zijieapi.com, reject
 host-suffix, mssdk3-normal-lf.zijieapi.com, reject
