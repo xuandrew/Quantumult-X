@@ -1,4 +1,4 @@
-Hostname = *kuwo*, *lrts*
+hostname = *kuwo*, *lrts*
 
 ^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ne|\/a\.p|v\d\/api\/(user\/in|pay\/vi)|\w{3}\/v\d\/user\/vi|\w{3}\/spi\/ms|\w{3}\/v\d\/the|\w{3}\/enc\/use) url script-response-body https://gitlab.com/ddgksf2013/Cuttlefish/-/raw/master/Script/kwyy.js
 
