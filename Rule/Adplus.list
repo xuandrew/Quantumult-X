@@ -6,7 +6,7 @@ host-suffix, p9-ad-sign.byteimg.com, reject
 host-suffix, ads3-normal-lf.zijieapi.com, reject
 host-suffix, ads5-normal-lf.zijieapi.com, reject
 host-suffix, adim.pinduoduo.com, reject
-ip-cidr, 36.96.0.0/11, reject
+#ip-cidr, 36.96.0.0/11, reject
 host-suffix, toutiao-frontier.snssdk.com, reject
 host-suffix, polaris3-normal-lf.zijieapi.com, reject
 host-suffix, tnc3-aliec2.snssdk.com, reject
