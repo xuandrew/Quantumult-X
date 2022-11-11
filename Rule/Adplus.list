@@ -22,7 +22,7 @@ host-suffix, log5-applog-lf.fqnovel.com, reject
 ip-cidr, 220.160.0.0/11, reject
 #ip-cidr, 121.224.0.0/12, reject
 host-suffix, mon3-misc-lf.fqnovel.com, reject
-ip-cidr, 117.21.0.0/16, reject
+#ip-cidr, 117.21.0.0/16, reject
 host-suffix, tnc3-bjlgy.bytedance.com, reject
 #host-suffix, is.snssdk.com, reject
 host-suffix, tnc11-bjlgy.zijieapi.com, reject
