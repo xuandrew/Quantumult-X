@@ -2,7 +2,7 @@ hostname= upos-hz-mirrorakam.akamaized.net, newclient.map.baidu.com, app.bilibil
 
 # 京东搜索页面优化
 #^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotWords url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
-#^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotSearchTerms url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotSearchTerms url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
 
 # 哔哩哔哩Upos服务器替换为腾讯Cos对象存储
 ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net\/(.*) url 302 https://upos-sz-mirrorcos.bilivideo.com/$1
