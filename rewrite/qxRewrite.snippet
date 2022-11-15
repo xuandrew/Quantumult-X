@@ -1,5 +1,9 @@
 hostname= upos-hz-mirrorakam.akamaized.net, newclient.map.baidu.com, app.bilibili.com, *.adobe.*, ap*.intsig.net, ossgw.alicdn.com, ykimg.alicdn.com, gw.alicdn.com, *.cibntv.net, app-gw.csdn.net, appwk.baidu.com, edu-wenku.bdimg.com, api.shenyin.name, mobile-api.adguard.com, mobile-api.adguard.org, news.ssp.qq.com, r.inews.qq.com, api.aliyundrive.com, pan.baidu.com, api.revenuecat.com, discardrp.umetrip.com, startup.umetrip.com, api.polaxiong.com, restore-access.indream.app, notability.com, p.du.163.com, mb3admin.com, guide-acs.m.taobao.com, *.wtzw.com, a-qmad.qm989.com, a-qmad.qimao.com, api.coolapk.com, pgdt.gtimg.cn, c.l.qq.com, *.xima*.*, *.xmcdn.*, magev6.if.qidian.com, www.xmind.cn, www.xmind.net, www.xmind.app, account.wps.cn, *account.wps.com, -vira.llsapp.com, apiwz.midukanshu.com, lchttpapi.xczim.com, *.bdstatic.com, edith.xiaohongshu.com
 
+# 京东搜索页面优化
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotWords url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotSearchTerms url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
+
 # 哔哩哔哩Upos服务器替换为腾讯Cos对象存储
 ^https?:\/\/upos-hz-mirrorakam\.akamaized\.net\/(.*) url 302 https://upos-sz-mirrorcos.bilivideo.com/$1
 
