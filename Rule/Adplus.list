@@ -4,6 +4,10 @@
 ip-cidr, 47.96.0.0/11, reject
 IP-CIDR, 203.107.1.1/24, REJECT
 
+# 喜马拉雅
+host, gslbali.ximalaya.com, reject
+host, gslbtx.ximalaya.com, reject
+
 # 番茄小说
 host-suffix, growth.ecombdapi.com, reject
 host-suffix, isaas.ecombdapi.com, reject
