@@ -1,3 +1,6 @@
+#微信
+host-suffix, wx.qlogo.cn, direct
+
 # 汽车之家
 host-suffix, push.app.autohome.com.cn, direct
 host-suffix, activity.app.autohome.com.cn, direct
