@@ -146,7 +146,7 @@ vidoza.*?\.(html|js) url reject
 # > 07 禁漫天堂[网页优化]@ddgksf2013 - 网站地址：https://18comic.org
 #^https?:\/\/.*18comic\.org\/($|(album|photo).*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/18comic.js
 ^https?:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-^https?:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* url 
+^https?:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* url reject
 
 # > 06 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
 ^https?:\/\/.*5yy.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/555.js
