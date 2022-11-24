@@ -1,4 +1,7 @@
-#微信
+# 美团
+host-suffix, analytics.meituan.net, direct
+
+# 微信
 host-suffix, wx.qlogo.cn, direct
 
 # 汽车之家
