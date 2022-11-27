@@ -3,7 +3,7 @@
 #ip-cidr, 203.107.0.0/17, reject
 #ip-cidr, 47.96.0.0/11, reject
 #ip-cidr, 47.100.0.0/11, reject
-IP-CIDR, 203.107.1.1/24, REJECT
+ip-cidr, 203.107.1.66/32, reject
 
 # 喜马拉雅
 host, gslbali.ximalaya.com, reject
