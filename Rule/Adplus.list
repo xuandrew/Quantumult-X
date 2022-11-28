@@ -6,7 +6,7 @@ ip-cidr, 61.147.236.43/29, reject
 #ip-cidr, 61.147.236.46/32, reject
 ip-cidr, 120.46.169.234/32, reject
 ip-cidr, 121.36.72.124/32, reject
-ip-cidr, 183.131.147.30, reject
+ip-cidr, 183.131.147.30/32, reject
 ip-cidr, 203.107.1.66/32, reject
 ip6-cidr, 240E:978:1503::243/128, reject
 
