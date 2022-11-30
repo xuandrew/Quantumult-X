@@ -1,3 +1,6 @@
+# 12306
+host, ad.12306, direct
+
 # 美团
 host-suffix, analytics.meituan.net, direct
 
