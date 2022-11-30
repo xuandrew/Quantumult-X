@@ -132,9 +132,9 @@ vidoza.*?\.(html|js) url reject
 
 # 豆瓣电影移动版网页优化
 // 茶杯狐、Libvio 流媒体
-^https://m.douban.com/movie/subject/.+ url script-response-body https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/douban.js
+^https://m.douban.com/movie/subject/.+ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/DouBan.js
 // Airtable 收藏
-^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://ocd0522.tk/ddgksf2013/Cuttlefish/raw/branch/master/Script/douban.js
+^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/DouBan.js
 
 # > 13 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
 ^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/bdys.js
