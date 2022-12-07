@@ -1,4 +1,4 @@
-hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliapi.net, manga.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
+hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliapi.net, manga.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, api.vc.bilibili.com,dataflow.biliapi.com,124.239.240.*,101.89.57.66, 218.94.210.66,240e:b1:9801:206:11:0:0:*
 
 # BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? url reject-dict
@@ -71,3 +71,6 @@ hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliap
 
 # BiliBili_哔哩哔哩_Proto去广告@app2smile
 ^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
+
+# BiliBili 影视番剧
+^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BiliBili.js
