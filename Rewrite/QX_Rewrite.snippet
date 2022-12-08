@@ -130,9 +130,6 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 ^http:\/\/oss\.umetrip\.com\/fs\/advert\/polite\/(690|700|705),* url reject-200
 #^http:\/\/img\.umetrip\.com\/fs\/advert\/icon\/(150|160),* url reject-200
 
-# iQiyi
-^https?:\/\/.+?\/etx\? url reject
-
 # Notability解锁订阅
 #^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/ddgksf2013/Cuttlefish/master/Crack/notability.js
 
@@ -246,7 +243,7 @@ https://lchttpapi.xczim.com/* url script-response-body https://raw.githubusercon
 ^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w url reject-img
 ^https?:\/\/.+\/videos\/other\/ url reject
 ^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
-^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/deliver\/config?mkey= url reject-img
+^https?:\/\/.+?\/etx\? url reject
 
 # > 百度地图开屏广告
 #^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) url reject
