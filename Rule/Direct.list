@@ -1,5 +1,5 @@
 # 12306
-host, ad.12306, direct
+host, ad.12306.cn, direct
 
 # 美团
 host-suffix, analytics.meituan.net, direct
