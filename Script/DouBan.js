@@ -59,7 +59,7 @@ async function douban_addons() {
     //.replace(/link\ href\=\"https?:\/\/img3\.doubanio\.com\/.+\.css\"/, `link href="https://img3.doubanio.com/f/talion/4eddaaed2bec5a0baa663274d47d136c54a2c03c/css/card/base.css"`)
 
     body = body.replace(/\<div\ class\=\"sub\-vendor\"[\s\S]*?\<\/div\>/, `${mweb.join("\n")}`)
-               .replace(/<head>/, '<head><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/ddgksf2013/Html/douban.css" type="text/css">')
+               .replace(/<head>/, '<head><link rel="stylesheet" href="https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/CSS/douban.css" type="text/css">')
 
     $done({ body });
 
