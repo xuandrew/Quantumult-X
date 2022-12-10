@@ -14,36 +14,35 @@ async function douban_addons() {
     if (!title) $done({})
     if (collect) body = body.replace(/<a.+pbtn.+wish.+>/, `<a href="${url}?seen=0">`)
     if (collect) body = body.replace(/<a.+pbtn.+collect.+>/, `<a href="${url}?seen=1">`)
-
-    let mweb = [`<div class="sub-ddgksf2013" style="background:rgba(0,0,0,0.1);border-radius:6px;padding:13px 15px;margin-top:10px"> <img src="https://files.catbox.moe/c8vszl.png" height="23" width="32" style="vertical-align: middle;"><a href="https://www.cupfox.com/search?key=${title[1]}"><span class="vendor-text" style="display: inline-block;vertical-align:middle;font-size:15px;color:#fff;margin-left:5px;">茶杯狐 👉 Click to Play 👈</span> </a></div>`]
-    mweb.push(`<div class="sub-ddgksf2013" style="background:rgba(0,0,0,0.1);border-radius:6px;padding:13px 15px;margin-top:10px"> <img src="https://p0.meituan.net/dpgroup/bf54b6ae9ee149d304b3a351b4247d563960.png" height="32" width="32" style="vertical-align: middle;"><a href="https://www.libvio.me/search/-------------.html?wd=${title[1]}"><span class="vendor-text" style="display: inline-block;vertical-align:middle;font-size:15px;color:#fff;margin-left:5px;">Libvio 👉 Click to Play 👈</span> </a></div>`);
-    let douban_options = {
+        
+        let mweb = [`<a href="https://www.cupfox.com/search?key=${title[1]}">\t<img src="https://raw.githubusercontent.com/githubdulong/Script/master/Images/Chb.png" height="26" width="26" style="vertical-align: text-top;" /></a>`]
+        mweb.push(`<a href="https://dsxys.com/sb/ke7nhZe3c1-.html?wd=${title[1]}&submit="><img src="https://raw.githubusercontent.com/githubdulong/Script/master/Images/Dsx.png" height="26" width="26" style="vertical-align: text-top;" /></a>`)
+        mweb.push(`<a href="https://im1907.top/?jx=${title[1]}&submit="><img src="https://raw.githubusercontent.com/githubdulong/Script/master/Images/Jxw.png" height="26" width="26" style="vertical-align: text-top;" /></a>`)
+        mweb.push(`<a href="https://www.o8tv.com/vodsearch/-------------.html?wd=${title[1]}&submit="><img src="https://raw.githubusercontent.com/githubdulong/Script/master/Images/555.png" height="26" width="26" style="vertical-align: text-top;" /></a>`)
+            let douban_options = {
         url: `https://frodo.douban.com/api/v2/movie/${movieId[1]}?apiKey=0ac44ae016490db2204ce0a042db2916`,
-        method: "GET",
         headers: {
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000323) NetType/WIFI Language/en",
             "Referer": "https://servicewechat.com/wx2f9b06c1de1ccfca/82/page-frame.html"
         }
     }
 
-    let douban_result = {};//await send_request(douban_options)
+    let douban_result = await send_request(douban_options, "get")
 
-    if (tmdb_api_key&&(douban_result.type == "movie" || douban_result.type == "tv") && douban_result.original_title) {
+    if ((douban_result.type == "movie" || douban_result.type == "tv") && douban_result.original_title && tmdb_api_key) {
 
         let tbdb_query_options = {
-            url: `https://api.themoviedb.org/3/search/${douban_result.type}?api_key=${tmdb_api_key}&query=${encodeURIComponent(douban_result.original_title.replace(/Season \d+$/, ""))}&page=1`,
-            method: "GET"
+            url: `https://api.themoviedb.org/3/search/${douban_result.type}?api_key=${tmdb_api_key}&query=${encodeURIComponent(douban_result.original_title.replace(/Season \d+$/, ""))}&page=1`
         }
-        let tmdb_query = await send_request(tbdb_query_options)
+        let tmdb_query = await send_request(tbdb_query_options, "get")
 
         if (tmdb_query.results[0]) {
 
             let providers_query_options = {
-                url: `https://api.themoviedb.org/3/${douban_result.type}/${tmdb_query.results[0].id}/watch/providers?api_key=${tmdb_api_key}`,
-                method: "GET"
+                url: `https://api.themoviedb.org/3/${douban_result.type}/${tmdb_query.results[0].id}/watch/providers?api_key=${tmdb_api_key}`
             }
 
-            let tmdb_providers = await send_request(providers_query_options)
+            let tmdb_providers = await send_request(providers_query_options, "get")
 
             if (tmdb_providers.results[region]) {
                 if (tmdb_providers.results[region].flatrate) {
@@ -56,31 +55,27 @@ async function douban_addons() {
         }
 
     }
-    //.replace(/link\ href\=\"https?:\/\/img3\.doubanio\.com\/.+\.css\"/, `link href="https://img3.doubanio.com/f/talion/4eddaaed2bec5a0baa663274d47d136c54a2c03c/css/card/base.css"`)
 
-    body = body.replace(/\<div\ class\=\"sub\-vendor\"[\s\S]*?\<\/div\>/, `${mweb.join("\n")}`)
-               .replace(/<head>/, '<head><link rel="stylesheet" href="https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/CSS/douban.css" type="text/css">')
+    body = body.replace(/("sub-title">.+?)(<\/div>)/, `$1${mweb.join("\n")}$2`)
 
-    $done({ body });
+    $done({ body })
 
 }
 
 async function collect_movie() {
-    if ($response) $done({})
     let options = {
         url: `https://frodo.douban.com/api/v2/movie/${movieId[1]}?apiKey=0ac44ae016490db2204ce0a042db2916`,
-        method: "GET",
         headers: {
             "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.3(0x18000323) NetType/WIFI Language/en",
             "Referer": "https://servicewechat.com/wx2f9b06c1de1ccfca/82/page-frame.html"
         }
     }
 
-    let douban_result = await send_request(options)
+    let douban_result = await send_request(options, "get")
 
     if (douban_result.msg == "movie_not_found") {
-        $notify('豆瓣电影', data.msg, "");
-        $done({ path: url.replace(/https:\/\/m.douban.com|\/\?seen=\d/g, "") })
+        $notification.post('豆瓣电影', data.msg, "");
+        $done({ url: url.replace(/\?seen=\d/, "") })
     }
 
     let casts = ""
@@ -94,12 +89,10 @@ async function collect_movie() {
     let title = douban_result.title + "  " + douban_result.original_title
     let table = {
         url: "https://api.airtable.com/v0/BASE_ID/Douban",
-        method: "POST",
         headers: {
-            Authorization: "Bearer API_KEY",
-            "Content-Type": "application/json"
+            Authorization: "Bearer API_KEY"
         },
-        body: JSON.stringify({
+        body: {
             records: [
                 {
                     "fields": {
@@ -120,24 +113,35 @@ async function collect_movie() {
                     }
                 }
             ]
-        })
+        }
     }
 
-    let airtable_collect = await send_request(table)
+    let airtable_collect = await send_request(table, "post")
 
     if (!airtable_collect.records) {
-        $notify('收藏失败', airtable_collect.error.type, airtable_collect.error.message);
-        $done({ path: url.replace(/https:\/\/m.douban.com|\/\?seen=\d/g, "") })
+        $notification.post('收藏失败', airtable_collect.error.type, airtable_collect.error.message);
+        $done({ url: url.replace(/\?seen=\d/, "") })
     }
 
-    $notify('豆瓣电影', title + " 收藏成功", "");
-    $done({ path: url.replace(/https:\/\/m.douban.com|\/\?seen=\d/g, "") })
+    $notification.post('豆瓣电影', title + " 收藏成功", "");
+    $done({ url: url.replace(/\?seen=\d/, "") })
 }
 
-function send_request(options) {
+function send_request(options, method) {
     return new Promise((resolve, reject) => {
-        $task.fetch(options).then(response => {
-            resolve(JSON.parse(response.body))
-        })
+
+        if (method == "get") {
+            $httpClient.get(options, function (error, response, data) {
+                if (error) return reject('Error')
+                resolve(JSON.parse(data))
+            })
+        }
+
+        if (method == "post") {
+            $httpClient.post(options, function (error, response, data) {
+                if (error) return reject('Error')
+                resolve(JSON.parse(data))
+            })
+        }
     })
 }
