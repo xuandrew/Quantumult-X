@@ -78,17 +78,7 @@
 ^https?:\/\/logoshejishi\.mairuan\.com\/ url 302 https://www.sothink.com/product/logo-design-software/
 
 # REJECT
-(?i)\btc\.qq\.com\/[\w\/\.-]+[a-z]\d+\.mp4\? url reject
-^https:\/\/god\.gameyw\.netease\.com\/v1\/ad\/.* url reject
-^https?://ads-img-al\.xhscdn\.com/hera/ url reject
-^https?://cdn\.fivecdm\.com/cr/ url reject
-^https?://cn-acs\.m\.cainiao\.com/gw/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn/ url reject-200
-^https?://img2\.autoimg\.cn/admdfs/ url reject
-^https?://m\d\.amap\.com/ws/message/notice/list? url reject-200
-^https?://sns\.amap\.com/ws/msgbox/pull? url reject-200
-^https?://mangaapi\.manhuaren\.com/v\d/ad/ url reject
-^https?://ssp\.dzh\.com\.cn/v2api/adgroupjson url reject
-^https?://venus\.yhd\.com/memhome/launchConfig url reject
+
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)(:\d+)?\/V\d\/splash\/getSplashV\d\.action$ url reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d):\d+/xygj-config-api\/queryData url reject
 ^https?:\/\/((25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d)\.){3}(25[0-5]|2[0-4]\d|1\d{2}|[1-9]?\d):\d+\/allOne\.php\?ad_name url reject
@@ -117,7 +107,6 @@
 ^https?:\/\/(api|b)\.zhuishushenqi\.com\/advert url reject
 ^https?:\/\/(api|promo)\.xueqiu\.com\/promotion\/(display_cache|display_ad|feed_display|search_ad) url reject
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject
-^https?:\/\/(e|m).+/((uu|oo).php.+|\d+.x?html\?$) url reject
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/.+\.jpg_(9\d{2}|\d{4}) url reject
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) url reject
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q90\.jpg_\.(heic|webp)$ url reject-200
@@ -133,23 +122,23 @@
 ^https?:\/\/.+?\.beacon\.qq\.com url reject
 ^https?:\/\/.+?\.iydsj\.com\/api\/.+?\/ad url reject
 ^https?:\/\/.+?\.l\.qq\.com url reject
-^https?:\/\/.+?\.mp4\?ccode=0902 url reject
-^https?:\/\/.+?\.mp4\?sid= url reject
+^https?:\/\/.+?\.mp4\?ccode=0902 url reject-200
+^https?:\/\/.+?\.mp4\?sid= url reject-200
 ^https?:\/\/.+?\.ott\.cibntv\.net\/[\w\/-]+.mp4\?sid= url reject-200
 ^https?:\/\/.+?\.pstatp\.com\/img\/ad url reject-200
 ^https?:\/\/.+?\.tc\.qq\.com\/.+?_p20\d_ url reject
 ^https?:\/\/.+?\.tc\.qq\.com\/.+?p20\d\.1\.mp4\? url reject
-^https?:\/\/.+?\/(mixer|track2)\? url reject
+^https?:\/\/.+?\/(mixer|track2)\? url reject-200
 ^https?:\/\/.+?\/(outadservice|ting\/preload)\/ url reject
 ^https?:\/\/.+?\/allOne\.php\?ad_name url reject
 ^https?:\/\/.+?\/api\/v\d\/adRealTime url reject
 ^https?:\/\/.+?\/brand\/search\/v1\.json url reject
 ^https?:\/\/.+?\/c\/s\/splashSchedule url reject
-^https?:\/\/.+?\/cdn-adn\/ url reject
+^https?:\/\/.+?\/cdn-adn\/ url reject-200
 ^https?:\/\/.+?\/commercial_api\/ url reject
-^https?:\/\/.+?\/eapi\/(ad|log)\/ url reject
+^https?:\/\/.+?\/eapi\/(ad|log)\/ url reject-200
 ^https?:\/\/.+?\/img\/ad\.union\.api\/ url reject
-^https?:\/\/.+?\/letv-gug\/ url reject
+^https?:\/\/.+?\/letv-gug\/ url reject-200
 ^https?:\/\/.+?\/music\/common\/upload\/t_splash_info url reject
 ^https?:\/\/.+?\/promotion\/(display_cache|display_ad|feed_display|search_ad) url reject
 ^https?:\/\/101\.201\.175\.228\/ads\/display url reject
@@ -159,7 +148,6 @@
 ^https?:\/\/47\.97\.20\.12\/ad\/ url reject
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ url reject
 ^https?:\/\/7n\.bczcdn\.com\/launchad\/ url reject
-^https?:\/\/9377\w{2}\.com url reject
 ^https?:\/\/[\s\s]*baidu\.com/.*ad[xs]\.php url reject
 ^https?:\/\/[^bbs].tianya\.cn url reject
 ^https?:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime url reject
@@ -171,7 +159,6 @@
 ^https?:\/\/\w.?up\.qingdaonews\.com url reject
 ^https?:\/\/\w{6}\.com1\.z0\.glb\.clouddn\.com url reject
 ^https?:\/\/\w{8}\.logic\.cpm\.cm\.kankan\.com url reject
-^https?:\/\/a0b\w{2}\.com url reject
 ^https?:\/\/a\.apicloud\.com\/start_page\/ url reject
 ^https?:\/\/a\.qiumibao\.com\/activities\/config\.php url reject
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv url reject
@@ -188,6 +175,7 @@
 ^https?:\/\/ad\d\.sina\.com url reject
 ^https?:\/\/ad\d\.sina\.com.cn url reject
 ^https?:\/\/adpai\.thepaper\.cn\/.+?&ad= url reject
+^https?:\/\/ads-img-al\.xhscdn\.com\/hera\/ url reject
 ^https?:\/\/aes\.acfun\.cn\/s\?adzones url reject
 ^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\/ url reject
 ^https?:\/\/amap\-aos\-info\-nogw\.amap\.com\/ws\/aos\/alimama\/ url reject-200
@@ -306,6 +294,7 @@
 ^https?:\/\/cdn\.api\.fotoable\.com\/Advertise\/ url reject
 ^https?:\/\/cdn\.dianshihome\.com\/static\/ad\/ url reject
 ^https?:\/\/cdn\.moji\.com\/(adoss|adlink)\/ url reject
+^https?:\/\/cdn\.moji\.com\/advert\/ url reject
 ^https?:\/\/cdnfile1\.msstatic\.com\/cdnfile\/appad\/resource url reject
 ^https?:\/\/channel\.beitaichufang\.com\/channel\/api\/v1\/promote\/ios\/start\/page url reject
 ^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds url reject
@@ -313,6 +302,7 @@
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ url reject
 ^https?:\/\/cms\.daydaycook\.com\.cn\/api\/cms\/advertisement\/ url reject
 ^https?:\/\/cmsapi\.wifi8\.com\/v\d\/(emptyAd|adNew)\/ url reject
+^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject-200
 ^https?:\/\/cntv\.hls\.cdn\.myqcloud\.com\/.+?\?maxbr=850 url reject
 ^https?:\/\/consumer\.fcbox\.com\/v1\/version\/getNewVersion url reject-dict
 ^https?:\/\/consumer\.fcbox\.com\/v\d\/ad\/ url reject
@@ -348,6 +338,7 @@
 ^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ url reject
 ^https?:\/\/ggx\.cmvideo\.cn\/request\/ url reject
 ^https?:\/\/goblin\.hupu\.com/[^/]+/[^/]+\/interfaceAd\/ url reject
+^https?:\/\/god\.gameyw\.netease\.com\/v1\/ad\/.* url reject
 ^https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/car-rest\/webservice\/passenger\/recommendADs url reject
 ^https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/zhuanche-passenger-token\/leachtoken\/webservice\/homepage\/queryADs url reject
 ^https?:\/\/gw-passenger\.01zhuanche\.com\/gw-passenger\/zhuanche-passengerController\/notk\/passenger\/recommendADs url reject
@@ -379,6 +370,7 @@
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ url reject
 ^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/image-\d{4}-\d{4}\/ url reject
 ^https?:\/\/img01\.10101111cdn\.com\/adpos\/ url reject
+^https?:\/\/img2\.autoimg\.cn\/admdfs\/ url reject
 ^https?:\/\/img\.jiemian\.com\/ads\/ url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|dpmobile|midas)\/\w+\.(gif|jpg|jpg\.webp)$ url reject
 #^https?:\/\/img\.umetrip\.com\/fs\/advert/ url reject
@@ -406,11 +398,13 @@
 ^https?:\/\/m\.ibuscloud.com\/v2\/app\/getStartPage url reject
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ url reject
 ^https?:\/\/m\.yhdm\.io\/bar\/yfgg.js url reject
+^https?:\/\/m\d\.amap\.com\/ws\/message\/notice\/list\? url reject-200
 ^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 ^https?:\/\/ma\.ofo\.com\/adImage\/ url reject
 ^https?:\/\/ma\.ofo\.com\/ads url reject
 ^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen url reject
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ url reject
+^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/ad\/ url reject
 ^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getStartPageAds url reject
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init url reject
 ^https?:\/\/mapi\.mafengwo\.cn\/(travelguide/)?ad\/ url reject
@@ -446,6 +440,7 @@
 ^https?:\/\/open\.qyer\.com\/qyer\/config\/get url reject
 ^https?:\/\/open\.qyer\.com\/qyer\/startpage\/ url reject
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ url reject-200
+^https?:\/\/oss\.umetrip\.com\/fs\/advert\/polite\/ url reject
 ^https?:\/\/overseas\.weico\.cc\/portal\.php\?a=get_coopen_ads url reject
 ^https?:\/\/p[^124](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ url reject
 ^https?:\/\/p\.du\.163\.com\/ad\/ url reject
@@ -493,10 +488,12 @@
 ^https?:\/\/smusic\.app\.wechat\.com\/commonCgi\/advertisement\/get_orint_egg$ url reject
 ^https?:\/\/snailsleep\.net\/snail\/v1\/adTask\/ url reject
 ^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? url reject
+^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull? url reject-200
 ^https?:\/\/sp\.kaola\.com\/api\/openad url reject
 ^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg url reject
 ^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons url reject
 ^https?:\/\/sso\.lxjapp\.com\/\/chims\/servlet\/csGetLatestSoftwareVersionServlet url reject-dict
+^https?:\/\/ssp\.dzh\.com\.cn\/v2api\/adgroupjson url reject
 ^https?:\/\/static\.vuevideo\.net\/styleAssets\/.+?\/splash_ad url reject
 ^https?:\/\/static\.vuevideo\.net\/styleAssets\/advertisement\/ url reject
 ^https?:\/\/status\.boohee\.com\/api\/v\d\/app_square\/start_up_with_ad url reject
@@ -516,6 +513,7 @@
 ^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ url reject
 ^https?:\/\/v\d-api\.miaopai\.com\/miaopai\/advertisement\/ url reject
 ^https?:\/\/vali\.cp31\.ott\.cibntv\.net\/youku\/.+?\.mp4\?sid= url reject
+^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig url reject
 ^https?:\/\/video\.dispatch\.tc\.qq\.com\/\w+\.p20\d\.1\.mp4 url reject
 ^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject
 ^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/ url reject
@@ -541,8 +539,8 @@
 ^https?:\/\/www\.meituan\.com\/api\/v\d\/appstatus\? url reject
 ^https?:\/\/www\.myhug\.cn\/ad\/ url reject
 ^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo url reject
-;^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/ url reject
-;^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url reject
+#^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/ url reject
+#^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url reject
 ^https?:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject-dict
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations url reject-dict
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation url reject-dict
