@@ -27,7 +27,7 @@ HOST,api.micloud.xiaomi.net,Direct
 host, id6.me, direct
 
 # iQiyi
-#host-suffix, static-s.iqiyi.com, direct
+host-suffix, static-s.iqiyi.com, direct
 #HOST-SUFFIX,cache.video.iqiyi.com,Direct
 #HOST-SUFFIX, msg.qy.net, Direct
 #host-suffix, act.vip.iqiyi.com, direct
