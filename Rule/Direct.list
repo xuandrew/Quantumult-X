@@ -68,6 +68,7 @@ host-suffix, collector.github.com, direct
 HOST,h5.sinaimg.cn,Direct
 HOST,ilce.alicdn.com,Direct
 host-suffix, gk.sina.cn, direct
+host-suffix, sdkapp.uve.weibo.com, direct
 
 # 360
 HOST,qhupdate.com,Direct
