@@ -265,6 +265,9 @@ function removeSearch(data) {
 		}
 	}
 	data.items = newItems;
+	if(data.loadedInfo){
+		data.loadedInfo.searchBarContent=[];
+	}
 	log('remove_search success');
 	return data;
 }
