@@ -9,16 +9,16 @@ const mainConfig = {
 	//微博详情页配置
 	removeRelate: true,			            //相关推荐
 	removeGood: true,			  			//微博主好物种草
-	removeFollow: true,						//关注博主
+	removeFollow: false,						//关注博主
 	modifyMenus: true,						//编辑上下文菜单
 	removeRelateItem: false,				//评论区相关内容
 	removeRecommendItem: true,				//评论区推荐内容
-	removeRewardItem: true,	            	//微博详情页打赏模块
+	removeRewardItem: false,	            	//微博详情页打赏模块
 
-	removeLiveMedia: true,		            //首页顶部直播
+	removeLiveMedia: false,		            //首页顶部直播
 	removeNextVideo: false,					//关闭自动播放下一个视频
 
-	removePinedTrending: true,		        //删除热搜列表置顶条目
+	removePinedTrending: false,		        //删除热搜列表置顶条目
 
 	removeInterestFriendInTopic: false,		//超话：超话里的好友
 	removeInterestTopic: false,				//超话：可能感兴趣的超话 + 好友关注
@@ -37,12 +37,12 @@ const mainConfig = {
 
 //菜单配置
 const itemMenusConfig = {
-	creator_task:false,					    //转发任务
-	mblog_menus_custom:false,				//寄微博
+	creator_task:true,					    //转发任务
+	mblog_menus_custom:true,				//寄微博
 	mblog_menus_video_later:true,			//可能是稍后再看？没出现过
 	mblog_menus_comment_manager:true,		//评论管理
-	mblog_menus_avatar_widget:false,		//头像挂件
-	mblog_menus_card_bg: false,			    //卡片背景
+	mblog_menus_avatar_widget:true,		//头像挂件
+	mblog_menus_card_bg: true,			    //卡片背景
 	mblog_menus_long_picture:true,		    //生成长图
 	mblog_menus_delete:true,				//删除
 	mblog_menus_edit:true,				    //编辑
@@ -50,7 +50,7 @@ const itemMenusConfig = {
 	mblog_menus_edit_video:true,			//编辑视频
 	mblog_menus_sticking:true,			    //置顶
 	mblog_menus_open_reward:true,			//赞赏
-	mblog_menus_novelty:false,			    //新鲜事投稿
+	mblog_menus_novelty:true,			    //新鲜事投稿
 	mblog_menus_favorite:true,			    //收藏
 	mblog_menus_promote:true,				//推广
 	mblog_menus_modify_visible:true,		//设置分享范围
@@ -64,7 +64,7 @@ const itemMenusConfig = {
 }
 
 const modifyCardsUrls    = ['/cardlist', 'video/community_tab', '/searchall'];
-const modifyStatusesUrls = ['statuses/friends/timeline', 'statuses/unread_friends_timeline', 'statuses/unread_hot_timeline', 'groups/timeline'];
+const modifyStatusesUrls = ['statuses/friends/timeline', 'statuses/unread_friends_timeline', 'statuses/unread_hot_timeline', 'groups/timeline', 'statuses/friends_timeline'];
 
 const otherUrls = {
 	'/profile/me': 'removeHome',								//个人页模块
@@ -87,7 +87,9 @@ const otherUrls = {
 	'/statuses/unread_topic_timeline': 'topicHandler',			//超话tab
 	'/statuses/container_timeline': 'removeMain',
 	'wbapplua/wbpullad.lua': 'removeLuaScreenAds',   			//Lua开屏广告
-	'interface/sdk/sdkad.php': 'removePhpScreenAds'  			//Php开屏广告
+	'interface/sdk/sdkad.php': 'removePhpScreenAds',  			//Php开屏广告
+	'ct=feed&a=trends': 'removeTopics',                         /* 国际版屏蔽探索页面下的一些Topic */
+	'user_center'     : 'modifiedUserCenter'                    /*国际版用户中心*/
 }
 
 
@@ -109,7 +111,27 @@ function getModifyMethod(url) {
 	}
 	return null;
 }
-
+/*国际版用户中心*/
+function modifiedUserCenter(data) {
+	if(!data.data||data.data.length===0) {
+		return data;
+	}
+	if(data.data.cards){
+		data.data.cards=Object.values(data.data.cards).filter((item) => !(item.items[0].type=='personal_vip'));
+	}
+	return data;
+}
+/* 国际版屏蔽探索页面下的一些Topic */
+function removeTopics(data) {
+	if(!data.data) {
+		return data;
+	}
+	//if(data.data.search_topic) {delete data.data.search_topic;}
+	if(data.data.topics) 	   {delete data.data.topics;}
+	if(data.data.discover)     {delete data.data.discover;}
+	
+	return data;
+}
 
 function isAd(data) {
 	if(!data) {
