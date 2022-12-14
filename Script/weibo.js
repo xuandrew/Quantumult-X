@@ -293,8 +293,8 @@ function removePage(data){
 
 	// 删除热搜列表置顶条目
 	if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
-		if (data.cards[0].card_group&&data.cards[0].card_group[0].itemid) {
-			data.cards[0].card_group = data.cards[0].card_group.filter(c=>!c.itemid.includes("t:51"));
+		if (data.cards[0].card_group) {
+			data.cards[0].card_group = data.cards[0].card_group.filter(c=>!(c?.actionlog?.ext?.includes("ads_wor")||c?.itemid?.includes("t:51")||c?.itemid?.includes("ads_wor")));
 		}
 	}
 
