@@ -6,7 +6,7 @@ if ($request.url.indexOf("replyList") != -1) {
     });
 } else if ($request.url.indexOf("indexV8") != -1) {
     var bodyObj = JSON.parse($response.body);
-    bodyObj.data = Object.values(bodyObj.data).filter((item) => !(item["entityTemplate"] == "sponsorCard" || item.entityId == 8639 || item.entityId == 33006 || item.entityId == 32557 || item.title.indexOf("值得买") != -1));
+    bodyObj.data = Object.values(bodyObj.data).filter((item) => !(item["entityTemplate"] == "sponsorCard" || item.entityId == 8639 || item.entityId == 33006 || item.entityId == 32557 || item.title.indexOf("值得买") != -1||item.title.indexOf("红包") != -1));
     //去除头条信息流推广和首页轮转
     $done({
         body: JSON.stringify(bodyObj),
