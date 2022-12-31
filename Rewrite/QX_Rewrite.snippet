@@ -215,8 +215,9 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/XiMaLaYa.js
 #
 # 喜马拉雅共享会员
-^https?:\/\/(mobile|mobilehera|mobwsa|mwsa|m|ar)\.ximalaya\.com\/(mobile\/(v\d\/album\/track|album\/paid\/info)|nyx\/history\/query\/detail|starwar\/task|vip\/(check|tabs|v\d\/recommand)|mobile-(user|album\/album\/page|playpage\/(playpage\/(tabs|recommendInfo)|track))|product\/(promotion|detail\/v1\/basicInfo)|business-vip-|(playlist|rec-association\/recommend)\/album) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
-^https?:\/\/(mobile|mobilehera|mobwsa|pns)\.ximalaya\.com\/(mobile-playpage|mobile\/(quickplay|acceptapn)|comment-mobile/get|sound-guide-portal\/(sound\/guide|display)) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly_crack.js
+;^https?:\/\/(mobile|mobilehera|mobwsa|mwsa|m|ar)\.ximalaya\.com\/(mobile\/(v\d\/album\/track|album\/paid\/info)|nyx\/history\/query\/detail|starwar\/task|vip\/(check|tabs|v\d\/recommand)|mobile-(user|album\/album\/page|playpage\/(playpage\/(tabs|recommendInfo)|track))|product\/(promotion|detail\/v1\/basicInfo)|business-vip-|(playlist|rec-association\/recommend)\/album) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
+;^https?:\/\/(mobile|mobilehera|mobwsa|pns)\.ximalaya\.com\/(mobile-playpage|mobile\/(quickplay|acceptapn)|comment-mobile/get|sound-guide-portal\/(sound\/guide|display)) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly_crack.js
+^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)) url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/xmly.js
 
 # 起点读书去广告
 ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|bookshelf\/getHoverAdv|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js
