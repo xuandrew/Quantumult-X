@@ -18,31 +18,41 @@ let magicJS = MagicJS(scriptName, "INFO");
 			magicJS.logError(`discovery-category：${err}`);
         }
         break;
+		//focus-mobile-user
+		case /focus-mobile\/focusPic/.test(magicJS.request.url):
+        try {
+			let obj = JSON.parse(magicJS.response.body);
+			if(obj.header&&obj.header.length<=1){
+				obj.header[0].item.list[0].data = obj.header[0].item.list[0].data.filter((i) => (!(i.realLink.indexOf("open")==-1)&&!i.isAd));
+			}
+			body = JSON.stringify(obj);
+		}
+		catch (err) {
+          magicJS.logError(`discovery-feed：${err}`);
+        }
+        break;
 	// discovery-feed
       case /discovery-feed\/v\d\/mix/.test(magicJS.request.url):
         try {
 		let obj = JSON.parse(magicJS.response.body);
-		if(obj.header&&obj.header.length>=1){
-			obj.header[0].item.list[0].data = obj.header[0].item.list[0].data.filter((i) => (!(i.realLink.indexOf("open")==-1)&&!i.isAd));
-		}
+		
 		const tabList = new Set([1001,1005,1009,1013,1015,1022,100000]);
-		if(obj.header&&obj.header.length>=3){
-			obj.header[2].item.list= obj.header[2].item.list.filter((e) => {
-              		return tabList.has(e.id);
-            	});
-		for(let k=0; k < obj.header[2].item.list.length; k++){
-			obj.header[2].item.list[k].displayClass="one_line";
-			}
-			delete obj.header[1];
-		}
-		else if(obj.header&&obj.header.length<=2){
+		if(obj.header&&obj.header.length>=2){
 			obj.header[1].item.list= obj.header[1].item.list.filter((e) => {
               		return tabList.has(e.id);
-            	});
-		for(let k=0; k < obj.header[1].item.list.length; k++){
-			obj.header[1].item.list[k].displayClass="one_line";
+            });
+			for(let k=0; k < obj.header[1].item.list.length; k++){
+				obj.header[1].item.list[k].displayClass="one_line";
 			}
-			//delete obj.header[1];
+			delete obj.header[0];
+		}
+		else if(obj.header&&obj.header.length<=1){
+			obj.header[0].item.list= obj.header[0].item.list.filter((e) => {
+              		return tabList.has(e.id);
+            });
+			for(let k=0; k < obj.header[0].item.list.length; k++){
+				obj.header[0].item.list[k].displayClass="one_line";
+			}
 		}
 		
 		obj.body = obj.body.filter((i) => (i.item.playsCounts>1000000&&!i.item.adInfo));
