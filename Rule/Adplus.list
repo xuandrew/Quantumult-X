@@ -1,3 +1,6 @@
+# 美团 去广告
+host, portal-portm.meituan.com, reject
+
 # Bilibili
 host, grpc.biliapi.net, reject
 ip-cidr, 47.100.123.169/32, reject
