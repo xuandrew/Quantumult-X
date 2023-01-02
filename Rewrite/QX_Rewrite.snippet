@@ -159,8 +159,8 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopshowapi\.getextendshowbyid url script-response-body https://raw.githubusercontent.com/Peng-YM/QuanX/master/Rewrites/TaoPiaoPiao/taopiaopiao.js
 
 # > 七猫小说(2022.01.18)
-^https?:\/\/(api-\w+|xiaoshuo)\.wtzw\.com\/api\/v\d\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/QiMaoXiaoShuo.js
-;https://(.+)\.wtzw\.com/.+ url script-response-body https://raw.githubusercontent.com/sngxmini/crack/master/qimao/sngxqmxs.js
+;^https?:\/\/(api-\w+|xiaoshuo)\.wtzw\.com\/api\/v\d\/ url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/QiMaoXiaoShuo.js
+^https?:\/\/.+\.wtzw\.com\/api\/.+\/user\/(get-user-info|my-center|(get-role-adv-vip-info|vip\/index)|my-level|page) url script-response-body https://hub.nange.cn/Script/QMNovel/UserInfo.js
 ^https:\/\/a-qmad\.qimao\.com\/api\/ad\/qm\/sdk\/v2\/init\?app_id= url reject
 ^https:\/\/a-qmad\.qm989\.com\/api\/ad\/union\/sdk\/v3\/get-splash url reject
 
