@@ -61,7 +61,7 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ^https:\/\/optimus-ads\.amap\.com\/uploadimg\/\w{32}\.(gif|jpg|png)$ url reject-img
 ^https:\/\/render-oss-cdn\.amap\.com\/render\/studio-dev\/image\/ url reject
 ## 首页消息横幅
-^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 ;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/dev/amap.js
 
 # >> 优酷 ups.youku.com, r.1.youku.com, m.youku.com, *.mobile.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com,  
