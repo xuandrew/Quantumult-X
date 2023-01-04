@@ -51,18 +51,28 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ^https:\/\/(api|api-cs-cn)\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Camscanner.js
 
 # 高德地图
-^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/7clgu url reject-200
-^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt\? url reject
+;^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/7clgu url reject-200
+;^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt\? url reject
 ## 我的页面
-^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+;^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 ## 首页卡片
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject
-^https:\/\/optimus-ads\.amap\.com\/uploadimg\/\w{32}\.(gif|jpg|png)$ url reject-img
-^https:\/\/render-oss-cdn\.amap\.com\/render\/studio-dev\/image\/ url reject
+;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+;^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject
+;^https:\/\/optimus-ads\.amap\.com\/uploadimg\/\w{32}\.(gif|jpg|png)$ url reject-img
+;^https:\/\/render-oss-cdn\.amap\.com\/render\/studio-dev\/image\/ url reject
 ## 首页消息横幅
 ;^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
+;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
+
+^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject
+^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/\w+\.gif url reject-img
+
 
 # >> 优酷 ups.youku.com, r.1.youku.com, m.youku.com, *.mobile.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com,  
 #^http:\/\/ykimg\.alicdn\.com\/product\/image\/2019-08-15\/9f1dfcfe8903a679055a54c443b7fdc3\.png url reject-200
