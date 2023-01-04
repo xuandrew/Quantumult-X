@@ -60,7 +60,7 @@ HOST-SUFFIX,bj.bcebos.com,Direct
 HOST-SUFFIX,crashlytics.com,Direct
 
 # 淘宝
-HOST,amdc.m.taobao.com,Direct
+host, amdc.m.taobao.com, direct
 
 host-suffix, collector.github.com, direct
 
