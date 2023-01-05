@@ -283,12 +283,6 @@ https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body htt
 # 西窗烛 lchttpapi.xczim.com
 https://lchttpapi.xczim.com/* url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/xichuangzhu.js
 
-# > 爱奇艺
-^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= url reject-img
-^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w url reject-img
-^https?:\/\/.+\/videos\/other\/ url reject
-^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
-
 # > 豆瓣
 ^https?:\/\/api\.douban\.com\/b\.*\/common_ads\?.* url reject
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
