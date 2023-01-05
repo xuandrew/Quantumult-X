@@ -285,25 +285,10 @@ https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body htt
 https://lchttpapi.xczim.com/* url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/xichuangzhu.js
 
 # > 爱奇艺
-;^https?:\/\/intl\.iqiyi\.com\/ad_external\/ url reject
-;^https?:\/\/intl\.iqiyi\.com\/video\/advertise url reject
-;^https?+:\/\/act\.vip\.iqiyi\.com\/interact\/api\/show\.do url reject-200
-;^https?+:\/\/act\.vip\.iqiyi\.com\/interact\/api\/v2\/show url reject-200
-;^https?+:\/\/iface\.iqiyi\.com\/api\/getNewAdInfo url reject-200
-;^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
-;^http:\/\/static-s\.iqiyi\.com\/common\/.+\/Small_video\/a2\/af\/.+\.png url reject
-;^http:\/\/msga/.cupid/.iqiyi/.com\/scp2\.gif url reject
-;https?:\/\/ssports\.iqiyi\.com/app\/ url reject
-;https?:\/\/ssports\.iqiyi\.com/json\/shop\/shopInfo url reject
-;https?:\/\/.+\.iqiyi\.com\/videos\/other\/20$ url reject
-;https?:\/\/static\.iqiyi\.com\/js\/common\/.+\.js url reject
-;https?:\/\/t7z\.cupid\.iqiyi\.com\/show url reject
-;^https?:\/\/u\d\.iqiyipic\.com\/image\/[\w\/]+\/oad_ url reject
-;^http:\/\/.+\.iqiyipic\.com\/image\/.+\/ad\/.+\.jpg url reject
-;https?:\/\/.+\.iqiyipic\.com\/image\/20*_100000 url reject
-
-# > 百度地图开屏广告
-#^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4) url reject
+^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz= url reject-img
+^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w url reject-img
+^https?:\/\/.+\/videos\/other\/ url reject
+^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch url reject-img
 
 # > 豆瓣
 ^https?:\/\/api\.douban\.com\/b\.*\/common_ads\?.* url reject
