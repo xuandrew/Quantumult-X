@@ -66,14 +66,15 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject-dict
 ;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
 
-;^https?:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
-;^https?:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject
-;^https?:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
-;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
-;^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
-;^https?:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
-;^https?:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
-;^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/\w+\.gif url reject-img
+;^https?:\/\/.*\.amap\.com\/ws\/boss\/order\/car\/access_guide url reject-dict
+;^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+;^https?:\/\/.*\.amap\.com\/ws\/asa\/ads_attribution url reject
+;^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+;^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+;^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+;^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+;^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+;^https?:\/\/.*\.amap\.com\/uploadimg\/\w+\.gif url reject-img
 
 
 # >> 优酷 ups.youku.com, r.1.youku.com, m.youku.com, *.mobile.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com,  
@@ -132,10 +133,10 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ;https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/chengkongyiban/shadowrocket/main/scripts/bdcloud.js
 
 # 阿里云盘（2022-10-16）@ddgksf2013
-^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Alidrive.js
+;^https?:\/\/api\.aliyundrive\.com\/apps\/v\d\/users\/apps\/widgets$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Alidrive.js
 # > 阿里云盘
 ;^https?:\/\/api\.aliyundrive\.com\/apps\/v1\/users\/apps\/widgets$ url script-response-body https://hub.nange.cn/Script/AliDrive/AliDrive.js
-^https?:\/\/api\.aliyundrive\.com\/(v2\/databox\/get_personal_info|business\/.+\/users\/vip\/info) url script-response-body https://hub.nange.cn/Script/AliDrive/SVIPInfo.js
+;^https?:\/\/api\.aliyundrive\.com\/(v2\/databox\/get_personal_info|business\/.+\/users\/vip\/info) url script-response-body https://hub.nange.cn/Script/AliDrive/SVIPInfo.js
 
 # 腾讯新闻App去广告
 ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js
