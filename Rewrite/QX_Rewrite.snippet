@@ -18,11 +18,13 @@ hostname = *.amap.com, sns.amap.com, ad.12306.cn, api.revenuecat.com, m-cloud.zh
 ;^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/12306.js
 
 # IT之家移动Web与APP新闻列表广告
-^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
-^https:\/\/api\.ithome\.com\/json\/(listpage|newslist)\/news url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
-^https:\/\/api\.ithome\.com\/json\/slide\/index url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
+^https:\/\/api\.ithome\.com\/json\/listpage\/news url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+^https:\/\/api\.ithome\.com\/json\/newslist\/news url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+^https:\/\/api\.ithome\.com\/json\/slide\/index url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 ^https:\/\/api\.zuihuimai\.com url reject
-^https:\/\/napi\.ithome\.com\/api\/(news|topmenu)\/(getfeeds|index) url script-response-body https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/ithome/ithome.ad.js
+^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+^https:\/\/napi\.ithome\.com\/api\/news\/index url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+^https:\/\/napi\.ithome\.com\/api\/topmenu\/getfeeds url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 
 # Aptv
 https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/APTV.js
