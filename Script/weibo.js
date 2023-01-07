@@ -108,13 +108,12 @@ function getModifyMethod(url) {
 }
 
 function isAd(data) {
-  if (!data) return false;
-  if (data.mblogtypename === "广告" || data.mblogtypename === "热推") {
-    return true;
-  }
-  if (data.promotion && data.promotion.type === "ad") return true;
-  if (data.common_struct && data.common_struct[0]?.actionlog?.source?.includes("ad")) return true;
-  return false;
+	if(!data) {
+		return false;
+	}
+	if(data.mblogtypename == '广告' || data.mblogtypename == '热推') {return true};
+	if(data.promotion && data.promotion.type == 'ad') {return true};
+	return false;
 }
 
 function removeCards(data) {
