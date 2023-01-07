@@ -1,28 +1,19 @@
 /*
 hostname = api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn
-
 # 微博去广告以及去除各部分推广模块 - cherish
 ;^https?://m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|unread_hot_timeline|extend|video_mixtimeline|unread_topic_timeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item|search/(finder|container_timeline|container_discover)) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo_main.js
-
 # 删除微博开屏广告 - cherish
 ;^https?://(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) url script-response-body https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js
-
 # 自定义tab皮肤
 ;^https://api.weibo.cn/2/!/client/light_skin url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo_main.js
-
 # 非会员设置tab皮肤 - cherish
 ;^https://new.vip.weibo.cn/littleskin/preview url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo_main.js
-
 # > 微博钱包
 ;(^https?:\/\/js\.t\.sinajs\.cn\/c2p\/sam\/frontend\/assets\/walletcache\.json|^https?:\/\/pay\.sc\.weibo\.com\/api\/client\/sdk\/app\/indexnew\/(index|person)|^https?:\/\/shop\.sc\.weibo\.com\/aj\/h5\/order\/center) url script-response-body https://hub.nange.cn/Script/Weibo/Wallet.js
-
 # > 微博个人信息
 ;^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(profile\/userinfo|statuses\/send|statuses\/destroy|comments\/destroy|profile|users\/(show|relation)|direct_messages\/user_list|messageflow\/notice)\? url script-response-body https://hub.nange.cn/Script/Weibo/Profile.js
-
 # > 微博会员中心
 ;^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/(vipcenter\/home|avatargj\/mall|activity\/userinfo|cardbackground\/index) url script-response-body https://hub.nange.cn/Script/Weibo/VIPCenter.js
-
-
 # > 微博_应用内弹窗广告
 ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
 # > 微博_屏蔽sdkconfig请求
