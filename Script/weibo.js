@@ -55,7 +55,7 @@ const itemMenusConfig = {
   mblog_menus_open_reward: true, // 赞赏
   mblog_menus_novelty: true, // 新鲜事投稿
   mblog_menus_favorite: true, // 收藏
-  mblog_menus_promote: false, // 推广
+  mblog_menus_promote: true, // 推广
   mblog_menus_modify_visible: true, // 设置分享范围
   mblog_menus_copy_url: true, // 复制链接
   mblog_menus_follow: true, // 关注
