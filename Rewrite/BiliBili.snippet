@@ -1,4 +1,4 @@
-hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliapi.net, manga.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, dataflow.biliapi.com,124.239.240.*,101.89.57.66, 218.94.210.66,240e:b1:9801:206:11:0:0:*
+hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliapi.net, manga.bilibili.com, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
 
 # BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? url reject-dict
@@ -69,7 +69,8 @@ hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliap
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/show\/tab url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_json.js
 
 # BiliBili_哔哩哔哩_我的页面处理@ddgksf2013
-^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_json.js
+;^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/mine url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_json.js
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
 
 # BiliBili_哔哩哔哩_Proto去广告@app2smile
 ;^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
@@ -79,4 +80,4 @@ hostname = app.bilibili.com, api.live.bilibili.com, api.bilibili.com, api.biliap
 ;^https:\/\/api\.bilibili\.com\/x\/garb\/v2\/mall\/suit\/detail url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/bili-suit-detail.js
 
 # BiliBili 影视番剧
-^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BiliBili.js
+;^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BiliBili.js
