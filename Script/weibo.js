@@ -18,52 +18,52 @@ const mainConfig={isDebug:!1,removeHomeVip:!0,removeHomeCreatorTask:!0,removeRel
 const mainConfig = {
   blockIds: [],	//屏蔽的用户id列表
   modifyMenus: true, // 编辑上下文菜单
-  removeExtendInfo: true, // 删除拓展卡片
-  removeFollow: true, // 关注博主
+  removeExtendInfo: false, // 删除拓展卡片
+  removeFollow: false, // 关注博主
   removeHomeVip: true, // 个人中心的 vip 栏
-  removeLiveMedia: true, // 首页直播
+  removeLiveMedia: false, // 首页直播
   removeGood: true, // 微博主好物种草
-  removeInterestFriendInTopic: true, // 超话 超话里的好友
-  removeInterestTopic: true, // 超话 可能感兴趣的超话 + 好友关注
-  removeInterestUser: true, // 用户页 可能感兴趣的人
+  removeInterestFriendInTopic: false, // 超话 超话里的好友
+  removeInterestTopic: false, // 超话 可能感兴趣的超话 + 好友关注
+  removeInterestUser: false, // 用户页 可能感兴趣的人
   removeLvZhou: true, // 绿洲模块
   removeNextVideo: true, // 关闭自动播放下一个视频
   removePinedTrending: true, // 删除热搜列表置顶条目
   removeRelate: true, // 相关推荐
   removeRelateItem: true, // 评论区相关内容
   removeRecommendItem: true, // 评论区推荐内容
-  removeRewardItem: true, // 微博详情页打赏模块
+  removeRewardItem: false, // 微博详情页打赏模块
   removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
-  removeUnfollowTopic: true, // 超话 未关注的
+  removeUnfollowTopic: false, // 超话 未关注的
   removeUnusedPart: true // 超话 乱七八糟没用的部分
 };
 
 // 菜单配置
 const itemMenusConfig = {
-  creator_task: false, // 转发任务
-  mblog_menus_custom: false, // 寄微博
-  mblog_menus_video_later: false, // 可能是稍后再看 没出现过
-  mblog_menus_comment_manager: false, // 评论管理
-  mblog_menus_avatar_widget: false, // 头像挂件
-  mblog_menus_card_bg: false, // 卡片背景
+  creator_task: true, // 转发任务
+  mblog_menus_custom: true, // 寄微博
+  mblog_menus_video_later: true, // 可能是稍后再看 没出现过
+  mblog_menus_comment_manager: true, // 评论管理
+  mblog_menus_avatar_widget: true, // 头像挂件
+  mblog_menus_card_bg: true, // 卡片背景
   mblog_menus_long_picture: true, // 生成长图
   mblog_menus_delete: true, // 删除
   mblog_menus_edit: true, // 编辑
   mblog_menus_edit_history: true, // 编辑记录
   mblog_menus_edit_video: true, // 编辑视频
-  mblog_menus_sticking: false, // 置顶
-  mblog_menus_open_reward: false, // 赞赏
-  mblog_menus_novelty: false, // 新鲜事投稿
-  mblog_menus_favorite: false, // 收藏
-  mblog_menus_promote: false, // 推广
-  mblog_menus_modify_visible: false, // 设置分享范围
+  mblog_menus_sticking: true, // 置顶
+  mblog_menus_open_reward: true, // 赞赏
+  mblog_menus_novelty: true, // 新鲜事投稿
+  mblog_menus_favorite: true, // 收藏
+  mblog_menus_promote: true, // 推广
+  mblog_menus_modify_visible: true, // 设置分享范围
   mblog_menus_copy_url: true, // 复制链接
-  mblog_menus_follow: false, // 关注
-  mblog_menus_video_feedback: false, // 播放反馈
+  mblog_menus_follow: true, // 关注
+  mblog_menus_video_feedback: true, // 播放反馈
   mblog_menus_shield: true, // 屏蔽
   mblog_menus_report: true, // 投诉
-  mblog_menus_apeal: false, // 申诉
-  mblog_menus_home: false // 返回首页
+  mblog_menus_apeal: true, // 申诉
+  mblog_menus_home: true // 返回首页
 };
 const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
 const modifyStatusesUrls = [
