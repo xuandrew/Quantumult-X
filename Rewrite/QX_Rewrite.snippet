@@ -56,35 +56,35 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ;^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/7clgu url reject-200
 # 高德地图 // *.amap.com, sns.amap.com
 # 首页卡片
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 首页顶部消息横幅
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 我的页面卡片
 ;^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 其他
-^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+;^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
+;^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
 # 开屏广告
-^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject-dict
+;^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject-dict
 ;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
 
 # > 高德地图_Tip请求@ddgksf2013
 ^https?:\/\/.*\.amap\.com\/ws\/boss\/order_web\/\w{8}_information url reject-200
 # > 高德地图_首页底部处理@ddgksf2013
-;^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/.*\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_通用广告请求@ddgksf2013
-;^https?:\/\/.*\.amap\.com\/ws\/asa\/ads_attribution url reject
+^https?:\/\/.*\.amap\.com\/ws\/asa\/ads_attribution url reject
 # > 高德地图_开屏广告@ddgksf2013
-;^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/.*\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_首页顶部推广@ddgksf2013
-;^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/.*\.amap\.com\/ws\/msgbox\/pull url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_我的页面@ddgksf2013
-;^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
+^https?:\/\/.*\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaas url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_搜索框热词@ddgksf2013
 ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/new_hotword url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_搜索框scene@ddgksf2013
-;^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+^https?:\/\/.*\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
 # > 高德地图_首页左上角gif@ddgksf2013
 ^https?:\/\/.*\.amap\.com\/uploadimg\/\w+\.gif url reject-img
 # > 高德地图_首页右中'2022出行报告'[自行添加]@ddgksf2013
