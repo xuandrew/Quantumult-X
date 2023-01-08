@@ -35,7 +35,7 @@ const mainConfig = {
   removeRewardItem: false, // 微博详情页打赏模块
   removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
   removeUnfollowTopic: false, // 超话 未关注的
-  removeUnusedPart: false // 超话 乱七八糟没用的部分
+  removeUnusedPart: true // 超话 乱七八糟没用的部分
 };
 
 // 菜单配置
