@@ -35,7 +35,7 @@ const mainConfig = {
   removeRewardItem: false, // 微博详情页打赏模块
   removeSearchWindow: true, // 搜索页滑动窗口 有的不是广告
   removeUnfollowTopic: false, // 超话 未关注的
-  removeUnusedPart: true // 超话 乱七八糟没用的部分
+  removeUnusedPart: false // 超话 乱七八糟没用的部分
 };
 
 // 菜单配置
@@ -262,9 +262,7 @@ function userHandler(data) {
   for (let item of data.items) {
     let isAdd = true;
     if (item.category === "group") {
-      try {
-        if (item.items[0]["data"]["desc"] === "可能感兴趣的人") isAdd = false;
-      } catch (error) {}
+      if (item.items[0]["data"]["desc"] === "可能感兴趣的人") isAdd = false;
     }
     if (isAdd) {
       if (item.data?.common_struct) {
@@ -329,6 +327,10 @@ function removeHome(data) {
     } else if (itemId === "100505_-_top8") {
       removeTopMine(item);
       newItems.push(item);
+    } else if (itemId === "100505_-_manage") {
+      if (item.style) delete item.style;
+      if (item.images) delete item.images;
+      newItems.push(item);
     } else if (
       [
         "mine_attent_title",
@@ -345,8 +347,6 @@ function removeHome(data) {
     } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
       continue;
     } else {
-      if (item.images) delete item.images;
-      if (item.rightIcon) delete item.rightIcon;
       newItems.push(item);
     }
   }
@@ -406,11 +406,9 @@ function removeSearchMain(data) {
 
 // 新版主页广告
 function removeMain(data) {
-  if (!data.items) {
-      if (data.loadedInfo && data.loadedInfo.headers) {
-        delete data.loadedInfo.headers;
-      }
-    return data;
+  if (!data.items) return data;
+  if (data.loadedInfo && data.loadedInfo.headers) {
+    delete data.loadedInfo.headers;
   }
   let newItems = [];
   for (let item of data.items) {
@@ -423,11 +421,9 @@ function removeMain(data) {
 }
 
 function removeTopic(data) {
-  if (!data.items) {
-    if (data.loadedInfo && data.loadedInfo.headers) {
-      delete data.loadedInfo.headers;
-    }
-  return data;
+  if (!data.items) return data;
+  if (data.loadedInfo && data.loadedInfo.headers) {
+    delete data.loadedInfo.headers;
   }
   let items = data.items;
   let newItems = [];
