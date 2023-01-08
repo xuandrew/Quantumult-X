@@ -15,11 +15,12 @@ body = JSON.stringify(obj);
 }
 
 else if (url.indexOf(home) != -1) {
+	obj.content.user.prime.is_prime = true;
 	obj.content.user.is_prime = true;
 	body = JSON.stringify(obj);
 }
-obj.data.vip_item.type = 1 ,
-obj.data.vip_item.end_date = 2533268164
-obj.data.vip_item.expireTime: "3070928235000",
+//obj.data.vip_item.type = 1 ,
+//obj.data.vip_item.end_date = 2533268164
+//obj.data.vip_item.expireTime: "3070928235000",
 
 $done({body});
