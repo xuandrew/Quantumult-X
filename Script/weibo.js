@@ -277,10 +277,13 @@ function userHandler(data) {
 
 function removeHomeVip(data) {
   if (!data.header) return data;
-  if (data.header.vipView) {
-    data.header.vipView = null;
+  if (data.header.vipCenter) {
+    delete data.header.vipCenter;
   }
-  if (data.header?.vipIcon) {
+  if (data.header.vipView) {
+    delete data.header.vipView;
+  }
+  if (data.header.vipIcon) {
     delete data.header.vipIcon;
   }
   return data;
@@ -296,7 +299,7 @@ function updateFollowOrder(item) {
   }
 }
 
-function removeTopMine(data) {
+function removeTop8(data) {
   if (!data) return data;
   if (data.items) {
     data.items = data.items.filter((i) => {
@@ -325,29 +328,18 @@ function removeHome(data) {
       updateFollowOrder(item);
       newItems.push(item);
     } else if (itemId === "100505_-_top8") {
-      removeTopMine(item);
+      removeTop8(item);
       newItems.push(item);
-    } else if (itemId === "100505_-_manage") {
-      if (item.style) delete item.style;
-      if (item.images) delete item.images;
-      newItems.push(item);
-    } else if (
-      [
-        "mine_attent_title",
-        "100505_-_meattent_pic",
-        "100505_-_newusertask",
-        "100505_-_vipkaitong",
-        "100505_-_hongbao2022",
-        "100505_-_adphoto",
-        "100505_-_advideo",
-        "2022pk_game_tonglan"
-      ].indexOf(itemId) !== -1
-    ) {
-      continue;
-    } else if (itemId.match(/100505_-_meattent_-_\d+/)) {
-      continue;
+    } else if (item.category === "mine") {
+      if (itemId === "100505_-_manage") {
+        if (item.style) delete item.style;
+        if (item.images) delete item.images;
+        newItems.push(item);
+      } else {
+        continue;
+      }
     } else {
-      newItems.push(item);
+      continue;
     }
   }
   data.items = newItems;
