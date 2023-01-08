@@ -14,7 +14,6 @@ body = JSON.stringify(obj);
 }
 
 else if (url.indexOf(home) != -1) {
-	obj.content.user.prime.is_prime = true;
 	obj.content.user.is_prime = true;
 	body = JSON.stringify(obj);
 }
