@@ -413,19 +413,7 @@ function removeTopic(data) {
   for (let item of items) {
     if (item.category === "feed") {
       if (!isAd(item.data)) newItems.push(item);
-    } else if (item.category === "group") {
-      if (item.items.length > 0 && item.items[0].data?.itemid?.includes("search_input")) {
-        item.items = item.items.filter((e) =>
-          e?.data?.itemid?.includes("mine_topics") ||
-          e?.data?.itemid?.includes("search_input")
-        );
-        item.items[0].data.hotwords = [{word: "搜索超话", tip: ""}];
-        newItems.push(item);
-      } else {
-        if (item.items.length > 0 && item.items[0].data?.itemid?.includes("top_title")) continue;
-        newItems.push(item);
-      }
-    } else if (item.category === "card") {
+    } else {
       continue;
     }
   }
