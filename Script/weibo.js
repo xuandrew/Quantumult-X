@@ -365,14 +365,17 @@ function removeSearch(data) {
       }
     }
   }
-  data.items = newItems;
-  // 去除搜索框填充词
   if (data.loadedInfo) {
-    data.loadedInfo.searchBarContent = {};
+    // 去除搜索框填充词
+    if (data.loadedInfo.searchBarContent) {
+      data.loadedInfo.searchBarContent = [];
+    }
+    // 去除搜索背景图片
     if (data.loadedInfo.headerBack) {
       data.loadedInfo.headerBack.channelStyleMap = {};
     }
   }
+  data.items = newItems;
   return data;
 }
 
