@@ -1,15 +1,15 @@
 hostname = app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net
 
-# ～ BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
+# BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? url reject-dict
 
-# ～ BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
+# BiliBili_哔哩哔哩_屏蔽广告浮窗@ddgksf2013
 ^https?:\/\/api\.bilibili\.com\/pgc\/activity\/deliver\/material\/receive url reject-dict
 
-# ～ BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
+# BiliBili_哔哩哔哩_屏蔽IP请求@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip url reject
 
-# ～ BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
+# BiliBili_哔哩哔哩_屏蔽DefaultWord@ddgksf2013
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.interface\.v1\.Search\/Default url reject
 
 # BiliBili_哔哩哔哩_屏蔽首页右上活动[卸载重装]@ddgksf2013
@@ -52,7 +52,7 @@ hostname = app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibil
 ;^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr url reject-dict
 
 # BiliBili_哔哩哔哩_漫画去广告@ddgksf2013
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash) url reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) url reject-dict
 
 # BiliBili_哔哩哔哩_推荐去广告@ddgksf2013
 ;^https?:\/\/app\.bilibili\.com\/x\/v2\/feed\/index url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-json.js
