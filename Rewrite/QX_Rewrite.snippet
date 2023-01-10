@@ -145,6 +145,8 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/AdGuardProCrack.js
 
 # 百度网盘
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/welfare\/list url reject-200
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
 ;https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js
 ^https:\/\/pan\.baidu\.com\/((rest\/\d\.\d\/membership\/(volume|product|user))|cms\/config\?method=query|act\/v2\/skin\/(userset|inuse)|api\/user\/getinfo|wap\/vip\/memberChannel).* url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BaiduCloud.js
 ;https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/chengkongyiban/shadowrocket/main/scripts/bdcloud.js
