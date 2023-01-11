@@ -128,8 +128,8 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 # 百度贴吧
 # 贴吧全面去广告 //c.tieba.baidu.com, tiebac.baidu.com
 # 须搭配分流: IP-CIDR, 180.76.76.200/32, REJECT
-^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
-^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
+;^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
+;^http(:\/\/c\.tieba|s:\/\/tiebac)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
 #^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/frs\/(threadlist|generalTabList)\?cmd url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js
 #^https:\/\/tieba-ares\.cdn\.bcebos\.com\/mis url reject-200
 
