@@ -69,6 +69,7 @@ const otherUrls = {
   "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
   "/2/profile/container_timeline": "userHandler", // 用户主页
   "/2/profile/me": "removeHome", // 个人页模块
+  "/2/push/active": "removeRed", // 右上角红包
   "/2/search/container_discover": "removeSearch", // 搜索 tab 信息流
   "/2/search/container_timeline": "removeSearch", // 搜索 tab 信息流
   "/2/search/finder": "removeSearchMain",
@@ -231,12 +232,13 @@ function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
     if (data.cards[0].card_group) {
-      data.cards[0].card_group = data.cards[0].card_group.filter((c) =>
-        !(
-          c?.actionlog?.ext?.includes("ads_word") ||
-          c?.itemid?.includes("t:51") ||
-          c?.itemid?.includes("ads_word")
-        )
+      data.cards[0].card_group = data.cards[0].card_group.filter(
+        (c) =>
+          !(
+            c?.actionlog?.ext?.includes("ads_word") ||
+            c?.itemid?.includes("t:51") ||
+            c?.itemid?.includes("ads_word")
+          )
       );
     }
   }
@@ -292,18 +294,17 @@ function updateFollowOrder(item) {
 function removeTop8(data) {
   if (!data) return data;
   if (data.items) {
-    data.items = data.items.filter((i) => {
-      return (
+    data.items = data.items.filter(
+      (i) =>
         i.itemId === "100505_-_album" || // 我的相册
         i.itemId === "100505_-_like" || // 赞/收藏
         i.itemId === "100505_-_watchhistory" || // 浏览记录
         i.itemId === "100505_-_draft" // 草稿箱
-        // i.itemId === "100505_-_pay" || // 我的钱包
-        // i.itemId === "100505_-_ordercenter" || // 我的订单
-        // i.itemId === "100505_-_productcenter" || // 创作中心
-        // i.itemId === "100505_-_promote" || // 广告中心
-      );
-    });
+      // i.itemId === "100505_-_pay" || // 我的钱包
+      // i.itemId === "100505_-_ordercenter" || // 我的订单
+      // i.itemId === "100505_-_productcenter" || // 创作中心
+      // i.itemId === "100505_-_promote" || // 广告中心
+    );
   }
   return data;
 }
@@ -333,6 +334,18 @@ function removeHome(data) {
     }
   }
   data.items = newItems;
+  return data;
+}
+
+function removeRed(data) {
+  if (!data) return data;
+  if (data.feed_redpacket) {
+    data.feed_redpacket.starttime = "2208960000";
+    data.feed_redpacket.interval = "31536000";
+    data.feed_redpacket.endtime = "2209046399";
+    data.feed_redpacket.icon = null;
+    data.feed_redpacket.finish_icon = null;
+  }
   return data;
 }
 
@@ -449,7 +462,11 @@ function topicHandler(data) {
         let cGroup = c.card_group;
         if (!cGroup) continue;
         let cGroup0 = cGroup[0];
-        if (["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(cGroup0.itemid) !== -1) {
+        if (
+          ["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(
+            cGroup0.itemid
+          ) !== -1
+        ) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
