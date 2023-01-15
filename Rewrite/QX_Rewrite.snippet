@@ -166,7 +166,8 @@ https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body 
 ;^https?:\/\/api\.aliyundrive\.com\/(v2\/databox\/get_personal_info|business\/.+\/users\/vip\/info) url script-response-body https://hub.nange.cn/Script/AliDrive/SVIPInfo.js
 
 # 腾讯新闻App去广告
-^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js
+;^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js
+^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/qq_news.js
 
 # 瑞幸咖啡 *.luckincoffeecdn.com,
 ;^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/+.? url reject-200
