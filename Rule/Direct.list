@@ -63,6 +63,7 @@ HOST-SUFFIX,crashlytics.com,Direct
 ;host, amdc.m.taobao.com, direct
 
 host-suffix, collector.github.com, direct
+host-suffix, log.snssdk.com, direct
 
 # 微博
 HOST,h5.sinaimg.cn,Direct
