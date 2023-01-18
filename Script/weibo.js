@@ -31,7 +31,7 @@ const mainConfig = {
   removeInterestTopic: false, // 移除可能感兴趣的超话
   removeInterestUser: false, // 移除可能感兴趣的人
   removeLvZhou: true, // 移除绿洲模块
-  removeTab: false, // 移除广场
+  removeTab: true, // 移除广场
   removeUnfollowTopic: false, // 移除未关注的人
   removeUnusedPart: false // 移除乱七八糟没用的部分
 };
