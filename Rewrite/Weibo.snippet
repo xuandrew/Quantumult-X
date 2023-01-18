@@ -20,9 +20,9 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/wb_main.js
-# > 微博_应用内弹窗广告
+# > 微博_应用内弹窗广告@ddgksf2013
 ^https?:\/\/(preload-click|preload-impression)\.uve\.weibo\.com\/(interface\/wbpullad\/wbpullad_click\.php|wbapplua\/get_wbpullad_log\.lua) url reject
-# > 微博_屏蔽sdkconfig请求
+# > 微博_屏蔽sdkconfig请求@ddgksf2013
 ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
 # > 微博_Spotlight@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/hot\/hours_spotlight url reject-dict
