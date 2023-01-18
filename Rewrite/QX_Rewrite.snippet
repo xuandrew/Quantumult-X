@@ -21,6 +21,10 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, ad.12306.cn, api.revenuecat
 ;^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*)$ url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.index.js
 # 搜索结果广告(baidu)
 ^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.js
+# 内容农场(bing)
+^https?:\/\/(www\.bing)(\.\w{2,4}){1,2}\/(search\?.*|\?sa=|\?FORM)(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 内容农场(google)
+^https?:\/\/(www\.google)(\.\w{2,4}){1,2}\/search\?(?!.*?(apps=)).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
 
 # 12306 去除倒计时
 ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/12306.js
