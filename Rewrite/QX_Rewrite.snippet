@@ -232,11 +232,16 @@ https://m5.amap.com/ws/shield/frogserver/aocs/updatable url script-response-body
 ^https?:\/\/pgdt\.gtimg\.cn url reject
 ^https?:\/\/c\.l\.qq\/.com url reject
 
-# > 酷安完美去广告@kk pp
-^https?:\/\/api.coolapk.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Coolapk.js
-#^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk url reject
-#^http?:\/\/image\.coolapk\.com\/image\/2022\/1103\/23 url reject-200
-# > 酷安热搜@ddgksf2013
+# > 酷安完美去广告
+# > 酷安_推广广告@ddgksf2013
+^https?:\/\/api.coolapk.com\/v6\/dataList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# > 酷安_首页广告@ddgksf2013
+^https?:\/\/api.coolapk.com\/v6\/main\/indexV8 url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# > 酷安_评论广告@ddgksf2013
+^https?:\/\/api.coolapk.com\/v6\/feed\/replyList url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# > 酷安_商品推广@ddgksf2013
+^https?:\/\/api.coolapk.com\/v6\/feed\/detail url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/coolapk.js
+# > 酷安_屏蔽热词@ddgksf2013
 ^https?:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch url reject-dict
 
 # 喜马拉雅听去广告
