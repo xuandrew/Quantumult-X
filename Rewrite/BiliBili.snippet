@@ -1,5 +1,8 @@
 hostname = app.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com, *.bilibili.com, *.bilibili.*, grpc.biliapi.net,api.biliapi.net, -broadcast.chat.bilibili.com, -*cdn*.biliapi.net, -*tracker*.biliapi.net, *.bili*.*, 124.239.240.*, 101.89.57.66, 218.94.210.66, 240e:b1:9801:206:11:0:0:*
 
+# ～ BiliBili_哔哩哔哩_屏蔽直播页顶部轮播图@ddgksf2013
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_json.js
+
 # BiliBili_哔哩哔哩_屏蔽直播间商品广告浮窗@ddgksf2013
 ^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v\d\/ecommerce-user\/get_shopping_info\? url reject-dict
 
