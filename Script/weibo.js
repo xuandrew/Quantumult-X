@@ -506,7 +506,7 @@ function removeMain(data) {
     return data;
   }
   if (data.loadedInfo && data.loadedInfo.headers) {
-    delete data.loadedInfo.headers;
+    data.loadedInfo.headers = {};
   }
   let newItems = [];
   for (let item of data.items) {
@@ -525,7 +525,7 @@ function removeTopic(data) {
     return data;
   }
   if (data.loadedInfo && data.loadedInfo.headers) {
-    delete data.loadedInfo.headers;
+    data.loadedInfo.headers = {};
   }
   let items = data.items;
   let newItems = [];
