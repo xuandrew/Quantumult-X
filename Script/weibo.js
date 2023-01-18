@@ -623,13 +623,13 @@ function itemExtendHandler(data) {
       data.follow_data = null;
     }
   }
-  if (mainConfig.removeRewardItem) {
-    if (data.reward_info) {
-      data.reward_info = null;
-    }
-  }
+  //if (mainConfig.removeRewardItem) {
+  //  if (data.reward_info) {
+  //    data.reward_info = null;
+  //  }
+  // }
+ 
   // 删除拓展卡片
-
   if (data?.extend_info) {
     data.extend_info = {};
   }
