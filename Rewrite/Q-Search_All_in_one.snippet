@@ -49,6 +49,12 @@ hostname = duckduckgo.com
 # gh    xxx (GitHub)
 ^https:\/\/duckduckgo.com\/\?q=gh\+([^&]+).+ url 302 https://github.com/search?q=$1
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+gh.+ url 302 https://github.com/search?q=$1
+# gu    xxx (GitHub User)
+^https:\/\/duckduckgo.com\/\?q=gu\+([^&]+).+ url 302 https://github.com/search?q=$1&type=users
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+gu.+ url 302 https://github.com/search?q=$1&type=users
+# gc    xxx (GitHub Code)
+^https:\/\/duckduckgo.com\/\?q=gc\+([^&]+).+ url 302 https://github.com/search?o=desc&q=$1&s=indexed&type=Code
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+gc.+ url 302 https://github.com/search?o=desc&q=$1&s=indexed&type=Code
 # so    xxx (Stack Overflow)
 ^https:\/\/duckduckgo.com\/\?q=so\+([^&]+).+ url 302 https://stackoverflow.com/search?q=$1
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+so.+ url 302 https://stackoverflow.com/search?q=$1
