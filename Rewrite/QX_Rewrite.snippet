@@ -70,6 +70,8 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, ad.12306.cn, api.revenuecat
 ;^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject-dict
 ;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
 
+# > 高德地图_首页右中广告@ddgksf2013
+https://m5.amap.com/ws/shield/frogserver/aocs/updatable url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_附近页面@ddgksf2013
 ^https?:\/\/.*\.amap\.com\/ws\/shield\/search\/nearbyrec_smart url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
 # > 高德地图_打车页面@ddgksf2013
