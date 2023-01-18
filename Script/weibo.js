@@ -11,7 +11,7 @@ const mainConfig = {
   // 微博详情页配置
   blockIds: [], // 屏蔽的账号id
   modifyMenus: true, // 自定义编辑上下文菜单
-  removeFollow: true, // 移除关注博主
+  removeFollow: false, // 移除关注博主
   removeGood: true, // 移除博主好物种草
   removeRecommendItem: true, // 移除评论区推荐内容
   removeRelate: true, // 移除相关推荐
