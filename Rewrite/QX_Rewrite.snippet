@@ -48,14 +48,17 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, ad.12306.cn, api.revenuecat
 #^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotWords url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotSearchTerms url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
 
-#百度地图去广告
+# 百度地图去广告
 ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js
 
 # Photoshop（2021-03-21） by ddgksf2013
 ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Ps.js
 
 # 扫描全能王
-^https:\/\/(api|api-cs-cn)*\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Camscanner.js
+;^https:\/\/(api|api-cs-cn)*\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Camscanner.js
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?.+\_(RoadMap\&sign) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/SMQNW/smqnw.js
+^https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?.+\%(7CCamScanner_Pdfword%) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/SMQNW/smqnw.js
+^https:\/\/v3\.camscanner\.com\/app url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/SMQNW/smqnw.js
 
 # 高德地图
 ;^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/7clgu url reject-200
