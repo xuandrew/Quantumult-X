@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-19 16:11
+// 2023-01-19 17:21
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -24,7 +24,7 @@ const mainConfig = {
   removeNextVideo: true, // 关闭自动播放下一个视频
 
   // 热搜配置
-  removePinedTrending: false, // 移除热搜列表置顶条目
+  removePinedTrending: true, // 移除热搜列表置顶条目
   removeSearchWindow: true, // 移除搜索页滑动窗口
 
   // 超话配置
@@ -44,7 +44,7 @@ const itemMenusConfig = {
   mblog_menus_card_bg: true, // 卡片背景
   mblog_menus_comment_manager: true, // 评论管理
   mblog_menus_copy_url: true, // 复制链接
-  mblog_menus_custom: trie, // 寄微博
+  mblog_menus_custom: true, // 寄微博
   mblog_menus_delete: true, // 删除
   mblog_menus_edit: true, // 编辑
   mblog_menus_edit_history: true, // 编辑记录
@@ -54,7 +54,7 @@ const itemMenusConfig = {
   mblog_menus_home: true, // 返回首页
   mblog_menus_long_picture: true, // 生成长图
   mblog_menus_modify_visible: true, // 设置分享范围
-  mblog_menus_novelty: true, // 新鲜事投稿
+  mblog_menus_novelty: false, // 新鲜事投稿
   mblog_menus_open_reward: true, // 赞赏
   mblog_menus_promote: true, // 推广
   mblog_menus_report: true, // 投诉
