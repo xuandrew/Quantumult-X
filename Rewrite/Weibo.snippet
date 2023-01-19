@@ -113,7 +113,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get url reject-dict
 
 # 去除红包信息
-^https:\/\/api\.weibo\.cn\/2\/video\/redpacket url reject-dict
+;^https:\/\/api\.weibo\.cn\/2\/video\/redpacket url reject-dict
 
 # 跳过重定向页面以直接访问 //weibo.cn, shop.sc.weibo.com, t.cn, sinaurl.cn
 ^https:\/\/weibo\.cn\/sinaurl\?(.*&)?(u|toasturl|goto)= url script-echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
