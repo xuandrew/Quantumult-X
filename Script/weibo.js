@@ -78,6 +78,7 @@ const modifyStatusesUrls = [
 ];
 const otherUrls = {
   "/2/checkin/show": "removeCheckin", // 签到任务
+  "/2/client/publisher_list": "publishHandler", // 发布按钮
   "/2/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
   "/2/container/get_item": "containerHandler", // 列表相关
   "/2/messageflow": "removeMsgAd", // 私信推广
@@ -242,6 +243,18 @@ function removeTimeLine(data) {
 // 移除首页签到
 function removeCheckin(data) {
   data.show = 0;
+}
+
+// 首页发布按钮
+function publishHandler(data) {
+  if (!data.elements) {
+    return data;
+  }
+  data.elements = data.elements.filter(
+    (e) =>
+      e.app_name === "写微博" || e.app_name === "图片" || e.app_name === "视频"
+  );
+  return data;
 }
 
 // 评论区相关和推荐内容
