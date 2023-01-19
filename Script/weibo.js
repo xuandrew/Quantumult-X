@@ -128,13 +128,10 @@ function isAd(data) {
   if (data.mblogtypename === "广告" || data.mblogtypename === "热推") {
     return true;
   }
-  if (data.promotion && data.promotion.type === "ad") {
+  if (data.promotion?.type === "ad") {
     return true;
   }
-  if (
-    data.common_struct &&
-    data.common_struct[0]?.actionlog?.source?.includes("ad")
-  ) {
+  if (data.common_struct?.[0]?.actionlog?.source.includes("ad")) {
     return true;
   }
   return false;
@@ -162,14 +159,11 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165].indexOf(cardType) !== -1) {
+      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
       } else {
-        if ([180, 1007].indexOf(cardType) !== -1) {
-          continue;
-        }
         newCards.push(card);
       }
     }
@@ -227,13 +221,11 @@ function removeTimeLine(data) {
     if (!isAd(s)) {
       lvZhouHandler(s);
       if (!isBlock(s)) {
-        if (s.category === "feed") {
-          // 移除拓展信息
-          if (s?.common_struct) {
-            delete s.common_struct;
-          }
-          newStatuses.push(s);
+        // 移除拓展信息
+        if (s?.common_struct) {
+          delete s.common_struct;
         }
+        newStatuses.push(s);
       }
     }
   }
@@ -322,9 +314,9 @@ function removePage(data) {
       data.cards[0].card_group = data.cards[0].card_group.filter(
         (c) =>
           !(
-            c?.actionlog?.ext?.includes("ads_word") ||
-            c?.itemid?.includes("t:51") ||
-            c?.itemid?.includes("ads_word")
+            c?.actionlog?.ext.includes("ads_word") ||
+            c?.itemid.includes("t:51") ||
+            c?.itemid.includes("ads_word")
           )
       );
     }
@@ -490,7 +482,7 @@ function checkSearchWindow(item) {
     item.data?.card_type === 1005 ||
     item.data?.itemid === "finder_window" ||
     item.data?.itemid === "more_frame" ||
-    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
+    item.data?.mblog?.page_info?.actionlog?.source.includes("ad")
   ) {
     return true;
   }
@@ -552,7 +544,7 @@ function removeMain(data) {
   if (!data.items) {
     return data;
   }
-  if (data.loadedInfo && data.loadedInfo.headers) {
+  if (data.loadedInfo?.headers) {
     data.loadedInfo.headers = {};
   }
   let newItems = [];
@@ -768,7 +760,7 @@ function removePhp(data) {
 
 // 移除开屏广告
 function removeLua(data) {
-  if (data.cached_ad && data.cached_ad.ads) {
+  if (data.cached_ad?.ads) {
     for (let item of data["cached_ad"]["ads"]) {
       item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       item["show_count"] = 0;
