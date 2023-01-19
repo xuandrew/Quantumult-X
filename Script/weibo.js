@@ -62,6 +62,7 @@ const itemMenusConfig = {
   mblog_menus_video_feedback: true, // 播放反馈
   mblog_menus_video_later: true // 可能是稍后再看
 };
+// 匹配的URL
 const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
 const modifyStatusesUrls = [
   "/2/groups/timeline",
@@ -112,6 +113,7 @@ function getModifyMethod(url) {
   return null;
 }
 
+// 判断信息流是不是广告、热推
 function isAd(data) {
   if (!data) {
     return false;
@@ -162,6 +164,7 @@ function removeCards(data) {
   data.cards = newCards;
 }
 
+// 移除绿洲
 function lvZhouHandler(data) {
   if (!mainConfig.removeLvZhou) {
     return data;
@@ -182,7 +185,7 @@ function lvZhouHandler(data) {
   data.common_struct = newStruct;
 }
 
-// 屏蔽用户
+// 屏蔽用户id
 function isBlock(data) {
   let blockIds = mainConfig.blockIds || [];
   if (blockIds.length === 0) {
@@ -212,6 +215,7 @@ function removeTimeLine(data) {
       lvZhouHandler(s);
       if (!isBlock(s)) {
         if (s.category === "feed") {
+          // 移除拓展信息
           if (s?.common_struct) {
             delete s.common_struct;
           }
@@ -223,7 +227,7 @@ function removeTimeLine(data) {
   data.statuses = newStatuses;
 }
 
-// 移除tab1签到
+// 移除首页签到
 function removeCheckin(data) {
   data.show = 0;
 }
@@ -244,6 +248,7 @@ function removeComments(data) {
   let newItems = [];
   for (let item of items) {
     let adType = item.adType || "";
+    // 移除评论区推广、过滤提示
     if (delType.indexOf(adType) === -1 && item.type !== 6) {
       newItems.push(item);
     }
@@ -251,7 +256,7 @@ function removeComments(data) {
   data.datas = newItems;
 }
 
-// 处理感兴趣的超话和超话里的好友
+// 感兴趣的超话和超话里的好友
 function containerHandler(data) {
   if (mainConfig.removeInterestFriendInTopic) {
     if (data.card_type_name === "超话里的好友") {
@@ -267,6 +272,7 @@ function containerHandler(data) {
   }
 }
 
+// 移除私信推广
 function removeMsgAd(data) {
   if (!data.messages) {
     return data;
@@ -283,7 +289,7 @@ function removeMsgAd(data) {
   return data;
 }
 
-// 删除热搜列表置顶项目,删除推广项目
+// 移除热搜列表置顶项目、推广项目
 function removePage(data) {
   removeCards(data);
   if (mainConfig.removePinedTrending && data.cards && data.cards.length > 0) {
@@ -329,6 +335,7 @@ function userHandler(data) {
   return data;
 }
 
+// 移除会员
 function removeHomeVip(data) {
   if (!data.header) {
     return data;
@@ -355,6 +362,7 @@ function updateFollowOrder(item) {
   }
 }
 
+// 我的页面置顶项目
 function removeTop8(data) {
   if (!data) {
     return data;
@@ -375,6 +383,7 @@ function removeTop8(data) {
   return data;
 }
 
+// 我的页面
 function removeHome(data) {
   if (!data.items) {
     return data;
@@ -396,22 +405,27 @@ function removeHome(data) {
         if (item.style) {
           item.style = {};
         }
+        // 移除分隔符的点点点
         if (item.images) {
           item.images = {};
         }
         newItems.push(item);
       } else if (itemId === "100505_-_manage2") {
+        // 移除面板样式
         if (item.footer) {
           item.footer = {};
         }
+        // 移除框内推广
         if (item.body) {
           item.body = {};
         }
         newItems.push(item);
       } else {
+        // 其他项目全部移除
         continue;
       }
     } else {
+      // 其他项目全部移除
       continue;
     }
   }
@@ -419,6 +433,7 @@ function removeHome(data) {
   return data;
 }
 
+// 移除首页右上角红包
 function removeRed(data) {
   if (!data) {
     return data;
@@ -441,7 +456,6 @@ function checkSearchWindow(item) {
     return false;
   }
   if (
-    item?.itemId ||
     item.data?.card_type === 19 ||
     item.data?.card_type === 208 ||
     item.data?.card_type === 217 ||
@@ -468,6 +482,10 @@ function removeSearch(data) {
       }
     } else {
       if (!checkSearchWindow(item)) {
+        // 搜索页中间的热议话题、热门人物
+        if (item.category === "group") {
+          continue;
+        }
         newItems.push(item);
       }
     }
@@ -501,7 +519,7 @@ function removeSearchMain(data) {
   return data;
 }
 
-// 新版主页广告
+// 移除首页广告
 function removeMain(data) {
   if (!data.items) {
     return data;
@@ -515,6 +533,7 @@ function removeMain(data) {
       if (item.category === "feed") {
         newItems.push(item);
       } else {
+        // 移除所有的推广
         continue;
       }
     }
@@ -609,13 +628,11 @@ function itemExtendHandler(data) {
       data.reward_info = null;
     }
   }
-  // 删除拓展卡片
-
+  // 移除拓展卡片
   if (data?.extend_info) {
     data.extend_info = {};
   }
-
-  // 删除超话新帖和新用户通知
+  // 移除超话新帖和新用户通知
   if (data.page_alerts) {
     data.page_alerts = null;
   }
@@ -643,7 +660,7 @@ function itemExtendHandler(data) {
   }
 }
 
-// 移除tab2的假通知
+// 移除超话的假通知
 function removeVideoRemind(data) {
   data.bubble_dismiss_time = 0;
   data.exist_remind = false;
@@ -655,7 +672,7 @@ function removeVideoRemind(data) {
   data.tag_image_normal_dark = "";
 }
 
-// 移除话题 tab 顶部广场
+// 移除话题顶部广场
 function removeTopicTab(data) {
   if (!mainConfig.removeTab) {
     return data;
@@ -673,6 +690,7 @@ function removeMediaHomelist(data) {
   }
 }
 
+// 移除开屏广告
 function removePhp(data) {
   if (data.needlocation) {
     data.needlocation = false;
@@ -707,6 +725,7 @@ function removePhp(data) {
   return data;
 }
 
+// 移除开屏广告
 function removeLua(data) {
   if (data.cached_ad && data.cached_ad.ads) {
     for (let item of data["cached_ad"]["ads"]) {
