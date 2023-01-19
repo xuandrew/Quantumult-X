@@ -1,8 +1,9 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-18 21:38
+// 2023-01-19 16:11
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
+
 // 主要的选项配置
 const mainConfig = {
   // 个人中心配置
@@ -31,10 +32,10 @@ const mainConfig = {
   removeInterestTopic: false, // 移除可能感兴趣的超话
   removeInterestUser: false, // 移除可能感兴趣的人
   removeLvZhou: true, // 移除绿洲模块
-  removeTab: true, // 移除广场
   removeUnfollowTopic: false, // 移除未关注的人
-  removeUnusedPart: false // 移除乱七八糟没用的部分
+  removeUnusedPart: true // 移除乱七八糟没用的部分
 };
+
 // 菜单配置
 const itemMenusConfig = {
   creator_task: true, // 转发任务
@@ -43,7 +44,7 @@ const itemMenusConfig = {
   mblog_menus_card_bg: true, // 卡片背景
   mblog_menus_comment_manager: true, // 评论管理
   mblog_menus_copy_url: true, // 复制链接
-  mblog_menus_custom: true, // 寄微博
+  mblog_menus_custom: trie, // 寄微博
   mblog_menus_delete: true, // 删除
   mblog_menus_edit: true, // 编辑
   mblog_menus_edit_history: true, // 编辑记录
@@ -62,8 +63,13 @@ const itemMenusConfig = {
   mblog_menus_video_feedback: true, // 播放反馈
   mblog_menus_video_later: true // 可能是稍后再看
 };
+
 // 匹配的URL
-const modifyCardsUrls = ["/2/cardlist", "/2/video/community_tab", "/2/searchall"];
+const modifyCardsUrls = [
+  "/2/cardlist",
+  "/2/video/community_tab",
+  "/2/searchall"
+];
 const modifyStatusesUrls = [
   "/2/groups/timeline",
   "/2/statuses/friends/timeline",
@@ -88,7 +94,7 @@ const otherUrls = {
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话菜单上的假通知
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
-  "/2/!/huati/discovery_home_bottom_channels": "removeTopicTab", // 超话顶部广场
+  "/2/!/huati/discovery_home_bottom_channels": "topicTabHandler", // 超话顶部按钮、广场
   "/2/!/live/media_homelist": "removeMediaHomelist", // 首页顶部直播
   "/interface/sdk/sdkad.php": "removePhp", // 开屏广告sdkad
   "/wbapplua/wbpullad.lua": "removeLua" // 开屏广告pullad
@@ -124,7 +130,10 @@ function isAd(data) {
   if (data.promotion && data.promotion.type === "ad") {
     return true;
   }
-  if (data.common_struct && data.common_struct[0]?.actionlog?.source?.includes("ad")) {
+  if (
+    data.common_struct &&
+    data.common_struct[0]?.actionlog?.source?.includes("ad")
+  ) {
     return true;
   }
   return false;
@@ -152,11 +161,14 @@ function removeCards(data) {
       newCards.push(card);
     } else {
       let cardType = card.card_type;
-      if ([9, 165, 180, 1007].indexOf(cardType) !== -1) {
+      if ([9, 165].indexOf(cardType) !== -1) {
         if (!isAd(card.mblog)) {
           newCards.push(card);
         }
       } else {
+        if ([180, 1007].indexOf(cardType) !== -1) {
+          continue;
+        }
         newCards.push(card);
       }
     }
@@ -356,7 +368,10 @@ function updateFollowOrder(item) {
   for (let d of item.items) {
     if (d.itemId === "mainnums_friends") {
       let s = d.click.modules[0].scheme;
-      d.click.modules[0].scheme = s.replace("231093_-_selfrecomm", "231093_-_selffollowed");
+      d.click.modules[0].scheme = s.replace(
+        "231093_-_selfrecomm",
+        "231093_-_selffollowed"
+      );
       return item;
     }
   }
@@ -577,15 +592,21 @@ function topicHandler(data) {
         }
         let cGroup0 = cGroup[0];
         if (
-          ["guess_like_title", "cats_top_title", "chaohua_home_readpost_samecity_title"].indexOf(
-            cGroup0.itemid
-          ) !== -1
+          [
+            "guess_like_title",
+            "cats_top_title",
+            "chaohua_home_readpost_samecity_title"
+          ].indexOf(cGroup0.itemid) !== -1
         ) {
           addFlag = false;
         } else if (cGroup.length > 1) {
           let newCardGroup = [];
           for (let cg of cGroup) {
-            if (["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(cg.itemid) === -1) {
+            if (
+              ["chaohua_discovery_banner_1", "bottom_mix_activity"].indexOf(
+                cg.itemid
+              ) === -1
+            ) {
               newCardGroup.push(cg);
             }
           }
@@ -672,13 +693,20 @@ function removeVideoRemind(data) {
   data.tag_image_normal_dark = "";
 }
 
-// 移除话题顶部广场
-function removeTopicTab(data) {
-  if (!mainConfig.removeTab) {
+// 话题按钮、顶部广场
+function topicTabHandler(data) {
+  if (!mainConfig.removeUnusedPart) {
     return data;
   }
+  // 移除超话左上角、右上角图标
+  if (data.button_configs) {
+    data.button_configs = [];
+  }
+  // 移除广场页
   if (data.channelInfo.channel_list) {
-    data.channelInfo.channel_list = data.channelInfo.channel_list.filter((l) => l.title !== "广场");
+    data.channelInfo.channel_list = data.channelInfo.channel_list.filter(
+      (c) => c.title !== "广场"
+    );
   }
   return data;
 }
