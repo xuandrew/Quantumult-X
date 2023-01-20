@@ -405,6 +405,9 @@ function removeTop8(data) {
 
 // 我的页面
 function removeHome(data) {
+  if (data.vipHeaderBgImage) {
+    data.vipHeaderBgImage = {};
+  }
   if (!data.items) {
     return data;
   }
