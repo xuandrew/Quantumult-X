@@ -462,8 +462,8 @@ function removeRed(data) {
     data.feed_redpacket.starttime = "2208960000";
     data.feed_redpacket.interval = "31536000";
     data.feed_redpacket.endtime = "2209046399";
-    data.feed_redpacket.icon = null;
-    data.feed_redpacket.finish_icon = null;
+    data.feed_redpacket.icon = "";
+    data.feed_redpacket.finish_icon = "";
   }
   return data;
 }
@@ -760,7 +760,7 @@ function removePhp(data) {
 
 // 移除开屏广告
 function removeLua(data) {
-  if (data.cached_ad?.ads) {
+  if (data.cached_ad.ads) {
     for (let item of data["cached_ad"]["ads"]) {
       item["start_date"] = 2208960000; // Unix 时间戳 2040-01-01 00:00:00
       item["show_count"] = 0;
