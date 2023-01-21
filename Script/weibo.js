@@ -77,21 +77,21 @@ const modifyStatusesUrls = [
   "/2/statuses/unread_hot_timeline"
 ];
 const otherUrls = {
-  "/2/checkin/show": "removeCheckin", // 签到任务
-  "/2/client/publisher_list": "publishHandler", // 发布按钮
+  "/2/checkin/show": "removeCheckin", // 首页签到
+  "/2/client/publisher_list": "publishHandler", // 首页发布按钮
   "/2/comments/build_comments": "removeComments", // 微博详情页评论区相关内容
   "/2/container/get_item": "containerHandler", // 列表相关
   "/2/messageflow": "removeMsgAd", // 私信推广
-  "/2/page?": "removePage", // 超话签到的按钮 /2/page/button 加?区别
-  "/2/profile/container_timeline": "userHandler", // 用户主页
+  "/2/page?": "removePage", // 超话签到按钮 /2/page/button 加?区别
+  "/2/profile/container_timeline": "userHandler", // 个人页信息流
   "/2/profile/me": "removeHome", // 个人页模块
-  "/2/push/active": "removeRed", // 右上角红包
-  "/2/search/container_discover": "removeSearch", // 搜索信息流
-  "/2/search/container_timeline": "removeSearch", // 搜索信息流
+  "/2/push/active": "removeRed", // 首页右上角红包
+  "/2/search/container_discover": "removeSearch", // 搜索页信息流
+  "/2/search/container_timeline": "removeSearch", // 搜索页信息流
   "/2/search/finder": "removeSearchMain", // 搜索页
   "/2/statuses/container_timeline": "removeMain", // 新版主页广告、超话信息流
   "/2/statuses/extend": "itemExtendHandler", // 微博详情页
-  "/2/statuses/unread_topic_timeline": "topicHandler", // 超话
+  "/2/statuses/unread_topic_timeline": "topicHandler", // 超话信息流
   "/2/statuses/video_mixtimeline": "nextVideoHandler", // 取消自动播放下一个视频
   "/2/video/remind_info": "removeVideoRemind", // 超话菜单上的假通知
   "/2/video/tiny_stream_video_list": "nextVideoHandler", // 取消自动播放下一个视频
