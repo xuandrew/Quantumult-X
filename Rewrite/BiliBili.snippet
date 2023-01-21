@@ -78,8 +78,8 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 
 # BiliBili_哔哩哔哩_Proto去广告@app2smile
 ;^https:\/\/app\.bilibili\.com\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
-;^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_proto_ddgksf2013.js
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$, url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili-proto.js
+^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_proto_ddgksf2013.js
+;^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$, url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili-proto.js
 
 # 哔哩哔哩解锁大会员
 # > 哔哩哔哩会员限定版
