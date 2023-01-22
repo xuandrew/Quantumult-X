@@ -17,7 +17,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 
 
 # > 微博_屏蔽首页左上角每日的弹窗tips@ddgksf2013
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
+;^https?:\/\/m?api\.weibo\.c(n|om)\/\d/push/daily url reject-dict
 # > 微博_屏蔽发现页面搜索框热词@ddgksf2013
 ^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/\w{5}\/cardlist url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/wb_main.js
 # > 微博_应用内弹窗广告@ddgksf2013
