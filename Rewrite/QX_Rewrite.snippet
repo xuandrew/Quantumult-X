@@ -63,19 +63,32 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, ad.12306.cn, api.revenuecat
 # 高德地图
 ;^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/prod\/feupload\/user\/7clgu url reject-200
 # 高德地图 // *.amap.com, sns.amap.com
+# 路线规划推广
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan\? url reject-dict
 # 首页卡片
-;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
-# 首页顶部消息横幅
-;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page(-location)?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
-;^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull(3|_mp)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
-# 我的页面卡片
+;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+# 首页消息横幅
+;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url reject-dict
+;^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull\? url reject-dict
+# 我的卡片
 ;^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+# 首页右上角动图
+;^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable url script-response-body https://gitlab.com/RuCu6/QuanX/-/raw/main/Scripts/amap.js
+# 搜索框热词
+;^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? url reject-dict
+# 附近
+;^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 其他
-;^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
-;^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+;^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution\? url reject-dict
+;^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? url reject-dict
 # 开屏广告
-;^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url reject-dict
-;^https?:\/\/sns\.amap\.com\/ws\/msgbox\/pull url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/amap.js
+;^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
+# 首页天气
+;^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? url reject-dict
+# 打车弹窗
+;^https:\/\/m5-zb\.amap\.com\/ws\/boss\/order_web\/friendly_information\? url reject-dict
+# 打车卡片
+;^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 
 # > 高德地图_首页右中广告@ddgksf2013
 https://m5.amap.com/ws/shield/frogserver/aocs/updatable url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amap.js
