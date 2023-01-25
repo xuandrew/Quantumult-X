@@ -11,8 +11,8 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, ad.12306.cn, api.revenuecat
 ;^https?:\/\/api2\.mubu\.com\/v3\/api\/user\/current_user url script-response-body https://raw.githubusercontent.com/chiupam/surge/main/scripts/unblock/Mubu_SVIP.js
 
 # 樊登读书
-^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js
-^http[s]?:\/\/.+dushu.+(v101/content|book/v100/info|/play/duration|/v100/index).*$ url request-body "token":"[^"]+ request-body "token":"20230124JvU3kqQmJpAqw6pzD4R
+;^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js
+;^http[s]?:\/\/.+dushu.+(v101/content|book/v100/info|/play/duration|/v100/index).*$ url request-body "token":"[^"]+ request-body "token":"20230124JvU3kqQmJpAqw6pzD4R
 
 # fileball
 ;^https?:\/\/.*\.example\.com url script-analyze-echo-response https://github.com/ddgksf2013/Scripts/raw/master/ali.js
