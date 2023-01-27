@@ -275,9 +275,14 @@ function removeComments(data) {
   let newItems = [];
   for (let item of items) {
     let adType = item.adType || "";
-    // 移除评论区推广、过滤提示
-    if (delType.indexOf(adType) === -1 && item.type !== 6) {
-      newItems.push(item);
+    // 移除评论区推广
+    if (delType.indexOf(adType) === -1) {
+      // 移除过滤提示
+      if (item.type === 6) {
+        continue;
+      } else {
+        newItems.push(item);
+      }
     }
   }
   data.datas = newItems;
