@@ -178,11 +178,6 @@ https://m5.amap.com/ws/shield/frogserver/aocs/updatable url script-response-body
 #^https?:\/\/.+\.(amemv|musical|snssdk|tiktokv)\.(com|ly)\/(api|motor)\/ad\/ url reject-200
 #^https?:\/\/.+\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ url reject-200
 
-# 番茄小说
-#^http:\/\/v3-novelapp\.fqnovelvod\.com\/\/\/video\/tos\/cn\/tos-cn-ve-51-alinc2 url reject
-#^http:\/\/p9-ad-sign\.byteimg\.com\/web\.business\.image url reject
-#^http:\/\/p6-ad-sign\.byteimg\.com\/ad-app-package url reject
-
 # CSDN开屏广告
 ^https:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v2\/assemble\/list\/pub\/channel\/app_open_screen_ad\?adPositionId url reject
 
@@ -279,6 +274,7 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-bo
 ^https?:\/\/.+\.wtzw\.com\/api\/.+\/user\/(get-user-info|my-center|(get-role-adv-vip-info|vip\/index)|my-level|page) url script-response-body https://hub.nange.cn/Script/QMNovel/UserInfo.js
 ^https:\/\/a-qmad\.qimao\.com\/api\/ad\/qm\/sdk\/v2\/init\?app_id= url reject
 ^https:\/\/a-qmad\.qm989\.com\/api\/ad\/union\/sdk\/v3\/get-splash url reject
+^https:\/\/update\.wtzw\.com\/app|eas-config url reject
 
 # 腾讯视频开屏广告 hostname= vv.video.qq.com
 #^https?:\/\/vv\.video\.qq\.com\/getvmind\? url reject
