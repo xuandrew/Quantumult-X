@@ -9,7 +9,7 @@ const mainConfig = {
   // 个人中心配置
   removeHomeVip: true, // 个人中心的vip栏
 
-  // 微博详情页配置
+  // 详情页配置
   blockIds: [], // 屏蔽的账号id
   modifyMenus: true, // 自定义编辑上下文菜单
   removeFollow: false, // 移除关注博主
@@ -18,6 +18,7 @@ const mainConfig = {
   removeRelate: true, // 移除相关推荐
   removeRelateItem: true, // 移除评论区相关内容
   removeRewardItem: false, // 移除微博详情页打赏模块
+  removeUserItem: false, // 移除头像挂件、勋章、评论气泡
 
   // 视频、直播配置
   removeLiveMedia: false, // 移除首页顶部直播
