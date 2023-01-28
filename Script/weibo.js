@@ -260,6 +260,20 @@ function publishHandler(data) {
   return data;
 }
 
+// 移除头像挂件、勋章
+function removeUserCard(data) {
+  if (!data) {
+    return data;
+  }
+  if (data.cardid) {
+    data.cardid = "";
+  }
+  if (data.icons) {
+    data.icons = [];
+  }
+  return data;
+}
+
 // 评论区相关和推荐内容
 function removeComments(data) {
   let delType = ["广告"];
@@ -275,6 +289,15 @@ function removeComments(data) {
   }
   let newItems = [];
   for (let item of items) {
+    // 移除头像挂件、勋章、评论气泡
+    if (mainConfig.removeUserItem) {
+      if (item.data.user) {
+        removeUserCard(item.data.user);
+      }
+      if (item?.data?.comment_bubble) {
+        item.data.comment_bubble = {};
+      }
+    }
     let adType = item.adType || "";
     // 移除评论区推广
     if (delType.indexOf(adType) === -1) {
