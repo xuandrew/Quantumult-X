@@ -6,7 +6,7 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, ad.12306.cn, api.revenuecat
 # 网易云解锁VIP直接听
 ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 # 网易云音乐
-^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
+;^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
 ^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
 ^https:\/\/interface\d?\.music\.163.com\/eapi\/(ad\/.*|search\/(default\/keyword\/list|specialkeyword/get)\?) url reject
 
