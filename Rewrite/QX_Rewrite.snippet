@@ -7,10 +7,10 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 # 网易云音乐
 ;^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
-^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
-^https:\/\/interface3\.music\.163\.com\/api\/search\/rcmd\/keyword\/get\/v2\? url reject-dict
-^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
-^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)$|default\/keyword\/list\?|rcmd\/keyword\/get\/v2$|specialkeyword\/get\?) url reject-dict
+;^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
+;^https:\/\/interface3\.music\.163\.com\/api\/search\/rcmd\/keyword\/get\/v2\? url reject-dict
+;^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
+;^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)$|default\/keyword\/list\?|rcmd\/keyword\/get\/v2$|specialkeyword\/get\?) url reject-dict
 
 # 白描解锁黄金vip @sirsunknight
 ;^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/sirsunknight/QuantumultX/master/Scripts/Baimiao.js
