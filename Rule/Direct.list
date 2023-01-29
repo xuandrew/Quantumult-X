@@ -1,3 +1,6 @@
+# Google
+host-suffix, ad.doubleclick.net, direct
+
 # 12306
 host, ad.12306.cn, direct
 
