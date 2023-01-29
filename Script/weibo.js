@@ -384,9 +384,9 @@ function removePage(data) {
       data.cards[0].card_group = data.cards[0].card_group.filter(
         (c) =>
           !(
-            c?.actionlog?.ext.includes("ads_word") ||
-            c?.itemid.includes("t:51") ||
-            c?.itemid.includes("ads_word")
+            c?.actionlog?.ext?.includes("ads_word") ||
+            c?.itemid?.includes("t:51") ||
+            c?.itemid?.includes("ads_word")
           )
       );
     }
