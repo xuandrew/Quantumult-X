@@ -2,14 +2,15 @@ hostname = -redirector*.googlevideo.com,*.googlevideo.com,www.youtube.com,s.yout
 
 # 视频广告请求
 #^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube-fake.js
-(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
-^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
+;(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) url 302 $1$2$3
+;^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad url reject-200
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad url reject-img
 
 # 瀑布流|搜索|播放页|短视频|贴片 广告
 ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/youtube.js
 
 # 通用广告请求
 #^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v\d\/player\/ad_break url reject
-^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
-^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
-^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
+;^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads url reject-200
+;^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) url reject-200
+;^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext url reject-200
