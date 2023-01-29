@@ -1,7 +1,7 @@
 # NAME: AllInOne
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-01-29 02:12:31
+# UPDATED: 2023-01-29 23:05:47
 # HOST:2
 # IP-CIDR:1
 # IP6-CIDR:1
@@ -246,14 +246,14 @@
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage url reject
 ^https?:\/\/api\.yizhibo\.com\/common\/api\/(api_)?pz$ url reject
 ^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd url reject
-^https?:\/\/api\.zhihu\.com/moments/hybrid\? url reject-dict
-^https?:\/\/api\.zhihu\.com\/(notifications\/v3\/count|v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad|appview\/api\/v\d\/answers\/\d+\/recommendations) url reject-dict
-^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config url reject-200
-^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\? url reject-dict
-^https?:\/\/api\.zhihu\.com\/explore\/entry\/tips url reject
-^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
-^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 url reject-dict
-^https?:\/\/api\.zhihu\.com\/people\/self\/new_user_card url reject-200
+;^https?:\/\/api\.zhihu\.com/moments/hybrid\? url reject-dict
+;^https?:\/\/api\.zhihu\.com\/(notifications\/v3\/count|v3\/package|me\/guides|drama\/living-info|ad|fringe|commercial|market\/popovers|search\/(top|tab)|.*featured-comment-ad|appview\/api\/v\d\/answers\/\d+\/recommendations) url reject-dict
+;^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config url reject-200
+;^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\? url reject-dict
+;^https?:\/\/api\.zhihu\.com\/explore\/entry\/tips url reject
+;^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
+;^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 url reject-dict
+;^https?:\/\/api\.zhihu\.com\/people\/self\/new_user_card url reject-200
 ^https?:\/\/api\.zhuishushenqi\.com\/notification\/shelfMessage url reject
 ^https?:\/\/api\.zhuishushenqi\.com\/splashes\/ios url reject
 ^https?:\/\/api\.zhuishushenqi\.com\/user\/bookshelf-updated url reject
@@ -313,7 +313,7 @@
 ^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ url reject
 ^https?:\/\/capis\.didapinche\.com\/ad\/ url reject
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ url reject
-^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade url reject
+^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade url reject-dict
 ^https?:\/\/cdn-1rtb\.caiyunapp\.com/creative/.*$ url reject
 ^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 url reject-200
 ^https?:\/\/cdn\.\w{3}\.chelaileapp\.cn\/(api\/)?adpub url reject
@@ -629,11 +629,11 @@
 ^https?:\/\/www\.shihuo\.cn\/app\d\/saveAppInfo url reject
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/ads\/ url reject
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url reject
-^https?:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject-dict
-^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations url reject-dict
-^https?:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation url reject-dict
-^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\? url reject-dict
-^https?:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner url reject-dict
+;^https?:\/\/www\.zhihu\.com\/api\/v4/(questions|anwsers)\/\d+/related-readings url reject-dict
+;^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations url reject-dict
+;^https?:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation url reject-dict
+;^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\? url reject-dict
+;^https?:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner url reject-dict
 ^https?:\/\/www\.zybang\.com\/adx\/ url reject
 ^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d url reject
 ^https?:\/\/xyz\.cnki\.net\/resourcev7\/api\/manualpush\/SlidsList$ url reject
@@ -678,7 +678,7 @@ https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
 # zhihu.js_HTTP-REQUEST-SCRIPT
 ;^https?:\/\/api\.zhihu\.com\/feed-root\/block url script-analyze-echo-response https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zhihu/zhihu.js
 # bilibili_plus.js_HTTP-RESPONSE-SCRIPT
-;^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
+^https?:\/\/app\.bilibili\.com\/x\/v2\/splash\/list url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/bilibili/bilibili_plus.js
 # famijia_checkin.js_HTTP-RESPONSE-SCRIPT
 ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/market\/start\/ad url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/famijia/famijia_checkin.js
 # smzdm_remove_ads.js_HTTP-RESPONSE-SCRIPT
