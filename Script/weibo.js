@@ -1,5 +1,5 @@
 // https://github.com/zmqcherish/proxy-script/blob/main/weibo_main.js
-// 2023-01-26 17:21
+// 2023-01-28 17:21
 
 // 屏蔽用户id获取方法
 // 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
@@ -260,16 +260,19 @@ function publishHandler(data) {
   return data;
 }
 
-// 移除头像挂件、勋章
+// 移除评论区头像挂件、勋章
 function removeUserCard(data) {
-  if (!data) {
+  if (!data.user) {
     return data;
   }
-  if (data.cardid) {
-    data.cardid = "";
+  if (data.user.cardid) {
+    data.user.cardid = "";
   }
-  if (data.icons) {
-    data.icons = [];
+  if (data.user.icons) {
+    data.user.icons = [];
+  }
+  if (data.user.avatargj_id) {
+    data.user.avatargj_id = "";
   }
   return data;
 }
@@ -283,33 +286,61 @@ function removeComments(data) {
   if (mainConfig.removeRecommendItem) {
     delType.push(...["推荐", "热推"]);
   }
-  let items = data.datas || [];
-  if (items.length === 0) {
-    return data;
-  }
-  let newItems = [];
-  for (let item of items) {
-    // 移除头像挂件、勋章、评论气泡
-    if (mainConfig.removeUserItem) {
-      if (item.data.user) {
-        removeUserCard(item.data.user);
+  if (data.datas) {
+    let items = data.datas || [];
+    if (items.length === 0) {
+      return data;
+    }
+    let newItems = [];
+    for (let item of items) {
+      // 移除头像挂件、勋章、评论气泡
+      if (mainConfig.removeUserItem) {
+        if (item.data) {
+          removeUserCard(item.data);
+        }
+        if (item.data?.comment_bubble) {
+          item.data.comment_bubble = {};
+        }
       }
-      if (item?.data?.comment_bubble) {
-        item.data.comment_bubble = {};
+      let adType = item.adType || "";
+      // 移除评论区推广
+      if (delType.indexOf(adType) === -1) {
+        // 移除过滤提示
+        if (item.type === 6) {
+          continue;
+        } else {
+          newItems.push(item);
+        }
       }
     }
-    let adType = item.adType || "";
-    // 移除评论区推广
-    if (delType.indexOf(adType) === -1) {
-      // 移除过滤提示
-      if (item.type === 6) {
-        continue;
-      } else {
-        newItems.push(item);
+    data.datas = newItems;
+  } else if (data.root_comments) {
+    let items = data.root_comments || [];
+    if (items.length === 0) {
+      return data;
+    }
+    let newItems = [];
+    for (let item of items) {
+      // 移除头像挂件、勋章、评论气泡
+      if (mainConfig.removeUserItem) {
+        removeUserCard(item);
+        if (item.comment_bubble) {
+          item.comment_bubble = {};
+        }
+      }
+      let adType = item.adType || "";
+      // 移除评论区推广
+      if (delType.indexOf(adType) === -1) {
+        // 移除过滤提示
+        if (item.type === 6) {
+          continue;
+        } else {
+          newItems.push(item);
+        }
       }
     }
+    data.root_comments = newItems;
   }
-  data.datas = newItems;
 }
 
 // 感兴趣的超话和超话里的好友
