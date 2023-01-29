@@ -10,6 +10,7 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com
 # 首页消息横幅
 ;^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page-assets\? url reject-dict
 ;^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull\? url reject-dict
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? url reject-dict
 # 我的卡片
 ;^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # 首页右上角动图
