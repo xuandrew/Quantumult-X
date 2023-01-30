@@ -6,14 +6,27 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 # > Unlock Revenuecat
 ^https?:\/\/api\.revenuecat\.com url script-request-body https://hub.nange.cn/Script/RevenueCat/RevenueCat.js
 
-# 网易云解锁VIP直接听
-^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 # 网易云音乐
 ;^https://only\b.*nstool.netease.com\/info.js\?referer=https:\/\/nstool.netease.com\/info.js url reject
-# 开屏广告 | 搜索页热搜卡片 | 评论区广告 | 评论区右上角星评馆 | 评论区回复里的广告
-^https?:\/\/interface3\.music\.163\.com\/eapi\/(ad|search\/chart|comment\/(feed\/inserted|hotcomment\/collect)|v\d\/content\/exposure\/comment\/banner) url reject-dict
-# 搜索页猜你喜欢(需卸载重装)
-^https?:\/\/interface3\.music\.163\.com\/e?api\/search\/rcmd\/keyword url reject-dict
+^http:\/\/iadmat\.nosdn\.127\.net\/.* url reject
+^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
+^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
+## 热搜,填充词,排行榜
+^https:\/\/interface3\.music\.163\.com\/api\/search\/rcmd\/keyword\/get\/v2\? url reject-dict
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/chart\/(detail|list)$ url reject-dict
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/default\/keyword\/list\? url reject-dict
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/rcmd\/keyword\/get\/v2$ url reject-dict
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/specialkeyword\/get\? url reject-dict
+## 首页右上角图标,仅保留听歌识曲
+^https:\/\/interface3\.music\.163\.com\/eapi\/link\/scene\/show\/resource\? url reject-dict
+## 会员歌曲播放提示
+^https:\/\/interface3\.music\.163\.com\/eapi\/vipcenter\/tspopup\/get\? url reject-dict
+## 评论区,广告,星评馆
+^https:\/\/interface3\.music\.163\.com\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2\? url reject-dict
+^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/feed\/inserted\/resources\? url reject-dict
+^https?:\/\/interface3\.music\.163\.com\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? url reject-dict
+# 网易云解锁VIP直接听
+^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 
 # 白描解锁黄金vip @sirsunknight
 ;^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/sirsunknight/QuantumultX/master/Scripts/Baimiao.js
