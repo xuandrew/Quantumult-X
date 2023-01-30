@@ -1,5 +1,5 @@
 # 网易云音乐
-;host, api.iplay.163.com, direct
+host, api.iplay.163.com, direct
 
 # Google
 host-suffix, ad.doubleclick.net, direct
