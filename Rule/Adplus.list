@@ -1,5 +1,5 @@
 # 小红书信息流
-;host, www.xiaohongshu.com, reject
+host, www.xiaohongshu.com, reject
 
 # 高德首页横幅
 host, amap-aos-info-nogw.amap.com, reject
