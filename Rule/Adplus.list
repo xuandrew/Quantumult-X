@@ -3,10 +3,10 @@
 ;host-suffix, music.163.com.163jiasu.com, reject
 
 # 高德首页横幅
-host, amap-aos-info-nogw.amap.com, reject
+;host, amap-aos-info-nogw.amap.com, reject
 host, amdc.m.taobao.com, reject
-host, awaken.amap.com, reject
-host, free-aos-cdn-image.amap.com, reject
+;host, awaken.amap.com, reject
+;host, free-aos-cdn-image.amap.com, reject
 
 # 美团 去广告
 host, portal-portm.meituan.com, reject
