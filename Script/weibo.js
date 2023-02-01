@@ -160,9 +160,7 @@ function removeCards(data) {
         let cardType = group.card_type;
         if (cardType !== 118) {
           if (!isAd(group.mblog)) {
-            if (!JSON.stringify(group).includes("res_from:ads")) {
-              newGroup.push(group);
-            }
+            newGroup.push(group);
           }
         }
       }
