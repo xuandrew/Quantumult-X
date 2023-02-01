@@ -31,7 +31,7 @@ hostname = *.ximalaya.com, *.xmcdn.com, www.xmind.cn, www.xmind.net, www.xmind.a
 # ～ XiMaLaYa_喜马拉雅_屏蔽位置请求@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽热搜词@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/hotWord url reject
+;^https?:\/\/.*\.xima.*\.com\/hotWord url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽搜索框定时_Ad@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/guideWord url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽实时Ad请求@ddgksf2013
@@ -45,7 +45,7 @@ hostname = *.ximalaya.com, *.xmcdn.com, www.xmind.cn, www.xmind.net, www.xmind.a
 # ～ XiMaLaYa_喜马拉雅_屏蔽Tab页滚动_Ad@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/XiMaLaYa.js
 # ～ XiMaLaYa_喜马拉雅_去除我的页面Ad_Tag@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/XiMaLaYa.js
+;^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/XiMaLaYa.js
 #
 # 喜马拉雅共享会员
 ;^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/focus-mobile\/focusPic\/info url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/noFocusAd.js
