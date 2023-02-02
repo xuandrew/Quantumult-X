@@ -7,7 +7,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ^https?:\/\/api\.revenuecat\.com url script-request-body https://hub.nange.cn/Script/RevenueCat/RevenueCat.js
 
 # 网易云音乐去广告, interface3.music.163.com
-;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
+^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* url reject
 ^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
