@@ -3,14 +3,14 @@
 
 # 拦截DNS解析
 ^https?:\/\/118\.89\.204\.198 url reject-dict
-^https?:\/\/103\.41\.167\.237 url reject-dict
+;^https?:\/\/103\.41\.167\.237 url reject-dict
 ^https?:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 url reject-200
 
 # 屏蔽下发的配置，如皮肤等
 ^https?:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config url reject
 
 # 屏蔽我的页面开通会员的卡片
-# ^https?:\/\/api\.zhihu\.com\/unlimited\/go\/my_card url reject
+^https?:\/\/api\.zhihu\.com\/unlimited\/go\/my_card url reject
 
 # 拦截开屏广告
 ^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-dict
@@ -24,7 +24,7 @@
 ^https?:\/\/api\.zhihu\.com\/moments\/tab_v2 url reject-dict
 
 # 去除消息通知角标
-;^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count) url reject-dict
+^https?:\/\/api\.zhihu\.com\/(notifications\/v\d\/count) url reject-dict
 
 # 拦截回答下的卡片广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers\/\d+\/recommendations url reject-dict
@@ -48,7 +48,7 @@
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config url reject-dict
 
 # 暂不清楚作用
-;^https?:\/\/api\.zhihu\.com\/commercial_api\/banners_v3\/app_topstory_banner url reject-dict
+^https?:\/\/api\.zhihu\.com\/commercial_api\/banners_v3\/app_topstory_banner url reject-dict
 
 # 获取用户信息 - 隔离用户数据，开启本地会员等
 ^https?:\/\/api\.zhihu\.com\/people\/ url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.js
@@ -85,7 +85,7 @@
 ^https?:\/\/api\.zhihu\.com\/(comment_v5\/)?(answers|comments?|articles|pins)\/\d+\/(root_|child_)?comments? url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.js
 
 # 消息页 - 折叠官方消息、屏蔽营销消息
-;^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message) url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.js
+^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message|timeline\/entry\/system_message) url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.js
 
 # 回答页 - 内容优化，付费、营销、推广内容文首提醒
 ^https?:\/\/www\.zhihu\.com\/appview\/v2\/answer\/.*(entry=(?!(preload-topstory|preload-search|preload-subscription)))? url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/zheye/zheye.js
