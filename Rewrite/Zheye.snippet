@@ -3,7 +3,7 @@
 
 # 拦截DNS解析
 ^https?:\/\/118\.89\.204\.198 url reject-dict
-;^https?:\/\/103\.41\.167\.237 url reject-dict
+^https?:\/\/103\.41\.167\.237 url reject-dict
 ^https?:\/\/2402:4e00:1200:ed00:0:9089:6dac:96b6 url reject-200
 
 # 屏蔽下发的配置，如皮肤等
@@ -42,7 +42,7 @@
 ^https?:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings url reject-dict
 
 # 推荐页搜索栏左侧图标
-^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading url reject-dict
+;^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/current_reading url reject-dict
 
 # 疑似推荐页内容更新红点
 ^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config url reject-dict
