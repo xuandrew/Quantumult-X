@@ -65,9 +65,7 @@ HOST-SUFFIX,baikebcs.bdimg.com,Direct
 HOST-SUFFIX,bj.bcebos.com,Direct
 HOST-SUFFIX,crashlytics.com,Direct
 
-# 淘宝
-;host, amdc.m.taobao.com, direct
-
+#
 host-suffix, collector.github.com, direct
 host-suffix, log.snssdk.com, direct
 
