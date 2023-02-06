@@ -12,7 +12,7 @@ host, amdc.m.taobao.com, reject
 host, portal-portm.meituan.com, reject
 
 # Bilibili
-host, grpc.biliapi.net, reject
+;host, grpc.biliapi.net, reject
 ip-cidr, 47.100.123.169/32, reject
 ip-cidr, 47.101.175.206/32, reject
 #ip-cidr, 61.147.236.43/29, reject
@@ -105,7 +105,7 @@ host-suffix, afdback.ppsimg.com, reject
 host, im.tieba.baidu.com, reject
 
 # iQiyi
-host-suffix, data6.video.iqiyi.com, reject
+;host-suffix, data6.video.iqiyi.com, reject
 
 # 知乎
 host, 118.89.204.198, reject
@@ -116,7 +116,7 @@ IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 USER-AGENT, AVOS*, reject
 
 # 抖音
-host-suffix, api26-normal-lq.amemv.com, reject
+;host-suffix, api26-normal-lq.amemv.com, reject
 
 # 特殊网站去广告
 ##### https://javmost.xyz/  
