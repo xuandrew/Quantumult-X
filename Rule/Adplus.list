@@ -12,7 +12,7 @@ host, amdc.m.taobao.com, reject
 host, portal-portm.meituan.com, reject
 
 # Bilibili
-;host, grpc.biliapi.net, reject
+host, grpc.biliapi.net, reject
 ip-cidr, 47.100.123.169/32, reject
 ip-cidr, 47.101.175.206/32, reject
 #ip-cidr, 61.147.236.43/29, reject
