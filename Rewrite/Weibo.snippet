@@ -82,6 +82,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline(_topic|_unread)? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/extend url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 
 # 热搜提醒
@@ -103,7 +104,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get url reject-dict
 
 # 猜你想搜
-^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? url reject-dict
+^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange url reject-dict
 
 # 开屏广告
 ;^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
