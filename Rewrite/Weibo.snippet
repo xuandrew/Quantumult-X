@@ -102,6 +102,9 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 # 信息流视频号
 ;^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get url reject-dict
 
+# 猜你想搜
+^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? url reject-dict
+
 # 开屏广告
 ;^https:\/\/boot\.biz\.weibo\.com\/v1\/ad\/realtime$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 ;^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
