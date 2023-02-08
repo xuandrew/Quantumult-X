@@ -2,6 +2,16 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 
 # Spotify 解锁
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
+^https?:\/\/spclient\.wg\.spotify\.com\/.+ad_slot url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/.+banners url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/.+crashlytics url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/.+doubleclick url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/.+enabled-tracks url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/.+event url reject-200
+^https?:\/\/spclient\.wg\.spotify\.com\/.+promoted url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/.+sponsored url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/ad-logic url reject-img
+^https?:\/\/spclient\.wg\.spotify\.com\/ads url reject-img
 
 # > Unlock Revenuecat
 ^https?:\/\/api\.revenuecat\.com url script-request-body https://hub.nange.cn/Script/RevenueCat/RevenueCat.js
