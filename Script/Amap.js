@@ -1,4 +1,4 @@
-// 2023-02-02 10:30
+// 2023-02-08 11:15
 
 if (!$response.body) $done({});
 const url = $request.url;
@@ -30,12 +30,12 @@ if (obj.data) {
         (item) => item.dataKey === "MyOrderCard"
       );
     }
-//    if (obj.data.tipData) {
-//      delete obj.data.tipData;
-//    }
-//    if (obj.data.footPrintV2) {
-//      delete obj.data.footPrintV2;
-//    }
+//  if (obj.data.tipData) {
+//    delete obj.data.tipData;
+//   }
+//  if (obj.data.footPrintV2) {
+//    delete obj.data.footPrintV2;
+//   }
   } else if (url.includes("/shield/frogserver/aocs")) {
     // 首页右上角图层
     if (obj.data.operation_layer) {
@@ -81,6 +81,7 @@ if (obj.data) {
       "smallListBizRec", // 周边热门酒店
       "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
       "bigListBizRec", // 周边景点推荐 三张景点大图
+      "nearbyRecommendModule", // 周边推荐
       "scenic_recommend", // 景点建议
       // "parentBizRec",
       // "surround_facility",
