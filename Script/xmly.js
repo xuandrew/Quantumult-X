@@ -12,7 +12,7 @@ var body = $response.body;
  const p8 = '/track/v3/baseInfo'
  //个人页面
  if (url.indexOf(p1) != -1) {
-     obj.data.nickname = "by~伟人";
+     obj.data.nickname = "为什么叫我写昵称";
      obj.data.isVip = true;
      obj.data.vipExpireTime = 32493834549000;
      obj.data.vipStatus = 2;
@@ -30,7 +30,7 @@ var body = $response.body;
 
  //主页会员
  if (url.indexOf(p2) != -1) {
-     obj.data.userInfo.userNickName = "by~伟人";
+     obj.data.userInfo.userNickName = "为什么叫我写昵称";
      obj.data.userInfo.userLogoPic = "https://static.jietushuiyin.com/uploads/20230204/452be787cb7d63972965498fbf23666d.jpg";
      obj.data.userInfo.vipStatus = 2;
      obj.data.userInfo.expireDate = "2999-12-12";
