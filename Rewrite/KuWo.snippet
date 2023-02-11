@@ -1,4 +1,4 @@
-hostname = *kuwo*, *lrts*, tmeadcomm.y.qq.com
+hostname = *kuwo*, *lrts*
 
 ;^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ne|\/a\.p|v\d\/api\/(user\/in|pay\/vi)|\w{3}\/v\d\/user\/vi|\w{3}\/spi\/ms|\w{3}\/v\d\/the|\w{3}\/enc\/use) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/kuwo.js
 ;^https?:\/\/.*(kuwo|lrts).*(music\.pay\?ui) url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/kuwo.js
@@ -11,18 +11,12 @@ hostname = *kuwo*, *lrts*, tmeadcomm.y.qq.com
 # 广告
 ;^http:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright ^GET url-and-header reject-dict
 ;^http:\/\/mgxhtj\.kuwo\.cn\/mgxh\.s ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/mobilead\.kuwo\.cn\/EcomResourceServer ^GET url-and-header reject-dict
-;^http:\/\/mobilead\.kuwo\.cn\/MobileAdServer\/getMobileLyricAd\.do ^GET url-and-header reject-dict
 ;^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^GET url-and-header reject-dict
 ;^http:\/\/nmobi\.kuwo\.cn\/mobi\.s ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/rich\.kuwo\.cn\/AdService\/kaiping ^GET url-and-header reject-dict
 ;^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^https:\/\/tmeadcomm\.y\.qq\.com\/maproxy\/getAd$ ^POST url-and-header reject-dict
-
 # 会员
 ;^http:\/\/audiobookpay\.kuwo\.cn\/a\.p url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
 ;^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
 ;^http:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
 ;^http:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme\?op=gd ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
 ;^https:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* url script-response-body https://raw.githubusercontent.com/nameking77/Qx/main/rewrite/kw.js
