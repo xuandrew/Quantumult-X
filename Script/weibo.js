@@ -1,12 +1,8 @@
-// 2023-02-13 11:15
+// 2023-02-13 18:10
 
 const url = $request.url;
 if (!$response.body) $done({});
 let body = $response.body;
-
-// 屏蔽用户id获取方法
-// 进入用户主页 选择复制链接 得到类似 `https://weibo.com/u/xxx` 的文本 xxx即为用户id 多个id用英文逗号 `,` 分开
-const blockIds = [];
 
 // 微博详情页菜单配置
 const itemMenusConfig = {
