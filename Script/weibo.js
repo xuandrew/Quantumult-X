@@ -105,7 +105,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item.data?.comment_bubble) {
               delete item.data.comment_bubble;
             }
-            if (item?.type === 6) {
+            // 相关内容,过滤提示
+            if (item?.adType === "相关内容" || item?.type === 6) {
               continue;
             }
             newItems.push(item);
@@ -181,10 +182,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newItems = [];
       for (let item of obj.items) {
         if (item.category === "card") {
-          if (item.data.right_filter) {
+          // 筛选按钮
+          if (item.data.card_type === 216) {
             newItems.push(item);
-          } else {
-            continue;
+          }
+        } else if (item.category === "group") {
+          // 遍历group,保留置顶微博
+          for (let ii of item.items) {
+            if (ii.data.itemid === "profile_top") {
+              newItems.push(item);
+            }
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
@@ -193,8 +200,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.data.common_struct;
             }
             newItems.push(item);
-          } else {
-            continue;
           }
         }
       }
@@ -345,6 +350,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             let cardType = group.card_type;
             if (cardType !== 118) {
               if (!isAd(group.mblog)) {
+                // 商品橱窗
+                if (group.mblog?.common_struct) {
+                  delete group.mblog.common_struct;
+                }
                 newGroup.push(group);
               }
             }
@@ -384,6 +393,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         if (!isAd(item.data)) {
           if (item.category === "feed") {
+            // 商品橱窗
+            if (item.data?.common_struct) {
+              delete item.data.common_struct;
+            }
             newItems.push(item);
           } else if (item.category === "feedBiz") {
             // 管理特别关注按钮
