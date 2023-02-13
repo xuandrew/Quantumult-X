@@ -16,6 +16,7 @@ host-suffix, wx.qlogo.cn, direct
 # 汽车之家
 host-suffix, push.app.autohome.com.cn, direct
 host-suffix, activity.app.autohome.com.cn, direct
+host, img2.autoimg.cn, direct
 
 # CSDN
 host, kunyu.csdn.net, direct
