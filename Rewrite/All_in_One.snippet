@@ -702,9 +702,11 @@ https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
 ^https?:\/\/api\.zhihu\.com\/next\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_处理用户信息
 ^https?:\/\/api\.zhihu\.com\/people url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-# 哲也_推荐页优化
+# 哲也_推荐页优化,去除关注页最常访问
+^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
 ^https?:\/\/api\.zhihu\.com\/moments\/recent url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
-# 哲也_文章优化
+# 哲也_文章优化,拦截回答下的卡片广告
+^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers\/\d+\/recommendations url reject-dict
 ^https?:\/\/www\.zhihu\.com\/api\/v4\/answers\/\d+\/recommendations url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_消息优化
 ^https?:\/\/api\.zhihu\.com\/notifications\/v3\/(message\?|timeline\/entry\/system_message) url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
@@ -726,6 +728,24 @@ https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
 ^https?:\/\/wmapi\.meituan\.com\/api\/v\d+\/loadInfo? url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
 # 联享家_开屏去广告
 ^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg url script-response-body https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
+# 哲也_屏蔽我的页面开通会员的卡片
+;^https?:\/\/api\.zhihu\.com\/unlimited\/go\/my_card url reject
+# 哲也_拦截开屏广告
+^https?:\/\/api\.zhihu\.com\/commercial_api\/launch_v2\? url reject-dict
+^https?:\/\/api\.zhihu\.com\/commercial_api\/real_time_launch_v2\? url reject-dict
+# 哲也_拦截品牌提问广告
+^https?:\/\/api\.zhihu\.com\/brand\/question\/\d+/card\? url reject-dict
+^https?:\/\/www\.zhihu\.com\/api\/v\d+\/brand\/question/\d+/card\? url reject-dict
+# 哲也_拦截应用内弹窗
+^https?:\/\/api\.zhihu\.com\/me\/guides url reject-dict
+# 哲也_疑似推荐页内容更新红点
+;^https?:\/\/api\.zhihu\.com\/feed\/render\/revisit\/tag_config url reject-dict
+# 哲也_关注页内容优化及屏蔽转发的黑名单用户想法
+^https?:\/\/api\.zhihu\.com\/moments_v3\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+# 哲也_推荐页移除黑名单用户发布的文章、去除广告，及自定义一些屏蔽项目
+^https:\/\/api\.zhihu\.com\/topstory\/recommend url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+# 哲也_回答信息流移除黑名单用户的回答、去除广告
+^https?:\/\/api\.zhihu\.com\/next-data url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_文章页去除底部广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 
