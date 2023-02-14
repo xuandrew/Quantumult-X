@@ -512,9 +512,18 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/v2/strategy/ad")) {
     // 开屏广告
-    obj.data = {};
-    obj.end = "2040-01-01 23:59:59";
-    obj.start = "2040-01-01 00:00:00";
+    if (obj.data?.next_adid) {
+      obj.data.next_adid = "0";
+    }
+    if (obj.reqid) {
+      obj.reqid = "0";
+    }
+    if (obj.end) {
+      obj.end = "2040-01-01 23:59:59";
+    }
+    if (obj.start) {
+      obj.start = "2040-01-01 00:00:00";
+    }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告
     if (obj.cached_ad.ads) {
