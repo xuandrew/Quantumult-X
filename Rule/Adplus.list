@@ -1,3 +1,8 @@
+# Outlook
+host, acdn.adnxs.com, reject
+host, mediation.adnxs.com, reject
+host, sin3-ib.adnxs.com, reject
+
 # 小红书
 ;host, www.xiaohongshu.com, reject
 
