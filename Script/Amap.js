@@ -95,7 +95,7 @@ if (obj.data) {
       "new_operation_banner", // 精选活动 高德的推广
       "portal_entrance", // 高德旅游版块 引流到旅游频道
       "scenic_voice", // 语音讲解 付费的项目
-      // "official_account",
+      "official_account", // 其他平台官方账号
       // "scenic_knowledge",
       // "scenic_helper", // 景区助手 开放时间 旺季 淡季
       // "human_traffic", // 人流量情况 有统计图
