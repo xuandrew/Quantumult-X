@@ -46,6 +46,10 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 # 通用
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* url reject
 ^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
+# 歌单页,横幅广告
+^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list\? url reject-dict
+^https:\/\/interface\.music\.163\.com\/weapi\/resource-exposure\/activity\/config\/get\? url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/resource-exposure\/config\? url reject-dict
 # 开屏广告,首页顶部横幅广告
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
 # 搜索页,填充词,排行榜
