@@ -1,7 +1,7 @@
-// 2023-02-08 11:15
+// 2023-02-15 17:05
 
-if (!$response.body) $done({});
 const url = $request.url;
+if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
 if (obj.data) {
@@ -30,12 +30,12 @@ if (obj.data) {
         (item) => item.dataKey === "MyOrderCard"
       );
     }
-//  if (obj.data.tipData) {
-//    delete obj.data.tipData;
-//   }
-//  if (obj.data.footPrintV2) {
-//    delete obj.data.footPrintV2;
-//   }
+//    if (obj.data.tipData) {
+//      delete obj.data.tipData;
+//    }
+//    if (obj.data.footPrintV2) {
+//      delete obj.data.footPrintV2;
+//    }
   } else if (url.includes("/shield/frogserver/aocs")) {
     // 首页右上角图层
     if (obj.data.operation_layer) {
@@ -63,7 +63,7 @@ if (obj.data) {
     }
   } else if (url.includes("/shield/search/poi/detail")) {
     // 景点详情页
-    let item = [
+    const item = [
       // "normal_nav_bar", // 右上角图标 客服 反馈
       // "base_info",
       // "ggc_entry",
@@ -72,7 +72,7 @@ if (obj.data) {
       // "scenic_ticket_activity",
       "scenic_filter", // 购票悬浮菜单 可定明日 随时退
       // "scenic_ticket",
-      // "scenic_coupon",
+      "scenic_coupon", // 优惠券过期提示
       "movie_info", // 优惠购票 景点宣传片
       // "evaluate", // 高德出行评分
       "reviews", // 用户评价
@@ -126,5 +126,4 @@ if (obj.data) {
   }
 }
 
-body = JSON.stringify(obj);
-$done({ body });
+$done({ body: JSON.stringify(obj) });
