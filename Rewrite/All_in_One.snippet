@@ -1,14 +1,14 @@
 # NAME: AllInOne
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-02-15 02:13:48
+# UPDATED: 2023-02-15 23:48:03
 # HOST:5
 # HTTP-REQUEST-SCRIPT:3
 # HTTP-RESPONSE-SCRIPT:32
 # REDIRECT:62
-# REJECT:579
-# MITM:596
-# TOTAL:1277
+# REJECT:591
+# MITM:606
+# TOTAL:1299
 
 # REDIRECT
 (^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d\/(fav|msgfeed)).+?)(&s_locale=zh-Hans_[A-Z]{2})(.+?)(&sim_code=\d+)(.+) url 302 $1&s_locale=zh-Hans_PH$6&sim_code=51503$8
@@ -376,6 +376,7 @@
 ^https?:\/\/games\.mobileapi\.hupu\.com\/interfaceAdMonitor url reject-img
 ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig url reject
 ^https?:\/\/gateway\.shouqiev\.com(:8443)?\/fsda\/app\/bootImage\.json url reject
+^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 url reject
 ^https?:\/\/gfp\.veta\.naver\.com\/adcall\? url reject
 ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ url reject
 ^https?:\/\/ggic(\d)?\.cmvideo\.cn\/ad\/ url reject
@@ -454,8 +455,9 @@
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/json\/getAdsList url reject
 ^https?:\/\/m\.ibuscloud.com\/v2\/app\/getStartPage url reject
 ^https?:\/\/m\.tuniu\.com\/api\/operation\/splash\/ url reject
-;^https?:\/\/m\d\.amap\.com\/ws\/message\/notice\/list\? url reject-200
-;^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
+^https?:\/\/m\.yhdm\.io\/bar\/yfgg.js url reject
+^https?:\/\/m\d\.amap\.com\/ws\/message\/notice\/list\? url reject-200
+^https?:\/\/m\d\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\/ url reject
 ^https?:\/\/ma-adx\.ctrip\.com\/_ma\.gif url reject
 ^https?:\/\/ma\.ofo\.com\/adImage\/ url reject
 ^https?:\/\/ma\.ofo\.com\/ads url reject
@@ -644,16 +646,27 @@
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) url reject
 ^https?:\/\/zjh5api\.189smarthome\.com:\d+\/xygj-config-api\/queryData url reject
 ^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do url reject
+https?:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible url reject
+https?:\/\/apis\.lifeweek\.com\.cn\/api\/baseConfig\/getIosNewConfig url reject
+https?:\/\/b\.appsimg\.com\/upload\/momin\/ url reject
 https?:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush\/* url reject
 https?:\/\/fbchina\.flipchina\.cn\/v2\/ad\/query\/* url reject
+https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start url reject
 https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSplashFrequencyStatistics|getPopInfo|getAppEntranceConfig|promote\/list|getSplash|outing\/reqFoundNewList|outing\/reqIndex) url reject
+https?:\/\/homefront\.qunar\.com\/front\/splash\/ad url reject
 https?:\/\/ios\.sspai\.com\/api\/v3\/recommend\/page\/get\?ad.*ios_home_modal url reject
 https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens url reject-200
 https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup url reject-200
 https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url reject
 https?:\/\/mangaapi\.manhuaren\.com\/v2\/public\/getShelfActivity url reject
+https?:\/\/new-app-api\.ylyk\.com\/v1\/user\/myinfo\/adviser url reject
 https?:\/\/open3\.vistastory\.com\/v3\/api.*get_popup url reject
+https?:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad url reject
+https?:\/\/support\.you\.163\.com\/appversync\/check.do url reject
+https?:\/\/tagit\.hyhuo\.com\/recover\/list url reject
+https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config url reject
 https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
+
 
 
 
