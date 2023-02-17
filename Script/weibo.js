@@ -67,7 +67,45 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   $done({ body: JSON.stringify(obj) + "OK" });
 } else {
   let obj = JSON.parse(body);
-  if (url.includes("/2/checkin/show")) {
+  if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
+    if (obj.cards) {
+      let newCards = [];
+      for (let card of obj.cards) {
+        let cardGroup = card.card_group;
+        if (cardGroup?.length > 0) {
+          let newGroup = [];
+          for (let group of cardGroup) {
+            let cardType = group.card_type;
+            if (cardType !== 118) {
+              if (!isAd(group.mblog)) {
+                // 商品橱窗
+                if (group.mblog?.common_struct) {
+                  delete group.mblog.common_struct;
+                }
+                newGroup.push(group);
+              }
+            }
+          }
+          card.card_group = newGroup;
+          newCards.push(card);
+        } else {
+          let cardType = card.card_type;
+          // 9 广告
+          // 17 猜你想搜
+          // 58 猜你想搜偏好设置
+          // 165 广告
+          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
+            continue;
+          } else {
+            if (!isAd(card.mblog)) {
+              newCards.push(card);
+            }
+          }
+        }
+      }
+      obj.cards = newCards;
+    }
+  } else if (url.includes("/2/checkin/show")) {
     // 首页签到
     if (obj.show) {
       obj.show = 0;
@@ -106,7 +144,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.data.comment_bubble;
             }
             // 相关内容,过滤提示
-            if (item?.adType === "相关内容" || item?.type === 6) {
+            if (
+              item?.adType === "相关内容" ||
+              item?.adType === "推荐" ||
+              item?.type === 6 ||
+              item?.type === 15
+            ) {
               continue;
             }
             newItems.push(item);
@@ -339,43 +382,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
     }
-  } else if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
-    if (obj.cards) {
-      let newCards = [];
-      for (const card of obj.cards) {
-        let cardGroup = card.card_group;
-        if (cardGroup?.length > 0) {
-          let newGroup = [];
-          for (const group of cardGroup) {
-            let cardType = group.card_type;
-            if (cardType !== 118) {
-              if (!isAd(group.mblog)) {
-                // 商品橱窗
-                if (group.mblog?.common_struct) {
-                  delete group.mblog.common_struct;
-                }
-                newGroup.push(group);
-              }
-            }
-          }
-          card.card_group = newGroup;
-          newCards.push(card);
-        } else {
-          let cardType = card.card_type;
-          // 9 广告
-          // 58 猜你想搜偏好设置
-          // 165 广告
-          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
-            continue;
-          } else {
-            if (!isAd(card.mblog)) {
-              newCards.push(card);
-            }
-          }
-        }
-      }
-      obj.cards = newCards;
-    }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||
     url.includes("/2/statuses/container_timeline_unread")
@@ -509,20 +515,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       );
-    }
-  } else if (url.includes("/v2/strategy/ad")) {
-    // 开屏广告
-    if (obj.data?.next_adid) {
-      obj.data.next_adid = "0";
-    }
-    if (obj.reqid) {
-      obj.reqid = "0";
-    }
-    if (obj.end) {
-      obj.end = "2040-01-01 23:59:59";
-    }
-    if (obj.start) {
-      obj.start = "2040-01-01 00:00:00";
     }
   } else if (url.includes("/wbapplua/wbpullad.lua")) {
     // 开屏广告
