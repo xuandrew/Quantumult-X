@@ -79,7 +79,7 @@ if (obj.data) {
       // "packageShelf",
       // "smallOrListBizRec",
       "smallListBizRec", // 周边热门酒店
-      "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
+      // "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
       "bigListBizRec", // 周边景点推荐 三张景点大图
       "nearbyRecommendModule", // 周边推荐
       "scenic_recommend", // 景点建议
