@@ -4,7 +4,7 @@ hostname = *.amap.com, sns.amap.com, img.alicdn.com, m5-zb.amap.com
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv url reject-dict
-;^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_operation_location url reject-dict
+;^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_operation_location url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
 
 # 首页,卡片,消息横幅,天气质量卡片,右上角动图,搜索框热词,左下角天气
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/main-page url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
