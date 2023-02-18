@@ -1,4 +1,4 @@
-// 2023-02-18 13:15
+// 2023-02-18 21:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -36,21 +36,15 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   //  delete obj.data.footPrintV2;
   //}
 } else if (url.includes("/shield/frogserver/aocs")) {
-  // 首页右上角图层
-  if (obj.data.operation_layer) {
-    obj.data.operation_layer = {
-      status: 1,
-      version: "",
-      value: ""
-    };
-  }
-  // 首页右上角动图
-  if (obj.data.home_business_position_config) {
-    obj.data.home_business_position_config = {
-      status: 1,
-      version: "",
-      value: ""
-    };
+  const item = [
+    "operation_layer", // 首页右上角图层
+    "home_business_position_config", // 首页右上角动图
+    "his_input_tip"
+  ];
+  for (let i of item) {
+    if (obj.data?.[i]) {
+      obj.data[i] = { status: 1, version: "", value: "" };
+    }
   }
 } else if (url.includes("/shield/search/nearbyrec_smart")) {
   // 附近页面
