@@ -67,8 +67,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "scenic_ticket",
     "scenic_coupon", // 优惠券过期提示
     "movie_info", // 优惠购票 景点宣传片
-    // "evaluate", // 高德出行评分
-    // "reviews", // 用户评价
+    "evaluate", // 高德出行评分
+    "reviews", // 用户评价
     // "packageShelf",
     // "smallOrListBizRec",
     "smallListBizRec", // 周边热门酒店
