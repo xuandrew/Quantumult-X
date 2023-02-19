@@ -67,9 +67,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   if (obj.data.tipData) {
     delete obj.data.tipData;
   }
-  if (obj.data.footPrintV2) {
-    delete obj.data.footPrintV2;
-  }
+  //if (obj.data.footPrintV2) {
+  //  delete obj.data.footPrintV2;
+  //}
 } else if (url.includes("/shield/frogserver/aocs")) {
   // 首页右上角
   const item = [
