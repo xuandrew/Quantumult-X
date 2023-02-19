@@ -108,7 +108,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "craftsman_entry",
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
-    // "evaluate", // 高德出行评分
+    "evaluate", // 高德出行评分
     // "events",
     "everyOneToSee", // 大家还在看
     "feedback", // 问题反馈
