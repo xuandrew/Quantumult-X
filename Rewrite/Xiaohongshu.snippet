@@ -32,10 +32,20 @@ hostname = edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,refer
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/user\/teenager\/status url reject-dict
 
 
-# 小红书 //edith.xiaohongshu.com
-## 去除开屏广告,去除瀑布流推荐,惊喜弹窗
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(open|get_style) url reject-dict
+# ======= 小红书 ======= #
+# 2023-02-20 20:35
+
+# 惊喜弹窗
+;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(open|get_style)\? url reject-dict
+
+# 搜索页
+;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+
+# 开屏广告
 ;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+
+# 信息流
 ;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
-;^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource url reject-dict
+;^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? url reject-dict
