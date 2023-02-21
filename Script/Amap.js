@@ -1,4 +1,4 @@
-// 2023-02-21 15:55
+// 2023-02-21 20:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -15,7 +15,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     );
   }
   if (obj.data.mapBizList) {
-    obj.data.mapBizList = [];
+    obj.data.mapBizList = obj.data.mapBizList.filter(
+      (i) => i.dataKey === "FindCarVirtualCard" // 显示关联车辆位置
+    );
   }
 } else if (url.includes("/mapapi/poi/infolite")) {
   // 搜索结果 列表详情
@@ -73,6 +75,10 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   //if (obj.data.footPrintV2) {
   //  delete obj.data.footPrintV2;
   //}
+  // 成就勋章 lv1见习达人
+  if (obj.data.memberInfo) {
+    delete obj.data.memberInfo;
+  }
 } else if (url.includes("/shield/frogserver/aocs")) {
   // 首页右上角
   const item = [
@@ -80,7 +86,9 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "home_business_position_config", // 首页右上角动图
     "hotel_activity",
     "hotel_tipsicon",
-    "operation_layer" // 首页右上角图层
+    "operation_layer", // 首页右上角图层
+    "splashscreen",
+    "testflight_adiu"
   ];
   for (let i of item) {
     if (obj.data?.[i]) {
@@ -91,10 +99,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   // 附近页面
   if (obj.data.modules) {
     obj.data.modules = obj.data.modules.filter(
-      (i) =>
-        i === "head" ||
-        i === "search_hot_words" ||
-        i === "feed_rec"
+      (i) => i === "head" || i === "search_hot_words" || i === "feed_rec"
     );
   }
 } else if (url.includes("/shield/search/poi/detail")) {
@@ -184,7 +189,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "rentsalehouse",
     // "residentialOwners",
     "reviews", // 用户评价
-    "roomSelect", // 选择订房日期 悬浮菜单
+    // "roomSelect", // 选择订房日期 悬浮菜单
     // "same_price_new_estate",
     "scenic_coupon", // 优惠券过期提示
     "scenic_filter", // 购票悬浮菜单 可定明日 随时退
