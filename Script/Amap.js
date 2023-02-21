@@ -1,4 +1,4 @@
-// 2023-02-21 11:50
+// 2023-02-21 15:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -8,17 +8,15 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   // 首页底部卡片
   if (obj.data.cardList) {
     obj.data.cardList = obj.data.cardList.filter(
-      (i) => 
-        !(
-          i.dataKey === "AmapVoiceCard" || // 语音引导卡
-          i.dataKey === "BusinessBanner" || // 轮播banner卡
-          i.dataKey === "LocalTopListCard" // 本地榜单卡
-        )
+      (i) =>
+        i.dataKey === "ContinueNavigationCard" || // 继续导航
+        i.dataKey === "FrequentLocation" || // 常去地点
+        i.dataKey === "LoginCard" // 登陆卡片
     );
   }
-  // if (obj.data.mapBizList) {
-    // obj.data.mapBizList = [];
-  // }
+  if (obj.data.mapBizList) {
+    obj.data.mapBizList = [];
+  }
 } else if (url.includes("/mapapi/poi/infolite")) {
   // 搜索结果 列表详情
   if (obj.data.district) {
@@ -78,9 +76,11 @@ if (url.includes("/faas/amap-navigation/main-page")) {
 } else if (url.includes("/shield/frogserver/aocs")) {
   // 首页右上角
   const item = [
-    "operation_layer", // 首页右上角图层
+    "his_input_tip",
     "home_business_position_config", // 首页右上角动图
-    "his_input_tip"
+    "hotel_activity",
+    "hotel_tipsicon",
+    "operation_layer" // 首页右上角图层
   ];
   for (let i of item) {
     if (obj.data?.[i]) {
@@ -107,14 +107,16 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "brand_story",
     "checkIn",
     "check_in", // 足迹打卡
+    "claim", // 立即认领 管理店铺
     "collector_guide", // 游玩的图文指南
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
     // "consultancy",
-    // "contributor",
+    "contributor", // 地点贡献
     // "coupon_allowance",
     // "coupon_entrance",
     // "cpt_service_shop",
     // "craftsman_entry",
+    // "crowd_index", // 人流量情况
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
     "evaluate", // 高德出行评分
@@ -167,6 +169,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "officesellhouse",
     "official_account", // 其他平台官方账号
     "oldsellhouse",
+    // "opentime", // 营业时间
     "operation_banner", // 横版图片推广
     // "packageShelf",
     "parentBizRec",
@@ -215,7 +218,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "surround_selloffice",
     // "traffic", // 交通出行 地铁站 公交站 停车场
     "uploadBar",
-    "upload_bar" // 上传照片
+    "upload_bar", // 上传照片
+    "verification" // 商家已入驻
     // "video",
   ];
   if (obj.data.modules) {
@@ -229,17 +233,17 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     delete obj.data.coupon;
   }
   const bar = [
-    "coupon_float_bar",
-    "common_float_bar",
-    "coupon_discount_float_bar",
-    "mood_coupon_banner",
-    "image_cover_bar",
-    "promotion_wrap_card",
-    "discount_coupon",
-    "common_image_banner",
-    "tips_top_banner",
     "belt",
-    "operation_brand"
+    "common_float_bar",
+    "common_image_banner",
+    "coupon_discount_float_bar",
+    "coupon_float_bar",
+    "discount_coupon",
+    "image_cover_bar",
+    "mood_coupon_banner",
+    "operation_brand",
+    "promotion_wrap_card",
+    "tips_top_banner"
   ];
   if (obj.data.modules) {
     bar.forEach((i) => {
