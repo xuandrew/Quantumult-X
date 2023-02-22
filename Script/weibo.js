@@ -75,10 +75,17 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         if (cardGroup?.length > 0) {
           let newGroup = [];
           for (let group of cardGroup) {
-            // 头像挂件,关注按钮
-            removeAvatar(group.mblog);
+            if (group.mblog) {
+              // 头像挂件,关注按钮
+              removeAvatar(group.mblog);
+            }
             let cardType = group.card_type;
             if (cardType !== 118) {
+              if (card?.show_type === 3) {
+                if (cardType !== 17) {
+                  continue;
+                }
+              }
               if (!isAd(group.mblog)) {
                 // 商品橱窗
                 if (group.mblog?.common_struct) {
@@ -92,18 +99,23 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           newCards.push(card);
         } else {
           let cardType = card.card_type;
+          if (card.mblog) {
+            // 头像挂件,关注按钮
+            removeAvatar(card.mblog);
+          }
           // 9 广告
           // 17 猜你想搜
           // 58 猜你想搜偏好设置
           // 165 广告
-          if ([9, 17, 58, 165, 180, 1007].indexOf(cardType) !== -1) {
-            continue;
-          } else {
+          if ([9, 165].indexOf(cardType) !== -1) {
             if (!isAd(card.mblog)) {
-              // 头像挂件,关注按钮
-              removeAvatar(card.mblog);
               newCards.push(card);
             }
+          } else {
+            if ([17, 58, 180, 1007].indexOf(cardType) !== -1) {
+              continue;
+            }
+            newCards.push(card);
           }
         }
       }
@@ -394,7 +406,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||
-    url.includes("/2/statuses/container_timeline_unread")
+    url.includes("/2/statuses/container_timeline_unread") ||
+    url.includes("/2/statuses/container_timeline_hot")
   ) {
     // 首页关注tab信息流
     if (obj.loadedInfo?.headers) {
