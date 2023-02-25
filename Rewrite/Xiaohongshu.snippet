@@ -36,7 +36,8 @@ hostname = edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,refer
 # 2023-02-20 20:35
 
 # 惊喜弹窗
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(open|get_style)\? url reject-dict
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style\?|open\?|submit_action$) url reject-dict
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger url reject-dict
 
 # 搜索页
 ;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
