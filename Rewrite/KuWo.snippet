@@ -8,15 +8,15 @@ hostname = *kuwo*, *lrts*
 ;^https?:\/\/.*\.kuwo\.cn\/(mgxh|recterm|a\.p|music\.pay\?newver|vip\/(v2|enc)\/(theme\?op=gd|user\/vip\?op=ui)) url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/kuwo.js
 
 
+# ======= 酷我音乐 ====== #
+# 2023-02-27 19:30
+
 # 广告
-;^http:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright ^GET url-and-header reject-dict
-;^http:\/\/mgxhtj\.kuwo\.cn\/mgxh\.s ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^GET url-and-header reject-dict
-;^http:\/\/nmobi\.kuwo\.cn\/mobi\.s ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
+;^http:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright_endtime url reject-dict
+;^http:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
+
 # 会员
 ;^http:\/\/audiobookpay\.kuwo\.cn\/a\.p url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/musicpay\.kuwo\.cn\/music\.pay ^POST url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/vip1\.kuwo\.cn\/vip\/enc\/user\/vip ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
-;^http:\/\/vip1\.kuwo\.cn\/vip\/v2\/theme\?op=gd ^GET url-and-header script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
+;^http:\/\/musicpay\.kuwo\.cn\/music\.pay url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
+;^http:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v2\/theme\?op=gd) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
 ;^https:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js
