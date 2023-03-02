@@ -591,7 +591,7 @@ function removeAvatar(data) {
     delete data.buttons;
   }
   if (data?.pic_bg_new) {
-    delete data?.pic_bg_new;
+    delete data.pic_bg_new;
   }
   if (data?.user?.cardid) {
     delete data.user.cardid;
