@@ -225,12 +225,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             i.itemid?.includes("infeed_may_interest_in") || // 你可能感兴趣的超话
             i.itemid?.includes("infeed_pagemanual3") || // 手动区域3
             i.itemid?.includes("infeed_weibo_mall") || // 微博小店
-            i?.mblog?.mblogtypename === "广告"
+            i?.mblog?.mblogtypename?.includes("广告")
           )
       );
     } else if (obj.card_group) {
-      obj.card_group = obj.card_group.filter(
-        (i) => !(i?.desc === "你可能感兴趣的超话")
+      obj.card_group = obj.card_group.filter((i) =>
+        i?.desc?.includes("你可能感兴趣的超话")
       );
     }
   } else if (url.includes("/2/profile/container_timeline")) {
