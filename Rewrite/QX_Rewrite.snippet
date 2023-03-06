@@ -59,11 +59,12 @@ https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceN
 # 通用
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* url reject
 ^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* url reject
-# 歌单页,横幅广告
+# 歌单页,横幅广告,侧边栏
 ^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list url reject-dict
 ^https:\/\/interface\.music\.163\.com\/weapi\/resource-exposure\/activity\/config\/get url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/resource-exposure\/activity\/config\/get url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/resource-exposure\/config url reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/batch-deliver) url reject-dict
 # 开屏广告,首页顶部横幅广告
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* url reject-dict
 # 搜索页,填充词,排行榜
@@ -90,8 +91,8 @@ https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceN
 # 我的页面,小部件红点
 ^https:\/\/interface3\.music\.163\.com\/eapi\/mine\/applet\/redpoint url reject-dict
 # 歌单页,横幅广告
-^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list url reject-dict
-^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config) url reject-dict
+;^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list url reject-dict
+;^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config) url reject-dict
 
 # 白描解锁黄金vip @sirsunknight
 ;^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/sirsunknight/QuantumultX/master/Scripts/Baimiao.js
