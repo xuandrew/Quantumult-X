@@ -9,19 +9,19 @@
 hostname = edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,referee.xiaohongshu.com
 
 # > 小红书_开屏广告@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
+;^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_首页瀑布流@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
+;^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\? url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_启动处理@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
+;^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/config\? url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_热搜发现@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
+;^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hot_list url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_默认填词@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
+;^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/hint url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_去除购物@ddgksf2013
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/homefeed\/categories url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_猜你想搜@ddgksf2013
-^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
+;^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/search\/trending url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/redbook_json.js
 # > 小红书_通用广告请求@ddgksf2013
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/(tag\/)?ads url reject-dict
 # > 小红书_隐私屏蔽@ddgksf2013
@@ -42,13 +42,13 @@ hostname = edith.xiaohongshu.com,www.xiaohongshu.com,pages.xiaohongshu.com,refer
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger url reject-dict
 
 # 搜索页
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
 
 # 开屏广告
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
 
 # 信息流
-;^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
-;^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? url reject-dict
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource url reject-dict
