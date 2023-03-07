@@ -79,6 +79,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "charlie", // 横版推广 单单立减 领专属优惠 体验问卷
     "icon",
     "popup",
+    "push", // 顶部通知 发单立享优惠
     "tips"
   ];
   if (obj.data) {
