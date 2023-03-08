@@ -1,3 +1,6 @@
+# 米家
+host, sdkconfig.ad.xiaomi.com, reject
+
 # Outlook
 host, acdn.adnxs.com, reject
 host, mediation.adnxs.com, reject
