@@ -1,4 +1,4 @@
-// 2023-03-09 12:20
+// 2023-03-09 16:45
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -164,6 +164,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "crowd_index", // 人流量情况
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
+    "divergentRecommendModule", // 你可能还喜欢
     "evaluate", // 高德出行评分
     // "events",
     "everyOneToSee", // 大家还在看
@@ -195,6 +196,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "house_rent_sale_agency",
     // "human_traffic", // 人流量情况 有统计图
     // "legal_document",
+    "listBizRec_1",
     "listBizRec_2", // 周边餐饮
     "membership", // 高德菲住卡 会员项目
     "movie_info", // 优惠购票 景点宣传片
@@ -230,6 +232,8 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "residentialOwners",
     "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
+    "sameIndustryRecommendModule",
+    "sameIndustry2RecommendModule",
     // "same_price_new_estate",
     "scenic_coupon", // 优惠券过期提示
     "scenic_filter", // 购票悬浮菜单 可定明日 随时退
