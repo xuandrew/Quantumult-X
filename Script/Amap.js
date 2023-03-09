@@ -1,4 +1,4 @@
-// 2023-03-07 12:45
+// 2023-03-09 12:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -86,6 +86,10 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     item.forEach((i) => {
       delete obj.data[i];
     });
+  }
+} else if (url.includes("/sharedtrip/taxi/order_detail_car_tips")) {
+  if (obj.data.carTips.data?.popupInfo) {
+    delete obj.data.carTips.data.popupInfo;
   }
 } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
   // 我的页面
@@ -194,7 +198,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "listBizRec_2", // 周边餐饮
     "membership", // 高德菲住卡 会员项目
     "movie_info", // 优惠购票 景点宣传片
-    // "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
+    "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
     "nearbyRecommendModule", // 周边推荐
     "nearby_house",
     "nearby_new_house_estate",
