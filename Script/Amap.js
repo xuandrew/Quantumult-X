@@ -198,7 +198,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "listBizRec_2", // 周边餐饮
     "membership", // 高德菲住卡 会员项目
     "movie_info", // 优惠购票 景点宣传片
-    "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
+    // "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
     "nearbyRecommendModule", // 周边推荐
     "nearby_house",
     "nearby_new_house_estate",
