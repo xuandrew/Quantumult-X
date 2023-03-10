@@ -1,4 +1,4 @@
-// 2023-03-09 16:45
+// 2023-03-10 22:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -67,6 +67,14 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // 底栏 打车
     if (list?.bottom?.bottombar_button?.takeCar) {
       delete list.bottom.bottombar_button.takeCar;
+    }
+    // 预览信息中的优惠推广
+    if (list?.promotion_wrap_card) {
+      delete list.promotion_wrap_card;
+    }
+    // 预览信息中的推广
+    if (list?.hookInfo) {
+      delete list.hookInfo;
     }
   }
 } else if (url.includes("/promotion-web/resource")) {
@@ -146,13 +154,18 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   // 搜索结果 模块详情
   const item = [
     // "anchor",
+    "adv_compliance_info", // 服务提供方
+    "adv_gift",
     // "base_info",
     "bigListBizRec", // 周边景点推荐 三张景点大图
     // "brand_introduction",
+    "brand_shop_bar",
     // "brand_story",
     "checkIn",
     "check_in", // 足迹打卡
+    "city_discount", // 专业老师在线答疑
     "claim", // 立即认领 管理店铺
+    "co_branded_card",
     "collector_guide", // 游玩的图文指南
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
     // "consultancy",
@@ -195,6 +208,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "house_price",
     "house_rent_sale_agency",
     // "human_traffic", // 人流量情况 有统计图
+    "image_banner",
     // "legal_document",
     "listBizRec_1",
     "listBizRec_2", // 周边餐饮
@@ -206,6 +220,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "nearby_new_house_estate",
     "nearby_office_estate",
     "nearby_old_sell_estate",
+    "nearby_play_rec", // 附近玩乐项目
     "newGuest", // 新客专享
     "newRelatedRecommends", // 探索周边
     "new_operation_banner", // 精选活动 高德的推广
@@ -218,8 +233,10 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "oldsellhouse",
     // "opentime", // 营业时间
     "operation_banner", // 横版图片推广
+    "operator_card",
     // "packageShelf",
     "parentBizRec",
+    "poster_banner",
     // "poi_intercept",
     "portal_entrance", // 高德旅游版块 引流到旅游频道
     // "question_answer_card", // 问问 地点附近的热门问题
