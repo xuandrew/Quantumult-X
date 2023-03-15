@@ -224,6 +224,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         obj.root_comments = newItems;
       }
     }
+  } else if (url.includes("/2/container/asyn")) {
+    if (obj.items?.[0]?.items) {
+      let item = obj.items?.[0]?.items;
+      for (let i of item) {
+        removeAvatar(i.data);
+      }
+    }
   } else if (url.includes("/2/messageflow/notice")) {
     // 消息动态页
     if (obj.messages) {
