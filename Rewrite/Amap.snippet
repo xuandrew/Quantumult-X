@@ -1,5 +1,10 @@
 hostname = m5.amap.com, m5-zb.amap.com, mps.amap.com, sns.amap.com
 
+# 其他
+^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
+
 # 导航详情页,路线规划,地点详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword url reject-dict
@@ -27,11 +32,6 @@ hostname = m5.amap.com, m5-zb.amap.com, mps.amap.com, sns.amap.com
 
 # 附近页
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
-
-# 其他
-^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ url reject-dict
-^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
 
 # 开屏广告
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
