@@ -21,7 +21,6 @@ host-suffix, wx.qlogo.cn, direct
 host-suffix, push.app.autohome.com.cn, direct
 host-suffix, activity.app.autohome.com.cn, direct
 host, img2.autoimg.cn, direct
-host, staticsns.cdn.bcebos.com, direct
 host, adm3.autoimg.cn, direct
 host, leads.autohome.com.cn, direct
 host-suffix, al.autohome.com.cn, direct
@@ -73,6 +72,7 @@ HOST-SUFFIX,sp0.baidu.com,Direct
 HOST-SUFFIX,baikebcs.bdimg.com,Direct
 HOST-SUFFIX,bj.bcebos.com,Direct
 HOST-SUFFIX,crashlytics.com,Direct
+host, staticsns.cdn.bcebos.com, direct
 
 #
 host-suffix, collector.github.com, direct
