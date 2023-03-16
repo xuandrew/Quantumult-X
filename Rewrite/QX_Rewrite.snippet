@@ -57,6 +57,11 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ^https?:\/\/api\.revenuecat\.com url script-request-body https://hub.nange.cn/Script/RevenueCat/RevenueCat.js
 
 # 网易云音乐去广告, interface3.music.163.com
+# 会员解锁
+;^https:\/\/interface3\.music\.163\.com\/eapi\/content\/exposure\/songplay\/entrance\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
+;^https:\/\/interface3\.music\.163\.com\/eapi\/search\/complex\/page\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
+;^https:\/\/interface3\.music\.163\.com\/eapi\/song\/enhance\/player\/url\/v1\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
+;^https:\/\/interface3\.music\.163\.com\/eapi\/(v6\/)?playlist\/(detail\/|update\/playcount)\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 # 通用
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* url reject
