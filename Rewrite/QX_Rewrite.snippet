@@ -268,9 +268,11 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 ;^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js
 ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/(channel_feed|event_detail)|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/qq_news.js
 
-# 瑞幸咖啡 *.luckincoffeecdn.com,
-;^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/+.? url reject-200
-;^https?:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew\?sign= url reject
+# 瑞幸咖啡 *.luckincoffeecdn.com
+^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew url reject
+^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList url reject
+^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page url response-body \{.+\} response-body {"status":"SUCCESS"}
+^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main url response-body "popTitle":".+?" response-body "popTitle":""
 
 # 1Blocker
 #^https:\/\/api\.revenuecat\.com\/v1\/subscribers url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/blocker.js
