@@ -140,12 +140,12 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ;^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bytq.js
 
 # 知道搜索广告
-^https?:\/\/(zhidao)\.baidu\.com\/(question|index|\?fr|\?word) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js
+^https?:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js
 # 搜索首页广告
-;^https?:\/\/(www|m)\.baidu\.com(/|\/\?ref.*|\/\?from.*)$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js
+^https?:\/\/(www|m)\.baidu\.com(\/$|\/\?(ref|from).*) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js
 # 搜索结果广告
-^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.js
-;^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url response-body <head> response-body <head><style> .ec_ad_results{display:none!important} </style>
+^https?:\/\/(www|m)\.baidu\.com\/.*word=.* url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu.js
+;^https?:\/\/(www|m)\.baidu\.com(\/s\?word.*|\/from.*?\/s\?word.*|\/from.*?word=.*) url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_baidu.js
 # 百度防跳转
 ^https?:\/\/boxer\.baidu\.com\/scheme\?scheme url script-response-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js
 # 内容农场(bing)
