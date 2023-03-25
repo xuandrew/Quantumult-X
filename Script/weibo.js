@@ -270,12 +270,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         } else if (item.category === "feed") {
           if (!isAd(item.data)) {
-            // 头像挂件,关注按钮
-            removeAvatar(item.data);
-            // 商品橱窗
-            if (item.data?.common_struct) {
-              delete item.data.common_struct;
-            }
+            removeFeedAd(item.data);
             newItems.push(item);
           }
         }
@@ -368,8 +363,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         for (let item of obj.items) {
           if (item.category === "feed") {
             if (!isAd(item.data)) {
-              // 头像挂件,关注按钮
-              removeAvatar(item.data);
+              removeFeedAd(item.data);
               newItems.push(item);
             }
           } else if (item.category === "card") {
@@ -404,8 +398,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               for (let item of payload.items) {
                 if (item.category === "feed") {
                   if (!isAd(item.data)) {
-                    // 头像挂件,关注按钮
-                    removeAvatar(item.data);
+                    removeFeedAd(item.data);
                     newItems.push(item);
                   }
                 } else if (item.category === "card") {
@@ -475,15 +468,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let item of obj.items) {
         if (!isAd(item.data)) {
           if (item.category === "feed") {
-            // 头像挂件,关注按钮
-            removeAvatar(item.data);
-            if (item.data?.retweeted_status) {
-              removeAvatar(item.data.retweeted_status);
-            }
-            // 商品橱窗
-            if (item.data?.common_struct) {
-              delete item.data.common_struct;
-            }
+            removeFeedAd(item.data);
             newItems.push(item);
           } else if (item.category === "feedBiz") {
             // 管理特别关注按钮
@@ -518,15 +503,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.items = newItems;
     }
   } else if (url.includes("/2/statuses/show")) {
-    // 头像挂件,关注按钮
-    removeAvatar(obj);
-    // 商品橱窗
-    if (obj?.common_struct) {
-      delete obj.common_struct;
-    }
+    removeFeedAd(obj);
     // 循环引用中的商品橱窗
-    if (obj.text?.common_struct) {
-      delete obj.text.common_struct;
+    if (obj.text) {
+      removeFeedAd(obj.text);
     }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流
@@ -539,12 +519,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       let newStatuses = [];
       for (let s of obj.statuses) {
         if (!isAd(s)) {
-          // 头像挂件,关注按钮
-          removeAvatar(s);
-          // 移除拓展信息,绿洲
-          if (s?.common_struct) {
-            delete s.common_struct;
-          }
+          removeFeedAd(s);
           newStatuses.push(s);
         }
       }
@@ -675,4 +650,20 @@ function checkSearchWindow(item) {
     return true;
   }
   return false;
+}
+
+function removeFeedAd(item) {
+  // 头像挂件,关注按钮
+  removeAvatar(item);
+  if (item?.retweeted_status) {
+    removeAvatar(item.retweeted_status);
+  }
+  // 商品橱窗
+  if (item?.common_struct) {
+    delete item.common_struct;
+  }
+  // 移除信息流中的热评
+  if (item?.comment_summary) {
+    delete item.comment_summary;
+  }
 }
