@@ -663,7 +663,7 @@ function removeFeedAd(item) {
     delete item.common_struct;
   }
   // 移除信息流中的热评
-  if (item?.comment_summary) {
-    delete item.comment_summary;
-  }
+  //if (item?.comment_summary) {
+  //  delete item.comment_summary;
+  //}
 }
