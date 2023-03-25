@@ -1,4 +1,4 @@
-// 2023-03-11 08:55
+// 2023-03-25 08:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -67,7 +67,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   $done({ body: JSON.stringify(obj) + "OK" });
 } else {
   let obj = JSON.parse(body);
-  if (url.includes("/2/cardlist") || url.includes("/2/searchall")) {
+  if (url.includes("/2/cardlist")) {
     if (obj.cards) {
       let newCards = [];
       for (let card of obj.cards) {
@@ -75,48 +75,24 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         if (cardGroup?.length > 0) {
           let newGroup = [];
           for (let group of cardGroup) {
-            if (group.mblog) {
-              // 头像挂件,关注按钮
-              removeAvatar(group.mblog);
-            }
             let cardType = group.card_type;
-            if (cardType !== 118) {
-              if (card?.show_type === 3) {
-                if (cardType !== 17) {
-                  continue;
-                }
-              }
-              if (!isAd(group.mblog)) {
-                // 商品橱窗
-                if (group.mblog?.common_struct) {
-                  delete group.mblog.common_struct;
-                }
-                newGroup.push(group);
+            if (card?.show_type === 3) {
+              // 保留视频热榜
+              if (cardType !== 17) {
+                continue;
               }
             }
+            newGroup.push(group);
           }
           card.card_group = newGroup;
           newCards.push(card);
         } else {
           let cardType = card.card_type;
-          if (card.mblog) {
-            // 头像挂件,关注按钮
-            removeAvatar(card.mblog);
+          // 17猜你想搜 58搜索偏好设置
+          if ([17, 58].indexOf(cardType) !== -1) {
+            continue;
           }
-          // 9 广告
-          // 17 猜你想搜
-          // 58 猜你想搜偏好设置
-          // 165 广告
-          if ([9, 165].indexOf(cardType) !== -1) {
-            if (!isAd(card.mblog)) {
-              newCards.push(card);
-            }
-          } else {
-            if ([17, 58, 180, 1007].indexOf(cardType) !== -1) {
-              continue;
-            }
-            newCards.push(card);
-          }
+          newCards.push(card);
         }
       }
       obj.cards = newCards;
@@ -396,13 +372,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               removeAvatar(item.data);
               newItems.push(item);
             }
-          } else {
+          } else if (item.category === "card") {
             if (!checkSearchWindow(item)) {
               newItems.push(item);
             }
           }
-          obj.items = newItems;
         }
+        obj.items = newItems;
       }
       if (obj?.loadedInfo) {
         delete obj?.loadedInfo;
@@ -432,7 +408,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                     removeAvatar(item.data);
                     newItems.push(item);
                   }
-                } else {
+                } else if (item.category === "card") {
                   if (!checkSearchWindow(item)) {
                     newItems.push(item);
                   }
@@ -443,6 +419,43 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         }
       }
+    }
+  } else if (url.includes("/2/searchall")) {
+    if (obj.cards) {
+      let newCards = [];
+      for (let card of obj.cards) {
+        let cardGroup = card.card_group;
+        if (cardGroup?.length > 0) {
+          let newGroup = [];
+          for (let group of cardGroup) {
+            if (group.mblog) {
+              // 头像挂件,关注按钮
+              removeAvatar(group.mblog);
+            }
+            let cardType = group.card_type;
+            if (cardType !== 118) {
+              if (!isAd(group.mblog)) {
+                // 商品橱窗
+                if (group.mblog?.common_struct) {
+                  delete group.mblog.common_struct;
+                }
+                newGroup.push(group);
+              }
+            }
+          }
+          card.card_group = newGroup;
+          newCards.push(card);
+        } else {
+          if (card.mblog) {
+            if (!isAd(card.mblog)) {
+              // 头像挂件,关注按钮
+              removeAvatar(card.mblog);
+              newCards.push(card);
+            }
+          }
+        }
+      }
+      obj.cards = newCards;
     }
   } else if (
     url.includes("/2/statuses/container_timeline?") ||
@@ -649,16 +662,6 @@ function removeAvatar(data) {
 }
 
 function checkSearchWindow(item) {
-  if (item.category) {
-    // 搜索页中间的热议话题、热门人物
-    if (item.category === "group") {
-      return true;
-    } else {
-      if (item.category !== "card") {
-        return false;
-      }
-    }
-  }
   if (
     item.data?.card_type === 19 || // 找人 热议 本地
     item.data?.card_type === 118 || // finder_window 横版大图
@@ -666,7 +669,8 @@ function checkSearchWindow(item) {
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
     item.data?.itemid === "more_frame" ||
-    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
+    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad") ||
+    item.data?.title === "微博热搜"
   ) {
     return true;
   }
