@@ -82,6 +82,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 continue;
               }
             }
+            // 搜索框 我的热搜 查看更多热搜
+            if ([4, 6, 101].indexOf(cardType) !== -1) {
+              continue;
+            }
+            if (group.mblog) {
+              // 移除卡片挂件,关注按钮
+              removeAvatar(group.mblog);
+            }
             newGroup.push(group);
           }
           card.card_group = newGroup;
@@ -92,10 +100,18 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if ([17, 58].indexOf(cardType) !== -1) {
             continue;
           }
+          if (card.mblog) {
+            // 移除 卡片挂件,关注按钮
+            removeAvatar(card.mblog);
+          }
           newCards.push(card);
         }
       }
       obj.cards = newCards;
+    }
+    // 我的热搜
+    if (obj.cardlistInfo?.page_type === "08") {
+      delete obj.cardlistInfo;
     }
   } else if (url.includes("/2/checkin/show")) {
     // 首页签到
@@ -370,6 +386,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (!checkSearchWindow(item)) {
               newItems.push(item);
             }
+          } else if (item.category === "cell") {
+            // 保留信息流分割线
+            newItems.push(item);
           }
         }
         obj.items = newItems;
@@ -405,6 +424,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (!checkSearchWindow(item)) {
                     newItems.push(item);
                   }
+                } else if (item.category === "cell") {
+                  // 保留信息流分割线
+                  newItems.push(item);
                 }
               }
               payload.items = newItems;
@@ -426,7 +448,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               removeAvatar(group.mblog);
             }
             let cardType = group.card_type;
-            if (cardType !== 118) {
+            // 22信息流横版广告图
+            if ([22, 118].indexOf(cardType) === -1) {
               if (!isAd(group.mblog)) {
                 // 商品橱窗
                 if (group.mblog?.common_struct) {
@@ -606,6 +629,9 @@ function isAd(data) {
     if (data.promotion?.type === "ad") {
       return true;
     }
+    if (data.readtimetype === "adMblog") {
+      return true;
+    }
   }
   return false;
 }
@@ -644,8 +670,7 @@ function checkSearchWindow(item) {
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
     item.data?.itemid === "more_frame" ||
-    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad") ||
-    item.data?.title === "微博热搜"
+    item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
     return true;
   }
