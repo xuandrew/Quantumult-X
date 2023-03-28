@@ -1,4 +1,4 @@
-// 2023-03-28 15:40
+// 2023-03-28 18:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -172,7 +172,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "contributor", // 地点贡献
     // "coupon_allowance",
     // "coupon_entrance",
-    // "cpt_service_shop",
+    "cpt_service_shop", //买卖二手房
     // "craftsman_entry",
     // "crowd_index", // 人流量情况
     // "detailFeedCommodity",
@@ -209,7 +209,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "house_rent_sale_agency",
     // "human_traffic", // 人流量情况 有统计图
     "image_banner",
-    // "legal_document",
+    "legal_document", // 房源法律信息
     "listBizRec_1",
     "listBizRec_2", // 周边餐饮
     "membership", // 高德菲住卡 会员项目
@@ -246,7 +246,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "rentsaleagencyv2",
     "rentsaleagencyv3",
     "rentsalehouse",
-    // "residentialOwners",
+    "residentialOwners", // 小区业主
     "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
     "sameIndustryRecommendModule",
@@ -271,7 +271,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "scenic_ticket_activity", // 购票活动
     "scenic_voice", // 语音讲解 付费的项目
     "second_surround_estate_tab", // 周边房产
-    // "service_shop",
+    "service_shop", // 中介门店
     // "shop_news",
     "smallListBizRec", // 周边热门酒店
     "smallOrListBizRec",
