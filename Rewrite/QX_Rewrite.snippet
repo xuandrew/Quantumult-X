@@ -378,12 +378,12 @@ https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body htt
 ## WPS稻壳会员模板 //account.wps.cn, *.docer.wps.cn
 ;^https?:\/\/account\.wps\.cn\/api\/v\d\/mine\/vips url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/wpsUser.js
 ;^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v\d\/vip|android\/mb\/buy|download\/v\d\/ios|partner\/invoke\/usable|(api|rank)\/v\d(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/wpsOwer.js
-###
-;^https?:\/\/(drive|account)\.wps\.cn\/api\/(users|v3\/(spaces|mine\/vips)) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wps.js
-^https?:\/\/(client|userinfo)\.docer\.wps\.cn\/(android\/mb\/buy|user\/v1\/vip\_dl\_times) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer_times.js
-^https?:\/\/.+\.(docer.)?wps.cn\/(download\/v1\/ios|user\/v1\/vip|android\/mb\/buy|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer.js
 # new
 ^https:\/\/vas\.wps\.cn\/query\/api\/v\d\/list_purchase_info url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+###
+^https?:\/\/(drive|account)\.wps\.cn\/api\/(users|v3\/(spaces|mine\/vips)) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wps.js
+^https?:\/\/(client|userinfo)\.docer\.wps\.cn\/(android\/mb\/buy|user\/v1\/vip\_dl\_times) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer_times.js
+^https?:\/\/.+\.(docer.)?wps.cn\/(download\/v1\/ios|user\/v1\/vip|android\/mb\/buy|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer.js
 
 # 解锁流利说·阅读会员、解锁阅读权限、解锁音频权限等 hostname = vira.llsapp.com
 ^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js
