@@ -1,4 +1,4 @@
-// 2023-03-25 08:55
+// 2023-04-02 08:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -83,7 +83,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               }
             }
             // 搜索框 我的热搜 查看更多热搜
-            if ([4, 6, 101].indexOf(cardType) !== -1) {
+            if ([4, 6, 101].includes(cardType)) {
               continue;
             }
             if (group.mblog) {
@@ -97,7 +97,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         } else {
           let cardType = card.card_type;
           // 17猜你想搜 58搜索偏好设置
-          if ([17, 58].indexOf(cardType) !== -1) {
+          if ([17, 58].includes(cardType)) {
             continue;
           }
           if (card.mblog) {
@@ -163,15 +163,17 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item.data?.vip_button) {
               delete item.data.vip_button;
             }
-            // 相关内容,过滤提示
+            // 6为你推荐更多精彩内容 15过滤提示
             if (
               item?.adType === "相关内容" ||
+              item?.adType === "相关评论" ||
               item?.adType === "推荐" ||
               item?.type === 6 ||
               item?.type === 15
             ) {
               continue;
             }
+            fixPos(item.data);
             newItems.push(item);
           }
         }
@@ -210,10 +212,30 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item?.vip_button) {
               delete item.vip_button;
             }
+            fixPos(item);
             newItems.push(item);
           }
         }
         obj.root_comments = newItems;
+      }
+    } else if (obj.comments) {
+      let items = obj.comments;
+      if (items.length > 0) {
+        let newItems = [];
+        for (let item of items) {
+          if (item.user) {
+            // 头像挂件,关注按钮
+            removeAvatar(item);
+          }
+          fixPos(item);
+          newItems.push(item);
+        }
+        obj.comments = newItems;
+      }
+    }
+    function fixPos(arr) {
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].position = i + 1;
       }
     }
   } else if (url.includes("/2/container/asyn")) {
@@ -448,8 +470,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               removeAvatar(group.mblog);
             }
             let cardType = group.card_type;
-            // 22信息流横版广告图
-            if ([22, 118].indexOf(cardType) === -1) {
+            // 17正在热搜卡片 22信息流横版广告图 25超话卡片(单个) 42正在热搜标题 182超话卡片(多个)
+            if (![17, 22, 25, 42, 118, 182].includes(cardType)) {
               if (!isAd(group.mblog)) {
                 // 商品橱窗
                 if (group.mblog?.common_struct) {
@@ -555,7 +577,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
     if (obj.trend?.titles) {
       let title = obj.trend.titles.title;
-      if (["博主好物种草", "相关推荐"].indexOf(title) !== -1) {
+      if (["博主好物种草", "相关推荐"].includes(title)) {
         delete obj.trend;
       }
     }
@@ -620,16 +642,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 // 判断信息流
 function isAd(data) {
   if (data) {
-    if (data.mblogtypename === "广告") {
+    if (data?.mblogtypename === "广告") {
       return true;
     }
-    if (data.mblogtypename === "热推") {
+    if (data?.mblogtypename === "热推") {
       return true;
     }
-    if (data.promotion?.type === "ad") {
+    if (data?.promotion?.type === "ad") {
       return true;
     }
-    if (data.readtimetype === "adMblog") {
+    if (data?.readtimetype === "adMblog") {
+      return true;
+    }
+    if (data?.readtimetype?.includes("_recommend")) {
       return true;
     }
   }
@@ -638,26 +663,29 @@ function isAd(data) {
 
 // 移除头像挂件,关注按钮
 function removeAvatar(data) {
+  if (data?.buttons) {
+    delete data.buttons;
+  }
   if (data?.cardid) {
     delete data.cardid;
   }
-  if (data?.buttons) {
-    delete data.buttons;
+  if (data?.icons) {
+    delete data.icons;
   }
   if (data?.pic_bg_new) {
     delete data.pic_bg_new;
   }
-  if (data?.user?.cardid) {
-    delete data.user.cardid;
+  if (data?.user?.avatargj_id) {
+    delete data.user.avatargj_id;
   }
   if (data?.user?.avatar_extend_info) {
     delete data.user.avatar_extend_info;
   }
+  if (data?.user?.cardid) {
+    delete data.user.cardid;
+  }
   if (data?.user?.icons) {
     delete data.user.icons;
-  }
-  if (data?.user?.avatargj_id) {
-    delete data.user.avatargj_id;
   }
   return data;
 }
