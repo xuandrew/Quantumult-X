@@ -769,14 +769,15 @@ https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
 ^https:\/\/api\.zhihu\.com\/topstory\/recommend url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_回答信息流移除黑名单用户的回答、去除广告
 ^https?:\/\/api\.zhihu\.com\/next-data url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
+# 哲也_
+^https:\/\/www\.zhihu\.com\/api\/v4\/(answers|articles)\/\d+\/recommendations?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 # 哲也_文章页去除底部广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/articles\/\d+\/recommendation\? url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_回答页相关搜索词(ddgksf2013)
 ^https:\/\/www\.zhihu\.com\/api\/v\d\/search\/related_queries\/answer url reject
 # 哲也_搜索左侧活动
 ;^https:\/\/api\.zhihu\.com\/root\/window$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
-# 哲也_
-^https:\/\/www\.zhihu\.com\/api\/v4\/(answers|articles)\/\d+\/recommendations?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+
 
 
 # MITM
