@@ -164,16 +164,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               delete item.data.vip_button;
             }
             // 6为你推荐更多精彩内容 15过滤提示
-            if (
-              item?.adType === "相关内容" ||
-              item?.adType === "相关评论" ||
-              item?.adType === "推荐" ||
-              item?.type === 6 ||
-              item?.type === 15
-            ) {
+            if (item?.type === 6 || item?.type === 15) {
               continue;
             }
-            fixPos(item.data);
             newItems.push(item);
           }
         }
@@ -212,7 +205,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item?.vip_button) {
               delete item.vip_button;
             }
-            fixPos(item);
             newItems.push(item);
           }
         }
@@ -227,15 +219,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 头像挂件,关注按钮
             removeAvatar(item);
           }
-          fixPos(item);
           newItems.push(item);
         }
         obj.comments = newItems;
-      }
-    }
-    function fixPos(arr) {
-      for (let i = 0; i < arr.length; i++) {
-        arr[i].position = i + 1;
       }
     }
   } else if (url.includes("/2/container/asyn")) {
