@@ -1,8 +1,4 @@
-# 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
-^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer$ url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
-^https:\/\/api\.zhihu\.com\/commercial_api\/(banners_v3\/app_topstory_banner$|launch_v2\?|real_time_launch_v2\?) url reject-dict
-^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings$ url reject-dict
-^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list)$ url reject-dict
-^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/recommend(_v2)?)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
-^https:\/\/api\.zhihu\.com\/root\/window$ url reject-dict
-^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+# 回答详情页,下一个回答
+^https:\/\/api\.zhihu\.com\/next-data\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/api\.zhihu\.com\/(v4\/)?questions\/\d+\/(feeds|answers)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
+^https:\/\/www\.zhihu\.com\/api\/v4\/(answers|articles)\/\d+\/recommendations?\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
