@@ -167,6 +167,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item?.type === 6 || item?.type === 15) {
               continue;
             }
+            if (
+              item?.adType === "相关内容" ||
+              item?.adType === "相关评论" ||
+              item?.adType === "推荐"
+            ) {
+              continue;
+            }
             newItems.push(item);
           }
         }
@@ -635,12 +642,6 @@ function isAd(data) {
       return true;
     }
     if (data?.promotion?.type === "ad") {
-      return true;
-    }
-    if (data?.readtimetype === "adMblog") {
-      return true;
-    }
-    if (data?.readtimetype?.includes("_recommend")) {
       return true;
     }
   }
