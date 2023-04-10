@@ -208,7 +208,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 
 # >> 优酷 ups.youku.com, r.1.youku.com, m.youku.com, *.mobile.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com,  
 #^http:\/\/ykimg\.alicdn\.com\/product\/image\/2019-08-15\/9f1dfcfe8903a679055a54c443b7fdc3\.png url reject-200
-;^https:\/\/gw\.alicdn\.com\/imgextra\/i*\/? url reject-200
+^https:\/\/gw\.alicdn\.com\/imgextra\/i\d\/[A-Za-z0-9]{23}_\..*\/.png url reject-200
 ;^https:\/\/gw\.alicdn\.com\/imgextra\/i3\/? url reject-200
 #^http:\/\/valipl\.cp31\.ott\.cibntv\.net\/? url reject
 #^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/? url reject
