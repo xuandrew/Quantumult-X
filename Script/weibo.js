@@ -540,6 +540,42 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
       obj.items = newItems;
     }
+  } else if (url.includes("/2/statuses/extend")) {
+    // 微博详情页
+    if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
+      delete obj.trend;
+    }
+    if (obj.trend?.titles) {
+      let title = obj.trend.titles.title;
+      if (["博主好物种草", "相关推荐"].includes(title)) {
+        delete obj.trend;
+      }
+    }
+    const item = [
+      "extend_info", // 拓展卡片
+      "follow_data", // 关注提醒
+      "head_cards", // 超话投票
+      "page_alerts", // 超话新帖 新用户通知
+      "reward_info" // 公益赞赏
+    ];
+    if (obj) {
+      item.forEach((i) => {
+        delete obj[i];
+      });
+    }
+    if (obj.custom_action_list) {
+      let newActions = [];
+      for (let item of obj.custom_action_list) {
+        let type = item.type;
+        let add = itemMenusConfig[type];
+        if (type === "mblog_menus_copy_url") {
+          newActions.unshift(item);
+        } else if (add) {
+          newActions.push(item);
+        }
+      }
+      obj.custom_action_list = newActions;
+    }
   } else if (url.includes("/2/statuses/show")) {
     removeFeedAd(obj);
     // 循环引用中的商品橱窗
@@ -562,46 +598,6 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
       obj.statuses = newStatuses;
-    }
-  } else if (url.includes("/2/statuses/extend")) {
-    // 微博详情页
-    if (obj?.trend?.extra_struct?.extBtnInfo?.btn_picurl?.includes("ad")) {
-      delete obj.trend;
-    }
-    if (obj.trend?.titles) {
-      let title = obj.trend.titles.title;
-      if (["博主好物种草", "相关推荐"].includes(title)) {
-        delete obj.trend;
-      }
-    }
-    // 关注提醒
-    if (obj?.follow_data) {
-      delete obj.follow_data;
-    }
-    // 公益赞赏
-    if (obj?.reward_info) {
-      delete obj.reward_info;
-    }
-    // 移除拓展卡片
-    if (obj?.extend_info) {
-      delete obj.extend_info;
-    }
-    // 移除超话新帖和新用户通知
-    if (obj?.page_alerts) {
-      delete obj.page_alerts;
-    }
-    if (obj.custom_action_list) {
-      let newActions = [];
-      for (let item of obj.custom_action_list) {
-        let type = item.type;
-        let add = itemMenusConfig[type];
-        if (type === "mblog_menus_copy_url") {
-          newActions.unshift(item);
-        } else if (add) {
-          newActions.push(item);
-        }
-      }
-      obj.custom_action_list = newActions;
     }
   } else if (url.includes("/2/video/tiny_stream_video_list")) {
     if (obj.statuses) {
