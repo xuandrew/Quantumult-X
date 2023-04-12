@@ -614,7 +614,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         (t) => t.title !== "广场"
       );
     }
-  } else if (url.includes("/v1/ad/preload")) {
+  } else if (
+    url.includes("/v1/ad/preload") ||
+    url.includes("/v2\/ad\/rea")
+  ) {
     // 开屏广告
     if (obj.ads) {
       for (let item of obj.ads) {
