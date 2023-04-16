@@ -17,6 +17,8 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 
 
 
+# > 微博_开屏广告预加载处理@ddgksf2013
+^https?:\/\/boot.*weibo\.com\/v\d\/ad\/preload url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/wb_main.js
 # > 微博_未登陆状态下首页信息流处理@ddgksf2013
 ^https?:\/\/api\.weibo\.cn\/\d\/\w{5}\/(statuses_unread_hot_timeline|timeline) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/wb_main.js
 # > 微博_每日一次的开屏广告请求@ddgksf2013
@@ -114,7 +116,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 
 # 开屏广告
 ;^https:\/\/boot(realtime)?\.(biz|uve)\.weibo\.com\/v[12]\/ad\/realtime$ url reject-dict
-^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
+;^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/adstrategy\.biz\.weibo\.com\/v2\/strategy\/ad url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
 ;^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkconfig\.php url reject
