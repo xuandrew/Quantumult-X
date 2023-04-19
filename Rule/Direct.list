@@ -1,3 +1,13 @@
+# 夸克浏览器
+host-suffix, px.effirst.com, direct
+host-suffix, image.zzd.sm.cn, direct
+host-suffix, m.uczzd.cn, direct
+host-suffix, iflow.uczzd.com, direct
+host-suffix, quark.uczzd.cn, direct
+host-suffix, iflow.uczzd.cn, direct
+host-suffix, puds.ucweb.com, direct
+host-suffix, image.uczzd.cn, direct
+
 # 淘宝
 host, sjarvis.taobao.com, direct
 
