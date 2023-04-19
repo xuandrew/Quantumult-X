@@ -1,3 +1,10 @@
+
+# 航旅纵横
+host-suffix, event.umetrip.com, reject
+
+# 今日头条
+host-suffix, tosv.byted.org, reject
+
 # 安全浏览限制解除
 host, lookup.api.bsb.baidu.com, reject
 host, proxy.safebrowsing.apple, reject
