@@ -387,7 +387,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete list?.card;
     }
   }
-} else if (url.includes("/shield/search_poi/sug")) {
+} else if (url.includes("/shield/search/sug")) {
   if (obj?.tip_list) {
     let newList = [];
     if (obj?.tip_list?.length > 0) {
