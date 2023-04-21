@@ -7,7 +7,7 @@ hostname = m5.amap.com, m5-zb.amap.com, sns.amap.com, amdc.m.taobao.com
 
 # 导航详情页,路线规划,地点详情页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-route-plan url reject-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/poi\/detail url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/city_feed url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(search\/sp|tips_operation_location) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
