@@ -1,4 +1,4 @@
-// 2023-03-28 18:15
+// 2023-04-21 09:40
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -36,7 +36,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   }
 } else if (url.includes("/mapapi/poi/infolite")) {
   // 搜索结果 列表详情
-  if (obj.data.district) {
+  if (obj.data?.district?.poi_list) {
     let poi = obj.data.district.poi_list[0];
     // 订票横幅 订票用高德 出行享低价
     if (poi?.transportation) {
@@ -46,7 +46,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (poi?.feed_rec_tab) {
       delete poi.feed_rec_tab;
     }
-  } else if (obj.data.list_data) {
+  } else if (obj.data?.list_data) {
     let list = obj.data.list_data.content[0];
     if (list?.bottom?.taxi_button) {
       list.bottom.taxi_button = 0;
@@ -109,9 +109,10 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   if (obj.data.tipData) {
     delete obj.data.tipData;
   }
-  //if (obj.data.footPrintV2) {
-  //  delete obj.data.footPrintV2;
-  //}
+  // 足迹
+  // if (obj.data.footPrintV2) {
+  //   delete obj.data.footPrintV2;
+  // }
   // 成就勋章 lv1见习达人
   if (obj.data.memberInfo) {
     delete obj.data.memberInfo;
@@ -119,29 +120,90 @@ if (url.includes("/faas/amap-navigation/main-page")) {
 } else if (url.includes("/shield/frogserver/aocs")) {
   // 整体图层
   const item = [
+    "Naviendpage_Searchwords",
+    "SplashScreenControl",
+    "TipsTaxiButton",
+    "TrainOrderBanner",
+    "_testmark_info",
+    "_user_profile_",
+    "air_card",
+    "amapCoin",
+    "aos_feedback",
+    "apple_location_log_collect",
     "collect",
+    "deviceml_force_recommend",
+    "deviceml_update_apk_conf",
     "footprint", // 足迹
+    "gd_code_cover",
     "gd_notch_logo",
     "his_input_tip",
     "home_business_position_config", // 首页右上角动图
+    "homepage_resource_config",
     "hotel_activity",
+    "hotel_fillin_opt",
     "hotel_loop",
+    "hotel_portal",
     "hotel_tipsicon",
     "icon_show",
+    "info_env_setting",
+    "ip_square",
+    "ip_square_share",
     "isNewSearchMapCard", // 可能是足迹
+    "isPoiBubbleDisplay",
+    "lab_screenrecording",
+    "landing_page_info",
+    "list_action_drawer",
+    "listguide",
+    "map_environment_air",
+    "map_weather_switch",
+    "maplayers", // 赏花地图
+    "message_tab",
+    "navi_end", // 导航结束页面
+    "nearby",
+    "nearby_business_popup",
+    "nearby_map_entry_guide",
+    "nearby_map_pull_down_guide",
+    "nore_rec",
     "operation_layer", // 首页右上角图层
     "photo_with_location",
+    "poi_rec",
+    "preword",
     "profileHeaderPic",
     "profiletTopBtn",
+    "recommend_api",
+    "redesign_user",
+    "routeresult_banner",
+    "search_homepage",
+    "search_keyword",
+    "search_moni",
+    "search_perf",
+    "search_poi_recommend",
+    "search_service_adcode",
+    "search_word",
+    "small_biz_fun",
+    "small_biz_news",
     "splashscreen",
+    "splashview_config",
+    "sur_bar",
+    "taxi_activity",
     "testflight_adiu",
+    "tf_remind",
+    "third_party_places",
+    "tips_bar_black_list",
+    "tips_hook",
+    "trackupload",
+    "user_insight", // 您对本次导航满意吗
     "vip",
-    "_user_profile_"
+    "weather_restrict_config"
   ];
   for (let i of item) {
     if (obj.data?.[i]) {
       obj.data[i] = { status: 1, version: "", value: "" };
     }
+  }
+} else if (url.includes("/shield/search/common/coupon/info")) {
+  if (obj.data) {
+    obj.data = {};
   }
 } else if (url.includes("/shield/search/nearbyrec_smart")) {
   // 附近页面
@@ -168,6 +230,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "co_branded_card",
     "collector_guide", // 游玩的图文指南
     "common_coupon_bar", // 领券条幅 新客专享 省钱卡
+    "comprehensiveEditEntrance", // 编辑地点信息
     // "consultancy",
     "contributor", // 地点贡献
     // "coupon_allowance",
@@ -178,7 +241,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
     "divergentRecommendModule", // 你可能还喜欢
-    "evaluate", // 高德出行评分
+    // "evaluate", // 高德出行评分
     // "events",
     "everyOneToSee", // 大家还在看
     "feedback", // 问题反馈
@@ -247,7 +310,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "rentsaleagencyv3",
     "rentsalehouse",
     "residentialOwners", // 小区业主
-    "reviews", // 用户评价
+    // "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
     "sameIndustryRecommendModule",
     "sameIndustry2RecommendModule",
@@ -318,6 +381,24 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     }
     if (list?.bottom?.bottombar_button?.hotel) {
       delete list.bottom.bottombar_button.hotel;
+    }
+    // 搜索页 商业卡片
+    if (list?.card && list?.item_type === "brandAdCard") {
+      delete list?.card;
+    }
+  }
+} else if (url.includes("/shield/search_poi/sug")) {
+  if (obj?.tip_list) {
+    let newList = [];
+    if (obj?.tip_list?.length > 0) {
+      for (let item of obj.tip_list) {
+        if (item?.tip?.is_user_input === "1") {
+          newList.push(item);
+        } else {
+          continue;
+        }
+      }
+      obj.tip_list = newList;
     }
   }
 } else if (url.includes("/shield/search_poi/tips_operation_location")) {
