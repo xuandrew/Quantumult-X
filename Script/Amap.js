@@ -1,4 +1,4 @@
-// 2023-04-21 09:40
+// 2023-04-21 18:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -382,12 +382,25 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (list?.bottom?.bottombar_button?.hotel) {
       delete list.bottom.bottombar_button.hotel;
     }
-    // 搜索页 商业卡片
-    if (list?.card && list?.item_type === "brandAdCard") {
-      delete list?.card;
+    // 搜索页 顶部商业卡片
+    if (
+      list?.card?.card_id === "SearchCardBrand" &&
+      list?.item_type === "brandAdCard"
+    ) {
+      delete list.card;
+    }
+    // 搜索页 顶部促销卡片
+    if (
+      list?.card?.card_id === "NearbyGroupBuy" &&
+      list?.item_type === "toplist"
+    ) {
+      delete list.card;
     }
   }
-} else if (url.includes("/shield/search/sug")) {
+} else if (
+  url.includes("/shield/search_poi/sug") ||
+  url.includes("/shield/search/sug")
+) {
   if (obj?.tip_list) {
     let newList = [];
     if (obj?.tip_list?.length > 0) {
