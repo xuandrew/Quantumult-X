@@ -241,7 +241,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
     "divergentRecommendModule", // 你可能还喜欢
-    // "evaluate", // 高德出行评分
+    "evaluate", // 高德出行评分
     // "events",
     "everyOneToSee", // 大家还在看
     "feedback", // 问题反馈
@@ -310,7 +310,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "rentsaleagencyv3",
     "rentsalehouse",
     "residentialOwners", // 小区业主
-    // "reviews", // 用户评价
+    "reviews", // 用户评价
     // "roomSelect", // 选择订房日期 悬浮菜单
     "sameIndustryRecommendModule",
     "sameIndustry2RecommendModule",
