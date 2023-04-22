@@ -39,7 +39,7 @@ host, sin3-ib.adnxs.com, reject
 host, portal-portm.meituan.com, reject
 
 # Bilibili
-host, grpc.biliapi.net, reject
+;host, grpc.biliapi.net, reject
 ip-cidr, 47.100.123.169/32, reject
 ip-cidr, 47.101.175.206/32, reject
 #ip-cidr, 61.147.236.43/29, reject
@@ -50,6 +50,8 @@ ip-cidr, 121.36.72.124/32, reject
 ip-cidr, 203.107.1.33/32, reject
 ip-cidr, 203.107.1.66/32, reject
 ip6-cidr, 240E:978:1503::243/128, reject
+HOST, mall.bilibili.com, REJECT
+HOST, passport.bilibili.com, REJECT
 
 # 喜马拉雅
 ;host, gslbali.ximalaya.com, reject
