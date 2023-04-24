@@ -45,11 +45,11 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ;^https:\/\/zto\.ztomember\.com\/api\/active\/red\/subsidy\/pro\/page url reject-dict
 
 # 滴滴打车 #小程序净化 感谢#豆豆分享 #主机名conf.diditaxi.com.cn 
-;^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core url reject-dict
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core url reject-dict
 
 # 嘀嗒出行 #小程序净化 感谢#豆豆分享 #主机名capis*.didapinche.com
-^https:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
-^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/didi.js
+;^https:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
+;^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/didi.js
 
 # 阅读记录
 ^https:\/\/app\.yidiansz\.com\/api\/.+\/app\/user\/info?(.*?)*$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/ydjl.js
