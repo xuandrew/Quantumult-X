@@ -4,10 +4,10 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ;^https?:\/\/www\.bing\.com\/(search|new|web) url request-header (\r\nUser-Agent:.+?)\w+\/[\d\.]+(\r\n) request-header $1AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0$2
 
 # 德邦快递 微信小程序净化（删除Top轮播）
-;^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface url reject-dict
+^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface url reject-dict
 
 # 必胜客 微信小程序净化
-^https:\/\/res\.pizzahut\.com\.cn\/CRM url reject-dict
+;^https:\/\/res\.pizzahut\.com\.cn\/CRM url reject-dict
 
 # 肯德基 微信小程序净化
 ^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon url reject-dict
