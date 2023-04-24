@@ -33,7 +33,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 
 # 申通快递 微信小程序净化
 ^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner url reject-dict
-^;https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images url reject-dict
+^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images url reject-dict
 
 # 顺丰速运小程序
 ^https?:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list url reject-200
@@ -91,21 +91,21 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 
 # 菜鸟
 # > 菜鸟裹裹_首页中部的惊喜福利推广@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
+;^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
 # > 菜鸟裹裹_搜索框下方今日好物推荐@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
+;^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
 # > 菜鸟裹裹_首页底部商品推广@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
+;^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
 # > 菜鸟裹裹_通用广告请求@ddgksf2013
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject-200
+;^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject-200
 # > 菜鸟裹裹_支付宝小程序_通用广告请求@ddgksf2013
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show url reject-200
+;^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show url reject-200
 # > 菜鸟裹裹_支付宝小程序_底部商品推广@ddgksf2013
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad url reject-200
+;^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad url reject-200
 # > 菜鸟裹裹_支付宝小程序_匿名选择@ddgksf2013
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge url reject-200
+;^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge url reject-200
 # > 菜鸟裹裹_支付宝小程序_中部的寄件推广@ddgksf2013
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
+;^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js
 
 # Spotify 解锁
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
@@ -264,7 +264,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 #^http:\/\/ykimg\.alicdn\.com\/product\/image\/2019-08-15\/9f1dfcfe8903a679055a54c443b7fdc3\.png url reject-200
 ;^https:\/\/gw\.alicdn\.com\/imgextra\/i\d\/[A-Za-z0-9]{23}_!!\d{13}-\d-\tps-\d{3}-\d{3}\/.png? url reject-dict
 ;^https:\/\/gw\.alicdn\.com\/imgextra\/i3\/? url reject-200
-;^http:\/\/vali-g1\.cp31\.ott\.cibntv\.net\/youku url reject-dict
+^http:\/\/vali-g1\.cp31\.ott\.cibntv\.net\/youku url reject-dict
 #^https:\/\/ossgw\.alicdn\.com\/creatives-assets\/? url reject
 #^https?:\/\/ups\.youku\.com\/.*?needad=1& url reject
 #^https?:\/\/r\.1\.youku\.com\/rec_at_click url reject-img
@@ -279,6 +279,18 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 #^https?:\/\/.+\.mp4\?sid= url reject-img
 ;^https?:\/\/huichuan-mc\.sm\.cn\/vod url reject
 # > ddgksf2013
+^https?:\/\/iyes\.youku\.com\/uts\/v1\/video url reject-200
+^https?:\/\/amdc\.m\.youku\.com url reject-200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/iyes\.youku\.com\/uts\/v1\/start url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.home\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.uc\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.gateway\.new\.execute url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.ycp\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 
 # 字节跳动
 ^https?:\/\/.+?\.pstatp\.com\/large\/im-resource url reject-200
