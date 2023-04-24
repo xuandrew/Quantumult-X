@@ -39,7 +39,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 ^https?:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list url reject-200
 
 # 中通快递微信小程序
-;^https:\/\/hdgateway\.zto\.com\/(getApolloConfig|track|getAdInfo|listJumperShow) url reject-dict
+^https:\/\/hdgateway\.zto\.com\/(getApolloConfig|track|getAdInfo|listJumperShow) url reject-dict
 ;^https:\/\/zto\.ztomember\.com\/api\/zto\/advert\/banner\/advertising\?bannerCode=29 url reject-dict
 ;^https:\/\/zto\.ztomember\.com\/api\/zto\/advert\/banner\/template\/data\? url reject-dict
 ;^https:\/\/zto\.ztomember\.com\/api\/active\/red\/subsidy\/pro\/page url reject-dict
@@ -281,7 +281,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, newclient.
 # > ddgksf2013
 ^https?:\/\/iyes\.youku\.com\/uts\/v1\/video url reject-200
 ^https?:\/\/amdc\.m\.youku\.com url reject-200
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+;^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ^https?:\/\/iyes\.youku\.com\/uts\/v1\/start url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.home\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
