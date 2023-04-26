@@ -115,7 +115,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange url reject-dict
 
 # 开屏广告
-;^https:\/\/boot(realtime)?\.(biz|uve)\.weibo\.com\/v[12]\/ad\/realtime$ url reject-dict
+;^https:\/\/bootrealtime\.uve\.weibo\.com\/v2\/ad\/realtime$ url reject-dict
 ;^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/adstrategy\.biz\.weibo\.com\/v2\/strategy\/ad url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/get-lbs-cell-info\.php$ url reject
