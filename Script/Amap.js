@@ -1,4 +1,4 @@
-// 2023-04-25 09:38
+// 2023-04-28 12:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -244,7 +244,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
     "divergentRecommendModule", // 你可能还喜欢
-    "evaluate", // 高德出行评分
+    // "evaluate", // 高德出行评分
     // "events",
     "everyOneToSee", // 大家还在看
     "feedback", // 问题反馈
@@ -280,7 +280,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "listBizRec_2", // 周边餐饮
     "membership", // 高德菲住卡 会员项目
     "movie_info", // 优惠购票 景点宣传片
-    // "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
+    "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
     "nearbyRecommendModule", // 周边推荐
     "nearby_house",
     "nearby_new_house_estate",
@@ -359,8 +359,15 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete obj.data.modules[i];
     });
   }
+} else if (url.includes("/shield/search_poi/city_feed")) {
+  const item = ["city_feed", "transportation"];
+  if (obj.modules) {
+    item.forEach((i) => {
+      delete obj.modules[i];
+    });
+  }
 } else if (url.includes("/shield/search_poi/search/sp")) {
-  if (obj.data.list_data) {
+  if (obj.data?.list_data) {
     let list = obj.data.list_data.content[0];
     // 详情页 底部 房产推广
     if (list?.hookInfo) {
@@ -403,6 +410,17 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       list?.item_type === "ImageBanner"
     ) {
       delete list.card;
+    }
+  } else if (obj.data?.district?.poi_list) {
+    // 搜索列表详情页
+    let poi = obj.data.district.poi_list[0];
+    // 订票横幅
+    if (poi?.transportation) {
+      delete poi.transportation;
+    }
+    // 景点门票 酒店特惠 特色美食 休闲玩乐
+    if (poi?.feed_rec_tab) {
+      delete poi.feed_rec_tab;
     }
   }
 } else if (
