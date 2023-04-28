@@ -402,7 +402,7 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 ;^http:\/\/oss\.umetrip\.com\/fs\/advert\/polite\/(46|[5-9]{1}\d{2}),* url reject-200
 ;^http:\/\/oss\.umetrip\.com\/fs\/advert\/icon\/[5-9]{1}\d{2},* url reject-200
 #^http:\/\/img\.umetrip\.com\/fs\/advert\/icon\/(150|160),* url reject-200
-^http:\/\/*?\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
+^http:\/\/.*\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
 
 # Notability解锁订阅
 ^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/dsvip/Quantumult-X/main/on1y/script/notability.js
