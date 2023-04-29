@@ -1,4 +1,4 @@
-// 2023-04-28 12:15
+// 2023-04-29 23:42
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -427,14 +427,21 @@ if (url.includes("/faas/amap-navigation/main-page")) {
   url.includes("/shield/search_poi/sug") ||
   url.includes("/shield/search/sug")
 ) {
-  if (obj?.tip_list && obj?.sug_general_search === "1") {
+  if (obj?.tip_list) {
     let newList = [];
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
-        if (item?.tip?.is_user_input === "1") {
-          newList.push(item);
-        } else {
+        if (
+          [
+            "exct_query_sug_merge_theme",
+            "query_sug_merge_theme",
+            "sp"
+          ].includes(item?.tip?.task_tag) ||
+          ["toplist"].includes(item?.tip?.result_type)
+        ) {
           continue;
+        } else {
+          newList.push(item);
         }
       }
       obj.tip_list = newList;
