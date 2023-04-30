@@ -1,0 +1,56 @@
+#!name=🍟 Fries: 🚫 Block HTTPDNS
+#!desc=阻止常见的 HTTPDNS 服务器
+#!author=VirgilClyne
+#!homepage=https://github.com/VirgilClyne/GetSomeFries/wiki/🚫-HTTPDNS
+#!icon=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+
+
+# Alibaba
+host, httpdns.alicdn.com,reject
+# Aliyun
+host, httpdns-api.aliyuncs.com, reject
+host, httpdns-sc.aliyuncs.com, reject
+IP-CIDR, 203.107.1.0/24, reject
+# Baidu
+host, httpsdns.baidu.com, reject
+host, httpdns.baidu.com, reject
+# BaiduBCE
+host, httpdns.baidubce.com, reject
+IP-CIDR, 186.76.76.200/32, reject
+# Bilibili
+host, httpdns.bilivideo.com, reject
+# Huawei
+host, httpdns.c.cdnhwc2.com, reject
+# JD
+host, dns.jd.com, reject
+IP-CIDR, 101.124.19.122/32, reject
+IP-CIDR6, 2402:db40:5100:1011::5/128, reject
+# JD Cloud
+IP-CIDR, 103.224.222.208/32, reject
+# NetEase
+host, httpdns.n.netease.com, reject
+IP-CIDR, 59.111.239.61/32, reject
+IP-CIDR, 59.111.239.62/32, reject
+host, music.httpdns.c.163.com, reject
+host, lofter.httpdns.c.163.com, reject
+# Oppo
+host, httpdns.push.oppomobile.com, reject
+# Volcengine
+host, httpdns.volcengineapi.com, reject
+# Weibo
+host, dns.weibo.cn, reject
+IP-CIDR, 39.97.128.148/32, reject
+IP-CIDR, 39.97.130.51/32, reject
+# Weixin
+host, dns.weixin.qq.com, reject
+host, dns.weixin.qq.com.cn, reject
+IP-CIDR, 42.81.232.18/32, reject
+IP-CIDR, 42.187.182.106/32, reject
+IP-CIDR, 42.187.182.123/32, reject
+IP-CIDR, 42.187.184.154/32, reject
+IP-CIDR, 123.151.54.50/32, reject
+IP-CIDR6, 2402:4e00:1900:1700:0:9554:1ad9:c3a/128, reject
+IP-CIDR6, 240e:928:1400:10::25/128, reject
+# Zhihu
+IP-CIDR, 118.89.204.198/23, reject
+IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, reject
