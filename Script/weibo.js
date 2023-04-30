@@ -1,4 +1,4 @@
-// 2023-04-24 08:50
+// 2023-04-30 08:50
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -234,7 +234,19 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj.items?.[0]?.items) {
       let item = obj.items?.[0]?.items;
       for (let i of item) {
-        removeAvatar(i.data);
+        removeAvatar(i?.data);
+      }
+    }
+  } else if (url.includes("/2/flowlist")) {
+    if (obj.items) {
+      let item = obj.items;
+      for (let i of item) {
+        if (i.items) {
+          let ii = i?.items;
+          for (let l of ii) {
+            removeAvatar(l?.data);
+          }
+        }
       }
     }
   } else if (url.includes("/2/messageflow/notice")) {
@@ -462,8 +474,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               removeAvatar(group.mblog);
             }
             let cardType = group.card_type;
-            // 17正在热搜卡片 22信息流横版广告图 25超话卡片(单个) 42正在热搜标题 182超话卡片(多个)
-            if (![17, 22, 25, 42, 118, 182].includes(cardType)) {
+            // 3 信息流商家卡片
+            // 17 正在热搜卡片
+            // 22 信息流横版广告图
+            // 25 超话卡片(单个)
+            // 42 正在热搜标题
+            // 182 超话卡片(多个)
+            if (![3, 17, 22, 25, 42, 118, 182].includes(cardType)) {
               if (!isAd(group.mblog)) {
                 // 商品橱窗
                 if (group.mblog?.common_struct) {
@@ -652,13 +669,16 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 // 判断信息流
 function isAd(data) {
   if (data) {
-    if (data?.mblogtypename === "广告") {
+    if (data?.mblogtypename?.includes("广告")) {
       return true;
     }
-    if (data?.mblogtypename === "热推") {
+    if (data?.mblogtypename?.includes("热推")) {
       return true;
     }
-    if (data?.promotion?.type === "ad") {
+    if (data?.promotion?.type?.includes("ad")) {
+      return true;
+    }
+    if (data?.content_auth_info?.content_auth_title?.includes("广告")) {
       return true;
     }
   }
@@ -667,18 +687,6 @@ function isAd(data) {
 
 // 移除头像挂件,关注按钮
 function removeAvatar(data) {
-  if (data?.buttons) {
-    delete data.buttons;
-  }
-  if (data?.cardid) {
-    delete data.cardid;
-  }
-  if (data?.icons) {
-    delete data.icons;
-  }
-  if (data?.pic_bg_new) {
-    delete data.pic_bg_new;
-  }
   if (data?.user?.avatargj_id) {
     delete data.user.avatargj_id;
   }
@@ -691,6 +699,18 @@ function removeAvatar(data) {
   if (data?.user?.icons) {
     delete data.user.icons;
   }
+  if (data?.buttons) {
+    delete data.buttons;
+  }
+  if (data?.cardid) {
+    delete data.cardid;
+  }
+  if (data?.icons) {
+    delete data.icons;
+  }
+  if (data?.pic_bg_new) {
+    delete data.pic_bg_new;
+  }
   return data;
 }
 
@@ -701,7 +721,7 @@ function checkSearchWindow(item) {
     item.data?.card_type === 208 || // 实况热聊
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
-    item.data?.itemid === "more_frame" ||
+    item.data?.itemid?.includes("more_frame") ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
     return true;
