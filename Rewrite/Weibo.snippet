@@ -91,7 +91,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/2\/photo\/info url reject-dict
 ;^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/profile\/me url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
-;^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline(_topic|_unread) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
+^https:\/\/api\.weibo\.cn\/2\/statuses\/container_timeline(_topic|_unread|_hot) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/extend url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/show url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
