@@ -4,6 +4,8 @@ hostname = 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,1
 
 # 喜马拉雅听去广告
 #hostname = *.xima*.*, *.xmcdn.*
+# ～ XiMaLaYa_喜马拉雅_首页顶部去除直播@ddgksf2013
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/xmly_json.js
 # ～ XiMaLaYa_喜马拉雅_修复轮播Ad失效Bug@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
 # ～ XiMaLaYa_喜马拉雅_播放页_Live@ddgksf2013
