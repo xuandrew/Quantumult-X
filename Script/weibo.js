@@ -1,4 +1,4 @@
-// 2023-04-30 08:50
+// 2023-05-02 08:50
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -568,6 +568,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
     }
     const item = [
+      "bubble_guide_data", // 评论区弹窗
       "extend_info", // 拓展卡片
       "follow_data", // 关注提醒
       "head_cards", // 超话投票
