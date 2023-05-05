@@ -5,6 +5,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 
 # Agenda
 ^https:\/\/accounts\.agenda\.com\/users\/.*\/license url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Ag.js
+^https:\/\/accounts\.agenda\.com\/users\/.*\/pendingreferralbonus url reject-dict
 
 # pdfexpert
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/dsvip/Quantumult-X/main/on1y/script/pdfexpert.js
