@@ -1,4 +1,4 @@
-// 2023-04-29 23:42
+// 2023-05-05 09:18
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -366,7 +366,10 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete obj.modules[i];
     });
   }
-} else if (url.includes("/shield/search_poi/search/sp")) {
+} else if (
+  url.includes("/shield/search_poi/search/sp") ||
+  url.includes("/shield/search_poi/mps")
+) {
   if (obj.data?.list_data) {
     let list = obj.data.list_data.content[0];
     // 详情页 底部 房产推广
@@ -432,12 +435,12 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
         if (
+          ["toplist"].includes(item.tip?.result_type) ||
           [
             "exct_query_sug_merge_theme",
             "query_sug_merge_theme",
             "sp"
-          ].includes(item?.tip?.task_tag) ||
-          ["toplist"].includes(item?.tip?.result_type)
+          ].includes(item.tip?.task_tag)
         ) {
           continue;
         } else {
