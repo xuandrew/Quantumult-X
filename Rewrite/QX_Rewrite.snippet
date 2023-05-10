@@ -3,7 +3,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 # 夸克
 https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|capacity\/growth\/info) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/kuake.js
 
-## 移除公众号中的推广内容 //mp.weixin.qq.com
+# 移除公众号中的推广内容 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|relatedarticle)\? url reject-dict
 
 # Cubox
@@ -86,6 +86,7 @@ https?:\/\/drive.*\.quark\.cn\/.+\/clouddrive\/(member.+|distribute\/detail.+|ca
 # 彩云天气
 ;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
 ;^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/cytq.js
+https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun_svip.js
 
 # 拼多多的多多买菜 #开屏广告 感谢@豆豆分享 #主机名mobile.yangkeduo.com
 ^https:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ url response-body "list":\[.+\] response-body "list":[]
