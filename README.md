@@ -1,2 +1,0 @@
-# Quantumult-X
-
