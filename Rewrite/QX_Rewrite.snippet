@@ -28,12 +28,6 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https:\/\/acs4miniapp-inner\.m\.taobao\.com\/gw\/mtop\.alimama\.abyss\.unionpage\.get url reject-dict
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.alimama\.abyss\.unionpage\.get url reject-dict
 
-# NewBing
-;^https?:\/\/www\.bing\.com\/(search|new|web) url request-header (\r\nUser-Agent:.+?)\w+\/[\d\.]+(\r\n) request-header $1AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0$2
-# > New Bing Ai
-;^https:\/\/www\.bing\.com\/(search|new) header-replace-regex User-Agent \w+\/[\d\.]+$ "AppleWebKit/537.36 Chrome/110.0 Safari/537.36 Edg/110.0"
-;^https?://www.bing.com url request-header (\r\n)User-Agent:(?=.+(?:iPhone))(?!.+(?:BingSapphire|EdgiOS)).+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) EdgiOS/110.0.1587.54 Version/16.0 Mobile/15E148 Safari/604.1$2
-
 # 德邦快递 微信小程序净化（删除Top轮播）
 ^https:\/\/www\.deppon\.com\/gwapi\/memberService\/eco\/member\/grade\/commonInterface url reject-dict
 
@@ -45,9 +39,6 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https:\/\/dynamicad\.kfc\.com\.cn\/api url reject-dict
 ^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp url reject-dict
 ^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity url reject-dict
-
-# 星巴克 微信小程序净化
-;^https:\/\/3pp\.starbucks\.com\.cn\/wxmem\/(popup|index\/(banner|global)) url reject
 
 # 神州租车 微信小程序净化
 ^https:\/\/apiproxy\.zuche\.com\/resource\/carrctapi\/home\/marketing url reject-dict
@@ -207,15 +198,6 @@ https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response
 ;^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list url reject-dict
 ;^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config) url reject-dict
 
-# 白描解锁黄金vip @sirsunknight
-;^https?:\/\/baimiao\.uzero\.cn\/api\/v\d\.user\/appLaunchWithUser$ url script-response-body https://raw.githubusercontent.com/sirsunknight/QuantumultX/master/Scripts/Baimiao.js
-
-# 石墨文档解锁
-;^https:\/\/shimo\.im\/lizard-api\/users\/me url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/shimo.js
-
-# Adobe解锁订阅 //createpdf.acrobat.com
-;^https?:\/\/createpdf\.acrobat\.com\/createpdf\/api\/users\/me\/subscriptions  url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/adobePDF.js
-
 # Noted-录音笔记+解锁订阅
 ^https:\/\/subscription-api\.notedapp\.io\/api\/verifyReceipt url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/noteb.js
 
@@ -223,26 +205,8 @@ https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response
 ;^https:\/\/api2.mubu.com\/v3\/api\/user/* url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/mubu.js
 ^https:\/\/api2.mubu.com\/v3\/api\/user/* url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/mubu.js
 
-# 樊登读书
-;^http[s]?:\/\/.+dushu.+(v101|v100|program\/v100)\/(content|play\/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType|share).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/FD.js
-;^http[s]?:\/\/.+dushu.+(v101/content|book/v100/info|/play/duration|/v100/index).*$ url request-body "token":"[^"]+ request-body "token":"20230124JvU3kqQmJpAqw6pzD4R
-;^http[s]?:\/\/.+dushu.+(v101|v100|program/v100)\/(content|play/duration|index|list|userInfo|vipInfo|info|ceiltip|mainList|getMarketInfoByType) url script-response-body https://raw.githubusercontent.com/gjwj666/qx/main/fd.js
-;^http[s]?:\/\/.+dushu.+(v101/content|book/v100/info|/play/duration|/v100/index).*$ url request-body "token":"[^"]+ request-body "token":"20211116v3Y5aRgEzRqwhOtwURL
-
-# fileball
-;^https?:\/\/.*\.example\.com url script-analyze-echo-response https://github.com/ddgksf2013/Scripts/raw/master/ali.js
-
 # MOJi辞书
 ^https:\/\/api\.mojidict\.com\/parse\/functions\/getNPrivileges url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/MOJi.js
-
-# 多看
-;^https:\/\/ts\.market\.mi-img\.com\/thumbnail\/png\/w1080\/Duokan\/* url reject
-
-# 懒饭
-;^https:\/\/lanfanapp.com\/api\/v1\/user\/(prime.json|page_detail.json) url script-response-body https://raw.githubusercontent.com/linuszlx/Quantumult-add/master/JS/lanfan.js
-
-# 白云天气-感知自然呼吸+解锁订阅
-;^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/\$RCAnonymousID%3A\w{32})$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/bytq.js
 
 # 知道搜索广告
 ^https?:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js
@@ -271,9 +235,6 @@ https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response
 ^https:\/\/m\.ithome\.com\/api\/news\/newslistpageget url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 ^https:\/\/napi\.ithome\.com\/api\/news\/index url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 ^https:\/\/napi\.ithome\.com\/api\/topmenu\/getfeeds url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
-
-# Aptv
-;https://api.revenuecat.com/v1/(receipts|subscribers)/* url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/APTV.js
 
 # 京东比价
 ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_Price.js
@@ -392,52 +353,15 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 ^https?:\/\/r\.inews\.qq\.com\/upLoadLoc url reject-img
 ^https:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)) url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/qq_news.js
 
-# 瑞幸咖啡 *.luckincoffeecdn.com, 124.71.225.147
-^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew url reject
-^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList url reject
-^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page url response-body \{.+\} response-body {"status":"SUCCESS"}
-^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main url response-body "popTitle":".+?" response-body "popTitle":""
-^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/start2\? url reject
-
-# 1Blocker
-#^https:\/\/api\.revenuecat\.com\/v1\/subscribers url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/blocker.js
-
-# 微信阅读
-#^https:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/txwxds.js
-
 # Polarr解锁
 ^https:\/\/api\.polaxiong\.com\/v1\/payments\/appleiap\/receipts\/confirmation url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Polarr.js
-
-# 微信听书
-#^https:\/\/i\.at\.qq\.com\/pay\/memberinfo url script-response-body https://raw.githubusercontent.com/sngxmini/crack/master/wxts/wxts.js
-
-# Bilibili
-#^https:\/\/api\.bilibili\.com\/x\/vas_ads_open\/ads\/callback url reject
 
 # 解锁Nicegram会员
 ^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ url script-echo-response https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js
 
-# 知乎App去广告
-#^https:\/\/(appcloud2\.zhihu\.com\/v3\/config$|www\.zhihu\.com\/api\/v4\/(answers\/\d+\/recommendations|articles\/\d+\/recommendation)|api\.zhihu\.com\/(topstory\/recommend|commercial_api\/(real_time_launch_v2|app_float_layer$)|questions\/\d+\/feeds\?|v4\/questions\/\d+\/answers\?)) url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/zhihu.js
-
-# 航旅纵横去开屏广告
-#^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
-;^http:\/\/oss\.umetrip\.com\/fs\/serviceRecommend\/132,* url reject-200
-;^http:\/\/oss\.umetrip\.com\/fs\/advert\/polite\/(46|[5-9]{1}\d{2}),* url reject-200
-;^http:\/\/oss\.umetrip\.com\/fs\/advert\/icon\/[5-9]{1}\d{2},* url reject-200
-#^http:\/\/img\.umetrip\.com\/fs\/advert\/icon\/(150|160),* url reject-200
-;^http:\/\/.*\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
-
-# Notability解锁订阅
-^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/dsvip/Quantumult-X/main/on1y/script/notability.js
-;^https?:\/\/notability\.com\/subscriptions url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/notability.js
-
 # 网易蜗牛读书VIP (By yxiaocai and JO2EY)
 ^https?://p\.du\.163\.com/readtime/info.json url reject
 ^https?:\/\/p\.du\.163\.com\/gain\/readtime\/info\.json url script-response-body https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/wnyd.js
-
-# > 微信读书(2022.01.16)hostname = i.weread.qq.com,101*.*.*,116.*.*.*,117.*.*.*,120.*.*.*,121.*.*.*,140.*.*.*,183.*.*.*,203*.*.*,
-;^https?:\/\/i\.weread\.qq\.com\/pay\/memberCardSummary url script-response-body https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/WeRead.js
 
 # Emby解锁播放权限
 ^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey) url script-echo-response https://raw.githubusercontent.com/qiangxinglin/Emby/main/scripts/emby.js
@@ -481,11 +405,6 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 # 解锁Xmind思维导图订阅到2030年 hostname = www.xmind.cn, www.xmind.net, www.xmind.app
 https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js
 
-# QX Youtube 无中文字幕机翻方案 www.youtube.com
-// 简体；订阅链接后面加上 #out=Hant 后开启资源解析器
-// https://raw.githubusercontent.com/id77/QuantumultX/master/rewrite/Youtube_CC.conf#out=Hant
-;https:\/\/www.youtube.com\/api\/timedtext\?.+&lang=(?!(zh|zh\-Hans)&)((?!&tlang=zh\-Hans).)*$ url request-header \sHTTP/1\.1(\r\n) request-header &tlang=zh-Hans HTTP/1.1$1
-
 # WPS解锁本地会员,支持大陆版以及非大陆版 hostname = account.wps.cn,*account.wps.com
 ;^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WPSOffice/Script/WPS.js
 # WPS //account.wps.cn, *account.wps.com, *.docer.wps.cn
@@ -515,13 +434,6 @@ https://lchttpapi.xczim.com/* url script-response-body https://raw.githubusercon
 # > 豆瓣
 ^https?:\/\/api\.douban\.com\/b\.*\/common_ads\?.* url reject
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ url reject
-
-# > 饿了么
-;^https?:\/\/elemecdn.com\/.+\/sitemap url reject
-;^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} url reject
-;^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} url reject
-;^https?:\/\/fuss10.elemecdn.com\/.+.mp4 url reject
-;^https?:\/\/www1.elecfans.com\/www\/delivery\/ url reject
 
 # 番茄小说去章末广告
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ url reject
