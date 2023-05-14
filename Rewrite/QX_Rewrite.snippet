@@ -397,6 +397,7 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 ^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList url reject
 ^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page url response-body \{.+\} response-body {"status":"SUCCESS"}
 ^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main url response-body "popTitle":".+?" response-body "popTitle":""
+^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/start2\? url reject
 
 # 1Blocker
 #^https:\/\/api\.revenuecat\.com\/v1\/subscribers url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/blocker.js
