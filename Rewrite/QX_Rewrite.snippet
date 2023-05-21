@@ -16,7 +16,8 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 ^https:\/\/server\.(yoyiapp|zbisq)\.com\/fimo-user\/user|apple\/certificate url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/fimo.js
 
 # Piscart
-https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-response-body https://raw.githubusercontent.com/Marol62926/MarScrpt/main/picsart.js
+;https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-response-body https://raw.githubusercontent.com/Marol62926/MarScrpt/main/picsart.js
+^https?:\/\/api\.meiease\.cn\/shop\/subscription\/validate url script-response-body https://raw.githubusercontent.com/chxm1023/script/main/Rewrite/picsart.js
 
 # Symbolab
 ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Syjsq.js
