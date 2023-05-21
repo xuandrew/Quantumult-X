@@ -193,8 +193,8 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 ^https:\/\/interface3\.music\.163\.com\/eapi\/vipcenter\/tspopup\/get url reject-dict
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get url reject-dict
 # 评论页,回复广告,星评馆
-^https:\/\/interface3\.music\.163\.com\/eapi\/batch\? url request-header os=iPhone\x20OS
-;^https:\/\/interface3\.music\.163\.com\/eapi\/batch\? url request-header appver=.+; request-header appver=2333;
+;^https:\/\/interface3\.music\.163\.com\/eapi\/batch\? url request-header os=iPhone\x20OS; request-header os=osx
+^https:\/\/interface3\.music\.163\.com\/eapi\/batch\? url request-header appver=.+; request-header appver=1.0.0;
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/tips\/v2\/get url reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2 url reject-dict
 ^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/feed\/inserted\/resources url reject-dict
