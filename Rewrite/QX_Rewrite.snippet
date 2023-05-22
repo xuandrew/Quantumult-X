@@ -95,6 +95,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 ;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun_svip.js
 ^https:\/\/ad\.caiyunapp\.com\/ url reject
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url reject-dict
+^https:\/\/ad\.cyapi\.cn\/v2\/(req|log)? url reject-dict
 
 # 拼多多的多多买菜 #开屏广告 感谢@豆豆分享 #主机名mobile.yangkeduo.com
 ^https:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ url response-body "list":\[.+\] response-body "list":[]
