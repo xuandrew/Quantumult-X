@@ -3,6 +3,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 
 
 # 解锁StormSniffer
+^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$ url script-request-header https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/user-profile\/$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
 
 # PDF Expert
