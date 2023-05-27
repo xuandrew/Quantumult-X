@@ -189,7 +189,6 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 # vsco
 ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js
 
-
 # 网易云音乐去广告, interface3.music.163.com
 # 会员解锁
 ;^https:\/\/interface3\.music\.163\.com\/eapi\/content\/exposure\/songplay\/entrance\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
@@ -252,7 +251,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, www.baidu.com, m.baidu.com, m.ithome.c
 
 # 伪装百度搜索
 ^https?:\/\/www\.baidu\.com url 302 https://m.baidu.com
-^https?:\/\/m\.baidu\.com header-replace user-agent Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.9.0 (Baidu; P2 16.3)
+^https?:\/\/m\.baidu\.com url request-header (\r\n)User-Agent:.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 SearchCraft/3.9.0 (Baidu; P2 16.3)
 # 知道搜索广告
 ^https?:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js
 # 搜索首页广告
