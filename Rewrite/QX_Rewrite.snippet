@@ -30,7 +30,7 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 
 # 芒果VIP
 ^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTK.js
-^http[s]?:\/\/.*mgtv\.com/(client\/dynamic_entry|v8\/video\/getSource|GetUserInfo|v3\/module\/list|credits\/url).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTV.js
+^http[s]?:\/\/.*mgtv\.com/(client\/dynamic_entry|v8\/video\/getSource|GetUserInfo|credits\/url).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTV.js
 ^https?:\/\/nuc\.api\.mgtv.com\/Logout url reject-200
 ^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ url reject-img
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ url reject-200
@@ -43,6 +43,7 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support url reject-200
 ^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ url reject-200
 ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?_support=10101001&abroad= url reject-dict
+^https:\/\/bsapi-mgbs\.wenxue\.mgtv\.com\/index\.php\?get_user_records url reject-dict
 
 # PDF Expert
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/jizhi0520/QX/main/PDFExpert.js
