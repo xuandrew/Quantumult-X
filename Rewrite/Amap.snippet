@@ -1,8 +1,8 @@
 hostname = m5.amap.com, m5-zb.amap.com, sns.amap.com, amdc.m.taobao.com
 
 # 其他
-^http:\/\/amdc\.m\.taobao\.com url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amdc.js
-;^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ AMapiPhone url-and-header reject-dict
+;^http:\/\/amdc\.m\.taobao\.com url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/amdc.js
+^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch AMapiPhone url-and-header reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/asa\/ads_attribution url reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend url reject-dict
 
