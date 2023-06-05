@@ -1,14 +1,14 @@
 # NAME: AllInOne
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2023-05-24 02:14:28
+# UPDATED: 2023-06-03 02:14:53
 # HOST:5
 # HTTP-REQUEST-SCRIPT:3
 # HTTP-RESPONSE-SCRIPT:32
 # REDIRECT:62
-# REJECT:603
+# REJECT:606
 # MITM:619
-# TOTAL:1324
+# TOTAL:1327
 
 # REDIRECT
 (^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d\/(fav|msgfeed)).+?)(&s_locale=zh-Hans_[A-Z]{2})(.+?)(&sim_code=\d+)(.+) url 302 $1&s_locale=zh-Hans_PH$6&sim_code=51503$8
@@ -116,6 +116,8 @@
 ^https?:\/\/(mobile|shop)\.laichon\.com\/api\/(v1\/goods\/goodsList|exposureAdvStatistics|getWebAdvList) url reject
 ^https?:\/\/(s3plus|flowplus)\.meituan\.net\/v\d\/\w+\/linglong\/\w+\.(gif|jpg|mp4) url reject
 ^https?:\/\/(www|cn)\.pornhub\.com\/_xa\/ads.* url reject
+^https?:\/\/.*mangaapi\.manhuaren\.\w{2,4}\/v\d\/ad url reject
+^https?:\/\/.*mangaapi\.manhuaren\.\w{2,4}\/v\d\/public\/(getStartUpMessage|getStartPageAds|getShelfActivity) url reject
 ^https?:\/\/.+?\/(outadservice|ting\/preload)\/ url reject
 ^https?:\/\/.+?\/api\/v\d\/adRealTime url reject
 ^https?:\/\/.+?\/brand\/search\/v1\.json url reject
@@ -137,6 +139,7 @@
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ url reject
 ^https?:\/\/7n\.bczcdn\.com\/launchad\/ url reject
 ^https?:\/\/[^bbs].tianya\.cn url reject
+^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}:\d+\/api\/v\d\/advert url reject
 ^https?:\/\/\w+?\.ximalaya\.com\/api\/v\d\/adRealTime url reject
 ^https?:\/\/\w+\.58cdn\.com\.cn\/brandads\/ url reject
 ^https?:\/\/\w+\.cloudfront\.net\/banner url reject
@@ -270,7 +273,7 @@
 ^https?:\/\/app-api\.jinse\.com\/v\d\/ad\/ url reject
 ^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ url reject
 ^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad url reject
-;^https?:\/\/app2\.autoimg\.cn\/appdfs\/ url reject
+^https?:\/\/app2\.autoimg\.cn\/appdfs\/ url reject
 ^https?:\/\/app3\.qdaily\.com\/app3\/boot_advertisements\.json url reject
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv)\/ url reject
 ^https?:\/\/app\.58\.com\/api\/home\/invite\/popupAdv url reject
@@ -366,6 +369,7 @@
 ^https?:\/\/edit\.sinaapp\.com\/ua\?t=adv url reject
 ^https?:\/\/elemecdn\.com\/.+?\/sitemap url reject
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService url reject
+^https?:\/\/evs\.500\.com\/esinfo\/loading\/loading url reject
 ^https?:\/\/explorer\.tratao\.com\/api\/client\/v4\/xtransfer\/ad\/ url reject-200
 ^https?:\/\/fb\.fbstatic\.cn\/api\/ape-images\/.*.jpg? url reject
 ^https?:\/\/flowplus\.meituan\.net\/v\d\/\w+\/linglong\/\d+\.(gif|jpg|mp4) url reject
@@ -426,7 +430,7 @@
 ^https?:\/\/imeclient\.openspeech\.cn\/adservice\/ url reject
 ^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/image-\d{4}-\d{4}\/ url reject
 ^https?:\/\/img01\.10101111cdn\.com\/adpos\/ url reject
-;^https?:\/\/img2\.autoimg\.cn\/admdfs\/ url reject
+^https?:\/\/img2\.autoimg\.cn\/admdfs\/ url reject
 ^https?:\/\/img\.jiemian\.com\/ads\/ url reject
 ^https?:\/\/img\.meituan\.net\/(adunion|display|dpmobile|midas)\/\w+\.(gif|jpg|jpg\.webp)$ url reject
 ^https?:\/\/img\.umetrip\.com\/fs\/advert/ url reject
@@ -440,7 +444,7 @@
 ^https?:\/\/ios\.lantouzi\.com\/api\/startpage url reject
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service url reject
 ^https?:\/\/iphone\.ac\.qq\.com\/.*\/Support\/(getSystemConf|bootScreen) url reject
-;^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/(guanggao|ts_ad)\/ url reject
+^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/(guanggao|ts_ad)\/ url reject
 ^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ url reject
 ^https?:\/\/j-image\.missfresh\.cn\/img_(.+)\.gif$ url reject
 ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position url reject
@@ -493,6 +497,7 @@
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ url reject
 ^https?:\/\/mobileapi-v6\.elong\.com\/adgateway\/ url reject
 ^https?:\/\/mp\.weixin\.qq\.com\/(s|mp)\/(ad_|advertisement|getappmsgad|report|appmsgreport|appmsgpicreport) url reject
+^https?:\/\/mp\.weixin\.qq\.com\/mp\/(advertisement_report|cps_product_info|wapcommreport|jsreport|jsmonitor|getappmsgext) url reject
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info url reject
 ^https?:\/\/mpcs\.suning\.com\/mpcs\/dm\/getDmInfo url reject
 ^https?:\/\/mpos-pic\.helipay\.com\/upload\/images\/advertisment url reject
@@ -558,7 +563,6 @@
 ^https?:\/\/restapi\.iyunmai\.com\/api\/ios\/ad\/ url reject
 ^https?:\/\/richmanapi\.jxedt\.com\/api\/(ad|adplus|guideplus|banadplus) url reject
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo url reject
-^https?:\/\/run\.api\.qyfxgd\.cn:9313\/api\/v1\/advert url reject
 ^https?:\/\/s1\.api\.tv\.itc\.cn\/v\d\/mobile\/control\/switch\.json url reject
 ^https?:\/\/s\d\.zdmimg\.com\/www\/api\/v\d\/api\/thirdAd\.php url reject
 ^https?:\/\/sa\d\.tuisong\.baidu\.com url reject
@@ -596,7 +600,6 @@
 ^https?:\/\/supportda\.ofo\.com\/adaction\? url reject
 ^https?:\/\/syh\.zybang\.com\/com\/adx\/ url reject
 ^https?:\/\/t1\.market\.xiaomi\.com\/thumbnail\/webp\/w1170q100\/ url reject
-^https?:\/\/tel\.mangaapi\.manhuaren\.com\/(v2\/public\/getStartUpMessage|v1\/public\/getStartPageAds) url reject
 ^https?:\/\/thor\.weidian\.com\/ares\/home\.splash\/ url reject
 ^https?:\/\/tiasdk\.app\.wechat\.com\/retrieval\/getAdInfo$ url reject
 ^https?:\/\/tiku\.zhan\.com\/Common\/newAd\/ url reject
@@ -646,6 +649,7 @@
 ^https?:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d\/system_service\/splash_config url reject
 ^https?:\/\/www\.zhihu\.com\/api\/v\d+\/search\/related_queries\/answer url reject-dict
 ^https?:\/\/www\.zybang\.com\/adx\/ url reject
+^https?:\/\/wxa\.wxs\.qq\.com\/tmpl\/kf\/base_tmpl\.html url reject
 ^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d url reject
 ^https?:\/\/xyz\.cnki\.net\/resourcev7\/api\/manualpush\/SlidsList$ url reject
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ url reject
@@ -670,7 +674,6 @@ https?:\/\/ios\.sspai\.com\/api\/v3\/recommend\/page\/get\?ad.*ios_home_modal ur
 https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens url reject-200
 https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup url reject-200
 https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do url reject
-https?:\/\/mangaapi\.manhuaren\.com\/v2\/public\/getShelfActivity url reject
 https?:\/\/new-app-api\.ylyk\.com\/v1\/user\/myinfo\/adviser url reject
 https?:\/\/open3\.vistastory\.com\/v3\/api.*get_popup url reject
 https?:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad url reject
@@ -678,8 +681,6 @@ https?:\/\/support\.you\.163\.com\/appversync\/check.do url reject
 https?:\/\/tagit\.hyhuo\.com\/recover\/list url reject
 https?:\/\/top-widgets-api\.xiaozujian\.com\/api\/ad\/config url reject
 https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
-
-
 
 
 
