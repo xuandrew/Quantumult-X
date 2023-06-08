@@ -415,6 +415,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           } else if (item.category === "cell") {
             // 保留信息流分割线
             newItems.push(item);
+          } else if (item.category === "group") {
+            if (item.items.length > 0) {
+              item.items = item.items.filter((i) => i.data?.card_type === 17);
+              newItems.push(item);
+            }
           }
         }
         obj.items = newItems;
@@ -453,6 +458,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 } else if (item.category === "cell") {
                   // 保留信息流分割线
                   newItems.push(item);
+                } else if (item.category === "group") {
+                  if (item.items.length > 0) {
+                    item.items = item.items.filter(
+                      (i) => i.data?.card_type === 17
+                    );
+                    newItems.push(item);
+                  }
                 }
               }
               payload.items = newItems;
@@ -722,6 +734,7 @@ function checkSearchWindow(item) {
     item.data?.card_type === 208 || // 实况热聊
     item.data?.card_type === 217 ||
     item.data?.card_type === 1005 ||
+    item.data?.itemid?.includes("finder_window") ||
     item.data?.itemid?.includes("more_frame") ||
     item.data?.mblog?.page_info?.actionlog?.source?.includes("ad")
   ) {
