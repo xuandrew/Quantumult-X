@@ -8,6 +8,12 @@ host-suffix, uczzd.com, direct
 host-suffix, uczzd.com.cn, direct
 host-suffix, uczzd.net, direct
 
+# Bing
+host-suffix, pipe.aria.microsoft.com, direct
+host-suffix, sb.scorecardresearch.com, direct
+host-suffix, c.bing.com, direct
+host-suffix, c.msn.com, direct
+host-suffix, srtb.msn.com, direct
 
 # 淘宝
 host, sjarvis.taobao.com, direct
@@ -86,10 +92,20 @@ HOST-SUFFIX,baikebcs.bdimg.com,Direct
 HOST-SUFFIX,bj.bcebos.com,Direct
 HOST-SUFFIX,crashlytics.com,Direct
 host, staticsns.cdn.bcebos.com, direct
+host, ext.baidu.com, direct
+host-suffix, hmma.baidu.com, direct
 
 #
 host-suffix, collector.github.com, direct
 host-suffix, log.snssdk.com, direct
+host-suffix, et.tanx.com, direct
+host-suffix, sdk.e.qq.com, direct
+host, cms-bucket.ws.126.net, direct
+host-suffix, api-a.op-mobile.opera.com, direct
+host-suffix, clarity.ms, direct
+host-suffix, getui.net, direct
+host-suffix, getui.com, direct
+host-suffix, analytics.126.net, direct
 
 # 微博
 HOST,h5.sinaimg.cn,Direct
