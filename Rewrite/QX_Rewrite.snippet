@@ -229,7 +229,7 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 
 # Spotify 解锁
 ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
-^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ url script-request-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ url script-request-header https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 ;^https?:\/\/spclient\.wg\.spotify\.com\/.+ad_slot url reject-img
 ;^https?:\/\/spclient\.wg\.spotify\.com\/.+banners url reject-img
 ;^https?:\/\/spclient\.wg\.spotify\.com\/.+crashlytics url reject-img
