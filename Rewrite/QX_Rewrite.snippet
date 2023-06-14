@@ -506,6 +506,9 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 # 解锁Xmind思维导图订阅到2030年 hostname = www.xmind.cn, www.xmind.net, www.xmind.app
 https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js
 
+# > WPS 解锁超级会员 Pro
+^https?:\/\/(account|drive|vas|userinfo.docer)\.wps\.cn\/(.*api\/(v3\/(mine\/vips|spaces)|users\/\d+\/overview|v1\/list_purchase_info)|user\/v1\/vip_dl_times) url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSuperVIPuserCrack.js
+^https?:\/\/(mobile|client|vas|download)(\.docer)?\.wps.cn\/(android\/mb\/buy_info|api\/v1\/mobile\/mb\/detail|query\/api\/v1\/list_privilege_info|download\/adapter\/v1\/mb) url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/WPSuperVIPowerCrack.js
 # WPS解锁本地会员,支持大陆版以及非大陆版 hostname = account.wps.cn,*account.wps.com
 ;^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$ url script-response-body https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/WPSOffice/Script/WPS.js
 # WPS //account.wps.cn, *account.wps.com, *.docer.wps.cn
@@ -515,11 +518,11 @@ https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body htt
 ;^https?:\/\/account\.wps\.cn\/api\/v\d\/mine\/vips url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/wpsUser.js
 ;^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v\d\/vip|android\/mb\/buy|download\/v\d\/ios|partner\/invoke\/usable|(api|rank)\/v\d(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/wpsOwer.js
 # new
-^https:\/\/vas\.wps\.cn\/query\/api\/v\d\/list_purchase_info url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
+;^https:\/\/vas\.wps\.cn\/query\/api\/v\d\/list_purchase_info url script-response-body https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/WPSOffice.js
 ###
-^https?:\/\/(drive|account)\.wps\.cn\/api\/(users|v3\/(spaces|mine\/vips)) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wps.js
-^https?:\/\/(client|userinfo)\.docer\.wps\.cn\/(android\/mb\/buy|user\/v1\/vip\_dl\_times) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer_times.js
-^https?:\/\/.+\.(docer.)?wps.cn\/(download\/v1\/ios|user\/v1\/vip|android\/mb\/buy|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer.js
+;^https?:\/\/(drive|account)\.wps\.cn\/api\/(users|v3\/(spaces|mine\/vips)) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wps.js
+;^https?:\/\/(client|userinfo)\.docer\.wps\.cn\/(android\/mb\/buy|user\/v1\/vip\_dl\_times) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer_times.js
+;^https?:\/\/.+\.(docer.)?wps.cn\/(download\/v1\/ios|user\/v1\/vip|android\/mb\/buy|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/WPS/wpsDocer.js
 
 # 解锁流利说·阅读会员、解锁阅读权限、解锁音频权限等 hostname = vira.llsapp.com
 ^https?:\/\/vira\.llsapp\.com\/api\/v\d\/\w+\/\w+$ url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/llsyd.js
