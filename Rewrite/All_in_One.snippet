@@ -731,7 +731,7 @@ https?:\/\/yanxuan.nosdn.127.net\/.*\.mp4 url reject
 # 哲也_处理用户信息
 ^https?:\/\/api\.zhihu\.com\/people url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_推荐页优化,去除关注页最常访问
-^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
+;^https?:\/\/api\.zhihu\.com\/moments\/recent url reject-dict
 ^https?:\/\/api\.zhihu\.com\/moments\/recent url script-response-body https://gist.githubusercontent.com/blackmatrix7/f5f780d0f56b319b6ad9848fd080bb18/raw/zheye.min.js
 # 哲也_文章优化,拦截回答下的卡片广告
 ^https?:\/\/www\.zhihu\.com\/api\/v\d\/answers\/\d+\/recommendations url reject-dict
