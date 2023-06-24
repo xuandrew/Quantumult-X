@@ -20,18 +20,18 @@ chxm1023.result.vip_expired_at = 4092599349;
 chxm1023.result.is_vip = true;
 chxm1023.result.xy_svip_expire = 4092599349;
 chxm1023.result.auto_renewal_type = "";
-chxm1023.result.third_party_id = null;
-chxm1023.result.third_party_ids = [
-     "64679dcd4050ad001760d58c",
-     "64679de55e4f320018d37a04",
-     "64679dec41787e0013c32cd3"
-    ];
+;chxm1023.result.third_party_id = null;
 ;chxm1023.result.third_party_ids = [
-;    "63592fa7e7a295001888256b",
-;    "639ac02db1839300133031c0"
+;     "64679dcd4050ad001760d58c",
+;     "64679de55e4f320018d37a04",
+;     "64679dec41787e0013c32cd3"
 ;    ];
+chxm1023.result.third_party_ids = [
+    "63592fa7e7a295001888256b",
+    "639ac02db1839300133031c0"
+    ];
 chxm1023.result.name = "xuandrew";
-chxm1023.result.free_trial = 0;
+;chxm1023.result.free_trial = 0;
 chxm1023.result.wt.vip = {
         "is_auto_renewal" : false,
         "enabled" : true,
