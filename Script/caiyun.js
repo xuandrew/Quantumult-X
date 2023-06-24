@@ -16,8 +16,9 @@ chxm1023.result.vip_expired_at = 4092599349;
 chxm1023.result.is_vip = true;
 chxm1023.result.xy_svip_expire = 4092599349;
 chxm1023.result.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
+     "64679de55e4f320018d37a04",
+     "64679dcd4050ad001760d58c",
+     "64679dec41787e0013c32cd3"
     ];
 chxm1023.result.wt.vip = {
         "is_auto_renewal" : false,
@@ -76,8 +77,9 @@ chxm1023.data.vip_expired_at = 4092599349;
 chxm1023.data.is_vip = true;
 chxm1023.data.xy_svip_expire = 4092599349;
 chxm1023.data.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
+     "64679de55e4f320018d37a04",
+     "64679dcd4050ad001760d58c",
+     "64679dec41787e0013c32cd3"
     ];
 chxm1023.data.wt.vip = {
         "is_auto_renewal" : false,
