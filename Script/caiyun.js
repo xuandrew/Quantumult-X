@@ -4,10 +4,10 @@ const yza = '/visitors';
 ;const yh = '/user_info';
 
 if ($request.url.indexOf(user) != -1){
-chxm1023.result.device_id = "D1F2A3F9-093E-4775-9E49-80DEEE9CC1C3";
-;chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6432c86484ea830012de2019";
-;chxm1023.result._id = "6358cb93e7a295001482d9aa";
+;chxm1023.result.device_id = "D1F2A3F9-093E-4775-9E49-80DEEE9CC1C3";
+chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
+;chxm1023.result._id = "6432c86484ea830012de2019";
+chxm1023.result._id = "6358cb93e7a295001482d9aa";
 chxm1023.result.is_visitor = false;
 chxm1023.result.svip_given = 365;
 chxm1023.result.ranking_above = 91;
