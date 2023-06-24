@@ -1,7 +1,7 @@
 var chxm1023 = JSON.parse($response.body);
 const user = '/user';
 const yza = '/visitors';
-;const yh = '/user_info';
+const yh = '/user_info';
 
 if ($request.url.indexOf(user) != -1){
 chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
@@ -113,14 +113,14 @@ chxm1023.result.bound_statuscaiyun = {
       };
 }
 
-;if ($request.url.indexOf(yh) != -1){
+if ($request.url.indexOf(yh) != -1){
 ;chxm1023.result.show_completed_award = false;
 ;chxm1023.result.avatar_status = 0;
 ;chxm1023.result.industry = "IT互联网";
 ;chxm1023.result.reg_time = "1599863895";
 ;chxm1023.result.name_status = 0;
 ;chxm1023.result.completed_percent = 100;
-;chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
+chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
 ;chxm1023.result.reg_days = 1015;
 ;chxm1023.result.birthday = "2000-08-08";
 ;chxm1023.result.city = "泰州市";
@@ -129,8 +129,8 @@ chxm1023.result.bound_statuscaiyun = {
     "自然科学",
     "摄影"
   ];
-;chxm1023.result.name = "xuandrew";
+chxm1023.result.name = "xuandrew";
 ;chxm1023.result.gender = 1
-;}
+}
 
 $done({body : JSON.stringify(chxm1023)});
