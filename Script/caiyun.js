@@ -1,7 +1,7 @@
 var chxm1023 = JSON.parse($response.body);
 const user = '/user';
 const yza = '/visitors';
-const yh = '/user_info';
+;const yh = '/user_info';
 
 if ($request.url.indexOf(user) != -1){
 chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
@@ -53,7 +53,7 @@ chxm1023.result.bound_status.weixin = {
       };
 chxm1023.result.bound_statuscaiyun = {
         "id" : "6358cb93e7a295001482d9aa",
-        "username" : "",
+        "username" : "xuandrew",
         "is_bound" : true
       };
 }
@@ -108,29 +108,29 @@ chxm1023.result.bound_status.weixin = {
       };
 chxm1023.result.bound_statuscaiyun = {
         "id" : "6358cb93e7a295001482d9aa",
-        "username" : "",
+        "username" : "xuandrew",
         "is_bound" : true
       };
 }
 
-if ($request.url.indexOf(yh) != -1){
-chxm1023.result.show_completed_award = false;
-chxm1023.result.avatar_status = 0;
-chxm1023.result.industry = "IT互联网";
-chxm1023.result.reg_time = "1599863895";
-chxm1023.result.name_status = 0;
-chxm1023.result.completed_percent = 100;
-chxm1023.result.avatar = "https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/8843EEBC-1114-4CE3-BB39-C0622D90A3F5.jpeg";
-chxm1023.result.reg_days = 1015;
-chxm1023.result.birthday = "2000-08-08";
-chxm1023.result.city = "泰州市";
-chxm1023.result.interests = [
+;if ($request.url.indexOf(yh) != -1){
+;chxm1023.result.show_completed_award = false;
+;chxm1023.result.avatar_status = 0;
+;chxm1023.result.industry = "IT互联网";
+;chxm1023.result.reg_time = "1599863895";
+;chxm1023.result.name_status = 0;
+;chxm1023.result.completed_percent = 100;
+;chxm1023.result.avatar = "https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/8843EEBC-1114-4CE3-BB39-C0622D90A3F5.jpeg";
+;chxm1023.result.reg_days = 1015;
+;chxm1023.result.birthday = "2000-08-08";
+;chxm1023.result.city = "泰州市";
+;chxm1023.result.interests = [
     "空气质量",
     "自然科学",
     "摄影"
   ];
-chxm1023.result.name = "xuandrew";
-chxm1023.result.gender = 1
-}
+;chxm1023.result.name = "xuandrew";
+;chxm1023.result.gender = 1
+;}
 
 $done({body : JSON.stringify(chxm1023)});
