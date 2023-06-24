@@ -1,136 +1,96 @@
-var chxm1023 = JSON.parse($response.body);
-const user = '/user';
-const yza = '/visitors';
-const yh = '/user_info';
+var obj = JSON.parse($response.body); 
 
-if ($request.url.indexOf(user) != -1){
-chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6358cb93e7a295001482d9aa";
-chxm1023.result.svip_given = 365;
-chxm1023.result.ranking_above = 91;
-chxm1023.result.is_visitor = false;
-chxm1023.result.is_phone_verified = true;
-chxm1023.result.hasBeenInvited = true;
-chxm1023.result.is_xy_vip = true;
-chxm1023.result.vip_expired_at = 4092599349;
-chxm1023.result.is_vip = true;
-chxm1023.result.xy_svip_expire = 4092599349;
-chxm1023.result.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
-    ];
-chxm1023.result.wt.vip = {
-        "is_auto_renewal" : false,
-        "enabled" : true,
-        "svip_auto_renewal_type" : "",
-        "expired_at" : 4092599349,
-        "auto_renewal_type" : "",
-        "svip_expired_at" : 4092599349
-      };
-chxm1023.result.wt.svip_given = 365;
-chxm1023.result.wt.ranking_above = 91;
-chxm1023.result.name = "xuandrew";
-chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
-chxm1023.result.phone_num = "13145200000";
-chxm1023.result.vip_take_effect = 1;
-chxm1023.result.is_auto_renewal = false;
-chxm1023.result.is_primary = true;
-chxm1023.result.xy_vip_expire = 0;
-chxm1023.result.platform_id = "o3rJ_t00r0mxqS6GCVWMaVtEFLUk";
-chxm1023.result.svip_expired_at = 4092599349;
-chxm1023.result.svip_take_effect = 1;
-chxm1023.result.vip_type = "s";
-chxm1023.result.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps";
-chxm1023.result.bound_status.qq = {
-        "id" : "63592fa7e7a295001888256b",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_status.weixin = {
-        "id" : "639ac02db1839300133031c0",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_statuscaiyun = {
-        "id" : "6358cb93e7a295001482d9aa",
-        "username" : "",
-        "is_bound" : true
-      };
+obj ={
+  "result": {
+    "xy_vip_expire": 0,
+    "vip_expired_at": 0,
+    "ranking_above": 99,
+    "auto_renewal_type": "",
+    "third_party_id": null,
+    "svip_expired_at": 4093515016.946474,
+    "is_login": true,
+    "is_xy_vip": false,
+    "platform_name": "caiyun",
+    "xy_svip_expire": 0,
+    "third_party_ids": [],
+    "score": 2000,
+    "is_xy_auto_renewal": false,
+    "is_primary": true,
+    "phone_num": "13800138000",
+    "free_trial": 0,
+    "last_acted_at": 1626863905.591368,
+    "vip_type": "s",
+    "is_phone_verified": true,
+    "wt": {
+      "ranking_above": 99,
+      "vip": {
+        "enabled": true,
+        "is_auto_renewal": false,
+        "auto_renewal_type": "",
+        "svip_auto_renewal_type": "",
+        "svip_expired_at": 4093515016.946474,
+        "expired_at": 0
+      },
+      "last_acted_at": 1626863905.591368,
+      "created_at": 1626863905.591368,
+      "is_login": true
+    },
+    "device_id": "B409FB39-AAC3-46E3-80B6-7544B5BB8C27",
+    "name": "xuandrew",
+    "bound_status": {
+      "qq": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      },
+      "weibo": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      },
+      "google": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      },
+      "apple": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      },
+      "weixin": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      },
+      "caiyun": {
+        "username": "",
+        "is_bound": true,
+        "id": "60f7f9217112ca00110b567f"
+      },
+      "twitter": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      },
+      "facebook": {
+        "username": "",
+        "is_bound": false,
+        "id": ""
+      }
+    },
+    "created_at": 1626863905.590722,
+    "is_auto_renewal": false,
+    "hasBeenInvited": false,
+    "platform_id": "",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNjBmN2Y5MjE3MTEyY2EwMDExMGI1NjdmIiwic3ZpcF9leHBpcmVkX2F0IjoxNjYzMTUxOTQwLjk0NjQ3NCwidmlwX2V4cGlyZWRfYXQiOjB9.ezQpaDFL1T_WCIZq42Q71hLgGa9DYDBaz0OjDzeuf2I",
+    "svip_given": 0,
+    "avatar": "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz",
+    "is_vip": true,
+    "gender": "0",
+    "_id": "60f7f9217112ca00110b567f"
+  },
+  "rc": 0
 }
 
-if ($request.url.indexOf(yza) != -1){
-chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6358cb93e7a295001482d9aa";
-chxm1023.result.svip_given = 365;
-chxm1023.result.ranking_above = 91;
-chxm1023.result.is_visitor = false;
-chxm1023.result.is_phone_verified = true;
-chxm1023.result.hasBeenInvited = true;
-chxm1023.result.is_xy_vip = true;
-chxm1023.result.vip_expired_at = 4092599349;
-chxm1023.result.is_vip = true;
-chxm1023.result.xy_svip_expire = 4092599349;
-chxm1023.result.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
-    ];
-chxm1023.result.wt.vip = {
-        "is_auto_renewal" : false,
-        "enabled" : true,
-        "svip_auto_renewal_type" : "",
-        "expired_at" : 4092599349,
-        "auto_renewal_type" : "",
-        "svip_expired_at" : 4092599349
-      };
-chxm1023.result.wt.svip_given = 365;
-chxm1023.result.wt.ranking_above = 91;
-chxm1023.result.name = "xuandrew";
-chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
-chxm1023.result.phone_num = "13145200000";
-chxm1023.result.vip_take_effect = 1;
-chxm1023.result.is_auto_renewal = false;
-chxm1023.result.is_primary = true;
-chxm1023.result.xy_vip_expire = 0;
-chxm1023.result.platform_id = "o3rJ_t00r0mxqS6GCVWMaVtEFLUk";
-chxm1023.result.svip_expired_at = 4092599349;
-chxm1023.result.svip_take_effect = 1;
-chxm1023.result.vip_type = "s";
-chxm1023.result.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps";
-chxm1023.result.bound_status.qq = {
-        "id" : "63592fa7e7a295001888256b",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_status.weixin = {
-        "id" : "639ac02db1839300133031c0",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_statuscaiyun = {
-        "id" : "6358cb93e7a295001482d9aa",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-}
-
-if ($request.url.indexOf(yh) != -1){
-;chxm1023.result.show_completed_award = false;
-;chxm1023.result.avatar_status = 0;
-;chxm1023.result.industry = "IT互联网";
-;chxm1023.result.reg_time = "1599863895";
-;chxm1023.result.name_status = 0;
-;chxm1023.result.completed_percent = 100;
-chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
-;chxm1023.result.reg_days = 1015;
-;chxm1023.result.birthday = "2000-08-08";
-;chxm1023.result.city = "泰州市";
-;chxm1023.result.interests = [
-    "空气质量",
-    "自然科学",
-    "摄影"
-  ];
-chxm1023.result.name = "xuandrew";
-;chxm1023.result.gender = 1
-}
-
-$done({body : JSON.stringify(chxm1023)});
+$done({body:JSON.stringify(obj)});
