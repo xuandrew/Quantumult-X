@@ -85,7 +85,7 @@ chxm1023.result.wt.vip = {
 chxm1023.result.wt.svip_given = 365;
 chxm1023.result.wt.ranking_above = 91;
 chxm1023.result.name = "xuandrew";
-chxm1023.result.avatar = "https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/8843EEBC-1114-4CE3-BB39-C0622D90A3F5.jpeg";
+chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
 chxm1023.result.phone_num = "13145200000";
 chxm1023.result.vip_take_effect = 1;
 chxm1023.result.is_auto_renewal = false;
@@ -120,7 +120,7 @@ chxm1023.result.bound_statuscaiyun = {
 ;chxm1023.result.reg_time = "1599863895";
 ;chxm1023.result.name_status = 0;
 ;chxm1023.result.completed_percent = 100;
-;chxm1023.result.avatar = "https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/8843EEBC-1114-4CE3-BB39-C0622D90A3F5.jpeg";
+;chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
 ;chxm1023.result.reg_days = 1015;
 ;chxm1023.result.birthday = "2000-08-08";
 ;chxm1023.result.city = "泰州市";
