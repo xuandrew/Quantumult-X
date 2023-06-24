@@ -64,18 +64,18 @@ chxm1023.result.bound_status.weibo = {
 }
 
 if ($request.url.indexOf(yza) != -1){
-chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6358cb93e7a295001482d9aa";
-chxm1023.result.svip_given = 365;
-chxm1023.result.ranking_above = 91;
-chxm1023.result.is_visitor = false;
-chxm1023.result.is_phone_verified = true;
-chxm1023.result.hasBeenInvited = true;
-chxm1023.result.is_xy_vip = true;
-chxm1023.result.vip_expired_at = 4092599349;
-chxm1023.result.is_vip = true;
-chxm1023.result.xy_svip_expire = 4092599349;
-chxm1023.result.third_party_ids = [
+chxm1023.data.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
+chxm1023.data._id = "6358cb93e7a295001482d9aa";
+chxm1023.data.svip_given = 365;
+chxm1023.data.ranking_above = 91;
+chxm1023.data.is_visitor = false;
+chxm1023.data.is_phone_verified = true;
+chxm1023.data.hasBeenInvited = true;
+chxm1023.data.is_xy_vip = true;
+chxm1023.data.vip_expired_at = 4092599349;
+chxm1023.data.is_vip = true;
+chxm1023.data.xy_svip_expire = 4092599349;
+chxm1023.data.third_party_ids = [
      "63592fa7e7a295001888256b",
       "639ac02db1839300133031c0"
     ];
