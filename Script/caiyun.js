@@ -19,10 +19,19 @@ chxm1023.result.is_xy_vip = true;
 chxm1023.result.vip_expired_at = 4092599349;
 chxm1023.result.is_vip = true;
 chxm1023.result.xy_svip_expire = 4092599349;
+chxm1023.result.auto_renewal_type = "";
+chxm1023.result.third_party_id = null;
 chxm1023.result.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
+     "64679dcd4050ad001760d58c",
+     "64679de55e4f320018d37a04",
+     "64679dec41787e0013c32cd3"
     ];
+;chxm1023.result.third_party_ids = [
+;    "63592fa7e7a295001888256b",
+;    "639ac02db1839300133031c0"
+;    ];
+chxm1023.result.name = "xuandrew";
+chxm1023.result.free_trial = 0;
 chxm1023.result.wt.vip = {
         "is_auto_renewal" : false,
         "enabled" : true,
@@ -33,8 +42,7 @@ chxm1023.result.wt.vip = {
       };
 chxm1023.result.wt.svip_given = 365;
 chxm1023.result.wt.ranking_above = 91;
-chxm1023.result.name = "xuandrew";
-chxm1023.result.avatar = "https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/8843EEBC-1114-4CE3-BB39-C0622D90A3F5.jpeg";
+chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
 chxm1023.result.phone_num = "13145200000";
 chxm1023.result.vip_take_effect = 1;
 chxm1023.result.is_auto_renewal = false;
