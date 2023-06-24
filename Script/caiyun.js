@@ -1,6 +1,5 @@
 var obj = JSON.parse($response.body);
 
-if ($request.url.indexOf(user) != -1){
 obj.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
 obj.result._id = "6358cb93e7a295001482d9aa";
 obj.result.svip_given = 365;
@@ -53,7 +52,6 @@ obj.result.bound_statuscaiyun = {
         "username" : "",
         "is_bound" : true
       };
-}
 
 $done({body : JSON.stringify(obj)});
 
