@@ -5,7 +5,7 @@ const yh = '/user_info';
 
 if ($request.url.indexOf(user) != -1){
 chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6358cb93e7a295001482d9aa";
+chxm1023.result._id = "6432c86484ea830012de2019";
 chxm1023.result.svip_given = 365;
 chxm1023.result.ranking_above = 91;
 chxm1023.result.is_visitor = false;
@@ -53,7 +53,7 @@ chxm1023.result.bound_status.weixin = {
         "is_bound" : true
       };
 chxm1023.result.bound_statuscaiyun = {
-        "id" : "6358cb93e7a295001482d9aa",
+        "id" : "6432c86484ea830012de2019",
         "username" : "",
         "is_bound" : true
       };
@@ -66,7 +66,7 @@ chxm1023.result.bound_status.weibo = {
 
 if ($request.url.indexOf(yza) != -1){
 chxm1023.data.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.data._id = "6358cb93e7a295001482d9aa";
+chxm1023.data._id = "6432c86484ea830012de2019";
 chxm1023.data.svip_given = 365;
 chxm1023.data.ranking_above = 91;
 chxm1023.data.is_visitor = false;
@@ -114,7 +114,7 @@ chxm1023.data.bound_status.weixin = {
         "is_bound" : true
       };
 chxm1023.data.bound_statuscaiyun = {
-        "id" : "6358cb93e7a295001482d9aa",
+        "id" : "6432c86484ea830012de2019",
         "username" : "",
         "is_bound" : true
       };
