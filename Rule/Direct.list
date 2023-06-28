@@ -1,8 +1,11 @@
 # 夸克浏览器
+host, ucweb.com, direct
+host-suffix, ucweb.cn, direct
+host-suffix, uc.ucweb.com, direct
+host-suffix, uc9.ucweb.com, direct
 host-suffix, px.effirst.com, direct
 host-suffix, image.zzd.sm.cn, direct
 host-suffix, uczzd.cn, direct
-host-suffix, ucweb.com, direct
 host-suffix, uczzd.cn, direct
 host-suffix, uczzd.com, direct
 host-suffix, uczzd.com.cn, direct
