@@ -31,7 +31,8 @@ hostname = 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,1
 # ～ XiMaLaYa_喜马拉雅_屏蔽版本更新@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽开屏广告@ddgksf2013
-^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
+;^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
+^https?:\/\/(adse\.wsa|adse|adbehavior)\.xima.*\.com\/.* url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽位置请求@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽热搜词@ddgksf2013
