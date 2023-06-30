@@ -111,7 +111,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Syjsq.js
 
 # 移除公众号中的推广内容 //mp.weixin.qq.com
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|relatedarticle)\? url reject-dict
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|masonryfeed|relatedarticle)\? url reject-dict
 
 # Cubox
 ^https:\/\/cubox\.pro\/c\/api\/userInfo url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/cubox.js
