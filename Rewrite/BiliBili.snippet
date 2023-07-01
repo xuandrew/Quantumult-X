@@ -45,6 +45,7 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 
 # BiliBili_哔哩哔哩_1080P高码率+4K画质(番剧和影视除外)@ddgksf2013
 ;^https?:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_json.js
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine(\/ipad)?|myinfo)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
 
 # BiliBili_哔哩哔哩_热搜发现@ddgksf2013
 ;^https://app.bilibili.com/x/v2/search/square url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_json.js
@@ -104,9 +105,9 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 
 # 哔哩哔哩解锁大会员
 # > 哔哩哔哩会员限定版
-^https?:\/\/(ap(i|p)\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.\w{3,9}\..+\/(View|Play(Conf|erOnline)|MainList|ViewProgress)$ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/BiLiBiLiBVIPCrack.js
+;^https?:\/\/(ap(i|p)\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.\w{3,9}\..+\/(View|Play(Conf|erOnline)|MainList|ViewProgress)$ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/BiLiBiLiBVIPCrack.js
 # > 哔哩哔哩魔改
-^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge\?).* url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/bili_info.js
+;^https?:\/\/ap(i|p)\.bilibili\.com\/x\/(vip|v2|resource)\/(space|account|web|price|top_panel_info|show)(\/|\?)(mine|myinfo|access|vip_center|panel|_bridge\?).* url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/bili_info.js
 
 # 屏蔽B站视频流4480端口
 ^http:\/\/.*:4480\/upgcxcode url reject
