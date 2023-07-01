@@ -178,6 +178,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
         obj.datas = newItems;
       }
+    } else if (obj.rootComment) {
+      if (obj.rootComment?.comment_bubble) {
+        delete obj.rootComment.comment_bubble;
+      }
     } else if (obj.root_comments) {
       let items = obj.root_comments;
       if (items.length > 0) {
@@ -221,9 +225,11 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       if (items.length > 0) {
         let newItems = [];
         for (let item of items) {
-          if (item.user) {
-            // 头像挂件,关注按钮
-            removeAvatar(item);
+          if (item.user?.icons) {
+            delete item.user.icons;
+          }
+          if (item?.reply_comment?.comment_badge) {
+            delete item.reply_comment.comment_badge;
           }
           newItems.push(item);
         }
@@ -236,6 +242,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       for (let i of item) {
         removeAvatar(i?.data);
       }
+    }
+  } else if (url.includes("/2/direct_messages/user_list")) {
+    if (obj.user_list) {
+      obj.user_list = obj.user_list.filter(
+        (i) => !["活动通知"].includes(i.user.name)
+      );
     }
   } else if (url.includes("/2/flowlist")) {
     if (obj.items) {
@@ -700,28 +712,28 @@ function isAd(data) {
 
 // 移除头像挂件,关注按钮
 function removeAvatar(data) {
-  if (data?.user?.avatargj_id) {
+  if (data.user?.avatargj_id) {
     delete data.user.avatargj_id;
   }
-  if (data?.user?.avatar_extend_info) {
+  if (data.user?.avatar_extend_info) {
     delete data.user.avatar_extend_info;
   }
-  if (data?.user?.cardid) {
+  if (data.user?.cardid) {
     delete data.user.cardid;
   }
-  if (data?.user?.icons) {
+  if (data.user?.icons) {
     delete data.user.icons;
   }
-  if (data?.buttons) {
+  if (data.buttons) {
     delete data.buttons;
   }
-  if (data?.cardid) {
+  if (data.cardid) {
     delete data.cardid;
   }
-  if (data?.icons) {
+  if (data.icons) {
     delete data.icons;
   }
-  if (data?.pic_bg_new) {
+  if (data.pic_bg_new) {
     delete data.pic_bg_new;
   }
   return data;
