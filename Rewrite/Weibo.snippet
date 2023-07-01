@@ -85,7 +85,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_getdotinfo url reject-dict
 ;^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist url reject-dict
 
-# 详情页 超话,评论区,看图界面,个人主页,我的页面,信息流,商品橱窗,视频流,视频号,话题卡片
+# 详情页 超话,评论区,看图界面,个人主页,我的页面,信息流,商品橱窗,视频流,视频号,视频调查,话题卡片
 ;^https:\/\/api\.weibo\.cn\/2\/cardlist url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens url reject-dict
