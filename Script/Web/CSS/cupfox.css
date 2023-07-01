@@ -7,3 +7,6 @@ div[class*="jsx-ad"]{display: none! important}
 a[href*="shopping"]{display: none! important}
 a[href*="donate"]{display: none! important}
 div[class*="notice"]{display: none! important}
+img[class*="cupfox-img"]{display: none! important}
+div[class*="left"]{display: none! important}
+div[class*="right"]{display: none! important}
