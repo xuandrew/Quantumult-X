@@ -11,8 +11,8 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/user-profile\/$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
 
 # 百度
-;^http?:\/\/mbd\.baidu\.com\/searchbox\?action=splash&cmd=2010&branchname=baiduboxapp&cfrom=1099a&ds_lv=7&ds_stc=1.2820&from= url reject-dict
-;^https?:\/\/mbd\.baidu\.com\/searchbox\?action=update&uuid= url reject-dict
+^http?:\/\/mbd\.baidu\.com\/searchbox\?action=splash&cmd=2010&branchname=baiduboxapp&cfrom=1099a&ds_lv=7&ds_stc=1.2820&from= url reject-dict
+^https?:\/\/mbd\.baidu\.com\/searchbox\?action=update&uuid= url reject-dict
 ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?fejoin= url reject-dict
 ^https?:\/\/mbd\.baidu\.com\/searchbox\?action=feed&cmd=308&refresh= url reject-dict
 ^https?:\/\/mbd\.baidu\.com\/feedcmp\/V1\/list\/feeddynamic\?branchname=baiduboxapp&cfrom= url reject-dict
