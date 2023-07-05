@@ -151,7 +151,7 @@ https://biz.cyapi.cn/v3/login_by_code 登录
 
 [rewrite_local]
 ^https:\/\/biz\.cyapi\.cn\/v\d\/(user\?app_name=weather|visitors|login_by_code)$ url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/caiyun.js
-^https:\/\/biz\.cyapi\.cn\/p\/v1\/user_info url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/caiyun-user.js
+^https:\/\/biz\.cyapi\.cn\/p\/v1\/user_info url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/caiyun-user.js
 
 
 [MITM]
