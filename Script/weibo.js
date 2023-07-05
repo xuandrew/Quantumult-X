@@ -712,28 +712,28 @@ function isAd(data) {
 
 // 移除头像挂件,关注按钮
 function removeAvatar(data) {
-  if (data.user?.avatargj_id) {
+  if (data?.user?.avatargj_id) {
     delete data.user.avatargj_id;
   }
-  if (data.user?.avatar_extend_info) {
+  if (data?.user?.avatar_extend_info) {
     delete data.user.avatar_extend_info;
   }
-  if (data.user?.cardid) {
+  if (data?.user?.cardid) {
     delete data.user.cardid;
   }
-  if (data.user?.icons) {
+  if (data?.user?.icons) {
     delete data.user.icons;
   }
-  if (data.buttons) {
+  if (data?.buttons) {
     delete data.buttons;
   }
-  if (data.cardid) {
+  if (data?.cardid) {
     delete data.cardid;
   }
-  if (data.icons) {
+  if (data?.icons) {
     delete data.icons;
   }
-  if (data.pic_bg_new) {
+  if (data?.pic_bg_new) {
     delete data.pic_bg_new;
   }
   return data;
