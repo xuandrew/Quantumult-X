@@ -17,7 +17,7 @@ let obj = JSON.parse($response.body);
     obj = {
       "show_completed_award" : false,
       "avatar_status" : 0,
-      "industry" : " ",
+      "industry" : "IT互联网",
       "reg_time" : "1599863895",
       "name_status" : 0,
       "completed_percent" : 100,
