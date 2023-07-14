@@ -523,7 +523,7 @@ https://api.aliyundrive.com/business/v1.0/users/feature/list url script-response
 ;^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch\?positions url reject-200
 
 # 解锁Xmind思维导图订阅到2030年 hostname = www.xmind.cn, www.xmind.net, www.xmind.app
-https?:\/\/www\.xmind\.(cn|net|app)\/\_res\/devices url script-response-body https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Xmind/Script/Xmind.js
+^https?:\/\/www\.xmind\.(cn|app)\/.+\/devices url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
 
 # > WPS 解锁超级会员 Pro
 ;^https?:\/\/(vas|account|drive)\.wps\.cn\/(query\/api\/.+\/list_purchase_info|api\/(v\d\/spaces|users\/.+\/overview)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/WPS.js
