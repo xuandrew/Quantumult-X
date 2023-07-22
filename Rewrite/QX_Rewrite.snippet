@@ -190,17 +190,18 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https:\/\/app\.yidiansz\.com\/api\/.+\/app\/user\/info?(.*?)*$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/ydjl.js
 
 # 彩云天气
-;^https:\/\/biz\.cyapi\.cn\/v\d\/(user\?app_name=weather|visitors|login_by_code)$ url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/CaiYun.js
+^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyuntianqi.js
+^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get url reject-200
 ^https:\/\/biz\.cyapi\.cn\/p\/v1\/user_info url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/caiyun-user.js
 ;^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/caiyun.js
 ;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/githubdulong/Script/master/cytq.js
 ;^http[s]?:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/v2\/user.*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/cytq.js
-^https:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/(v2\/user|v1\/visitors) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/caiyun.js
+;^https:\/\/biz\.(caiyunapp|cyapi)\.(com|cn)\/(v2\/user|v1\/visitors) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/caiyun.js
 ;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/Tartarus2014/Script/master/CaiYun.js
 ;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun_svip.js
 ;^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Weather/weather.js
 ;^https:\/\/biz\.caiyunapp\.com\/v2\/user\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
-^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url reject-dict
+;^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url reject-dict
 
 # 拼多多的多多买菜 #开屏广告 感谢@豆豆分享 #主机名mobile.yangkeduo.com
 ^https:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ url response-body "list":\[.+\] response-body "list":[]
