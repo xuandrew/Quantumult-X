@@ -1,4 +1,4 @@
-// 2023-05-05 09:18
+// 2023-07-29 22:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -224,6 +224,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "adv_gift",
     // "base_info",
     "bigListBizRec", // 周边景点推荐 三张景点大图
+    "bottomDescription", // 底部描述 高德酒店 全网比价
     // "brand_introduction",
     "brand_shop_bar",
     // "brand_story",
@@ -244,12 +245,14 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     // "crowd_index", // 人流量情况
     // "detailFeedCommodity",
     // "detail_bottom_shop_service",
+    "discount_commodity", // 优惠团购
     "divergentRecommendModule", // 你可能还喜欢
     // "evaluate", // 高德出行评分
     // "events",
     "everyOneToSee", // 大家还在看
     "feedback", // 问题反馈
     "first_surround_estate_tab", // 周边小区
+    // "floor_guide_second", // 楼层导览
     // "footer_logo",
     // "foreclosurehouse",
     // "gallery_info", // 现场照片
@@ -259,6 +262,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "hot_new_house_estate",
     "hot_shop",
     "hotelCoupon",
+    "hotelMustRead", // 订房必读
     // "hotelRooms", // 酒店所有房间
     // "hourHotelRooms", // 钟点房
     "houseList",
@@ -279,9 +283,11 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "legal_document", // 房源法律信息
     "listBizRec_1",
     "listBizRec_2", // 周边餐饮
+    "merchantSettlement", // 商家店铺管理
     "membership", // 高德菲住卡 会员项目
     "movie_info", // 优惠购票 景点宣传片
     "multi_page_anchor", // 二级导航菜单 门票 评论 推荐
+    // "navbarMore", // 右上角三点
     "nearbyRecommendModule", // 周边推荐
     "nearby_house",
     "nearby_new_house_estate",
@@ -303,6 +309,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     "operator_card",
     // "packageShelf",
     "parentBizRec",
+    "parentPoiRecEntrance", // 所在商圈
     "poster_banner",
     // "poi_intercept",
     "portal_entrance", // 高德旅游版块 引流到旅游频道
@@ -436,12 +443,13 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     if (obj?.tip_list?.length > 0) {
       for (let item of obj.tip_list) {
         if (
-          ["toplist"].includes(item.tip?.result_type) ||
+          ["12"].includes(item?.tip?.datatype_spec) ||
+          ["toplist"].includes(item?.tip?.result_type) ||
           [
             "exct_query_sug_merge_theme",
             "query_sug_merge_theme",
             "sp"
-          ].includes(item.tip?.task_tag)
+          ].includes(item?.tip?.task_tag)
         ) {
           continue;
         } else {
@@ -449,6 +457,25 @@ if (url.includes("/faas/amap-navigation/main-page")) {
         }
       }
       obj.tip_list = newList;
+    }
+  } else if (obj?.city_list) {
+    let newList = [];
+    if (obj?.city_list?.length > 0) {
+      for (let item of obj.city_list) {
+        let newTip = [];
+        if (item?.tip_list?.length > 0) {
+          for (let ii of item.tip_list) {
+            if (["12"].includes(ii?.tip?.datatype_spec)) {
+              continue;
+            } else {
+              newTip.push(ii);
+            }
+          }
+          item.tip_list = newTip;
+        }
+        newList.push(item);
+      }
+      obj.city_list = newList;
     }
   }
 } else if (url.includes("/shield/search_poi/tips_operation_location")) {
