@@ -34,6 +34,7 @@ https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profil
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/user-profile\/$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
 
 # 百度
+^https:\/\/m\.baidu\.com\/s\?tn=zbios&pu= url reject
 ^http?:\/\/mbd\.baidu\.com\/searchbox\?action=splash&cmd=2010&branchname=baiduboxapp&cfrom=1099a&ds_lv=7&ds_stc=1.2820&from= url reject-dict
 ^https?:\/\/mbd\.baidu\.com\/searchbox\?action=update&uuid= url reject-dict
 ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?fejoin= url reject-dict
