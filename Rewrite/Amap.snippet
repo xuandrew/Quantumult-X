@@ -22,9 +22,7 @@ hostname = m5.amap.com, m5-zb.amap.com, sns.amap.com, amdc.m.taobao.com
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2 url reject-dict
 
 # 我的页面,个人主页,卡片,足迹
-^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/usr-profile-fc\/highlightV2 url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
 ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3 url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
-;^https:\/\/sns\.amap\.com\/ws\/userview\/footprint url reject-dict
 
 # 附近页
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Amap.js
