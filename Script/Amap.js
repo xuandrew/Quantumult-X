@@ -1,4 +1,4 @@
-// 2023-07-29 22:30
+// 2023-08-06 11:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -18,64 +18,6 @@ if (url.includes("/faas/amap-navigation/main-page")) {
     obj.data.mapBizList = obj.data.mapBizList.filter(
       (i) => i.dataKey === "FindCarVirtualCard" // 显示关联车辆位置
     );
-  }
-} else if (url.includes("/faas/amap-navigation/usr-profile-fc/")) {
-  const item = [
-    "bulletData",
-    "cardList",
-    "dataList",
-    "homePageData",
-    "privateData",
-    "shareData",
-    "upgradeDialogData"
-  ];
-  for (let i of item) {
-    if (obj.data?.[i]) {
-      obj.data[i] = [];
-    }
-  }
-} else if (url.includes("/mapapi/poi/infolite")) {
-  // 搜索结果 列表详情
-  if (obj.data?.district?.poi_list) {
-    let poi = obj.data.district.poi_list[0];
-    // 订票横幅 订票用高德 出行享低价
-    if (poi?.transportation) {
-      delete poi.transportation;
-    }
-    // 周边推荐 列表项 景点 酒店 美食
-    if (poi?.feed_rec_tab) {
-      delete poi.feed_rec_tab;
-    }
-  } else if (obj.data?.list_data) {
-    let list = obj.data.list_data.content[0];
-    if (list?.bottom?.taxi_button) {
-      list.bottom.taxi_button = 0;
-    }
-    // 底栏 酒店
-    if (list?.map_bottom_bar?.hotel) {
-      delete list.map_bottom_bar.hotel;
-    }
-    if (list?.poi?.item_info?.tips_bottombar_button?.hotel) {
-      delete list.poi.item_info.tips_bottombar_button.hotel;
-    }
-    if (list?.tips_operation_info) {
-      delete list.tips_operation_info;
-    }
-    if (list?.bottom?.bottombar_button?.hotel) {
-      delete list.bottom.bottombar_button.hotel;
-    }
-    // 底栏 打车
-    if (list?.bottom?.bottombar_button?.takeCar) {
-      delete list.bottom.bottombar_button.takeCar;
-    }
-    // 预览信息中的优惠推广
-    if (list?.promotion_wrap_card) {
-      delete list.promotion_wrap_card;
-    }
-    // 预览信息中的推广
-    if (list?.hookInfo) {
-      delete list.hookInfo;
-    }
   }
 } else if (url.includes("/promotion-web/resource")) {
   // 打车页面
@@ -367,13 +309,6 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete obj.data.modules[i];
     });
   }
-} else if (url.includes("/shield/search_poi/city_feed")) {
-  const item = ["city_feed", "transportation"];
-  if (obj.modules) {
-    item.forEach((i) => {
-      delete obj.modules[i];
-    });
-  }
 } else if (
   url.includes("/shield/search_poi/search/sp") ||
   url.includes("/shield/search_poi/mps")
@@ -434,10 +369,7 @@ if (url.includes("/faas/amap-navigation/main-page")) {
       delete poi.feed_rec_tab;
     }
   }
-} else if (
-  url.includes("/shield/search_poi/sug") ||
-  url.includes("/shield/search/sug")
-) {
+} else if (url.includes("/shield/search_poi/sug")) {
   if (obj?.tip_list) {
     let newList = [];
     if (obj?.tip_list?.length > 0) {
