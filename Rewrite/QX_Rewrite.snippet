@@ -121,7 +121,10 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes/WaterMinder.js
 
 # 航旅纵横
+# 首页悬浮标签
 ^https?:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
+# 我的页面轮播图
+^https?:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native url reject
 
 # Fimo复古相机
 ^https:\/\/server\.(yoyiapp|zbisq)\.com\/fimo-user\/user|apple\/certificate url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/fimo.js
