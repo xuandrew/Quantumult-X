@@ -1,3 +1,7 @@
+# 163邮箱
+host, dl.reg.163.com, direct
+host, r.mail.163.com, direct
+
 # 夸克浏览器
 host, ucweb.com, direct
 host-suffix, ucweb.cn, direct
@@ -12,11 +16,11 @@ host-suffix, uczzd.com.cn, direct
 host-suffix, uczzd.net, direct
 
 # Bing
-host-suffix, pipe.aria.microsoft.com, direct
-host-suffix, sb.scorecardresearch.com, direct
-host-suffix, c.bing.com, direct
-host-suffix, c.msn.com, direct
-host-suffix, srtb.msn.com, direct
+;host-suffix, pipe.aria.microsoft.com, direct
+;host-suffix, sb.scorecardresearch.com, direct
+;host-suffix, c.bing.com, direct
+;host-suffix, c.msn.com, direct
+;host-suffix, srtb.msn.com, direct
 
 # 淘宝
 host, sjarvis.taobao.com, direct
