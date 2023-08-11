@@ -204,10 +204,10 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 
 # 滴滴打车 #小程序净化 感谢#豆豆分享 #主机名conf.diditaxi.com.cn 
 ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core url reject-dict
+^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/didi.js
 
 # 嘀嗒出行 #小程序净化 感谢#豆豆分享 #主机名capis*.didapinche.com, adx-cn.anythinktech.com
 ^https:\/\/capis(-\d)?\.didapinche\.com\/adbase url reject
-^https:\/\/common\.diditaxi\.com\.cn\/common\/v5 url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/didi.js
 ^https?:\/\/adx-cn\.anythinktech\.com\/bid url reject-dict
 
 # 阅读记录
