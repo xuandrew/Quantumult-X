@@ -302,11 +302,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 
 # 网易云音乐去广告, interface3.music.163.com
 # 会员解锁
-;^https:\/\/interface3\.music\.163\.com\/eapi\/content\/exposure\/songplay\/entrance\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
-;^https:\/\/interface3\.music\.163\.com\/eapi\/search\/complex\/page\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
-;^https:\/\/interface3\.music\.163\.com\/eapi\/song\/enhance\/player\/url\/v1\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
-;^https:\/\/interface3\.music\.163\.com\/eapi\/(v6\/)?playlist\/(detail\/|update\/playcount)\? url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
-;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
+^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 ;^https?:\/\/.*\/eapi\/(music|s(ong|ingle|earch)|album|link|zone|content|p(laylist|rivilege|laymode|urchased)|r(esni|nca)che|vip(auth|pro|(new)?center)|music-vip-membership).+ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/NeteaseMusicVipCrack.js
 ;^https?:\/\/.*\/api\/clientlog\/encrypt\/upload url reject-array
 # 通用
