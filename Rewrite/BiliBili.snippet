@@ -86,7 +86,7 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 ;^https:\/\/app\.bilibili\.com\/x\/v2\/account\/mine\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/bili.js
 
 # ～ BiliBili_哔哩哔哩_UP主推荐广告@app2smile@ddgksf2013
-;^https:\/\/app\.bilibili\.com\/bilibili\.app\.((view|viewunite)\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll|playurl\.v1\.PlayURL\/PlayView)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(viewunite\.v1\.View\/View|dynamic\.v2\.Dynamic\/DynAll)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/bilibili-proto.js
 ;^https?:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/View$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/bilibili_proto_ddgksf2013.js
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.(view|viewunite)\.v1\.View\/(View|TFInfo) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/biliProto.js
 # ～ BiliBili_哔哩哔哩_动态页面去广告[#out=DynAll]@app2smile@ddgksf2013
