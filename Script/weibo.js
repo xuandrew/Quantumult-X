@@ -628,9 +628,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       removeFeedAd(obj.text);
     }
     // 赞赏信息
-//    if (obj?.reward_info) {
-//      delete obj.reward_info;
-//    }
+    if (obj?.reward_info) {
+      delete obj.reward_info;
+    }
   } else if (url.includes("/2/statuses/unread_hot_timeline")) {
     // 首页推荐tab信息流
     for (let s of ["ad", "advertises", "trends", "headers"]) {
@@ -713,7 +713,7 @@ function isAd(data) {
   }
   return false;
 }
-/***
+
 // 移除头像挂件,关注按钮
 function removeAvatar(data) {
   if (data?.user?.avatargj_id) {
@@ -742,7 +742,7 @@ function removeAvatar(data) {
   }
   return data;
 }
-***/
+
 function checkSearchWindow(item) {
   if (
     item.data?.card_type === 19 || // 找人 热议 本地
