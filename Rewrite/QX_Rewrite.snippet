@@ -122,10 +122,36 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ url reject-200
 &src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&testversion=&ticket=84122092810F360BA056B85869F9F51A
 ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ url reject-200
-^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ url reject-200
-^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot url reject-200
+;^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ url reject-200
+;^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot url reject-200
 ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support url reject-200
 ^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ url reject-200
+
+http://rc-topic-api.bz.mgtv.com/rc/topic/rank url reject-200
+https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
+https://me.bz.mgtv.com/v3/module/list url reject-200
+https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
+^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ url reject-200
+https://video.da.mgtv.com url reject-dict
+https://pcvideoaliyun.titan.mgtv.com url reject-dict
+https://mobile.da.mgtv.com/app/el url reject-200
+https://mobile.da.mgtv.com/m/page url reject-200
+https://playgift.api.mgtv.com/play/gift/api/play/config url reject-200
+https://layer.bz.mgtv.com/layer/conf.* url reject-dict
+https://layer.bz.mgtv.com/layer/report url reject-200
+https://mobile.da.mgtv.com/creative/list url reject-dict
+https://mobile.da.mgtv.com/json/app/bdboot url reject-200
+https://img.da.mgtv.com/mediafiles/wiad_creative/1008/*.gif url reject-img
+https://layer.bz.mgtv.com/layer/confv2 url reject-200
+https://credits.bz.mgtv.com/credits/selectedToast url reject-dict
+http://dflow.bz.mgtv.com/flow/getExtensionPosition url reject-200
+https://me2.bz.mgtv.com/v3/module/list.+ url reject-dict
+https://vipcdn.mgtv.com/act_ugc/billing/20220825/tmp/acf2efcc245911edbe6e00163e308875.png url reject-img
+http://iphone.v0.mgtv.com/show.php?abroad.+ url reject-200
+https://mob.bz.mgtv.com/odin/c1/skin/config url reject-200
+https://mob.bz.mgtv.com/odin/c1/channel/ads url reject-200
+https://credits.bz.mgtv.com/credits/url url reject-200
+^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ url reject-200
 
 # PDF Expert
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
