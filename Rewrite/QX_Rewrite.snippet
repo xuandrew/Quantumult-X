@@ -30,6 +30,7 @@ https://iface2.iqiyi.com/views/3.0/home_top_menu.+ url script-response-body http
 
 # 懒人听书
 ^http[s]?:\/\/((shapi|hapi)(\.mting\.info)|(m\.lrts\.me)|(gzapi\.mting\.info))\/(app|yyting)\/(getVipPageData|userclient\/ClientGetUserInfo|usercenter\/ThirdPartyLogin).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/LanRen.js
+^https?:\/\/shapi\.mting\.info\/advert\/ClientAdvertList\.action\?imei= url reject-dict
 
 # CAD快速看图
 ^https?:\/\/cad\.glodon\.com\/(account|authorize\/query|alipay\/auth) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/cad.js
