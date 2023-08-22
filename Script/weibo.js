@@ -237,11 +237,21 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       }
     }
   } else if (url.includes("/2/container/asyn")) {
-    if (obj.items?.[0]?.items) {
-      let item = obj.items?.[0]?.items;
-      for (let i of item) {
-        removeAvatar(i?.data);
+    if (obj?.items?.length > 0) {
+      let newItems = [];
+      for (let item of obj.items) {
+        removeAvatar(item?.data);
+        if (item?.itemId?.includes("_infeed_may_interest_in_")) {
+          // 你可能感兴趣的超话
+          continue;
+        }
+        if (item?.itemId === null) {
+          // 横版博主卡片
+          continue;
+        }
+        newItems.push(item);
       }
+      obj.items = newItems;
     }
   } else if (url.includes("/2/direct_messages/user_list")) {
     if (obj.user_list) {
@@ -565,17 +575,53 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/statuses/container_timeline_topic")) {
     // 超话信息流
+    if (obj?.header?.data?.follow_guide_info) {
+      // 底部弹出的关注按钮
+      delete obj.header.data.follow_guide_info;
+    }
     if (obj.items) {
       let newItems = [];
       for (let item of obj.items) {
-        if (item?.items) {
-          delete item.items;
-        }
         if (item.category === "feed") {
           if (item.data) {
             // 头像挂件,关注按钮
             removeAvatar(item.data);
+            if (!isAd(item.data)) {
+              newItems.push(item);
+            }
           }
+        } else if (item.category === "card") {
+          if (![4, 197, 1012].includes(item?.data?.card_type)) {
+            // 4 你可能感兴趣的超话
+            // 197 你可能感兴趣的超话
+            // 1012 热门超话
+            newItems.push(item);
+          }
+        } else if (item.category === "group") {
+          if (item?.itemId === null) {
+            // 超话页顶部乱七八糟
+            if (item?.items?.length > 0) {
+              let newII = [];
+              for (let ii of item.items) {
+                if (ii?.data?.itemid?.includes("mine_topics")) {
+                  // 保留我的超话
+                  newII.push(ii);
+                } else if (ii?.data?.itemid?.includes("_tab_search_input")) {
+                  // 保留搜索框
+                  if (ii?.data?.hotwords) {
+                    // 删除热搜词
+                    ii.data.hotwords = [{ word: "搜索超话" }];
+                  }
+                  newII.push(ii);
+                }
+              }
+              item.items = newII;
+            } else {
+              continue;
+            }
+          }
+          newItems.push(item);
+        } else if (item.category === "cell") {
           newItems.push(item);
         } else {
           // 移除所有的推广
