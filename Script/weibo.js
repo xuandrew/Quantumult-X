@@ -1,4 +1,4 @@
-// 2023-08-22 09:30
+// 2023-08-22 17:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -620,12 +620,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 }
               }
               item.items = newII;
-            } else {
-              continue;
             }
           }
-          newItems.push(item);
-        } else if (item.category === "cell") {
+          if (item?.header?.arrayText?.contents?.length > 0) {
+            // 你的好友也关注了
+            continue;
+          }
           newItems.push(item);
         } else {
           // 移除所有的推广
