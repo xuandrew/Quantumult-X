@@ -42,8 +42,8 @@ host, dns.weibo.cn, reject
 IP-CIDR, 39.97.128.148/32, reject
 IP-CIDR, 39.97.130.51/32, reject
 # Weixin
-host, dns.weixin.qq.com, reject
-host, dns.weixin.qq.com.cn, reject
+;host, dns.weixin.qq.com, reject
+;host, dns.weixin.qq.com.cn, reject
 IP-CIDR, 42.81.232.18/32, reject
 IP-CIDR, 42.187.182.106/32, reject
 IP-CIDR, 42.187.182.123/32, reject
