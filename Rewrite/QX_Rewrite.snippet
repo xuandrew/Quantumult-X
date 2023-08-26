@@ -601,6 +601,8 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ;^https?:\/\/.+?(defaultts|dispatch|omts|qqvideo|variety)\.tc\.qq\.com\/* url reject
 ^http:\/\/(.+qqvideo\.tc\.qq\.com\/.+mp4|pgdt\.gtimg\.cn) url reject-200
 ^https:\/\/xsweb\.gdt\.qq\.com\/resources\/mosaic\/qqlive-splash-mosaic\/ios url reject-dict
+^http:\/\/[0-9\.:]*\/?(defaultts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ url reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ url reject-dict
 
 # > 酷安完美去广告
 # > 酷安_开屏广告@ddgksf2013
