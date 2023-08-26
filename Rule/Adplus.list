@@ -1,3 +1,12 @@
+# 腾讯视频
+HOST, adsmind.gdtimg.com, REJECT
+HOST, btrace.qq.com, REJECT
+HOST, info4.video.qq.com, REJECT
+HOST, info6.video.qq.com, REJECT
+HOST, ios.video.mpush.qq.com, REJECT
+HOST, mtrace.qq.com, REJECT
+HOST, pgdt.gtimg.cn, REJECT
+HOST, vv.video.qq.com, REJECT
 
 # 航旅纵横
 host-suffix, event.umetrip.com, reject
