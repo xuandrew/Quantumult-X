@@ -615,6 +615,20 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               item.items = newII;
             }
           }
+          if (item?.items?.length > 0) {
+            for (let ii of item.items) {
+              if (ii?.data) {
+                removeAvatar(ii.data);
+                if (ii?.data?.common_struct) {
+                  delete ii.data.common_struct;
+                }
+              }
+            }
+          }
+          if (item?.style?.topHover) {
+            // 空降发帖背景图
+            delete item.style.topHover;
+          }
           if (item?.header?.arrayText?.contents?.length > 0) {
             // 你的好友也关注了
             continue;
