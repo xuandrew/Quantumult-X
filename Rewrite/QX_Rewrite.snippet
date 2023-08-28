@@ -151,6 +151,7 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 ^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ url reject-200
 
 http://rc-topic-api.bz.mgtv.com/rc/topic/rank url reject-200
+https://floor.bz.mgtv.com/floor/detail.+ url reject-200
 https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
 https://me.bz.mgtv.com/v3/module/list url reject-200
 https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
@@ -175,6 +176,7 @@ https://mob.bz.mgtv.com/odin/c1/skin/config url reject-200
 https://mob.bz.mgtv.com/odin/c1/channel/ads url reject-200
 https://credits.bz.mgtv.com/credits/url url reject-200
 ^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ url reject-200
+http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/NoAdMgTV.conf
 
 # PDF Expert
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
