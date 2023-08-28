@@ -5,13 +5,13 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 ^https:\/\/read\.douban\.com\/api\/v2\/popup url reject
 
 # iQiyi
-^https?:\/\/kjp\.cupid\.iqiyi\.com url reject-200
-^https?:\/\/search\.video\.iqiyi\.com\/q.+ url reject-dict
-http://search.video.qiyi.com/q url reject-dict
+;^https?:\/\/kjp\.cupid\.iqiyi\.com url reject-200
+;^https?:\/\/search\.video\.iqiyi\.com\/q.+ url reject-dict
+;http://search.video.qiyi.com/q url reject-dict
 https://act.vip.iqiyi.com/interact/api/v2/show url reject-dict
 https://iface2.iqiyi.com/views_pop/3.0/component/vip_expire_save_emotion url reject-dict
 https://iface2.iqiyi.com/views_pop/3.0/pop_control url reject-dict
-https://iface2.iqiyi.com/control/3.0/init_proxy url reject-dict
+;https://iface2.iqiyi.com/control/3.0/init_proxy url reject-dict
 https://api.iqiyi.com/3f4/iface2.iqiyi.com/control/3.0/init_proxy url reject-dict
 https://iface2.iqiyi.com/views_pop/3.0/component/perception url reject-dict
 https://iface2.iqiyi.com/views_pop/3.0/6812/push_check url reject-dict
@@ -24,6 +24,12 @@ https://api.iqiyi.com/3f4/iface2.iqiyi.com/views/3.0/home_top_menu.+ url script-
 https://iface2.iqiyi.com/views/3.0/home_top_menu.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/Iqiyi.js
 ^https:\/\/.+\/aggregate\/3.0\/getMyMenus.+ url echo-response application/json echo-response https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/IQiyi
 ^https:\/\/.+/views_search\/3.0\/hot_query_search.+ url echo-response application/json echo-response https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/iQYI
+# 播放广告
+^http:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/iqiyi.js
+# 首页,卡片广告,左上角天气,搜索框填充
+^https:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/iqiyi.js
+^https:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/iqiyi.js
+^https:\/\/search\.video\.iqiyi\.com\/q\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/iqiyi.js
 
 # GoodNotes v6
 ^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://github.com/ddgksf2013/MoYu/raw/master/GoodNotesProCrack.js
