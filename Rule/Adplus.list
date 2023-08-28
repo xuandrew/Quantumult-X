@@ -1,3 +1,6 @@
+# 爱奇艺
+HOST, api.iqiyi.com, REJECT
+
 # 腾讯视频
 HOST, adsmind.gdtimg.com, REJECT
 HOST, btrace.qq.com, REJECT
