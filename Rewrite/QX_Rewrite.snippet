@@ -23,11 +23,11 @@ https://api.iqiyi.com/3f4/iface2.iqiyi.com/organize/3.0/p2a url reject-200
 https://api.iqiyi.com/3f4/iface2.iqiyi.com/views/3.0/home_top_menu.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/Iqiyi.js
 https://iface2.iqiyi.com/views/3.0/home_top_menu.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/Iqiyi.js
 ^https:\/\/.+\/aggregate\/3.0\/getMyMenus.+ url echo-response application/json echo-response https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/IQiyi
-^https:\/\/.+/views_search\/3.0\/hot_query_search.+ url echo-response application/json echo-response https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/iQYI
+;^https:\/\/.+/views_search\/3.0\/hot_query_search.+ url echo-response application/json echo-response https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/JSON/iQYI
 # 播放广告
 ^http:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 首页,卡片广告,左上角天气,搜索框填充
-^https:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 首页,卡片广告,搜索列表广告,左上角天气,搜索框填充词
+^https:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|views_search\/3\.0\/(hot_query_)?search|waterfall\/3\.0\/feed)\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 ^https:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 ^https:\/\/search\.video\.iqiyi\.com\/q\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
