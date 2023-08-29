@@ -1,6 +1,17 @@
 # 爱奇艺
 HOST, api.iqiyi.com, REJECT
 
+# 优酷
+HOST, adsmind.ugdtimg.com, REJECT
+HOST, amdc.m.youku.com, REJECT
+HOST, httpdns.alicdn.com, REJECT
+HOST, huichuan-mc.sm.cn, REJECT
+HOST, huichuan.sm.cn, REJECT
+HOST, vali-ugc.cp31.ott.cibntv.net, REJECT
+HOST, valipl.cp31.ott.cibntv.net, REJECT
+HOST, yk-ssp.ad.youku.com, REJECT
+HOST, ykad-data.youku.com, REJECT
+
 # 腾讯视频
 HOST, adsmind.gdtimg.com, REJECT
 HOST, btrace.qq.com, REJECT
@@ -134,9 +145,6 @@ host-suffix, afdback.ppsimg.com, reject
 # 贴吧 屏蔽域名dns查询
 #IP-CIDR,180.76.76.200/32,REJECT
 host, im.tieba.baidu.com, reject
-
-# iQiyi
-;host-suffix, data6.video.iqiyi.com, reject
 
 # 知乎
 host, 118.89.204.198, reject
