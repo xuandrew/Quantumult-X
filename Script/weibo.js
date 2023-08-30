@@ -145,38 +145,36 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                 continue;
               }
             }
+            // 评论气泡
+            if (item?.data?.comment_bubble) {
+              delete item.data.comment_bubble;
+            }
+            // 评论弹幕
+            if (item?.data?.comment_bullet_screens_message) {
+              delete item.data.comment_bullet_screens_message;
+            }
+            // 热评小图标 弹幕 首评
+            if (item?.data?.hot_icon) {
+              delete item.data.hot_icon;
+            }
+            // 会员气泡按钮
+            if (item?.data?.vip_button) {
+              delete item.data.vip_button;
+            }
+            // 6为你推荐更多精彩内容 15过滤提示
+            if (item?.type === 6 || item?.type === 15) {
+              continue;
+            }
+            if (
+              item?.adType === "相关内容" ||
+              item?.adType === "相关评论" ||
+              item?.adType === "推荐"
+            ) {
+              continue;
+            }
+            newItems.push(item);
           }
         }
-        // 评论气泡
-        if (item?.data?.comment_bubble) {
-          delete item.data.comment_bubble;
-        }
-        // 评论弹幕
-        if (item?.data?.comment_bullet_screens_message) {
-          delete item.data.comment_bullet_screens_message;
-        }
-        // 热评小图标 弹幕 首评
-        if (item?.data?.hot_icon) {
-          delete item.data.hot_icon;
-        }
-        // 会员气泡按钮
-        if (item?.data?.vip_button) {
-          delete item.data.vip_button;
-        }
-        // 6为你推荐更多精彩内容 15过滤提示
-        if (item?.type === 6 || item?.type === 15) {
-          continue;
-        }
-        if (
-          item?.adType === "相关内容" ||
-          item?.adType === "相关评论" ||
-          item?.adType === "广告" ||
-          item?.adType === "热推" ||
-          item?.adType === "推荐"
-        ) {
-          continue;
-        }
-        newItems.push(item);
       }
       obj.datas = newItems;
     } else if (obj?.root_comments?.length > 0) {
@@ -210,8 +208,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           if (item?.vip_button) {
             delete item.vip_button;
           }
+          newItems.push(item);
         }
-        newItems.push(item);
       }
       obj.root_comments = newItems;
     } else if (obj?.comments?.length > 0) {
