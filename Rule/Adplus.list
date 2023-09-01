@@ -1,3 +1,16 @@
+# 芒果TV
+HOST, dflow.bz.mgtv.com, REJECT
+HOST, encounter.bz.mgtv.com, REJECT
+HOST, floor.bz.mgtv.com, REJECT
+HOST, img.da.mgtv.com, REJECT
+HOST, layer.bz.mgtv.com, REJECT
+HOST, mob.bz.mgtv.com, REJECT
+HOST, mobile.da.mgtv.com, REJECT
+HOST, v2.da.mgtv.com, REJECT
+HOST, video.da.mgtv.com, REJECT
+HOST, vip.bz.mgtv.com, REJECT
+HOST, ys.da.mgtv.com, REJECT
+
 # 爱奇艺
 HOST, api.iqiyi.com, REJECT
 
