@@ -150,49 +150,48 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 ^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support url reject-200
 ^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ url reject-200
 
-;^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2.+ url reject-200
-;^https:\/\/encounter\.bz\.mgtv\.com\/encounter\/entrance\/home url reject-200
-;http://rc-topic-api.bz.mgtv.com/rc/topic/rank url reject-200
-;https://floor.bz.mgtv.com/floor/detail.+ url reject-200
-;https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
-;https://me.bz.mgtv.com/v3/module/list url reject-200
-;https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
-;^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ url reject-200
-;https://video.da.mgtv.com url reject-dict
-;https://pcvideoaliyun.titan.mgtv.com url reject-dict
-;https://mobile.da.mgtv.com/app/el url reject-200
-;https://mobile.da.mgtv.com/m/page url reject-200
-;https://playgift.api.mgtv.com/play/gift/api/play/config url reject-200
-;https://layer.bz.mgtv.com/layer/conf.* url reject-dict
-;https://layer.bz.mgtv.com/layer/report url reject-200
-;https://mobile.da.mgtv.com/creative/list url reject-dict
-;https://mobile.da.mgtv.com/json/app/bdboot url reject-200
-;https://img.da.mgtv.com/mediafiles/wiad_creative/1008/*.gif url reject-img
-;https://layer.bz.mgtv.com/layer/confv2 url reject-200
-;https://credits.bz.mgtv.com/credits/selectedToast url reject-dict
-;http://dflow.bz.mgtv.com/flow/getExtensionPosition url reject-200
-;https://me2.bz.mgtv.com/v3/module/list.+ url reject-dict
-;https://vipcdn.mgtv.com/act_ugc/billing/20220825/tmp/acf2efcc245911edbe6e00163e308875.png url reject-img
-;http://iphone.v0.mgtv.com/show.php?abroad.+ url reject-200
-;https://mob.bz.mgtv.com/odin/c1/skin/config url reject-200
-;https://mob.bz.mgtv.com/odin/c1/channel/ads url reject-200
-;https://credits.bz.mgtv.com/credits/url url reject-200
-;^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ url reject-200
-;http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/NoAdMgTV.conf
+^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2.+ url reject-200
+^https:\/\/encounter\.bz\.mgtv\.com\/encounter\/entrance\/home url reject-200
+http://rc-topic-api.bz.mgtv.com/rc/topic/rank url reject-200
+https://floor.bz.mgtv.com/floor/detail.+ url reject-200
+https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
+https://me.bz.mgtv.com/v3/module/list url reject-200
+https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
+^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ url reject-200
+https://video.da.mgtv.com url reject-dict
+https://pcvideoaliyun.titan.mgtv.com url reject-dict
+https://mobile.da.mgtv.com/app/el url reject-200
+https://mobile.da.mgtv.com/m/page url reject-200
+https://playgift.api.mgtv.com/play/gift/api/play/config url reject-200
+https://layer.bz.mgtv.com/layer/conf.* url reject-dict
+https://layer.bz.mgtv.com/layer/report url reject-200
+https://mobile.da.mgtv.com/creative/list url reject-dict
+https://mobile.da.mgtv.com/json/app/bdboot url reject-200
+https://img.da.mgtv.com/mediafiles/wiad_creative/1008/*.gif url reject-img
+https://layer.bz.mgtv.com/layer/confv2 url reject-200
+https://credits.bz.mgtv.com/credits/selectedToast url reject-dict
+http://dflow.bz.mgtv.com/flow/getExtensionPosition url reject-200
+https://me2.bz.mgtv.com/v3/module/list.+ url reject-dict
+https://vipcdn.mgtv.com/act_ugc/billing/20220825/tmp/acf2efcc245911edbe6e00163e308875.png url reject-img
+http://iphone.v0.mgtv.com/show.php?abroad.+ url reject-200
+https://mob.bz.mgtv.com/odin/c1/skin/config url reject-200
+https://mob.bz.mgtv.com/odin/c1/channel/ads url reject-200
+https://credits.bz.mgtv.com/credits/url url reject-200
+^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ url reject-200
+http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/NoAdMgTV.conf
 # 首页,左上角推广,信息流,顶部菜单,搜索框
-;^http:\/\/[0-9\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? url reject-dict
-;^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-;^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? url reject-dict
-;^https:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? url reject-dict
-;^https?:\/\/dc\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-;^https?:\/\/dc\.bz\.mgtv\.com\/dynamic\/v1\/channel\/vrsList\/\w url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-;^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+^http:\/\/[0-9\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? url reject-dict
+^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? url reject-dict
+^https:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? url reject-dict
+^https?:\/\/dc\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 我的页面
-;^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 升级弹窗
-;^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? url reject-dict
+^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? url reject-dict
 # 播放详情页
-;^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
 # PDF Expert
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
