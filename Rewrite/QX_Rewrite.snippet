@@ -154,7 +154,7 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 ^https:\/\/encounter\.bz\.mgtv\.com\/encounter\/entrance\/home url reject-200
 http://rc-topic-api.bz.mgtv.com/rc/topic/rank url reject-200
 https://floor.bz.mgtv.com/floor/detail.+ url reject-200
-https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
+;https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
 ;https://me.bz.mgtv.com/v3/module/list url reject-200
 ;https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
 ^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ url reject-200
@@ -189,6 +189,10 @@ http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https
 ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 我的页面
 ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
+# 升级弹窗
+^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? url reject-dict
+# 播放详情页
+^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
 # PDF Expert
 ^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/pdfexpert6\/subscription\/refresh url script-request-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PDFexpert.js
