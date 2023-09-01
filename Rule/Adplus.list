@@ -9,6 +9,7 @@ HOST, httpdns.alicdn.com, REJECT
 HOST, huichuan-mc.sm.cn, REJECT
 HOST, huichuan.sm.cn, REJECT
 HOST, iyes.youku.com, REJECT
+HOST, mc.atm.youku.com, REJECT
 HOST, vali-ugc.cp31.ott.cibntv.net, REJECT
 HOST, vali.cp31.ott.cibntv.net, REJECT
 HOST, valipl.cp31.ott.cibntv.net, REJECT
