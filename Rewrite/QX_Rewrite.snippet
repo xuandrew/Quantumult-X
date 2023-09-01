@@ -135,28 +135,14 @@ https://yun.feidee.net/cab-vip-ws/terminal/v1/vip-users/show-info url script-res
 # > 随手记_账本顶部推广
 https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-result url reject-dict
 
-# > 芒果vip
-^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTK.js
-^http[s]?:\/\/.*mgtv\.com\/(client\/dynamic_entry|v8\/video\/getSource|GetUserInfo|v3\/module\/list|credits\/url|dynamic\/v1\/channel\/index).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/MGTV.js
-^https?:\/\/nuc\.api\.mgtv.com\/Logout url reject-200
-^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ url reject-img
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/ url reject-200
-^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/package\.json url reject-200
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/server_bidding\/pre_fetch\/ url reject-200
-&src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&testversion=&ticket=84122092810F360BA056B85869F9F51A
-^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/stats\/batch\/ url reject-200
-^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ url reject-200
-^https?:\/\/mobile\.da\.mgtv\.com\/json\/app\/bdboot url reject-200
-^https?:\/\/mobile\.api\.mgtv\.com\/mobile\/config\?_support url reject-200
-^https?:\/\/sf3-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/renderer\/ url reject-200
-
-^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2.+ url reject-200
+# > 芒果TV
+;^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2.+ url reject-200
 ^https:\/\/encounter\.bz\.mgtv\.com\/encounter\/entrance\/home url reject-200
 http://rc-topic-api.bz.mgtv.com/rc/topic/rank url reject-200
 https://floor.bz.mgtv.com/floor/detail.+ url reject-200
-https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
-https://me.bz.mgtv.com/v3/module/list url reject-200
-https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
+;https://mobile.api.mgtv.com/v2/mobile/checkUpdate url reject-200
+;https://me.bz.mgtv.com/v3/module/list url reject-200
+;https://dc.bz.mgtv.com/dynamic/v1/channel/vrsList url response-body .+ response-body {}
 ^https?:\/\/vip\.bz\.mgtv\.com\/client\/dynamic_entry.+ url reject-200
 https://video.da.mgtv.com url reject-dict
 https://pcvideoaliyun.titan.mgtv.com url reject-dict
@@ -174,11 +160,11 @@ http://dflow.bz.mgtv.com/flow/getExtensionPosition url reject-200
 https://me2.bz.mgtv.com/v3/module/list.+ url reject-dict
 https://vipcdn.mgtv.com/act_ugc/billing/20220825/tmp/acf2efcc245911edbe6e00163e308875.png url reject-img
 http://iphone.v0.mgtv.com/show.php?abroad.+ url reject-200
-https://mob.bz.mgtv.com/odin/c1/skin/config url reject-200
-https://mob.bz.mgtv.com/odin/c1/channel/ads url reject-200
+;https://mob.bz.mgtv.com/odin/c1/skin/config url reject-200
+;https://mob.bz.mgtv.com/odin/c1/channel/ads url reject-200
 https://credits.bz.mgtv.com/credits/url url reject-200
 ^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ url reject-200
-http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/NoAdMgTV.conf
+;http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/NoAdMgTV.conf
 # 首页,左上角推广,信息流,顶部菜单,搜索框
 ^http:\/\/[0-9\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? url reject-dict
 ^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
