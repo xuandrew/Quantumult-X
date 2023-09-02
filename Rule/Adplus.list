@@ -149,6 +149,53 @@ host-suffix, mon.toutiaocloud.net, reject
 host-suffix, praisewindow.ugsdk.cn, reject
 host-suffix, mon.toutiaocloud.com, reject
 
+# 番茄小说
+HOST,p6-ad-sign.byteimg.com,REJECT
+HOST,p9-ad-sign.byteimg.com,REJECT
+HOST-SUFFIX,byteimg.com,DIRECT
+HOST,i.snssdk.com,REJECT
+HOST,i-lq.snssdk.com,REJECT
+HOST,dig.bdurl.net,REJECT
+HOST-KEYWORD,zijieapi,REJECT
+# HOST,ads3-normal-lq.zijieapi.com,REJECT
+# HOST,ads5-normal-lq.zijieapi.com,REJECT
+# HOST,polaris3-normal-lq.zijieapi.com,REJECT
+HOST,activity-ag.awemeughun.com,REJECT
+
+HOST,mcs.snssdk.com,REJECT
+HOST,tnc3-alisc1.snssdk.com,REJECT
+HOST,security-lq.snssdk.com,REJECT
+HOST,tnc3-aliec2.snssdk.com,REJECT
+HOST,is.snssdk.com,REJECT
+
+HOST,msync-im1-vip6-std.easemob.com,REJECT
+
+HOST,apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
+HOST,api.iegadp.qq.com,REJECT
+
+HOST,sf3-ttcdn-tos.pstatp.com,REJECT
+HOST-SUFFIX,pglstatp-toutiao.com,REJECT
+# HOST,p3-be-pack-sign.pglstatp-toutiao.com,REJECT
+# HOST,sf3-be-pack.pglstatp-toutiao.com,REJECT
+
+HOST,*default.ixigua.com,REJECT
+HOST,v6-novelapp.ixigua.com,REJECT
+HOST,*novelapp.ixigua.com,REJECT
+# HOST,v3-default.ixigua.com,REJECT
+# HOST,v9-default.ixigua.com,REJECT
+# HOST,v6-default.ixigua.com,REJECT
+
+HOST-SUFFIX,byteorge.com,REJECT
+HOST-SUFFIX,bytegoofy.com,REJECT
+HOST-SUFFIX,bytedance.com,REJECT
+
+IP-CIDR,49.71.37.101/32,REJECT,no-resolve
+IP-CIDR,117.71.105.23/32,REJECT,no-resolve
+IP-CIDR,218.94.207.205/32,REJECT,no-resolve
+IP-CIDR,117.92.229.188/32,REJECT,no-resolve
+IP-CIDR,101.36.166.16/32,REJECT,no-resolve
+IP-CIDR,180.96.2.114/32,REJECT,no-resolve
+
 
 # 瑞幸去开屏广告
 ;host-suffix, capi.lkcoffee.com, reject
