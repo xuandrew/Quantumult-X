@@ -21,6 +21,7 @@ HOST, apiv4-iyes.youku.com, REJECT
 HOST, huichuan-mc.sm.cn, REJECT
 HOST, huichuan.sm.cn, REJECT
 HOST, iyes.youku.com, REJECT
+HOST, m-vali.cp31.ott.cibntv.net, REJECT
 HOST, mc.atm.youku.com, REJECT
 HOST, vali-g1.cp31.ott.cibntv.net, REJECT
 HOST, vali-ugc.cp31.ott.cibntv.net, REJECT
