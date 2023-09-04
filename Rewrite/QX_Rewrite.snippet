@@ -525,8 +525,8 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 # 首页信息流,播放详情页,首页菜单,我的页面,底部菜单
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.query|uc\.query) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
-# 播放页,主演陪你看
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.pisp\.scripts\.get url reject-dict
+# 播放页,主演陪你看,弹窗动图
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.poplayer\.position\.query) url reject-dict
 # 青少年模式弹窗
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 热剧弹窗
