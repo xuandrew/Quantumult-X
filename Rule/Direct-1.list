@@ -1,40 +1,75 @@
-# NAME: Direct
-# AUTHOR: blackmatrix7
-# REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-02-10 02:11:45
-# HOST-SUFFIX: 5
-# HOST-KEYWORD: 1
-# HOST: 15
-# USER-AGENT: 4
-# TOTAL: 25
-HOST,ad.10010.com,Direct
-HOST,analytics.95516.com,Direct
-HOST,analytics.strava.com,Direct
-HOST,app.adjust.com,Direct
-HOST,bdtj.tagtic.cn,Direct
-HOST,fairplay.l.qq.com,Direct
-HOST,fonts.gstatic.com,Direct
-HOST,log.mmstat.com,Direct
-HOST,msg.umeng.com,Direct
-HOST,msg.umengcloud.com,Direct
-HOST,origin-a.akamaihd.net,Direct
-HOST,picanalysis.vivo.com.cn,Direct
-HOST,sycm.mmstat.com,Direct
-HOST,tracking.miui.com,Direct
-HOST,xivanalysis.com,Direct
-HOST,cache.video.iqiyi.com,Direct
-HOST,amdc.m.taobao.com,Direct
-HOST,ilce.alicdn.com,Direct
-HOST,msg.qy.net,Direct
-HOST,act.vip.iqiyi.com,Direct
-HOST,iadsdk.apple.com,Direct
-HOST-SUFFIX,dizhensubao.getui.com,Direct
-HOST-SUFFIX,f.video.weibocdn.com,Direct
-HOST-SUFFIX,fus.cdn.krcom.cn,Direct
-HOST-SUFFIX,ol.epicgames.com,Direct
-HOST-SUFFIX,tracking-protection.cdn.mozilla.net,Direct
-HOST-KEYWORD,wb_ad,Direct
-USER-AGENT,Coffee%20Corp*,Direct
-USER-AGENT,archero*,Direct
-USER-AGENT,coffeecorp*,Direct
-USER-AGENT,restaurant-mobile*,Direct
+# 番茄小说
+host, i.snssdk.com, reject
+host, effect.snssdk.com, reject
+host, ec5-core-lf.ecombdapi.com, reject
+host, ec3-core-lf.ecombdapi.com, reject
+host, ecom5-normal-lf.ecombdapi.com, reject
+host, ecom3-normal-lf.ecombdapi.com, reject
+host, p9-developer-sign.bytemaimg.com, reject
+host, p3-developer-sign.bytemaimg.com, reject
+host, is.snssdk.com, reject
+host, imapi5-oth.zijieapi.com, reject
+host, frontier100-toutiao-lf.fqnovel.com, reject
+host, applog.snssdk.com, reject
+host-suffix, growth.ecombdapi.com, reject
+host-suffix, isaas.ecombdapi.com, reject
+host-suffix, p6-ad-sign.byteimg.com, reject
+host-suffix, p9-ad-sign.byteimg.com, reject
+#host, i.snssdk.com, reject
+#host, i-lq.snssdk.com, reject
+host, activity-ag.awemeughun.com, reject
+host, mcs.snssdk.com, reject
+host, tnc3-alisc1.snssdk.com, reject
+#host, security-lq.snssdk.com, reject
+host, msync-im1-vip6-std.easemob.com, reject
+host, apd-pcdnwxlogin.teg.tencent-cloud.net, reject
+host, api.iegadp.qq.com, reject
+host, sf3-ttcdn-tos.pstatp.com, reject
+host-suffix, pglstatp-toutiao.com, reject
+host, *default.ixigua.com, reject
+host, v6-novelapp.ixigua.com, reject
+host, *novelapp.ixigua.com, reject
+host-suffix, byteorge.com, reject
+#host-suffix, bytegoofy.com, reject
+#host-suffix, bytedance.com, reject
+ip-cidr, 49.71.37.101/32, reject
+ip-cidr, 117.71.105.23/32, reject
+ip-cidr, 218.94.207.205/32, reject
+ip-cidr, 117.92.229.188/32, reject
+ip-cidr, 101.36.166.16/32, reject
+ip-cidr, 180.96.2.114/32, reject
+host-suffix, ads3-normal-lf.zijieapi.com, reject
+host-suffix, ads5-normal-lf.zijieapi.com, reject
+host-suffix, adim.pinduoduo.com, reject
+#ip-cidr, 36.96.0.0/11, reject
+host-suffix, toutiao-frontier.snssdk.com, reject
+host-suffix, polaris3-normal-lf.zijieapi.com, reject
+host-suffix, tnc3-aliec2.snssdk.com, reject
+host-suffix, mon11-misc-lf.fqnovel.com, reject
+host-suffix, bsync3-normal-lf.zijieapi.com, reject
+host-suffix, saveu5-normal-lf.zijieapi.com, reject
+host-suffix, log3-applog-lf.fqnovel.com, reject
+host-suffix, rtlog3-applog-lf.fqnovel.com, reject
+host-suffix, rtlog5-applog-lf.fqnovel.com, reject
+#ip-cidr, 58.192.0.0/11, reject
+host-suffix, log5-applog-lf.fqnovel.com, reject
+#ip-cidr, 150.138.0.0/15, reject
+#ip-cidr, 220.160.0.0/11, reject
+#ip-cidr, 121.224.0.0/12, reject
+host-suffix, mon3-misc-lf.fqnovel.com, reject
+#ip-cidr, 117.21.0.0/16, reject
+host-suffix, tnc3-bjlgy.bytedance.com, reject
+#host-suffix, is.snssdk.com, reject
+host-suffix, tnc11-bjlgy.zijieapi.com, reject
+host-suffix, abtest3-misc-lf.zijieapi.com, reject
+host-suffix, mssdk3-normal-lf.zijieapi.com, reject
+host-suffix, gecko3-lf.zijieapi.com, reject
+host-suffix, tnc3-alisc1.zijieapi.com, reject
+host-suffix, gecko5-lf.zijieapi.com, reject
+host-suffix, tnc3-aliec2.zijieapi.com, reject
+host-suffix, webcast5-open-lf.douyin.com, reject
+host-suffix, tnc3-bjlgy.zijieapi.com, reject
+host-suffix, feedback-c.zijieapi.com, reject
+host-suffix, mon.toutiaocloud.net, reject
+host-suffix, praisewindow.ugsdk.cn, reject
+host-suffix, mon.toutiaocloud.com, reject
