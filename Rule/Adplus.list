@@ -87,6 +87,18 @@ HOST, passport.bilibili.com, REJECT
 ;host, gslbtx.ximalaya.com, reject
 
 # 番茄小说
+host, i.snssdk.com, reject
+host, effect.snssdk.com, reject
+host, ec5-core-lf.ecombdapi.com, reject
+host, ec3-core-lf.ecombdapi.com, reject
+host, ecom5-normal-lf.ecombdapi.com, reject
+host, ecom3-normal-lf.ecombdapi.com, reject
+host, p9-developer-sign.bytemaimg.com, reject
+host, p3-developer-sign.bytemaimg.com, reject
+host, is.snssdk.com, reject
+host, imapi5-oth.zijieapi.com, reject
+host, frontier100-toutiao-lf.fqnovel.com, reject
+host, applog.snssdk.com, reject
 host-suffix, growth.ecombdapi.com, reject
 host-suffix, isaas.ecombdapi.com, reject
 host-suffix, p6-ad-sign.byteimg.com, reject
