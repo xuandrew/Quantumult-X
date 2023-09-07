@@ -128,6 +128,9 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/wbapp\.uve\.weibo\.com\/(preload\/get_ad|wbapplua\/wbpullad\.lua)\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ^https:\/\/wbapp\.uve\.weibo\.com\/preload\/get_ad\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 
+# 会员图标
+^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/reward url reject-dict
 ;^https:\/\/card\.weibo\.com\/article\/m\/aj\/uvead url reject-dict
