@@ -2,6 +2,8 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 
 
 # 哔哩哔哩解锁大会员
+^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/bilibilitk.js
+
 # > 哔哩哔哩会员限定版
 ^https?:\/\/(ap(i|p)\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.\w{3,9}\..+\/(View|Play(Conf|erOnline)|MainList|ViewProgress)$ url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/BiliBili/BiLiBiLiBVIPCrack.js
 # > 哔哩哔哩魔改
