@@ -80,6 +80,7 @@ hostname = 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,1
 ^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)).*\/(playpage\/tabs\/v2|v1\/album\/track\/ts|v1\/album\/price|v2\/homePage|business-vip-presale-mobile-web\/page\/ts|vip\/v1\/recommand|track\/v3\/baseInfo|v1\/module\/data\/dynamic|basicInfo\/dynamic\/ts).*$ url script-response-body https://raw.githubusercontent.com/gjwj666/qx/main/ximalayabd.js
 
 ^http:\/\/ad\.ximalaya\.com\/adrecord\?sdn= url reject
+^https:\/\/m\.ximalaya\.com\/gatekeeper\/lms-sale-page\?pageid= url reject
 
 ;^http[s]?:\/\/openapi\.mysteel\.com/v5/getAdv.htm url reject
 ;^http[s]?.+ulogs.umeng.com url reject
