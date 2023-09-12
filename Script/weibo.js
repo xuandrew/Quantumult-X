@@ -511,27 +511,35 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         if (card?.card_group?.length > 0) {
           let newGroup = [];
           for (let group of card.card_group) {
-            if (group?.mblog) {
-              if (!isAd(group.mblog)) {
-                // 头像挂件,关注按钮
-                removeAvatar(group.mblog);
-                if (group?.mblog?.title_source) {
-                  delete group.mblog.title_source;
+            if (group?.card_type === 22) {
+              // 先筛选card_group里面的card_type
+              // 横版广告图
+              continue;
+            } else {
+              if (group?.mblog) {
+                // 有mblog字段的过滤广告
+                if (!isAd(group.mblog)) {
+                  // 头像挂件,关注按钮
+                  removeAvatar(group.mblog);
+                  if (group?.mblog?.title_source) {
+                    delete group.mblog.title_source;
+                  }
+                  if (group?.mblog?.source_tag_struct) {
+                    delete group.mblog.source_tag_struct;
+                  }
+                  if (group?.mblog?.extend_info) {
+                    delete group.mblog.extend_info;
+                  }
+                  // 商品橱窗
+                  if (group?.mblog?.common_struct) {
+                    delete group.mblog.common_struct;
+                  }
+                  newGroup.push(group);
                 }
-                if (group?.mblog?.source_tag_struct) {
-                  delete group.mblog.source_tag_struct;
-                }
-                if (group?.mblog?.extend_info) {
-                  delete group.mblog.extend_info;
-                }
-                // 商品橱窗
-                if (group?.mblog?.common_struct) {
-                  delete group.mblog.common_struct;
-                }
+              } else {
+                // 没有mblog字段的全部推送
                 newGroup.push(group);
               }
-            } else {
-              newGroup.push(group);
             }
           }
           card.card_group = newGroup;
@@ -747,6 +755,14 @@ if (url.includes("/interface/sdk/sdkad.php")) {
       obj.channelInfo.channel_list = obj.channelInfo.channel_list.filter(
         (t) => t.title !== "广场"
       );
+    }
+  } else if (url.includes("/aj/appicon/list")) {
+    if (obj?.data?.list?.length > 0) {
+      for (let item of obj.data.list) {
+        if (item?.cardType) {
+          item.cardType = 2;
+        }
+      }
     }
   } else if (url.includes("/v1/ad/preload")) {
     // 开屏广告
