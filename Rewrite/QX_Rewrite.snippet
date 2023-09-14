@@ -531,18 +531,18 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 #^https?:\/\/.+\.mp4\?sid= url reject-img
 ;^https?:\/\/huichuan-mc\.sm\.cn\/vod url reject
 # > ddgksf2013
-^https?:\/\/iyes\.youku\.com\/uts\/v1\/video url reject-200
-^https?:\/\/amdc\.m\.youku\.com url reject-200
+;^https?:\/\/iyes\.youku\.com\/uts\/v1\/video url reject-200
+;^https?:\/\/amdc\.m\.youku\.com url reject-200
 ;^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.relationrecommend\.wirelessrecommend\.recommend url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/iyes\.youku\.com\/uts\/v1\/start url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.home\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.uc\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
-^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.gateway\.new\.execute url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
-^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.ycp\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
+;^https?:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.ycp\.query url script-response-body https://gist.githubusercontent.com/ddgksf2013/5b431857f8b88acbc7ac2453a21e676a/raw/youku.adblock.js
 ;^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 首页信息流,播放详情页,首页菜单,我的页面,评论区,底部菜单
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
