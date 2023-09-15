@@ -4,15 +4,15 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 ^https:\/\/p0\.meituan\.net\/wmbanner\/*.png url reject
 
 # 小日常
-;^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/xiaorichang.js
+;^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/xiaorichang.js
 
 # 用药助手
 #纯会员数据共享(单独使用的话放本地)
-^https://newdrugs.dxy.cn url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/yyzsck.js
+^https://newdrugs.dxy.cn url script-request-header https://raw.githubusercontent.com/Yu9191/Script/main/yyzsck.js
 #修改个人用户信息
-^https://newdrugs.dxy.cn url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/yyzs2.js
+^https://newdrugs.dxy.cn url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/yyzs2.js
 #pdf获取 测试远程不行 放本地用吧
-^https:\/\/file1\.dxycdn\.com\/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/pdf-url.js
+^https:\/\/file1\.dxycdn\.com\/ url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/pdf-url.js
 
 # Bing, rewards.bing.com, prod.rewardsplatform.microsoft.com, www.bing.com, cn.bing.com
 # 🔍BingSearch
@@ -420,7 +420,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 
 # 网易云音乐去广告, interface3.music.163.com
 # 会员解锁
-^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/wangyy.js
+^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/Yu9191/Script/main/wangyy.js
 ;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
 ;^https?:\/\/.*\/eapi\/(music|s(ong|ingle|earch)|album|link|zone|content|p(laylist|rivilege|laymode|urchased)|r(esni|nca)che|vip(auth|pro|(new)?center)|music-vip-membership).+ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/NeteaseMusicVipCrack.js
 ;^https?:\/\/.*\/api\/clientlog\/encrypt\/upload url reject-array
