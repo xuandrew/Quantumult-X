@@ -13,6 +13,8 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 ;^https://newdrugs.dxy.cn url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/yyzs2.js
 #pdf获取 测试远程不行 放本地用吧
 ;^https:\/\/file1\.dxycdn\.com\/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/pdf-url.js
+# 广告
+^https:\/\/newdrugs\.dxy\.cn\/app\/user\/adpos\/detail\?mc_sign= url reject-dict
 
 # Bing, rewards.bing.com, prod.rewardsplatform.microsoft.com, www.bing.com, cn.bing.com
 # 🔍BingSearch
