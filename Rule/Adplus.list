@@ -29,17 +29,14 @@ HOST, yk-ssp.ad.youku.com, REJECT
 HOST, ykad-data.youku.com, REJECT
 
 # 腾讯视频
-HOST, access1.tpns.tencent.com, REJECT
 HOST, adsmind.gdtimg.com, REJECT
 HOST, btrace.qq.com, REJECT
-HOST, guid.tpns.tencent.com, REJECT
-HOST, h.trace.qq.com, REJECT
 HOST, info4.video.qq.com, REJECT
 HOST, info6.video.qq.com, REJECT
 HOST, ios.video.mpush.qq.com, REJECT
 HOST, mtrace.qq.com, REJECT
 HOST, pgdt.gtimg.cn, REJECT
-HOST, stat.tpns.tencent.com, REJECT
+HOST, vv.video.qq.com, REJECT
 
 # 航旅纵横
 host-suffix, event.umetrip.com, reject
