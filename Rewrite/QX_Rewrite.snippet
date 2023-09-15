@@ -81,7 +81,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 # 懒人听书
 ^http[s]?:\/\/((shapi|hapi)(\.mting\.info)|(m\.lrts\.me)|(gzapi\.mting\.info))\/(app|yyting)\/(getVipPageData|userclient\/ClientGetUserInfo|usercenter\/ThirdPartyLogin).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/LanRen.js
 ^https?:\/\/shapi\.mting\.info\/advert\/ClientAdvertList\.action\?imei= url reject-dict
-^http:\/\/display\.wting\.info\[A-Za-z0-9]{32}$\.jpeg url reject
+^http:\/\/display\.wting\.info\(^[a-z0-9]{32}$)\.jpeg url reject
 
 # CAD快速看图
 ^https?:\/\/cad\.glodon\.com\/(account|authorize\/query|alipay\/auth) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/cad.js
