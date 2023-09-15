@@ -10,7 +10,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 #纯会员数据共享(单独使用的话放本地)
 ^https://newdrugs.dxy.cn url script-request-header https://raw.githubusercontent.com/Yu9191/Script/main/yyzsck.js
 #修改个人用户信息
-^https:\/\/newdrugs\.dxy\.cn\/(app/user/init|user/pro/stat)\? url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/yyzs2.js
+^https:\/\/newdrugs\.dxy\.cn\/app\/user\/init|(pro\/stat)\? url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/yyzs2.js
 #pdf获取 测试远程不行 放本地用吧
 ;^https:\/\/file1\.dxycdn\.com\/ url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/pdf-url.js
 # 广告
