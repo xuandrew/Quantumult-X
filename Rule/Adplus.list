@@ -88,7 +88,7 @@ HOST, passport.bilibili.com, REJECT
 
 # 番茄小说
 host-suffix, douyin.com, reject
-host-suffix, douyinpic.com, reject
+;host-suffix, douyinpic.com, reject
 
 host, p6-ad-sign.byteimg.com, reject
 host, p9-ad-sign.byteimg.com, reject
