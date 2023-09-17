@@ -39,7 +39,7 @@ HOST, mtrace.qq.com, REJECT
 HOST, p.l.qq.com, REJECT
 HOST, pgdt.gtimg.cn, REJECT
 HOST, rpt.gdt.qq.com, REJECT
-HOST, trace.qq.com, REJECT
+HOST-SUFFIX, trace.qq.com, REJECT
 
 # 航旅纵横
 host-suffix, event.umetrip.com, reject
