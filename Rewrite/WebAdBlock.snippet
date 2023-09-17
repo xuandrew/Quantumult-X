@@ -1,186 +1,83 @@
-hostname = files.yuchenglw.com, m.douban.com, ddrk.me, ddys.tv, ddys2.me, *bdys*, cupfox.app, *cokemv*, *pornhub.com, *lezhutv*, *bimi*, 18comic.org, *5y*, *gimytv*, *tkznp*, *czspp*, *ikandy*, *libvio*, www.ttsp.tv, *.cloudfront.net, www.o8tv.com, www.5dy*, *.tvn.cc, www.wnacg.com, www.wnacg.org, suzihaza.com, 91porn.com, netflav.com, www.javmost.xyz, javmost.xyz, www5.javmost.xyz, www5.javmost.com, jable.tv, *.tvn.cc, ddrk.me, ddys.tv, ddys2.me, 18comic.org, 18comic.vip, cn.pornhub.com, missav.com, www.libvio.com, 4hu.*, *.gimy.*, *.duboku.*, assert.avple.tv, avple.tv, *.btbdys.*, *.javbus.*, www.bdys01.com
+hostname =  mmfl02.com, embedrise.com, filemoon.sx, static-cdn77.xvideos-cdn.com, www.xvideos.com, javday.tv, xiaobaotv.net, cn1.91short.com, vthumb.killcovid2021.com, img.killcovid2021.com, m.nivod4.tv, www.nivod4.tv, m.yhpdm.com, m.yhdmp.cc, m.yhdmp.com, anime1.me, www.tz659.com, www.ttsp.tv, *.cloudfront.net, www.o8tv.com, www.555dd*.com, www.5dy*, *.tvn.cc, www.wnacg.com, www.wnacg.org, suzihaza.com, 91porn.com, netflav.com, www.javmost.xyz, javmost.xyz, www5.javmost.xyz, www5.javmost.com, zhuanlan.zhihu.com, www.zhihu.com, jable.tv, *.tvn.cc, ddrk.me, ddys.pro, ddys.tv, ddys.art, ddys2.me, 18comic.org, 18comic.vip, www.pornhub.com, cn.pornhub.com, missav.com, www.libvio.com, www.libvio.la, 4hu.*, gimy.ai, gimy.tv, *.duboku.*, assert.avple.tv, avple.tv, *.btbdys.*, www.bdys01.com, www.bdys02.com, www.bdys03.com, www.bdys10.com, *.javbus.*
 
-# 涩涩视频——去除所有广告 https://files.yuchenglw.com/
-^https://files.yuchenglw.com url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ghs/sssp.js
-
-# 低端影视
-^https?:\/\/(\w{0,3}(\.){0,1}(ddys|ddrk|ddys2)(\.)\w{0,3})(?!.*?(\.webmanifest|/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-
-# 紳士漫畫(www.wnacg.com)
-^https?:\/\/(\w{0,3}(\.){0,1}(wnacg)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-
-# 独播库(www.duboku.tv)
-^https?:\/\/(\w{0,3}(\.){0,1}(duboku)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_duboku.js
-
-# 韩剧TV(m.tvn.cc) 
-www.tvn.cc url 302 m.tvn.cc
-https://js.tvn.cc/static/cfo.min.js url echo-response * echo-response https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/tvn.cfo.min.js
-^https?:\/\/(\w{0,3}(\.){0,1}(tvn)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_tvn.js
-
-# Javmost.xyz
-^https?:\/\/(\w{0,3}(\.){0,1}(javmost)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*  url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_javmost.js
-^https:\/\/suzihaza\.com\/asset\/jquery\/slim-3\.2\.min\.js.* url reject
-# www.javbus.com
-^https?:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_javbus.js
-# avple.tv
-^https?:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_avple.js
-# Avple 弹窗跳转
-^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js url reject
-# jable.tv
-^https?:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-# missav.com
-# missav 播放页弹窗
-https://creative.live.missav.com/widgets/Spot/lib.js url reject
 https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} url reject
-^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-# 4hu.tv
-^https?:\/\/(\w{0,3}(\.){0,1}(4hu)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_4hu.js
-# cn.pornhub.com
-# ^https:\/\/cn\.pornhub\.com\/_xa\/ads.* url reject
-^https?:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_pornhub.js
+^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js url reject
 ^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads.* url reject
-# www.91porn.com
-https?:\/\/(\w{0,3}(\.){0,1}(91porn)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?((captcha\.php)|(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|ttf|PNG|woff|woff2|m3u8)))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-# www.ttsp.tv
-^https?:\/\/(www.ttsp.tv)(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+^https:\/\/(img|vthumb)\.killcovid2021\.com.*?\.mp4 url reject
+^https:\/\/.*\/js\/static\/header\/sda\/ppsuma*.js url reject
+^https:\/\/www.xvideos.com/zoneload.* url reject
+^https:\/\/suzihaza\.com\/asset\/jquery\/slim-3\.2\.min\.js.* url reject
+filemoon\.sx.*/js/baf.js url reject
+^https:\/\/mmfl02\.com\/assets\/jquery\/p2adult\.js.* url reject
+^https:\/\/mmfl02\.com\/.*?\&ads url reject
+https://(www|zhuanlan)\.zhihu\.com/api/v4/questions/\d+/related-readings url reject
+https://(www|zhuanlan)\.zhihu\.com/api/v4/answers/\d+/related-readings url reject
+#https://(www|zhuanlan)\.zhihu\.com/api/v4/hot_recommendation url reject
+https://(www|zhuanlan)\.zhihu\.com/commercial_api/banners_v3/(mobile_banner|mobile_question) url reject
+https://(www|zhuanlan)\.zhihu\.com/api/articles/\d+/recommendation url reject
+https://creative.live.missav.com/widgets/Spot/lib.js url reject
+(^https?:\/\/www\.pornhub\.com)(.*) url 307 https://cn.pornhub.com$2
+# url m.baidu.com www.baidu.com(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).*
 
-# 片库网(www.pianku.li)  - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(mypianku|pianku)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body </body> response-body <link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/mypianku.css" type="text/css"><script type="text/javascript" src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/mypianku.js"></script></body>
-
-# netflav.com - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(netflav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/netflav.css" type="text/css"><script type="text/javascript" src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/netflav.js"></script>
-bann.js.* url reject
-
-#### www.xvideos.com - 年久失修
-^https:/?\/.*?.xvideos-cdn.com.*?\/js\/.*?\/header\/.*?.js url reject
-^https?:\/\/(\w{0,3}(\.){0,1}(xvideos)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <div id="ad-header-mobile-contener">.*?</div></div> response-body <meta name="author" content="毒奶">
-
-# 麻豆TV(www.mdtv.pw) - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(mdtv)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/mdtv.css" type="text/css"><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/mdtv.js"></script>
-
-# 91porny - 年久失修
-^https:?/\/91porny\.com/* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/91porny.css" type="text/css">
-
-# 免费看韩漫(www.mfkhm.com) - 年久失修
-^https:?/\/.*?wudejia.com/.*?php.* url reject
-
-# 樱花动漫(m.yhdm.io) - 年久失修
-(yinghuacd)(?!.*?(\.css|\.js|\.jpeg|\.png|\.gif|\.ico)).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/yhdm.css" type="text/css"><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/yhdm.js"></script>
-http://m.yhdm.io/bar/yfgg.js url reject
-yfyh.js|yfdi.js url reject
-
-# 91porny.com - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(91porny)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <tbody>.*?(\n.*){5,15}.*?</tbody>|<div class="container-fluid mb-3 p-0">.*?(\n.*){35,40}.*</div>|<div class="adv adv-g1 mb-0">.*?(\n.*){20,27}.*?</div> response-body <meta name="author" content="毒奶">
-^https:/?\/cdn\.jsdelivr\.net.*\/ad\/.*gif url 302 https://limbopro.com/usr/uploads/2020/10/2091577197.png
-
-# javtsunami.com - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(javtsunami)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/javtsunami.css" type="text/css"><script type="text/javascript" src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/javtsunami.js"></script>
-
-# www.porntrex.com - 年久失修
-https://ads\.bullionyield\.com/.*?slider\.min\.js url reject
-^https:?/\/www\.porntrex\.com.* url response-body <script>.*?(\n.*){15,20}.*?</script>|<iframe.*?150.*?ad.*?</iframe>|<div style.*?(\n.*){2,4}.*?250.*?(\n.*){2,4}.*?</div> response-body <meta name="author" content="毒奶">
-https://urtirepor\.com/.*?/.*?/sc/scssx/.*?/lib\.js url reject
-https://cluster\.awmserve\.com/incstage/min_exec_pt.js.* url reject
-
-# www.javbus.com - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/javbus.css" type="text/css"><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/javbus.js"></script>
-
-# www.hptoon.com - 年久失修
-https:\/\/www\.hptoon\.com\/hanman\/static\/dist\/ppm\/js\/common(\d)\.js url 302 https://raw.githubusercontent.com/Maasea/sgmodule/master/script/hptoon/common.js
-^https?:\/\/(\w{0,3}(\.){0,1}(hptoon)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/hptoon.js"></script><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/user-script.js"></script>
-
-# www.mdapp(1|2).pw - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(mdapp1|mdapp2)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/mdapp2.js"></script><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/mdapp2.css" type="text/css">
-
-# 奈菲星影视(nfxhd.com) - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(nfxhd)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/nfstar.js"></script><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/user-script.js"></script><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/nfstar.css" type="text/css"
-# 绅士漫画(wnacg.org) - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(wnacg)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/wnacg.js"></script><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/user-script.js"></script>
-
-# 韩迷TV(www.hmtv.me) - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(hmtv)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/hmtv.css" type="text/css"><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/hmtv.js"></script></body>
-
-# AV淘宝(www.avtb01.com) - 年久失修
-^https:?/\/www.avtb01.com.* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/avtb.css" type="text/css"><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/avtb.js"></script></body>
-
-# AG美剧(www.btzx2017.com) - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(btzx2017)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url request-header iPhone request-header 360
-^https?:\/\/(\w{0,3}(\.){0,1}(btzx2017)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/agmj.css" type="text/css"><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/agmj.js"></script></body>
-
-# m.biquge.com.cn - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(biquge)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/biquge.css" type="text/css"><script type="text/javascript" src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/biquge.js"></script>
-biquge.*?\.js url reject
-
-# javfan.one - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(javfan)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*  url response-body </body> response-body <link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/javfan.css" type="text/css"><script type="text/javascript" src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/javfan.js"></script></body>
-
-# hpjav.tv - 年久失修
-https://hpjav.tv/asset/css/style2.css.* url 302 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/hpjav.style2.css
-https://hpjav.tv/asset/js/mainze\.js.* url 302 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/hpjav.mainze.js
-https://ninjastream\.to/js/app\.js.* url 302 https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/hpjav.app.js
-#vidoza.net/js/.*?\.js.* url reject
-vidoza.*?\.(html|js) url reject
-
-# www.pornbest.org - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(pornbest)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*  url response-body <head> response-body <head><script type="text/javascript"  src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/pornbest.js"></script><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/pornbest.css" type="text/css">
-
-# javgg.net - 年久失修
-^https?:\/\/(\w{0,3}(\.){0,1}(javgg)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).*  url response-body <head> response-body <head><link rel="stylesheet" href="https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/CSS/javgg.css" type="text/css"><script type="text/javascript" src="//raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/javgg.js"></script>
-
-# 哔嘀影视播放页(www.btbdys.com)
-^https?:\/\/(\w{0,3}(\.){0,1}(btbdys|bdys0(1|2|3))(\.)\w{0,3})\/play\/.*?\.htm.* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-# 哔嘀影视展示页(www.btbdys.com)
-^https?:\/\/(\w{0,3}(\.){0,1}(btbdys|bdys0(1|2|3))(\.)\w{0,3})(?!.*?(/(cdn-cgi|verifyCode|member\/|zzzzz)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8|ddr))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-
-
-
-# ddgksf2013
-
-# 豆瓣电影移动版网页优化
-// 茶杯狐、Libvio 流媒体
-^https://m.douban.com/movie/subject/.+ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/DouBan.js
-// Airtable 收藏
-^https://m.douban.com/movie/subject/.+\?seen=\d url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/DouBan.js
-
-# > 13 哔嘀影视[网页优化]@ddgksf2013 - 网站地址：https://www.bdys01.com 
-#^https?:\/\/.*bdys01.*com\/($|([a-z]+)\/(play\/)?\d+.*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/bdys.js
-
-# > 12 茶杯狐[网页优化]@ddgksf2013 - 网站地址：https://cupfox.app
-^https?:/\/cupfox\.app\/($|(search|list|s|_next).*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/cupfox.js
-
-# > 11 Cokemv[网页优化]@ddgksf2013 - 网站地址：https://cokemv.me 
-^https?:/\/cokemv\.me\/($|vod.*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/cokemv.js
-
-# > 10 PornHub[网页优化]@ddgksf2013 - 网站地址：https://cn.pornhub.com
-^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads url reject-dict
-^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/pornhub.js
-
-# > 09 LeZhu[网页优化]@ddgksf2013 - 网站地址：http://www.lezhutv.com
-^https?:/\/.*lezhutv\.com\/($|(type|detail|play|index).*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/lezhu.js
-
-# > 08 Bimi[网页优化]@ddgksf2013 - 网站地址：https://www.bimi.net
-^https?:/\/.*bimi.*net\/($|(vodshow|bangumi|type)\/[0-9a-z-\/]+\/$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/bimi.js
-
-# > 07 禁漫天堂[网页优化]@ddgksf2013 - 网站地址：https://18comic.org
-#^https?:\/\/.*18comic\.org\/($|(album|photo).*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/18comic.js
-^https?:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
-^https?:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* url reject
-
-# > 06 555影视[网页优化]@ddgksf2013 - 网站地址：https://555yy6.com
-^https?:\/\/.*5y.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/555.js
-
-# > 05 剧迷[网页优化]@ddgksf2013 - 网站地址：https://gimytv.app
-^https?:\/\/.*gimytv.*\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/gimytv.js
-
-# > 04 天空影视[网页优化]@ddgksf2013 - 网站地址：https://tkznp.com/ ****
-^https?:\/\/.*tkznp.*com\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/tkys.js
-
-# > 03 厂长电影[网页优化]@ddgksf2013 - 网站地址：https://www.czspp.com/
-^https?:/\/.*czspp.*com\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/qianoo.js
-
-# > 02 真不卡[网页优化]@ddgksf2013 - 网站地址：https://www.ikandy.fun
-^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/zhenbuka.js
-
-# > 01 libvio[网页优化]@ddgksf2013 - 网站地址：https://www.iioo.me
-#^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Web/libvio.js
-^https?:\/\/(\w{0,3}(\.){0,1}(libvio)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_libvio.js
+# 小宝影视(xiaobaotv.net)  
+^https?:\/\/(xiaobaotv\.(net|com))\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 91short(cn1.91short.com)  
+^https?:\/\/(cn1|www)\.(91short\.com)\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 泥巴影视(Nivod4.tv)  
+^https?:\/\/(www|m)\.(nivod4\.tv)\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 禁漫天堂(18comic.org|vip)  
+^https?:\/\/18comic\.(vip|org)\/(?!(.*(onclick|cdn-cgi|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 紳士漫畫(www.wnacg.com)  
+^https?:\/\/www\.wnacg\.com\/(?!(.*(onclick|cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 剧迷网(gimy.app|ai)  
+^https?:\/\/(\w{0,3}(\.){0,1}(gimy)(\.)\w{0,3})\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 低端影视(ddrk.me|ddys.pro)  
+^https?:\/\/(ddys|ddrk|ddys2)\.\w{0,3}\/(?!(.*(cdn-cgi|getvddr|\=json|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 哔嘀影视播放页(www.btbdys.com)  
+^https?:\/\/www\.(btbdys|bdys(01|02|03|10))\.com\/play\/.*?\.htm.* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 哔嘀影视展示页(www.btbdys.com)  
+^https?:\/\/www\.(btbdys|bdys(01|02|03|10))\.com\/(?!(.*(verifyCode|member|zzzzz|cdn-cgi|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 独播库(www.duboku.tv)  
+^https?:\/\/www\.duboku\.tv\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 韩剧TV(www.tvn.cc)  
+^https?:\/\/www\.tvn\.cc\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 555电影网(555dy.com)P.S.鉴于域名经常跳转将不再维护  
+^https?:\/\/(555dy\w{0,3})\.(com|top|shop)\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 梨播(libvio.top)  
+^https?:\/\/libvio\.top\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Netflav(netflav.com)  
+^https?:\/\/netflav\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_netflav.js
+# Netflav(filemoon.sx)  
+^https?:\/\/filemoon\.sx\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_netflav.js
+# Netflav(embedrise.com)  
+^https?:\/\/embedrise\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_netflav.js
+# Netflav(mmfl02.com)  
+^https?:\/\/mmfl02\.com\/(?!(.*(cdn-cgi|(\.(css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_netflav.js
+# Javmost(javmost.xyz)  
+^https?:\/\/\w{3,5}\.javmost\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/surge_javmost.js
+# Javbus(www.javbus.com)  
+^https?:\/\/www\.javbus\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Avple(avple.tv)  
+^https?:\/\/avple\.tv\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Jable(jable.tv)  
+^https?:\/\/jable\.tv\/(?!(.*(\?mode|cdn-cgi|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Missav(missav.com)  
+^https?:\/\/missav\.com\/(?!(.*(api|cdn-cgi|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Javday(javday.tv)  
+^https?:\/\/javday\.tv\/(?!(.*(api|cdn-cgi|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Xvideos(www.xvideos.com)  
+^https?:\/\/www\.xvideos\.com\/(?!(.*(api|cdn-cgi|\.))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 4hu(4hu.tv)  
+^https?:\/\/4hu\.tv\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# Pornhub(cn.pornhub.com)  
+^https?:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# 91porn(www.91porn.com)  
+^https?:\/\/\w{0,3}(\.){0,1}91porn\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# ttsp(www.ttsp.tv)  
+^https?:\/\/(www.ttsp.tv)\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# tz659(www.tz659.com)  
+^http?:\/\/www\.tz659\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# anime1(anime1.me)  
+^https?:\/\/anime1\.me\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
+# yhdmp(m.yhdmp.com)  
+^https?:\/\/m\.yhpdm\.com\/(?!(.*(cdn-cgi|(\.(js|css|jpg|jpeg|png|webp|gif|zip|woff|woff2|m3u8|mp4|mp3|json))))).* url script-response-body https://raw.githubusercontent.com/limbopro/Adblock4limbo/main/Adguard/Adblock4limbo.js
