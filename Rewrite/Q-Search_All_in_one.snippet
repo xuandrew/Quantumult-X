@@ -75,11 +75,11 @@ hostname = duckduckgo.com
 ^https:\/\/duckduckgo.com\/\?q=zdm\+([^&]+).+ url 302 https://search.m.smzdm.com/?v=b&s=$1
 ^https:\/\/duckduckgo.com\/\?q=([^+]+)\+zdm.+ url 302 https://search.m.smzdm.com/?v=b&s=$1
 # jd  xxx (京东)
-^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
-^https:\/\/duckduckgo.com\/\?q=([^+]+)\+jd.+ url 302 https://so.m.jd.com/ware/search.action?keyword=$1
+^https:\/\/duckduckgo.com\/\?q=jd\+([^&]+).+ url 302 openapp.jdmobile://virtual?params={"des":"productList","keyWord":"$1","from":"search","category":"jump"}
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+jd.+ url 302 openapp.jdmobile://virtual?params={"des":"productList","keyWord":"$1","from":"search","category":"jump"}
 # tb  xxx (淘宝)
-^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ url 302 https://s.m.taobao.com/h5?q=$1
-^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tb.+ url 302 https://s.m.taobao.com/h5?q=$1
+^https:\/\/duckduckgo.com\/\?q=tb\+([^&]+).+ url 302 taobao://s.taobao.com?q=$1
+^https:\/\/duckduckgo.com\/\?q=([^+]+)\+tb.+ url 302 taobao://s.taobao.com?q=$1
 
 
 #>>>>>>>>>>>>>>>>>>>>>>>视频
