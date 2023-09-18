@@ -41,6 +41,9 @@ HOST, pgdt.gtimg.cn, REJECT
 HOST, rpt.gdt.qq.com, REJECT
 HOST-SUFFIX, trace.qq.com, REJECT
 
+# 百度网盘
+HOST, sf3-fe-tos.pglstatp-toutiao.com, REJECT
+
 # 航旅纵横
 host-suffix, event.umetrip.com, reject
 
