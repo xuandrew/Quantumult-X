@@ -249,7 +249,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
   } else if (url.includes("/2/direct_messages/user_list")) {
     if (obj?.user_list?.length > 0) {
       obj.user_list = obj.user_list.filter(
-        (i) => !["活动通知"].includes(i.user.name)
+        (i) => !["活动通知", "闪聊"].includes(i?.user?.name)
       );
     }
   } else if (url.includes("/2/flowlist")) {
@@ -587,6 +587,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if (item.data?.title?.structs) {
               // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
               continue;
+            }
+            if (item?.data?.action_button_icon_dic) {
+              delete item.data.action_button_icon_dic;
             }
             newItems.push(item);
           } else if (item?.category === "feedBiz") {
