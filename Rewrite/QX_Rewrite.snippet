@@ -218,6 +218,7 @@ http://iphone.v0.mgtv.com/show.php?abroad.+ url reject-200
 # 播放器界面
 ^https:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo url reject-dict
 # 首页,左上角推广,信息流,顶部菜单,搜索框
+^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes.+ url reject-dict
 ^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? url reject-dict
 ^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? url reject-dict
