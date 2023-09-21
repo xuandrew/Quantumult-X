@@ -52,7 +52,7 @@ HOST, sf3-fe-tos.pglstatp-toutiao.com, REJECT
 host-suffix, event.umetrip.com, reject
 
 # 今日头条
-host-suffix, tosv.byted.org, reject
+;host-suffix, tosv.byted.org, reject
 
 # 米家
 host, sdkconfig.ad.xiaomi.com, reject
