@@ -1,5 +1,7 @@
 # 芒果TV
 HOST, credits.bz.mgtv.com, REJECT
+HOST, credits2.bz.mgtv.com, REJECT
+HOST, credits3.bz.mgtv.com, REJECT
 HOST, dflow.bz.mgtv.com, REJECT
 HOST, encounter.bz.mgtv.com, REJECT
 HOST, floor.bz.mgtv.com, REJECT
