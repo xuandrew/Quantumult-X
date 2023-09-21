@@ -83,7 +83,7 @@ hostname = ad.12306.cn, zhidao.baidu.com, boxer.baidu.com, baikeapi.baidu.com, t
 ^https?:\/\/notability\.com\/(global|subscriptions) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js
 
 # 懒人听书
-;^http[s]?:\/\/((shapi|hapi)(\.mting\.info)|(m\.lrts\.me)|(gzapi\.mting\.info))\/(app|yyting)\/(getVipPageData|userclient\/ClientGetUserInfo|usercenter\/ThirdPartyLogin).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/LanRen.js
+^http[s]?:\/\/((shapi|hapi)(\.mting\.info)|(m\.lrts\.me)|(gzapi\.mting\.info))\/(app|yyting)\/(getVipPageData|userclient\/ClientGetUserInfo|usercenter\/ThirdPartyLogin).*$ url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/LanRen.js
 ^https?:\/\/shapi\.mting\.info\/advert\/ClientAdvertList\.action\?imei= url reject
 ;http:\/\/display\.wting\.info\/[a-zA-Z0-9]{32}\.jpeg url reject
 ;^https?:\/\/gzapi\.mting\.info\/yyting\/page\/myAccountPage\? url reject
