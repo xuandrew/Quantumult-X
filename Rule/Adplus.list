@@ -97,6 +97,21 @@ HOST, passport.bilibili.com, REJECT
 ;host, gslbtx.ximalaya.com, reject
 
 # 番茄小说
+
+host, tnc3-bjlgy.snssdk.com, reject
+ip-cidr, 218.92.132.44/32, reject
+host, praisewindow.ugsdk.cn, reject
+ip-cidr, 116.211.220.249/32, reject
+host, lf-webcast-gr-sourcecdn.bytegecko.com, reject
+ip-cidr, 58.216.14.180/32, reject
+ip-cidr, 58.216.14.186/32, reject
+host, reading.snssdk.com, reject
+ip-cidr, 58.216.15.183/32, reject
+host, ichannel.snssdk.com, reject
+ip-cidr, 222.186.177.123/32, reject
+host, lf-cdn-tos.bytescm.com, reject
+ip-cidr, 222.186.149.100/32, reject
+
 host-suffix, douyin.com, reject
 ;host-suffix, douyinpic.com, reject
 
