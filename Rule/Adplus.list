@@ -98,6 +98,8 @@ HOST, passport.bilibili.com, REJECT
 
 # 番茄小说
 
+ip-cidr, 221.228.74.49/25, reject
+
 host, tnc3-bjlgy.snssdk.com, reject
 ip-cidr, 218.92.132.44/32, reject
 host, praisewindow.ugsdk.cn, reject
