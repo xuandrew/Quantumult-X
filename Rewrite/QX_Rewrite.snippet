@@ -227,6 +227,8 @@ http://iphone.v0.mgtv.com/show.php?abroad.+ url reject-200
 ^https?:\/\/recom\.api\.mgtv\.com\/xyt\/banner.+ url reject-200
 ;http://dc.bz.mgtv.com/dynamic/v1/channel/index/.+ url script-response-body https://raw.githubusercontent.com/Crazy-Z7/AdGuard/main/NoAdMgTV.conf
 # 芒果tv //*.mgtv.com
+# 无用请求
+^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes url reject
 # 首页左上角推广
 ^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? url reject-dict
 # 底部tab红点
