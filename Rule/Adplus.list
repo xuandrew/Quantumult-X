@@ -10,6 +10,7 @@ HOST, layer.bz.mgtv.com, REJECT
 HOST, mob.bz.mgtv.com, REJECT
 HOST, mobile.da.mgtv.com, REJECT
 HOST, rc-topic-api.bz.mgtv.com, REJECT
+HOST, rprain.bz.mgtv.com, REJECT
 HOST, v2.da.mgtv.com, REJECT
 HOST, video.da.mgtv.com, REJECT
 HOST, vip.bz.mgtv.com, REJECT
