@@ -2,7 +2,7 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 
 
 # 哔哩哔哩解锁大会员
-;^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/bilibilick.js
+^http[s]?:\/\/((app|api)\.(\w{2,15})?\.(com|cn)).*player\.(v3|v2|v1).Play(URL|View).*$ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/bilibilick.js
 ;^http[s]?:\/\/.+bilibili.+((pgc\/player\/api\/playurl)|(x\/v2\/account\/myinfo\?)|(x\/v2\/account/mine\?)).*$ url script-response-body https://raw.githubusercontent.com/gjwj666/qx/main/bilibilibd.js
 
 # > 哔哩哔哩会员限定版
@@ -130,4 +130,4 @@ hostname = api.bilibili.com, app.bilibili.com, api.live.bilibili.com, api.vc.bil
 ;^https:\/\/api\.bilibili\.com\/x\/garb\/v2\/mall\/suit\/detail url script-response-body https://raw.githubusercontent.com/kokoryh/Script/master/js/bili-suit-detail.js
 
 # > 哔哩哔哩解锁大会员
-^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/Script/BiLiBiLiBVIPCrack.js
+;^https?:\/\/ap(i|p)\.bilibili\.com\/bilibili\.\w{3,4}\..+\/(View|PlayView|PlayConf|PlayerOnline|MainList|ViewProgress)$ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/Script/BiLiBiLiBVIPCrack.js
