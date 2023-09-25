@@ -64,7 +64,15 @@ host, sin3-ib.adnxs.com, reject
 ;host, www.xiaohongshu.com, reject
 
 # 网易云音乐
-;host-suffix, music.163.com.163jiasu.com, reject
+# 网易云音乐
+HOST, gdt.qq.com, REJECT
+HOST, httpdns.music.163.com, REJECT
+HOST, httpdns.n.netease.com, REJECT
+HOST, iadmat.nosdn.127.net, REJECT
+HOST, iadmatapk.nosdn.127.net, REJECT
+HOST, iadmusicmat.music.126.net, REJECT
+HOST, iadmusicmatvideo.music.126.net, REJECT
+HOST-SUFFIX, 163jiasu.com, REJECT
 
 # 高德首页横幅
 ;host, amap-aos-info-nogw.amap.com, reject
