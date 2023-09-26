@@ -118,7 +118,7 @@ host, mcs.snssdk.com, reject
 host, tnc3-alisc1.snssdk.com, reject
 host, security-lq.snssdk.com, reject
 host, tnc3-aliec2.snssdk.com, reject
-;host, is.snssdk.com, reject
+host, is.snssdk.com, reject
 host, msync-im1-vip6-std.easemob.com, reject
 host, apd-pcdnwxlogin.teg.tencent-cloud.net, reject
 host, api.iegadp.qq.com, reject
