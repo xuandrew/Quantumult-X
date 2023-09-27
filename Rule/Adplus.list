@@ -41,6 +41,12 @@ HOST, mtrace.qq.com, REJECT
 HOST, p.l.qq.com, REJECT
 HOST, pgdt.gtimg.cn, REJECT
 HOST, rpt.gdt.qq.com, REJECT
+HOST, tytx.m.cn.miaozhen.com, REJECT
+;HOST, vv.video.qq.com, REJECT
+HOST, vv6.video.qq.com, REJECT
+HOST-SUFFIX, beacon.qq.com, REJECT
+HOST-SUFFIX, gdt.qq.com, REJECT
+HOST-SUFFIX, tpns.qq.com, REJECT
 HOST-SUFFIX, trace.qq.com, REJECT
 
 # 百度网盘
