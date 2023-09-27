@@ -262,11 +262,13 @@ if (url.includes("/interface/sdk/sdkad.php")) {
         }
       }
     }
-  } else if (url.includes("/2/groups/allgroups")) {
+  } else if (url.includes("/2/groups/allgroups/v2")) {
     // 顶部tab
     if (obj?.pageDatas?.length > 0) {
       // homeFeed关注 homeHot推荐
-      obj.pageDatas = obj.pageDatas.filter((i) => i?.pageDataType !== "homeExtend");
+      obj.pageDatas = obj.pageDatas.filter(
+        (i) => i?.pageDataType !== "homeExtend"
+      );
     }
   } else if (url.includes("/2/messageflow/notice")) {
     // 消息动态页
