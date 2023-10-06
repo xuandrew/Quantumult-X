@@ -193,8 +193,8 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 # > 芒果TV
 ;^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/Yu9191/Script/main/mgheader.js
 ;^https?:\/\/.*mgtv\.com\/(v\d+\/(video\/getSource|module\/list)|GetUserInfo) url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/mgbody.js
-;&src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&testversion=&ticket=677ABCDA17233AF889EA10602DFE84A3
-^(https:\/\/mobile.*\.api\.mgtv\.com\/v\d\/video\/.+ource.+)(&ticket=\w{32})(.*) url 302 $1&ticket=677ABCDA17233AF889EA10602DFE84A3
+&src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&testversion=&ticket=2031287C725A39BE8D5F5E2FF31D57AB
+;^(https:\/\/mobile.*\.api\.mgtv\.com\/v\d\/video\/.+ource.+)(&ticket=\w{32})(.*) url 302 $1&ticket=677ABCDA17233AF889EA10602DFE84A3
 ;^https?:\/\/nuc\.api\.mgtv.com\/Logout url reject-dict
 ;^https?:\/\/pcvideoyd\.titan\.mgtv\.com\/pb\/ url reject-dict
 ;^https?:\/\/mob\.bz\.mgtv\.com\/odin\/c1\/channel\/ads\?_ url reject-dict
