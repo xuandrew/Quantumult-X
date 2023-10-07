@@ -125,6 +125,7 @@ http:\/\/display\.wting\.info\/q9ul3raj2tti5n7crtqc3t94ohsghz6p\.png url reject
 ^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList url reject
 ^https:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page url response-body \{.+\} response-body {"status":"SUCCESS"}
 ^https:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main url response-body "popTitle":".+?" response-body "popTitle":""
+https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/home\/ordertips\?sign= url reject
 
 # 微信听书
 ^https?:\/\/i\.at\.qq\.com\/pay\/memberinfo.+ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/wxts.js
