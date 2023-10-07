@@ -625,8 +625,9 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 #^https:\/\/tieba-ares\.cdn\.bcebos\.com\/mis url reject-200
 
 # 百度文库解锁VIP文档阅读权限
-^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduLibrary.js
-;^https:\/\/edu-wenku\.bdimg\.com\/v1\/na\/0807 url reject-200
+^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter) url script-response-body https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduWenku/BaiduWenku_crack.js
+;^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduLibrary.js
+^https:\/\/appwk\.baidu\.com\/(naapi\/(recommend\/recommenddoc|wkcircle\/messagetab|search\/wkhotwords|api\/wmadopt)|appapi\/(search\/hot|donate\/detail)|xpage\/interface\/wknaad) url reject
 
 # 百度（全站替换为手机百度 Quark 的 User-Agent）
 ;^https?:\/\/(?!d\.pcs).*(?<!map)\.baidu\.com url request-header (\r\n)User-Agent:.+iPhone.+(\r\n) request-header $1User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)$2
