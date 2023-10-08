@@ -333,6 +333,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               if (ii?.category === "feed") {
                 // 头像挂件,关注按钮
                 removeAvatar(ii.data);
+                if (ii?.data?.page_info?.media_info?.vote_info) {
+                  delete ii.data.page_info.media_info.vote_info;
+                }
                 newItems.push(item);
               }
             }
@@ -546,6 +549,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (group?.mblog?.common_struct) {
                     delete group.mblog.common_struct;
                   }
+                  // 投票窗口
+                  if (group?.mblog?.page_info?.media_info?.vote_info) {
+                    delete group.mblog.page_info.media_info.vote_info;
+                  }
                   newGroup.push(group);
                 }
               } else {
@@ -569,6 +576,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               }
               if (card?.mblog?.extend_info) {
                 delete card.mblog.extend_info;
+              }
+              // 商品橱窗
+              if (card?.mblog?.common_struct) {
+                delete card.mblog.common_struct;
               }
               newCards.push(card);
             }
