@@ -766,7 +766,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh url reject-200
 ;^https:\/\/magev6\.if\.qidian\.com url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/qidiantk.js
 ;^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/qidianbd.js
-;^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv\/getadvlistbatch\?positions url reject-200
+^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv\/getadvlistbatch\?positions url reject-200
 ^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/bookreader\/toolbar\?bookId= url reject-dict
 ;^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage\?gender url reject-dict
 ;^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/reddot\/getdot\? url reject-dict
