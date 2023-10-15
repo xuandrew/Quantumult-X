@@ -102,6 +102,7 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 ;^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_positive|push_info) url reject-dict
 ;^https:\/\/api\.weibo\.cn\/2\/video\/tiny_stream_video_list url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? url reject-dict
+^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? url reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/weibo.js
 ;^https:\/\/api\.weibo\.cn\/2\/!\/multimedia\/playback\/batch_get url reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/mobile_discovery_searchchange url reject-dict
