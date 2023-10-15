@@ -482,6 +482,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
           }
         });
       }
+      if (toolbar?.lottie_guide) {
+        // 弹窗
+        delete toolbar.lottie_guide;
+      }
     }
   } else if (url.includes("/2/push/active")) {
     // 首页右上角红包图标
