@@ -581,6 +581,12 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               // 先筛选card_group里面的card_type
               // 横版广告图
               continue;
+            } else if (group?.card_type === 42 && group?.title_extra_text === "广告") {
+              // 推荐品牌广告
+              continue;
+            } else if (group?.card_type === 3 && group?.pics?.length > 0) {
+              // 推荐品牌广告图
+              continue;
             } else {
               if (group?.mblog) {
                 // 有mblog字段的过滤广告
