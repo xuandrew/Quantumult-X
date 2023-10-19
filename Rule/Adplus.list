@@ -142,7 +142,7 @@ ip-cidr, 117.92.229.188/32, reject
 ip-cidr, 101.36.166.16/32, reject
 ip-cidr, 180.96.2.114/32, reject
 # 番茄视频广告页的sdk agent都是ttplayer
-USER-AGENT,ttplayer*,REJECT
+;USER-AGENT,ttplayer*,REJECT
 
 # 瑞幸去开屏广告
 ;host-suffix, capi.lkcoffee.com, reject
