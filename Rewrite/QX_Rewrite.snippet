@@ -398,7 +398,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ;https?:\/\/biz\.caiyunapp\.com\/(membership_rights|v2\/user) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun_svip.js
 ;^https:\/\/biz\.caiyunapp\.com\/v2\/user\?app_name\=weather url script-response-body https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Weather/weather.js
 ;^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
-^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url reject-dict
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url echo-response application/json echo-response https://raw.githubusercontent.com/RuCu6/QuanX/main/Mocks/caiyun.json
 
 # 拼多多的多多买菜 #开屏广告 感谢@豆豆分享 #主机名mobile.yangkeduo.com
 ^https:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ url response-body "list":\[.+\] response-body "list":[]
