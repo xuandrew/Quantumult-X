@@ -655,6 +655,26 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https?:\/\/mobile-api\.adguard\.org\/api\/.+\/ios_validate_receipt url script-response-body https://raw.githubusercontent.com/yqc007/QuantumultX/master/AdGuardProCrack.js
 
 # 百度网盘
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/pan\.baidu\.com\/act\/v2\/membergrow\/my url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/pan\.baidu\.com\/story\/diff url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/pan\.baidu\.com\/dosp\/opconf\/list url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/pan\.baidu\.com\/api\/user\/getinfo url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/pan\.baidu\.com\/act\/api\/activityentry url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/pan\.baidu\.com\/api\/singkil\/bindquery url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/bdc.js
+https:\/\/staticsns\.cdn\.bcebos\.com\/amis\/.+\.(jpg|png|jpeg|gif)$ url reject-200
+https:\/\/pan\.baidu\.com\/imbox\/msg\/pull url reject-200
+https:\/\/pan\.baidu\.com\/api\/version\/getlatestversion url reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/product url reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/level url reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/activity url reject-200
+https:\/\/pan\.baidu\.com\/act\/api\/conf url reject-200
+https:\/\/pan\.baidu\.com\/act\/v2\/welfare\/list url reject-200
+https:\/\/pan\.baidu\.com\/api\/getconfig url reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/proxy\/guide url reject-200
+https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist url reject-200
+https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/xpan\/smartprogram url reject-200
+#
 ;^https?:\/\/pan\.baidu\.com\/act\/v\d\/welfare\/list url reject-200
 ;^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry url reject-200
 ;https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/BaiduCloud.js
@@ -663,7 +683,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ;^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user url script-response-body https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduNetDisk/BaiduNetDisk_crack.js
 ;^https?:\/\/pan\.baidu\.com url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
 ;^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
-^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
+;^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
 # > 百度网盘_开屏广告@ddgksf2013
 ;^https?:\/\/pan\.baidu\.com\/api\/getsyscfg url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 # > 百度网盘_设置信息流@ddgksf2013
@@ -675,10 +695,10 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 # > 百度网盘_会员权益@ddgksf2013
 ;^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id url script-response-body https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 # RuCu6
-^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? url reject-dict
-^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
-^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
-^https:\/\/update\.pan\.baidu\.com\/statistics\? url reject-dict
+;^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? url reject-dict
+;^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
+;^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
+;^https:\/\/update\.pan\.baidu\.com\/statistics\? url reject-dict
 
 # > 阿里云盘
 ;^https?:\/\/(api|member)\.aliyundrive\.com url script-response-body https://raw.githubusercontent.com/gjwj666/qx/main/aliy.js
