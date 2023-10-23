@@ -20,6 +20,7 @@ HOST, api.iqiyi.com, REJECT
 HOST, adsmind.ugdtimg.com, REJECT
 HOST, amdc.m.youku.com, REJECT
 HOST, apiv4-iyes.youku.com, REJECT
+HOST, httpdns.alicdn.com, REJECT
 HOST, huichuan-mc.sm.cn, REJECT
 HOST, huichuan.sm.cn, REJECT
 HOST, iyes.youku.com, REJECT
