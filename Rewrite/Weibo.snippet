@@ -134,6 +134,8 @@ hostname = *api.weibo*, *uve.weibo.com, new.vip.weibo.cn, shop.sc.weibo.com, t.c
 
 # 会员图标
 ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
+# 微博小尾巴
+https:\/\/api\.weibo\.cn\/device\/get url script-response-body https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/wb.js
 
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/reward url reject-dict
