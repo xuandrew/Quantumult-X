@@ -406,6 +406,17 @@ DOMAIN-KEYWORD,mathtag, reject
 DOMAIN-KEYWORD,pagespeed-mod, reject
 DOMAIN-KEYWORD,in-page-push, reject
 
+##### https://hanime1.me/
+DOMAIN-SUFFIX,impactserving.com, reject
+DOMAIN-SUFFIX,addthis.com, reject
+DOMAIN-SUFFIX,magsrv.com, reject
+DOMAIN-SUFFIX,creative.kbnmnl.com, reject
+
+##### https://supjav.com/
+DOMAIN-SUFFIX,adxadserv.com, reject
+DOMAIN-SUFFIX,xlivrdr.com, reject
+DOMAIN-SUFFIX,fanza.cc, reject
+
 #### disqus  
 DOMAIN-SUFFIX,referrer.disqus.com, reject
 DOMAIN-SUFFIX,links.services.disqus.com, reject
