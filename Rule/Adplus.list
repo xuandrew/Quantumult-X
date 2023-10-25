@@ -1,3 +1,6 @@
+# 淘宝
+HOST, poplayer.template.alibaba.com, REJECT
+
 # 芒果TV
 HOST, credits.bz.mgtv.com, REJECT
 HOST, credits2.bz.mgtv.com, REJECT
