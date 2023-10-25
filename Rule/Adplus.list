@@ -17,18 +17,26 @@ HOST-SUFFIX, da.mgtv.com, REJECT
 HOST, api.iqiyi.com, REJECT
 
 # 优酷
+;HOST, acs.youku.com, REJECT
+HOST, acs4baichuan.m.taobao.com, REJECT
 HOST, adsmind.ugdtimg.com, REJECT
 HOST, amdc.m.youku.com, REJECT
+HOST, api.sm.cn, REJECT
 HOST, apiv4-iyes.youku.com, REJECT
+HOST, baichuan-sdk.alicdn.com, REJECT
+HOST, httpdns.alicdn.com, REJECT
 HOST, huichuan-mc.sm.cn, REJECT
 HOST, huichuan.sm.cn, REJECT
 HOST, iyes.youku.com, REJECT
 HOST, m-vali.cp31.ott.cibntv.net, REJECT
 HOST, mc.atm.youku.com, REJECT
+HOST, nbsdk-baichuan.alicdn.com, REJECT
+HOST, pre-acs.youku.com, REJECT
 HOST, vali-g1.cp31.ott.cibntv.net, REJECT
 HOST, vali-ugc.cp31.ott.cibntv.net, REJECT
 HOST, yk-ssp.ad.youku.com, REJECT
 HOST, ykad-data.youku.com, REJECT
+HOST, youku-acs.m.taobao.com, REJECT
 
 # 腾讯视频
 HOST, adsmind.gdtimg.com, REJECT
