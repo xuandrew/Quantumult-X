@@ -23,7 +23,7 @@ HOST, api.iqiyi.com, REJECT
 ;HOST, acs.youku.com, REJECT
 HOST, acs4baichuan.m.taobao.com, REJECT
 HOST, adsmind.ugdtimg.com, REJECT
-HOST, amdc.m.youku.com, REJECT
+;HOST, amdc.m.youku.com, REJECT
 HOST, api.sm.cn, REJECT
 HOST, apiv4-iyes.youku.com, REJECT
 HOST, baichuan-sdk.alicdn.com, REJECT
