@@ -1,3 +1,72 @@
+# > 苹果推送服务
+host-keyword, push.apple.com, direct
+# > 苹果时间同步
+host, time.apple.com, direct
+
+# > 快手修正
+host-suffix, e.kuaishou.com, direct
+host-suffix, kuaishou.com, direct
+host-suffix, yximgs.com, direct
+host-suffix, ksapisrv.com, direct
+# > qq邮箱修正
+host-suffix, iwx.mail.qq.com, direct
+# > wps简历
+host-suffix, dl.op.wpscdn.cn, direct
+host, mo.res.wpscdn.cn, direct
+# > 同程修正
+host-suffix, 17u.cn, direct
+host-suffix, 40017.cn, direct
+# > 驾考宝典
+host,short-video.kakamobi.cn,direct
+# > 飞猪
+host-suffix,apoll.m.taobao.com,direct
+host-suffix,acs.m.taobao.com,direct
+# > 今日热榜
+host-suffix, tophub.app, direct
+# > 携程
+host-keyword, aw-s.tripcdn.com, direct
+host-keyword, trip.com, direct
+# > 中国移动登陆
+host, www.cmpassport.com, direct
+host, verify.cmpassport.com, direct
+# > 米家
+host, app.chat.xiaomi.net, direct
+# > 搜狗
+host, get.sogou.com, direct
+
+# > 苹果天气服务
+host-keyword, weather-edge.apple.com, direct
+host-keyword, weather-adge.apple.com, direct
+host-keyword, weather-data.apple.com, direct
+host-keyword, weather-map.apple.com, direct
+host-keyword, weather-analytics-events.apple.com, direct
+# > 苹果内购服务
+host-keyword, buy.itunes.apple.com, direct
+host, api.revenuecat.com, direct
+# > 苹果icloud
+host-keyword, icloud.com, direct
+# > 苹果输入法相关服务
+host-keyword, api.smoot.apple.com, direct
+host-keyword, api.smoot.apple.cn, direct
+# > 苹果iMessage服务
+host, init.ess.apple.com, direct
+# > 苹果其他服务
+host-keyword, ssl.apple.com, direct
+host-keyword, humb.apple.com, direct
+host, smp-device-content.apple.com, direct
+host-keyword, api-adservices.apple.com, direct
+host-keyword, ls.apple.com, direct
+host-keyword, gsa.apple.com, direct
+host-keyword, ess.apple.com, direct
+# > QQ空间
+host-keyword, ctc.qzs.qzone.qq.com, direct
+# > 路由器后台
+ip-cidr, 192.168.0.1/24, direct
+# > 天翼网关
+ip-cidr, 192.168.1.1/24, direct
+# > 其他分流修正
+host-keyword, anti-ad.net, direct
+
 # > 网易
 host, api.iplay.163.com, direct
 host, rcs.cmpassport.com, direct
@@ -87,6 +156,7 @@ host-suffix, static-s.iqiyi.com, direct
 host, comm.app.autohome.com.cn, direct
 
 # 百度
+host-suffix, baidustatic.com, direct
 host, ada.baidu.com, direct
 host, issuecdn.baidupcs.com, direct
 host, ms.bdimg.com, direct
