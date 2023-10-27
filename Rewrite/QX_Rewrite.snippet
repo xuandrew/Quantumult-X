@@ -562,6 +562,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 # IT之家移动Web与APP新闻列表广告
 # 首页,轮播图,置顶文章,信息流广告
 ^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
+^https:\/\/api\.zuihuimai\.com\/static\/s11 url reject
 
 # 京东比价
 ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_Price.js
