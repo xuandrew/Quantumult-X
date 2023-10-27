@@ -819,7 +819,7 @@ https:\/\/api\.coolapk\.com\/v6\/main\/init url script-response-body https://raw
 ;https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/mainPage url script-response-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.taskId.js
 
 # 解锁Xmind思维导图订阅到2030年 hostname = www.xmind.cn, www.xmind.net, www.xmind.app
-^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
+^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
 ;^https?:\/\/www\.xmind\.(cn|app)\/.+\/devices url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/X-mind.js
 ;^http[s]?:\/\/www.xmind.cn\/_res\/devices url script-response-body https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/xmindv.js
 
