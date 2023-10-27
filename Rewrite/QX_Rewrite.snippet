@@ -566,9 +566,11 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 
 # 京东比价
 ^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_Price.js
-# 京东搜索页面优化
-#^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotWords url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
-;^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=hotSearchTerms url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_json.js
+# 京东去广告 净化
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) url reject-200
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start url reject
 
 # Photoshop（2021-03-21） by ddgksf2013
 ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Ps.js
