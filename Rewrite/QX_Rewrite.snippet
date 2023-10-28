@@ -573,7 +573,7 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=myOrderInfo url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=orderTrackBusiness url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_ADRemove.js
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=welcomeHome url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_OpenPage.js
-#^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_Recommend.js
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_Recommend.js
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getRecommendNewFeedsList url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_NewFeedsList.js
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=discFollowEnterMainPage url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_FollowPage.js
 ;^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness url script-response-body https://raw.githubusercontent.com/linuszlx/JS/main/JD/JD-Optimize/JD_PersonPage.js
@@ -582,7 +582,8 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js
 ;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 ;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|uniformRecommend|queryMaterialAdverts) url reject
-;^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=queryMaterialAdverts url reject
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
 
 # Photoshop（2021-03-21） by ddgksf2013
 ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Ps.js
