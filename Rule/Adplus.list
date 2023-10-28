@@ -1,3 +1,7 @@
+# 京东
+HOST, blackhole.m.jd.com, REJECT
+HOST, policy.jd.com, REJECT
+
 # 淘宝
 ;HOST, poplayer.template.alibaba.com, REJECT
 
