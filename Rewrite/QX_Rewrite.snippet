@@ -569,8 +569,8 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 # 京东去广告 净化
 ;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend url reject-dict
-;^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
+;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=uniformRecommend url reject-dict
+^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
 
 # Photoshop（2021-03-21） by ddgksf2013
 ^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Ps.js
