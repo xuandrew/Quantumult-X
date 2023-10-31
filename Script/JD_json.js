@@ -84,3 +84,8 @@ if (body) {
         console.log(`京东-开屏广告, 出现异常: ` + error);
       }
       break;
+      default:
+      break;
+  }
+  $done({ body });
+}
