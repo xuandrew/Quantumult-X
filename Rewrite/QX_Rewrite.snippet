@@ -493,10 +493,10 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 # 网易云音乐去广告, interface3.music.163.com
 # 会员解锁
 ;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/Ventuno21/Ventuno/main/wangyiyunyinyue.js
-^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/wangyy.js
+;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/Yu9191/Rewrite/main/wangyy.js
 ;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/Wyy.js
 ;^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js
-;^https?:\/\/.*\/eapi\/(music|s(ong|ingle|earch)|album|link|zone|content|p(laylist|rivilege|laymode|urchased)|r(esni|nca)che|vip(auth|pro|(new)?center)|music-vip-membership).+ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/NeteaseMusicVipCrack.js
+^https?:\/\/.*\/eapi\/(music|s(ong|ingle|earch)|album|link|zone|content|p(laylist|rivilege|laymode|urchased)|r(esni|nca)che|vip(auth|pro|(new)?center)|music-vip-membership).+ url script-request-header https://raw.githubusercontent.com/yqc007/QuantumultX/master/NeteaseMusicVipCrack.js
 ;^https?:\/\/.*\/api\/clientlog\/encrypt\/upload url reject-array
 ;^https?:\/\/.*\/eapi\/ad\/.+ url reject-array
 # 开屏广告,首页顶部横幅广告
