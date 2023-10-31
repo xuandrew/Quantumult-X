@@ -1,3 +1,8 @@
+# 字节跳动
+HOST, ad.zijieapi.com, REJECT
+HOST-KEYWORD, asiad.byteactivity, REJECT
+HOST-KEYWORD, -ad-sign.byteimg.com, REJECT
+
 # 京东
 HOST, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT
