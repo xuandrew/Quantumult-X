@@ -14,7 +14,6 @@ if (body) {
             // orderIdFloor我的订单 keyToolsFloor浏览记录 newWalletIdFloor我的钱包 iconToolFloor底部工具栏
             const items = [
               "bigSaleFloor", // 双十一
-              "buyOften", // 常买常逛
               "newAttentionCard", // 关注的频道
               "newBigSaleFloor", // 双十一
               "noticeFloor", // 顶部横幅
