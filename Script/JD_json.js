@@ -1,3 +1,9 @@
+if (!$response.body) $done({});
+const url = $request.url;
+let body = $response.body;
+
+if (body) {
+  switch (true) {
 // 京东-个人主页
     case /^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness/.test(url):
       try {
