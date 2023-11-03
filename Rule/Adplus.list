@@ -8,8 +8,12 @@ HOST, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT
 IP6-CIDR, 2402:db40:5100:1011::5/128, REJECT
 
-# 淘宝
-;HOST, poplayer.template.alibaba.com, REJECT
+# 阿里巴巴
+HOST, adashx.m.taobao.com, REJECT
+HOST, ossgw.alicdn.com, REJECT
+HOST, ems.youku.com, REJECT
+HOST, hudong.alicdn.com, REJECT
+HOST, h-adashx.ut.taobao.com, REJECT
 
 # 芒果TV
 HOST, credits.bz.mgtv.com, REJECT
