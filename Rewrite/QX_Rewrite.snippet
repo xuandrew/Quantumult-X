@@ -202,6 +202,7 @@ https://yun.feidee.net/cab-vip-ws/terminal/v1/vip-users/show-info url script-res
 https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-result url reject-dict
 
 # > 芒果TV
+^https:\/\/mobile\.api\.mgtv.com\/v\d+\/video\/getSource\?_support=.+ url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/mgtv0.js
 ;^http[s]?:\/\/mobile\.api\.mgtv\.com\/v[0-9]\/(playlist|video\/album|video\/relative|video\/list).*$ url script-request-header https://raw.githubusercontent.com/Yu9191/Script/main/mgheader.js
 ;^https?:\/\/.*mgtv\.com\/(v\d+\/(video\/getSource|module\/list)|GetUserInfo) url script-response-body https://raw.githubusercontent.com/Yu9191/Script/main/mgbody.js
 ;&src\=mgtv&suuid\=.*&testversion\=&ticket\=[A-Z0-9]{32} url 302 &src=mgtv&testversion=&ticket=2031287C725A39BE8D5F5E2FF31D57AB$3
