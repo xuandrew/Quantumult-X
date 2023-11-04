@@ -1,5 +1,8 @@
+# 小红书
+host, fe-static.xhscdn.com, reject
+
 # bilibili
-host,upos-sz-staticcos.bilivideo.com,reject
+host, upos-sz-staticcos.bilivideo.com, reject
 
 # 字节跳动
 HOST, ad.zijieapi.com, REJECT
