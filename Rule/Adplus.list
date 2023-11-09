@@ -19,7 +19,7 @@ HOST, adashx.m.taobao.com, REJECT
 HOST, ossgw.alicdn.com, REJECT
 HOST, ems.youku.com, REJECT
 HOST, hudong.alicdn.com, REJECT
-HOST, h-adashx.ut.taobao.com, REJECT
+HOST-SUFFIX, ut.taobao.com, REJECT
 
 # 芒果TV
 HOST, credits.bz.mgtv.com, REJECT
