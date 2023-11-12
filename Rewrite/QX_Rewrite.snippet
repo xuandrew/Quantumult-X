@@ -824,6 +824,7 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/xpan\/smartprogram url reject-200
 # 起点读书获取广告/任务信息
 ;https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/finishWatch url script-request-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.cookie.js 
 ;https\:\/\/h5\.if\.qidian\.com\/argus\/api\/v1\/video\/adv\/mainPage url script-response-body https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/qidian/qidian.taskId.js
+^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation url reject-dict
 
 # 解锁Xmind思维导图订阅到2030年 hostname = www.xmind.cn, www.xmind.net, www.xmind.app
 ^https?:\/\/(?:www\.)?xmind\..*\/.+\/(devices|token\/.+) url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
