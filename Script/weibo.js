@@ -737,7 +737,9 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             removeVoteInfo(item?.data);
             // 快转内容
             if (item?.data?.screen_name_suffix_new?.length > 0) {
-              continue;
+              if (item?.data?.screen_name_suffix_new?.[3]?.content === "快转了") {
+                continue;
+              }
             }
             // 美妆精选季
             if (item?.data?.title?.text?.includes("精选")) {
@@ -973,7 +975,7 @@ function isAd(data) {
     if (data?.content_auth_info?.content_auth_title?.includes("广告")) {
       return true;
     }
-    if (data?.extend_info?.hasOwnProperty("ad")) {
+    if (data?.ads_material_info?.is_ads === true) {
       return true;
     }
   }
