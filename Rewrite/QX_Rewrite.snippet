@@ -131,7 +131,8 @@ http:\/\/display\.wting\.info\/q9ul3raj2tti5n7crtqc3t94ohsghz6p\.png url reject
 ^https?:\/\/i\.at\.qq\.com\/pay\/memberinfo.+ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/wxts.js
 
 # 微信阅读精简
-https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profile|groups\/readerEntrance|review\/list|mobileSync) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
+;https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profile|groups\/readerEntrance|review\/list|mobileSync) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
+https:\/\/i\.weread\.qq\.com\/(book\/chapterReview|user\/profile|groups\/readerEntrance|review\/list|mobileSync) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
 
 # filmicpro
 ^https:\/\/filmicpro\.oracle\.bendingspoonsapps\.com\/v2\/users\/setup url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/filmicpro.js
