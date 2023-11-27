@@ -752,7 +752,8 @@ https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/xpan\/smartprogram url reject-200
 ^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription) url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/polaqx.js
 
 # 解锁Nicegram会员
-^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ url script-echo-response https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js
+;^https?:\/\/restore-access\.indream\.app\/restoreAccess\?id=\w+$ url script-echo-response https://raw.githubusercontent.com/I-am-R-E/Functional-Store-Hub/Master/Nicegram/Script/Nicegram.js
+^https://nicegram.cloud/api/v6/user/info? url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nicegram.js
 
 # 网易蜗牛读书VIP (By yxiaocai and JO2EY)
 ^https?://p\.du\.163\.com/readtime/info.json url reject
