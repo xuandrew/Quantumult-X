@@ -185,7 +185,7 @@ ip-cidr, 117.92.229.188/32, reject
 ip-cidr, 101.36.166.16/32, reject
 ip-cidr, 180.96.2.114/32, reject
 # 番茄小说福利页
-host, lf-sourcecdn-tos.bytegecko.com, direct
+;host, lf-sourcecdn-tos.bytegecko.com, direct
 
 # 特殊网站去广告
 #### 毒奶去广告计划
