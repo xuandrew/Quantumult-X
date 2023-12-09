@@ -5,7 +5,7 @@ hostname = 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,1
 # 喜马拉雅听去广告
 #hostname = *.xima*.*, *.xmcdn.*
 # ～ XiMaLaYa_喜马拉雅_首页顶部去除直播@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_修复轮播Ad失效Bug@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
 # ～ XiMaLaYa_喜马拉雅_播放页_Live@ddgksf2013
@@ -37,20 +37,19 @@ hostname = 180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,1
 # ～ XiMaLaYa_喜马拉雅_屏蔽热搜词@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/hotWord url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽搜索框定时_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/guideWord url reject
+^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽实时Ad请求@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽ting_Ad@ddgksf2013
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽首页横幅_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js
+^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_屏蔽首页动态_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_屏蔽Tab页滚动_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js
+^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_去除我的页面Ad_Tag@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ximalaya_json.js
-
+^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 
 
 ;^https?:\/\/xdcs-collector\.ximalaya\.com\/(api|nyx)\/v1 url reject
