@@ -187,7 +187,7 @@ host-suffix, hmma.baidu.com, direct
 host-suffix, collector.github.com, direct
 ;host-suffix, log.snssdk.com, direct
 host-suffix, et.tanx.com, direct
-;host-suffix, sdk.e.qq.com, direct
+host-suffix, sdk.e.qq.com, direct
 host, cms-bucket.ws.126.net, direct
 host-suffix, api-a.op-mobile.opera.com, direct
 host-suffix, clarity.ms, direct
