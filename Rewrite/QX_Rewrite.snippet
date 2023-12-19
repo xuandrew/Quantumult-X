@@ -528,7 +528,8 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
 
 # Photoshop（2021-03-21） by ddgksf2013
-^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Ps.js
+;^https:\/\/.*\.adobe\..*\/mobile_profile\/nul\/v\d$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Ps.js
+https://lcs-mobile-cops.adobe.io/mobiles/access_profile/v3 url script-response-body https://raw.githubusercontent.com/Yu9191/Rewrite/main/PSExpress.js
 
 # 扫描全能王
 ^https:\/\/(api|api-cs-cn)*\.intsig\.net\/purchase\/cs\/query_property\? url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Camscanner.js
