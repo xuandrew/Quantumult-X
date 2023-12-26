@@ -322,6 +322,8 @@ https://api.meiease.(cn|com)/shop/subscription/apple/purchases url script-respon
 ;^https?:\/\/scibug\.com\/appleSubscriptionValidate$ url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/Syjsq.js
 ^https?:\/\/scibug\.com\/appleSubscriptionValidate$ url script-response-body https://raw.githubusercontent.com/harry-sunhao/QuanX/main/Symbolab/symbolab.js
 
+# 微信110
+^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/weixin110.js
 # 移除公众号中的推广内容 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|masonryfeed|relatedarticle)\? url reject-dict
 
