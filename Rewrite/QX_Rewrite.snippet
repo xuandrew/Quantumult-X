@@ -141,9 +141,6 @@ https:\/\/i\.weread\.qq\.com\/(book\/chapterReview|user\/profile|groups\/readerE
 # filmicpro
 ^https:\/\/filmicpro\.oracle\.bendingspoonsapps\.com\/v2\/users\/setup url script-response-body https://raw.githubusercontent.com/chxm1023/Rewrite/main/filmicpro.js
 
-# 海角社区
-(?i)^https:\/\/([a-zA-Z0-9]+\.haijiao\.com|hj[a-zA-Z0-9]+\.com)\/api\/topic\/(\d+)$ url script-response-body https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/haijiao.js
-
 # StormSniffer
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/.+$ url script-request-header https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferHeader.js
 ^http[s]?:\/\/api\.x-storm\.com(:\d{2,5})?\/app/user-profile\/$ url script-response-body https://raw.githubusercontent.com/paynexss/Scripts/main/Scripts/StormSnifferCrack.js
