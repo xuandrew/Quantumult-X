@@ -1,5 +1,7 @@
-hostname = isi.csan.goodnotes.com, notability.com, cad.glodon.com, i.at.qq.com, server.*.com, cubox.*, day-api.xixitime.com, app.yidiansz.com, wrapper.cyapi.cn, starplucker.cyapi.cn, biz.cyapi*, spclient.wg.spotify.com, api.revenuecat.com, api2.mubu.com, ap*.intsig.net, lchttpapi.xczim.com 
+hostname = gzapi.mting.info, shapi.mting.info, isi.csan.goodnotes.com, notability.com, cad.glodon.com, i.at.qq.com, server.*.com, cubox.*, day-api.xixitime.com, app.yidiansz.com, wrapper.cyapi.cn, starplucker.cyapi.cn, biz.cyapi*, spclient.wg.spotify.com, api.revenuecat.com, api2.mubu.com, ap*.intsig.net, lchttpapi.xczim.com 
 
+# > 懒人听书vip
+^https?:\/\/(shapi|gzapi).mting.info\/yyting\/(usercenter\/ThirdPartyLogin|userclient\/ClientGetUserInfo).action url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/lrts.js
 
 # GoodNotes v6
 ^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://github.com/ddgksf2013/MoYu/raw/master/GoodNotesProCrack.js
