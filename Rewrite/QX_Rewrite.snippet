@@ -82,6 +82,8 @@ http:\/\/display\.wting\.info\/q9ul3raj2tti5n7crtqc3t94ohsghz6p\.png url reject
 # 微信阅读精简
 ;https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profile|groups\/readerEntrance|review\/list|mobileSync) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
 https:\/\/i\.weread\.qq\.com\/(book\/chapterReview|user\/profile|groups\/readerEntrance|review\/list|mobileSync) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
+#微信
+^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\? url reject-dict
 
 # 百度
 ^http?:\/\/mbd\.baidu\.com\/searchbox\?action=splash&cmd=2010&branchname=baiduboxapp&cfrom=1099a&ds_lv=7&ds_stc=1.2820&from= url reject-dict
