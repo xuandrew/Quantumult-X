@@ -1,6 +1,6 @@
 # 微信
-HOST, finderks.video.qq.com, REJECT
-HOST, finderv1.video.qq.com, REJECT
+;HOST, finderks.video.qq.com, REJECT
+;HOST, finderv1.video.qq.com, REJECT
 HOST, wxsnsdy.wxs.qq.com, REJECT
 HOST, wxsnsdythumb.wxs.qq.com, REJECT
 
