@@ -292,11 +292,10 @@ https://yun.feidee.net/cab-draw-activity-ws/terminal/v1/draw-record/user-draw-re
 
 # 京东比价
 ;^https?://api\.m\.jd\.com/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/JD_Price.js
-# 京东去广告 净化
-;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness url script-response-body https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js
-;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
-;^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
-;^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ url reject-200
+# 京东 //api.m.jd.com
+^http:\/\/\w{32}\.jddebug\.com\/diagnose\? url reject
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) url reject-dict
 
 # >> 优酷 ups.youku.com, r.1.youku.com, m.youku.com, *.mobile.youku.com, ad.api.3g.youku.com, *.atm.youku.com, ems.youku.com,  
 #^http:\/\/ykimg\.alicdn\.com\/product\/image\/2019-08-15\/9f1dfcfe8903a679055a54c443b7fdc3\.png url reject-200
