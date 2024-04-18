@@ -1,8 +1,8 @@
-hostname = i.weread.qq.com, gzapi.mting.info, shapi.mting.info, isi.csan.goodnotes.com, notability.com, cad.glodon.com, i.at.qq.com, server.*.com, cubox.*, day-api.xixitime.com, app.yidiansz.com, wrapper.cyapi.cn, starplucker.cyapi.cn, biz.cyapi*, spclient.wg.spotify.com, api.revenuecat.com, api2.mubu.com, ap*.intsig.net, lchttpapi.xczim.com 
+hostname = -i.weread.qq.com, gzapi.mting.info, shapi.mting.info, isi.csan.goodnotes.com, notability.com, cad.glodon.com, i.at.qq.com, server.*.com, cubox.*, day-api.xixitime.com, app.yidiansz.com, wrapper.cyapi.cn, starplucker.cyapi.cn, biz.cyapi*, spclient.wg.spotify.com, api.revenuecat.com, api2.mubu.com, ap*.intsig.net, lchttpapi.xczim.com 
 
 # > 微信读书vip(需重新用微信登陆，无法刷新->关闭脚本进入) 
-^https?:\/\/i.weread.qq.com\/(login|pay\/balance|user\/profile).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/wxds.js
-^https://i\.weread\.qq\.com/updateConfig url reject
+;^https?:\/\/i.weread.qq.com\/(login|pay\/balance|user\/profile).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/wxds.js
+;^https://i\.weread\.qq\.com/updateConfig url reject
 
 # > 懒人听书vip
 ^https?:\/\/(shapi|gzapi).mting.info\/yyting\/(usercenter\/ThirdPartyLogin|userclient\/ClientGetUserInfo).action url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/lrts.js
