@@ -146,7 +146,7 @@ host, bid.adview.cn, reject
 host-suffix, afdback.ppsimg.com, reject
 
 # 贴吧 屏蔽域名dns查询
-IP-CIDR,180.76.76.200/32,REJECT
+;IP-CIDR,180.76.76.200/32,REJECT
 ;host, im.tieba.baidu.com, reject
 
 # 知乎
