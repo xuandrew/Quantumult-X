@@ -5,80 +5,86 @@ hostname = 43.132.81.*,101.33.27.*,114*0.*,61.172.1*.*,43.141.11.*,114.80.99.86,
 # 喜马拉雅听去广告
 #hostname = *.xima*.*, *.xmcdn.*
 # ～ XiMaLaYa_喜马拉雅_首页顶部去除直播@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+;^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_修复轮播Ad失效Bug@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
+;^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF url reject
 # ～ XiMaLaYa_喜马拉雅_播放页_Live@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
+;^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ url reject
 # ～ XiMaLaYa_喜马拉雅_MyInfo红点提醒@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
+;^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽大红包Tips@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
+;^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽gif弹窗Ad@ddgksf2013
-^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
+;^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
 # ～ XiMaLaYa_喜马拉雅_gslb@ddgksf2013
-^https?:\/\/gslb.*\.xima.*\.com\/ url reject
+;^https?:\/\/gslb.*\.xima.*\.com\/ url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽Aged请求@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
+;^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
 # ～ XiMaLaYa_喜马拉雅_部分Tab弹窗@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
+;^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽红点提示@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
+;^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽minor请求@ddgksf2013
-^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
+;^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽隐私搜集@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
+;^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽版本更新@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
+;^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽开屏广告@ddgksf2013
-^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
+;^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽位置请求@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
+;^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽热搜词@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/hotWord url reject
+;^https?:\/\/.*\.xima.*\.com\/hotWord url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽搜索框定时_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord url reject
+;^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽实时Ad请求@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
+;^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽ting_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
+;^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? url reject
 # ～ XiMaLaYa_喜马拉雅_屏蔽首页横幅_Ad@ddgksf2013
 ;^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_屏蔽首页动态_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+;^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_屏蔽Tab页滚动_Ad@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+;^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 # ～ XiMaLaYa_喜马拉雅_去除我的页面Ad_Tag@ddgksf2013
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
+;^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage url script-response-body https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js
 
 
-;^https?:\/\/xdcs-collector\.ximalaya\.com\/(api|nyx)\/v1 url reject
-;^https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ url reject
-;^https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
-;^https?:\/\/.*\.ximalaya\.com\/social-web\/bottomTabs\/dynamicEntrance\/status url reject
-;^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
-;^https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
-;^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isShowUserGiftPendant url reject
-;^https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread url reject
-;^https?:\/\/.*\.ximalaya\.com/mobile-user/minorProtection/pop url reject
-;^https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d url reject
-;^https?:\/\/.*\.ximalaya\.com\/butler-portal\/versionCheck url reject
-;^https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* url reject
-;^https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location url reject
-;^https?:\/\/.*\.ximalaya\.com\/hotWord url reject
-;^https?:\/\/.*\.ximalaya\.com\/guideWord url reject
-;^https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adRealTime url reject
-;^https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? url reject
-;^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryF url reject
-^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/focus-mobile\/focusPic\/info url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/noFocusAd.js
-;^https?:\/\/(mobile|mobilehera|mobwsa|mwsa|m|ar)\.ximalaya\.com\/(mobile\/(v\d\/album\/track|album\/paid\/info)|nyx\/history\/query\/detail|starwar\/task|vip\/(check|tabs|v\d\/recommand)|mobile-(user|album\/album\/page|playpage\/(playpage\/(tabs|recommendInfo)|track))|product\/(promotion|detail\/v1\/basicInfo)|business-vip-|(playlist|rec-association\/recommend)\/album) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
-;^https?:\/\/(mobile|mobilehera|mobwsa|pns)\.ximalaya\.com\/(mobile-playpage|mobile\/(quickplay|acceptapn)|comment-mobile/get|sound-guide-portal\/(sound\/guide|display)) url script-request-header https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/xmly.js
+https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 url reject
+https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ url reject
+https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list url reject
+https?:\/\/.*\.ximalaya\.com\/social-web\/bottomtabs\/dynamicentrance\/status url reject
+https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ url reject
+https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkold|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) url reject
+https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isshowusergiftpendant url reject
+https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread url reject
+https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorprotection\/pop url reject
+https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d url reject
+https?:\/\/.*\.ximalaya\.com\/butler-portal\/versioncheck url reject
+https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* url reject
+https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location url reject
+https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adrealtime url reject
+https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? url reject
+https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryf url reject
+https?:\/\.*linkeye-cloud\/checkip url reject
+https?:\/\/www\.taobao\.com\/help\/getip\.php url reject
+https?:\/\.*audid-api\.taobao\.com url reject
+https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh url reject
+https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/mobile(-user\/v\d\/homePage|-playpage\/(track\/v\d\/baseInfo|playpage\/(tabs\/v\d|recommend(\/resource\/allocation|ContentV\d)))|\/(album\/paid\/info|playlist\/album\/new)|\/v\d\/album\/track) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
+https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/business-vip-(presale-mobile-web\/page|level-h5-web\/api\/(gift\/detail|profile)|welfare-mobile-web\/welfare\/module\/exclusive\/list) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
+https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/discovery-(category\/customCategories|feed\/v\d\/(freeListenTab\/queryCardList|mix)|ranking-web\/v\d\/ranking\/concreteRankList) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
+https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/(browsing-history-business\/browsing\/history\/query|focus-mobile\/focusPic\/info|nyx\/history\/query\/(detail|id\/list)|product\/detail\/v\d\/basicInfo\/dynamic|subscribe\/v\d\/subscribe\/comprehensive\/rank|vip\/(feed\/v1\/mix|v\d\/recommand)) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
+https?:\/\/search(wsa)?\.ximalaya\.com\/(hub\/)?(guideWordV\d|hotWord(V\d|Billboard\/card)) url script-response-body https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly.js
+https?:\/\/(mobile(hera)?|m(ob)?wsa)\.ximalaya\.com\/(mobile-playpage\/track|mobile\/quickplay) url script-request-header https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/XMLY/xmly_ck.js
+
 
 ;^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))\/mobile-playpage\/track\/v3\/baseInfo\/ts url script-request-header https://raw.githubusercontent.com/gjwj666/qx/main/ximalayatk.js
 ;^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)).*\/(playpage\/tabs\/v2|v1\/album\/track\/ts|v1\/album\/price|v2\/homePage|business-vip-presale-mobile-web\/page\/ts|vip\/v1\/recommand|track\/v3\/baseInfo|v1\/module\/data\/dynamic|basicInfo\/dynamic\/ts).*$ url script-response-body https://raw.githubusercontent.com/gjwj666/qx/main/ximalayabd.js
 
-^https?:\/\/.+((ximalaya)|(xmcdn)).+(mobile-user\/v2|mobile-web|queryCategoryPageData|discovery-feed\/v4|vip\/v1\/recommand|product\/detail\/v1|mobile\/v1\/album|playpage|album\/price\/ts|mobile\/user\/member).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/xmly.js
-^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ url script-request-header https://raw.githubusercontent.com/WeiGiegie/666/main/xmck.js
+;^https?:\/\/.+((ximalaya)|(xmcdn)).+(mobile-user\/v2|mobile-web|queryCategoryPageData|discovery-feed\/v4|vip\/v1\/recommand|product\/detail\/v1|mobile\/v1\/album|playpage|album\/price\/ts|mobile\/user\/member).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/xmly.js
+;^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ url script-request-header https://raw.githubusercontent.com/WeiGiegie/666/main/xmck.js
 
 ;^http[s]?:\/\/openapi\.mysteel\.com/v5/getAdv.htm url reject
 ;^http[s]?.+ulogs.umeng.com url reject
