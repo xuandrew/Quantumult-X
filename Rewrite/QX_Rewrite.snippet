@@ -70,14 +70,12 @@ hostname = gw.m.163.com, nex.163.com, ad.12306.cn, mobile.12306.cn, zhidao.baidu
 ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
 # 懒人听书
-;^http[s]?:\/\/((shapi|hapi)(\.mting\.info)|(m\.lrts\.me)|(gzapi\.mting\.info))\/(app|yyting)\/(userclient\/ClientGetUserInfo|usercenter\/ThirdPartyLogin).*$ url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/Alidrive.js
-^https?:\/\/shapi\.mting\.info\/advert\/ClientAdvertList\.action\?imei= url reject-dict
+;^https?:\/\/shapi\.mting\.info\/advert\/ClientAdvertList\.action\?imei= url reject-dict
 ;http:\/\/display\.wting\.info\/[a-zA-Z0-9]{32}\.jpeg url reject
-^https?:\/\/gzapi\.mting\.info\/yyting\/page\/myAccountPage\? url reject-dict
-^https?:\/\/gzapi\.mting\.info\/advert\/ClientAdvertList\.action\? url reject-dict
-http:\/\/display\.wting\.info\/q9ul3raj2tti5n7crtqc3t94ohsghz6p\.png url reject
-;^https:\/\/shapi\.mting\.info\/yyting\/userclient\/ClientGetUserInfo\.action\? url script-response-body https://raw.githubusercontent.com/WeiRen0/Scripts/main/LanRen.js
-^https:\/\/hmonitor\.mting\.info\/upload\/clickAdvert\?imei= url reject
+;^https?:\/\/gzapi\.mting\.info\/yyting\/page\/myAccountPage\? url reject-dict
+;^https?:\/\/gzapi\.mting\.info\/advert\/ClientAdvertList\.action\? url reject-dict
+;^http:\/\/display\.wting\.info\/q9ul3raj2tti5n7crtqc3t94ohsghz6p\.png url reject
+;^https:\/\/hmonitor\.mting\.info\/upload\/clickAdvert\?imei= url reject
 
 # 微信阅读精简
 ;https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profile|groups\/readerEntrance|review\/list|mobileSync) url script-response-body https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
