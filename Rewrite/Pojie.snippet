@@ -1,4 +1,4 @@
-hostname = -i.weread.qq.com, gzapi.mting.info, shapi.mting.info, isi.csan.goodnotes.com, notability.com, cad.glodon.com, i.at.qq.com, server.*.com, cubox.*, day-api.xixitime.com, app.yidiansz.com, wrapper.cyapi.cn, starplucker.cyapi.cn, biz.cyapi*, spclient.wg.spotify.com, api.revenuecat.com, api2.mubu.com, ap*.intsig.net, lchttpapi.xczim.com 
+hostname = -i.weread.qq.com, gzapi.mting.info, shapi.mting.info, isi.csan.goodnotes.com, notability.com, cad.glodon.com, i.at.qq.com, server.*.com, cubox.*, day-api.xixitime.com, app.yidiansz.com, wrapper.cyapi.cn, starplucker.cyapi.cn, biz.cyapi*, api.revenuecat.com, api2.mubu.com, ap*.intsig.net, lchttpapi.xczim.com 
 
 # > 微信读书vip(需重新用微信登陆，无法刷新->关闭脚本进入) 
 ;^https?:\/\/i.weread.qq.com\/(login|pay\/balance|user\/profile).*$ url script-response-body https://raw.githubusercontent.com/WeiGiegie/666/main/wxds.js
@@ -50,10 +50,6 @@ hostname = -i.weread.qq.com, gzapi.mting.info, shapi.mting.info, isi.csan.goodno
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? url script-response-body https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? url script-request-header https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
 ;^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json"
-
-# Spotify 解锁
-^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ url script-response-body https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js
-^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ url script-request-header https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 
 # RevenueCat@ddgksf2013
 ;^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) url script-echo-response https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
