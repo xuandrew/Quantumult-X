@@ -1,14 +1,14 @@
 # NAME: AllInOne
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2024-04-29 13:37:22
+# UPDATED: 2024-06-01 02:14:21
 # HOST:5
 # HTTP-REQUEST-SCRIPT:3
 # HTTP-RESPONSE-SCRIPT:33
 # REDIRECT:62
-# REJECT:722
-# MITM:691
-# TOTAL:1516
+# REJECT:724
+# MITM:693
+# TOTAL:1520
 
 # REDIRECT
 (^https?:\/\/app\.biliintl\.com\/(x\/)?(intl|dm|reply|history|v\d\/(fav|msgfeed)).+?)(&s_locale=zh-Hans_[A-Z]{2})(.+?)(&sim_code=\d+)(.+) url 302 $1&s_locale=zh-Hans_PH$6&sim_code=51503$8
@@ -339,7 +339,7 @@
 ^https?:\/\/api\.xiaoyi\.com\/v5\/app\/config\?userid=.* url reject
 ^https?:\/\/api\.xiaoyi\.com\/v5\/app\/mobile\/ads url reject
 ^https?:\/\/api\.xueqiu\.com\/brand\/search\/v1\.json url reject
-^https?:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json url reject-200
+^https?:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json url reject
 ^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd url reject
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage url reject
 ^https?:\/\/api\.yizhibo\.com\/common\/api\/(api_)?pz$ url reject
@@ -381,6 +381,7 @@
 ^https?:\/\/app\.flymodem\.com\.cn\/Appapi\/Public\/welecome url reject-200
 ^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list url reject-200
 ^https?:\/\/app\.homeinns\.com\/api\/landing url reject-200
+^https?:\/\/app\.ibuscloud\.com\/v\d\/(app\/getSkipAdvert|notice\/getNoticeWithAdvByCity) url reject-200
 ^https?:\/\/app\.mixcapp\.com\/mixc\/api\/v\d\/ad url reject
 ^https?:\/\/app\.peopleapp\.com\/Api\/\d+/HomeApi\/(adv|getAdvertImage) url reject-dict
 ^https?:\/\/app\.poizon\.com\/api\/v\d\/app\/advertisement\/ url reject
@@ -446,6 +447,7 @@
 ^https?:\/\/cmsapi\.wifi8\.com\/v\d\/(emptyAd|adNew)\/ url reject
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ url reject-200
 ^https?:\/\/comicapi\.manhuashe\.com\/v\d\/(ads\/adstrategys|public\/startupactivity) url reject-200
+^https?:\/\/compus\.xiaofubao\.com\/compus\/advertising url reject-200
 ^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do url reject
 ^https?:\/\/creditcardapp\.bankcomm\.com\/mapp\/common\/getPopAds\.do$ url reject-200
 ^https?:\/\/creditcardapp\.bankcomm\.com\/mapp\/common\/queryGuidePageAds\.do url reject-200
@@ -724,7 +726,7 @@
 ^https?:\/\/superapp\.xgimi\.com\/api/v1\/app\/ad\/configs\?_sort=createdAt:Adesc url reject-200
 ^https?:\/\/support\.you\.163\.com\/appversync\/check.do url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
-^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) url reject-200
+^https?:\/\/switch\.jumpvg\.com\/jump\/(getlaunchad|recommend\/ad_conf) url reject
 ^https?:\/\/syh\.zybang\.com\/com\/adx\/ url reject
 ^https?:\/\/t1\.market\.xiaomi\.com\/thumbnail\/webp\/w1170q100\/ url reject-200
 ^https?:\/\/tagit\.hyhuo\.com\/recover\/list url reject
@@ -797,6 +799,7 @@
 ^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do url reject
 ^https?:\/\/ztoread\.ziroom\.com\/ymerApi\/v\d\/index\/open url reject-200
 https://dynamicad.kfc.com.cn/api/app5/homepage/ai/popup url reject-200
+
 
 
 
