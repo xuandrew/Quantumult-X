@@ -150,16 +150,16 @@ host-suffix, afdback.ppsimg.com, reject
 ;host, im.tieba.baidu.com, reject
 
 # 知乎
-DOMAIN-SUFFIX,analytics.zhihu.com
-DOMAIN-SUFFIX,appcloud2.in.zhihu.com
-DOMAIN-SUFFIX,appcloud2.zhihu.com
-DOMAIN-SUFFIX,event.zhihu.com
-DOMAIN-SUFFIX,lc-push.zhihu.com
-DOMAIN-SUFFIX,mqtt.zhihu.com
-DOMAIN-SUFFIX,sugar.zhihu.com
-DOMAIN-SUFFIX,zhstatic.zhihu.com
-DOMAIN-SUFFIX,zhihu-analytics.zhihu.com
-DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com
+host-suffix, analytics.zhihu.com, reject
+host-suffix, appcloud2.in.zhihu.com, reject
+host-suffix, appcloud2.zhihu.com, reject
+host-suffix, event.zhihu.com, reject
+host-suffix, lc-push.zhihu.com, reject
+host-suffix, mqtt.zhihu.com, reject
+host-suffix, sugar.zhihu.com, reject
+host-suffix, zhstatic.zhihu.com, reject
+host-suffix, zhihu-analytics.zhihu.com, reject
+host-suffix, zhihu-web-analytics.zhihu.com, reject
 
 # 抖音
 ;host-suffix, api26-normal-lq.amemv.com, reject
