@@ -150,22 +150,22 @@ host-suffix, afdback.ppsimg.com, reject
 ;host, im.tieba.baidu.com, reject
 
 # 知乎
-;host, analytics.zhihu.com, reject
-;host, appcloud2.in.zhihu.com, reject
-;host, appcloud2.zhihu.com, reject
-;host, event.zhihu.com, reject
-;host-suffix, lc-push.zhihu.com, reject
-;host, mqtt.zhihu.com, reject
-;host, sugar.zhihu.com, reject
-;host, zhstatic.zhihu.com, reject
-;host, zhihu-analytics.zhihu.com, reject
-;host, zhihu-web-analytics.zhihu.com, reject
-;HOST, appcloud.zhihu.com, REJECT
-;HOST, crash2.zhihu.com, REJECT
-;host, zxid-m.mobileservice.cn, reject
-;IP-CIDR, 103.41.167.237/32, REJECT
-;IP-CIDR, 118.89.204.198/32, REJECT
-;IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
+host, analytics.zhihu.com, reject
+host, appcloud2.in.zhihu.com, reject
+host, appcloud2.zhihu.com, reject
+host, event.zhihu.com, reject
+host-suffix, lc-push.zhihu.com, reject
+host, mqtt.zhihu.com, reject
+host, sugar.zhihu.com, reject
+host, zhstatic.zhihu.com, reject
+host, zhihu-analytics.zhihu.com, reject
+host, zhihu-web-analytics.zhihu.com, reject
+host, appcloud.zhihu.com, reject
+host, crash2.zhihu.com, reject
+host, zxid-m.mobileservice.cn, reject
+IP-CIDR, 103.41.167.237/32, reject
+IP-CIDR, 118.89.204.198/32, reject
+IP6-CIDR, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, reject
 
 # 抖音
 ;host-suffix, api26-normal-lq.amemv.com, reject
