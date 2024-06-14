@@ -909,7 +909,8 @@ https://dynamicad.kfc.com.cn/api/app5/homepage/ai/popup url reject-200
 # 哲也_回答页相关搜索
 ^https:\/\/www\.zhihu\.com\/api\/v\d+\/search\/related_queries\/article url reject-dict
 # 哲也_文章页去除底部广告
-^https:\/\/api\.zhihu\.com\/commercial_api\/answer\/\d{10}\/bottom-v2 url reject-dict
+^https?:\/\/api\.zhihu\.com\/commercial_api\/answer\/\d{10}\/bottom-v2 url reject-dict
+^https?:\/\/api\.zhihu\.com\/commercial_api\/article\/\d{9}\/bottom-v2 url reject-dict
 # 什么值得买新启动广告
 ^https:\/\/s3\.zdmimg\.com\/cpm\/api\/v1\/advert_distribution\/get_all_advertise url reject-dict
 
