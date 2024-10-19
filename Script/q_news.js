@@ -41,6 +41,10 @@ if (url.includes("r.inews.qq.com/gw/page/event_detail")) {
         // 必读列表广告
         name = '必读';
     } 
+    else if (url.includes("r.inews.qq.com/getRecommendSubList")) {
+        // 关注列表广告
+        name = '关注';
+    } 
       else if (url.includes("r.inews.qq.com/getNewsRelateModule")) {
         // 推送新闻发现更多列表广告
         name = '推送新闻';
