@@ -37,10 +37,15 @@ if (url.includes("r.inews.qq.com/gw/page/event_detail")) {
         // 如地方专区下的 XX旅游 XX美食列表广告
         name = 'getTagFeedList';
     } 
+      else if (url.includes("r.inews.qq.com/getQQNewsLimitList")) {
+        // 必读列表广告
+        name = '必读';
+    } 
       else if (url.includes("r.inews.qq.com/getNewsRelateModule")) {
         // 推送新闻发现更多列表广告
-        name = 'getNewsRelateModule';
-    }else {
+        name = '推送新闻';
+    } 
+      else {
         $notification.post('腾讯新闻App脚本错误', "路径匹配错误:", url);
     }
     console.log(name);
