@@ -1,183 +1,110 @@
-var chxm1023 = JSON.parse($response.body);
-const user = '/user';
-const yza = '/visitors';
-const yh = '/user_info';
+// 2024-09-28 10:30
 
-if ($request.url.indexOf(user) != -1){
-chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6358cb93e7a295001482d9aa";
-chxm1023.result.svip_given = 365;
-chxm1023.result.ranking_above = 91;
-chxm1023.result.is_visitor = false;
-chxm1023.result.is_phone_verified = true;
-chxm1023.result.hasBeenInvited = true;
-chxm1023.result.is_xy_vip = true;
-chxm1023.result.vip_expired_at = 4092599349;
-chxm1023.result.is_vip = true;
-chxm1023.result.xy_svip_expire = 4092599349;
-chxm1023.result.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
-    ];
-chxm1023.result.wt.vip = {
-        "is_auto_renewal" : false,
-        "enabled" : true,
-        "svip_auto_renewal_type" : "",
-        "expired_at" : 4092599349,
-        "auto_renewal_type" : "",
-        "svip_expired_at" : 4092599349
-      };
-chxm1023.result.wt.svip_given = 365;
-chxm1023.result.wt.ranking_above = 91;
-chxm1023.result.name = "xuandrew";
-chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
-chxm1023.result.phone_num = "13145200000";
-chxm1023.result.vip_take_effect = 1;
-chxm1023.result.is_auto_renewal = false;
-chxm1023.result.is_primary = true;
-chxm1023.result.xy_vip_expire = 0;
-chxm1023.result.platform_id = "o3rJ_t00r0mxqS6GCVWMaVtEFLUk";
-chxm1023.result.svip_expired_at = 4092599349;
-chxm1023.result.svip_take_effect = 1;
-chxm1023.result.vip_type = "s";
-chxm1023.result.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps";
-chxm1023.result.bound_status.qq = {
-        "id" : "63592fa7e7a295001888256b",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_status.weixin = {
-        "id" : "639ac02db1839300133031c0",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_statuscaiyun = {
-        "id" : "6358cb93e7a295001482d9aa",
-        "username" : "",
-        "is_bound" : true
-      };
+const url = $request.url;
+const isQuanX = typeof $task !== "undefined";
+let header = $request.headers;
+
+if (typeof $response === "undefined") {
+  const cyTK =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps";
+  header["device-token"] = cyTK;
+  if (compareVersions(header.version, "7.19.0") > 0) {
+    if (isQuanX) {
+      header["Authorization"] = "Bearer " + cyTK;
+    } else {
+      header["authorization"] = "Bearer " + cyTK;
+    }
+  }
+  $done({ headers: header });
+} else {
+  let obj = JSON.parse($response.body);
+  if (url.includes("/api.caiyunapp.com/v1/activity")) {
+    if (url.includes("&type_id=A03&")) {
+      // 底栏控制项目 主页图标 天气助手 彩云ai
+      if (obj?.interval) {
+        obj.interval = 2592000; // 30天===2592000秒
+      }
+      if (obj?.activities?.length > 0) {
+        for (let item of obj.activities) {
+          if (item?.name && item?.type && item?.feature) {
+            item.feature = false;
+          }
+        }
+      }
+    } else {
+      // 其他请求
+      obj = { status: "ok", activities: [{ items: [] }] };
+    }
+  } else if (url.includes("/api/v1/user_detail")) {
+    // 新版本 我的页面
+    if (obj?.vip_info?.show_upcoming_renewal) {
+      obj.vip_info.show_upcoming_renewal = false;
+    }
+    if (obj?.vip_info?.svip) {
+      if (obj?.vip_info?.svip) {
+        obj.vip_info.svip.is_auto_renewal = true;
+        obj.vip_info.svip.expires_time = "3742732800";
+      }
+    }
+  } else if (url.includes("/wrapper.cyapi.cn/v1/activity")) {
+    // 彩云推广
+    if (["&type_id=A03&"]?.includes(url)) {
+      // 天气助手 彩云ai
+      if (obj?.interval) {
+        obj.interval = 2592000; // 30天===2592000秒
+      }
+      if (obj?.activities?.length > 0) {
+        obj.activities = [];
+      }
+    } else {
+      // 其他请求
+      obj = { status: "ok", activities: [{ items: [] }] };
+    }
+  } else if (url.includes("/v1/vip_info")) {
+    // 我的页面
+    if (obj?.vip) {
+      obj.vip.expires_time = "4030000000";
+    }
+    if (obj?.svip) {
+      obj.svip.expires_time = "4030000000";
+    }
+    if (obj?.show_upcoming_renewal) {
+      obj.show_upcoming_renewal = false;
+    }
+  } else if (url.includes("/v2/user")) {
+    // 我的页面
+    if (obj?.result) {
+      obj.result.svip_given = 730;
+      obj.result.is_phone_verified = true;
+      obj.result.is_xy_vip = true;
+      obj.result.vip_expired_at = 4030000000.16;
+      obj.result.is_vip = true;
+      obj.result.xy_svip_expire = 4030000000.16;
+      if (obj?.result?.wt) {
+        if (obj.result.wt.vip) {
+          obj.result.wt.vip.enabled = true;
+          obj.result.wt.vip.expired_at = 4030000000.16;
+          obj.result.wt.vip.svip_expired_at = 4030000000.16;
+        }
+        obj.result.wt.svip_given = 730;
+      }
+      obj.result.is_primary = true;
+      obj.result.xy_vip_expire = 4030000000.16;
+      obj.result.svip_expired_at = 4030000000.16;
+      obj.result.vip_type = "s";
+    }
+  }
+  $done({ body: JSON.stringify(obj) });
 }
 
-if ($request.url.indexOf(yza) != -1){
-chxm1023.result.device_id = "78B61F3B-706F-44E8-9E4D-F68BDA1BA896";
-chxm1023.result._id = "6358cb93e7a295001482d9aa";
-chxm1023.result.svip_given = 365;
-chxm1023.result.ranking_above = 91;
-chxm1023.result.is_visitor = false;
-chxm1023.result.is_phone_verified = true;
-chxm1023.result.hasBeenInvited = true;
-chxm1023.result.is_xy_vip = true;
-chxm1023.result.vip_expired_at = 4092599349;
-chxm1023.result.is_vip = true;
-chxm1023.result.xy_svip_expire = 4092599349;
-chxm1023.result.third_party_ids = [
-     "63592fa7e7a295001888256b",
-      "639ac02db1839300133031c0"
-    ];
-chxm1023.result.wt.vip = {
-        "is_auto_renewal" : false,
-        "enabled" : true,
-        "svip_auto_renewal_type" : "",
-        "expired_at" : 4092599349,
-        "auto_renewal_type" : "",
-        "svip_expired_at" : 4092599349
-      };
-chxm1023.result.wt.svip_given = 365;
-chxm1023.result.wt.ranking_above = 91;
-chxm1023.result.name = "xuandrew";
-chxm1023.result.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz";
-chxm1023.result.phone_num = "13145200000";
-chxm1023.result.vip_take_effect = 1;
-chxm1023.result.is_auto_renewal = false;
-chxm1023.result.is_primary = true;
-chxm1023.result.xy_vip_expire = 0;
-chxm1023.result.platform_id = "o3rJ_t00r0mxqS6GCVWMaVtEFLUk";
-chxm1023.result.svip_expired_at = 4092599349;
-chxm1023.result.svip_take_effect = 1;
-chxm1023.result.vip_type = "s";
-chxm1023.result.token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps";
-chxm1023.result.bound_status.qq = {
-        "id" : "63592fa7e7a295001888256b",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_status.weixin = {
-        "id" : "639ac02db1839300133031c0",
-        "username" : "xuandrew",
-        "is_bound" : true
-      };
-chxm1023.result.bound_statuscaiyun = {
-        "id" : "6358cb93e7a295001482d9aa",
-        "username" : "",
-        "is_bound" : true
-      };
+function compareVersions(t, r) {
+  const e = t.split(".").map(Number);
+  const n = r.split(".").map(Number);
+  for (let t = 0; t < Math.max(e.length, n.length); t++) {
+    const r = e[t] || 0;
+    const i = n[t] || 0;
+    if (r > i) return 1;
+    if (r < i) return -1;
+  }
+  return 0;
 }
-
-if ($request.url.indexOf(yh) != -1){
-chxm1023.show_completed_award = true,
-chxm1023.avatar_status = 1,
-chxm1023.industry = "能源/矿产/电力/环境",
-chxm1023.reg_time = "1599863895",
-chxm1023.name_status = 1,
-chxm1023.completed_percent = 100,
-chxm1023.avatar = "https://tvax4.sinaimg.cn/crop.0.0.512.512.180/5b346ee9ly8h2rbudgjzvj20e80e8wet.jpg?KID=imgbed,tva&Expires=1687458878&ssig=8y8aNZ7Vzz",
-chxm1023.reg_days = 1015,
-chxm1023.birthday = "1987-07-18",
-chxm1023.city = "泰州市",
-chxm1023.interests = [
-    "穿衣指南",
-    "空气质量",
-    "徒步",
-    "气象景观",
-    "气象现象"
-  ],
-chxm1023.name = "xuandrew",
-chxm1023.gender = 1
-}
-
-$done({body : JSON.stringify(chxm1023)});
-
-
-
-/**********************************************
-脚本功能：彩云天气 解锁会员
-使用声明：⚠️仅供学习交流，🈲️商业用途
-
-
-https://biz.cyapi.cn/v2/user?app_name=weather
-https://biz.cyapi.cn/v1/visitors
-https://biz.cyapi.cn/v3/login_by_code 登录
-
-
-[rewrite_local]
-^https:\/\/biz\.cyapi\.cn\/v\d\/(user\?app_name=weather|visitors|login_by_code)$ url script-response-body https://raw.githubusercontent.com/jizhi0520/QX/main/caiyun.js
-^https:\/\/biz\.cyapi\.cn\/p\/v1\/user_info url script-response-body https://raw.githubusercontent.com/xuandrew/Quantumult-X/master/Script/caiyun-user.js
-
-
-[MITM]
-hostname = biz.cyapi.cn
-**********************************************/
-
-/********************
-var url = $request.url;
-var obj = JSON.parse($response.body);
-let Token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ2ZXJzaW9uIjoxLCJ1c2VyX2lkIjoiNWY1YmZjNTdkMmM2ODkwMDE0ZTI2YmI4Iiwic3ZpcF9leHBpcmVkX2F0IjoxNzA1MzMxMTY2LjQxNjc3MSwidmlwX2V4cGlyZWRfYXQiOjB9.h_Cem89QarTXxVX9Z_Wt-Mak6ZHAjAJqgv3hEY6wpps";
-
-if (url.indexOf('/user') != -1 || url.indexOf('/visitors') != -1) {
-		obj.result.token = Token;
-	body = JSON.stringify(obj);
-}
-
-if (url.indexOf('/login_by_code') != -1) {
-	let obj = {
-		"status": "ok",
-		"result": {
-			"is_phone_verified": true,
-			"token": Token
-		},
-		"rc": 0
-	}
-	body = JSON.stringify(obj);
-}
-$done({body});
-****************/
