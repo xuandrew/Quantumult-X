@@ -49,6 +49,10 @@ if (url.includes("r.inews.qq.com/gw/page/event_detail")) {
         // 推送新闻发现更多列表广告
         name = '推送新闻';
     } 
+      else if (url.includes("r.inews.qq.com/getSimpleVideo")) {
+        // 推送新闻热点精选列表广告
+        name = '热点精选';
+    } 
       else {
         $notification.post('腾讯新闻App脚本错误', "路径匹配错误:", url);
     }
