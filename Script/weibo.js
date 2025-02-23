@@ -48,15 +48,6 @@ const itemMenusConfig = {
       }
     }
 
-    // 2、发现页面刷新/再次点击发现按钮
-    if (url.includes("/search/container_timeline?") || url.includes("/search/container_discover?")) {
-      console.log('刷新发现页...');
-      processPayload(resp_data);
-      if (resp_data.header?.data?.items) {
-        removeHeaderAds(resp_data.header.data.items);
-      }
-    }
-
 if (url.includes("/interface/sdk/sdkad.php")) {
   // 开屏广告
   let obj = JSON.parse(body.substring(0, body.length - 2));
