@@ -38,15 +38,7 @@ const itemMenusConfig = {
   mblog_menus_video_later: false // 可能是稍后再看
 };
 
-// 1、首次点击发现按钮
-    if (url.includes("/search/finder?")) {
-      console.log('进入发现页...');
-      processPayload(resp_data.channelInfo.channels[0].payload);
-      removeChannelsTabs(resp_data.channelInfo.channels);
-      if (resp_data.header?.data?.items) {
-        removeHeaderAds(resp_data.header.data.items);
-      }
-    }
+
 
 if (url.includes("/interface/sdk/sdkad.php")) {
   // 开屏广告
