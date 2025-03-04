@@ -11,7 +11,7 @@ if (method !== "POST") {
     $notification.post("腾讯新闻App脚本错误", "method错误:", method);
 }
 
-if (url.includes("r.inews.qq.com/gw/page/event_detail")) {
+if (url.includes("r.inews.qq.com/gw/page/v2/event_detail")) {
     removeAdList('event_detail');
 } else if (url.includes("r.inews.qq.com/gw/page/channel_feed")) {
     removeAdList('channel_feed');
@@ -53,10 +53,10 @@ if (url.includes("r.inews.qq.com/gw/page/event_detail")) {
         // 推送新闻热点精选列表广告
         name = '热点精选';
     } 
-      else if (url.includes("r.inews.qq.com/gw/page/v2/event_detail")) {
+//      else if (url.includes("r.inews.qq.com/gw/page/v2/event_detail")) {
         // 推送新闻热点精选列表广告
-        name = '热点精选_专题';
-    } 
+//        name = '热点精选_专题';
+//    } 
       else {
         $notification.post('腾讯新闻App脚本错误', "路径匹配错误:", url);
     }
