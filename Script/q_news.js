@@ -103,6 +103,5 @@ function removeAdList(name) {
         });
     } else {
         console.log($response.body);
-        $notification.post('腾讯新闻App脚本错误', name, '无widget_list字段');
     }
 }
