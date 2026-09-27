@@ -87,7 +87,7 @@ $done({
 
 function removeAdList(name) {
     console.log(`gw/page/${name}`);
-    if (body.data.widget_list) {
+    if (body.data?.widget_list) {
         body.data.widget_list = body.data.widget_list.filter(item => {
             if (item.widget_type === 'ad_list') {
                 console.log('去除ad_list广告');
@@ -104,4 +104,3 @@ function removeAdList(name) {
         delete body.config.ad_info;
         console.log("✅ 删除config.ad_info广告字段");
     }
-}
