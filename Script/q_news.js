@@ -101,8 +101,8 @@ function removeAdList(name) {
             }
             return true;
         });
-    } else {
-        console.log(`当前接口${name}：无widget_list字段`);
-        // 移除弹窗通知
+    } elsx {
+        console.log($response.body);
+        $notification.post('腾讯新闻App脚本错误', name, '无widget_list字段');
     }
 }
