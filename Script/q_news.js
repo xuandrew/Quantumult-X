@@ -104,3 +104,4 @@ function removeAdList(name) {
         delete body.config.ad_info;
         console.log("✅ 删除config.ad_info广告字段");
     }
+}
