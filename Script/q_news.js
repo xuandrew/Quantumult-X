@@ -101,7 +101,5 @@ function removeAdList(name) {
             }
             return true;
         });
-    } else {
-        console.log($response.body);
     }
 }
