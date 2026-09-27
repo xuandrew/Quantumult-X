@@ -11,8 +11,11 @@ if (method !== "POST") {
     $notification.post("腾讯新闻App脚本错误", "method错误:", method);
 }
 
-if (/r\.inews\.qq\.com\/gw\/page\/v\d\/event_detail/.test(url)) {
-    removeAdList('vX_event_detail');
+if (url.includes("r.inews.qq.com/gw/page/v2/event_detail") {
+    removeAdList('event_detail');
+} else if (url.includes("r.inews.qq.com/gw/page/v4/event_detail")) {
+    // 新增v4版本专题详情，同样过滤widget_list中的ad_list广告
+    removeAdList('v4_event_detail');
 } else if (url.includes("r.inews.qq.com/gw/page/channel_feed")) {
     removeAdList('channel_feed');
 } else if (url.includes("r.inews.qq.com/v1/usercenter/module/get2")) {
