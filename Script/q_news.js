@@ -87,6 +87,12 @@ $done({
 
 function removeAdList(name) {
     console.log(`gw/page/${name}`);
+    // =====挪到最前面：删除 config 下的 ad_info 广告字符串=====
+    if(body.config?.ad_info){
+        delete body.config.ad_info;
+        console.log("✅ 删除config.ad_info广告字段");
+    }
+
     if (body.data?.widget_list) {
         body.data.widget_list = body.data.widget_list.filter(item => {
             if (item.widget_type === 'ad_list') {
@@ -96,12 +102,7 @@ function removeAdList(name) {
             return true;
         });
     } else {
-        console.log($response.body);
-        $notification.post('腾讯新闻App脚本错误', name, '无widget_list字段');
-    }
-       // =====新增：删除 config 下的 ad_info 广告字符串=====
-    if(body.config?.ad_info){
-        delete body.config.ad_info;
-        console.log("✅ 删除config.ad_info广告字段");
+        console.log(`当前接口${name}：无widget_list字段`);
+        // 移除弹窗通知
     }
 }
