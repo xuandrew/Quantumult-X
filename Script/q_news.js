@@ -23,7 +23,13 @@ if (url.includes("r.inews.qq.com/gw/page/v2/event_detail")) {
     if(body.data?.cards){
         delete body.data.cards;
         console.log("✅ 已移除个人中心 cards 数组");
-    }
+}
+else if (url.includes("r.inews.qq.com/getQNChannels")) {
+    // =====新增：去除中间Tab=====
+    if(body.tab_middle?){
+        delete body.tab_middle;
+        console.log("✅ 已移除首页中间标签");
+}
 } else {
     let name = "";
     if (url.includes("news.ssp.qq.com/app")) {
