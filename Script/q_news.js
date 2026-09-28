@@ -15,8 +15,11 @@ if (method !== "POST") {
 if (url.includes("r.inews.qq.com/getNewsRelateModule")) {
     body.relate_news = [];
     body.extendItems = [];
-    body.extend_items_above_interaction = [];
     $done({body: JSON.stringify(body)});
+} else if (url.includes("r.inews.qq.com/i/getONSDict")) {
+  if (body?.data?.news_web_banner_holiday) {
+    delete body.data.news_web_banner_holiday;
+  }
 } else if (url.includes("r.inews.qq.com/gw/page/v2/event_detail")) {
     removeAdList('event_detail');
 } else if (url.includes("r.inews.qq.com/gw/page/v4/event_detail")) {
