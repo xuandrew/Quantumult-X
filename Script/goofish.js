@@ -6,7 +6,6 @@ if (!$response.body) {
 let body = JSON.parse($response.body);
 
 if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
-    // reject-dict 替换为安全写法，保留顶层结构
     body.data = {};
     console.log("✅ 开屏广告：清空data");
 } else if (url.includes("mtop.taobao.idle.item.recommend.tab")) {
@@ -34,18 +33,15 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
         console.log("✅ hasMore设置为字符串false");
     }
 } else if (url.includes("mtop.taobao.idlehome.home.nextfresh")) {
-    // jq: .data.homeTopList |= map(select(.sectionType == "kingkongDo"))
     if(body.data?.homeTopList){
         body.data.homeTopList = body.data.homeTopList.filter(item => item.sectionType === "kingkongDo");
     }
-    // jq: .data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "homeMultiBanner" and $ct != "mamaAD"))
     if(body.data?.sections){
         body.data.sections = body.data.sections.filter(item => {
             const ct = item?.data?.clickParam?.args?.cardType;
             return ct !== "homeMultiBanner" && ct !== "mamaAD";
         });
     }
-    // jq: .data.sections |= map(select((.template.name|type=="string")and(.template.name=="idlefish_home_new_commodity_card"or(.template.name|contains("fish_home_tags_item_card")))))
     if(body.data?.sections){
         body.data.sections = body.data.sections.filter(item => {
             const name = item?.template?.name;
@@ -55,29 +51,24 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
     }
     console.log("✅ idlehome.home.nextfresh 首页新鲜流过滤");
 } else if (url.includes("mtop.taobao.idlehome.widget.refresh.get")) {
-    // jq: .data.homeTopList |= map(select(.sectionType == "kingkongDo"))
     if(body.data?.homeTopList){
         body.data.homeTopList = body.data.homeTopList.filter(item => item.sectionType === "kingkongDo");
     }
     console.log("✅ idlehome.widget.refresh.get");
 } else if (url.includes("mtop.taobao.idle.home.whale.modulet")) {
-    // jq: .data.container.sections |= map(select(.template.name == "fish_home_miniapp"))
     if(body.data?.container?.sections){
         body.data.container.sections = body.data.container.sections.filter(item => item?.template?.name === "fish_home_miniapp");
     }
     console.log("✅ idle.home.whale.modulet");
 } else if (url.includes("mtop.taobao.idle.user.strategy.list")) {
-    // reject-dict 安全写法
     body.data = {};
     console.log("✅ idle.user.strategy.list 清空data");
 } else if (url.includes("mtop.taobao.idle.fun.follow.feed.list")) {
-    // jq: .data.sections|=map(select(.cardType==2001))
     if(body.data?.sections){
         body.data.sections = body.data.sections.filter(item => item.cardType === 2001);
     }
     console.log("✅ idle.fun.follow.feed.list");
 } else if (url.includes("mtop.taobao.idlehome.home.community")) {
-    // jq: .data.feedsList |= map(select(.template.name == "idlefish_home_new_commodity_card" or .template.name == "idlefish_home_new_content_card"))
     if(body.data?.feedsList){
         body.data.feedsList = body.data.feedsList.filter(item => {
             const name = item?.template?.name;
@@ -86,7 +77,6 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
     }
     console.log("✅ idlehome.home.community");
 } else if (url.includes("mtop.taobao.idlehome.home.newitem.page")) {
-    // jq: .data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "banner" and $ct != "mamaAD"))
     if(body.data?.sections){
         body.data.sections = body.data.sections.filter(item => {
             const ct = item?.data?.clickParam?.args?.cardType;
@@ -95,11 +85,9 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
     }
     console.log("✅ idlehome.home.newitem.page");
 } else if (url.includes("mtop.taobao.idle.local.near.by.corner.info")) {
-    // reject-dict 安全写法
     body.data = {};
     console.log("✅ idle.local.near.by.corner.info 清空data");
 } else if (url.includes("mtop.taobao.idle.local.flow.plat.section")) {
-    // jq: .data.data.components |= map(select(.data and (.data|type=="object") and .data.template and (.data.template|type=="object") and .data.template.name and (.data.template.name|type=="string") and (.data.template.name|contains("fish_city_kingkong"))))
     if(body.data?.data?.components){
         body.data.data.components = body.data.data.components.filter(item => {
             if(!item?.data || typeof item.data !== "object") return false;
@@ -110,13 +98,11 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
     }
     console.log("✅ idle.local.flow.plat.section");
 } else if (url.includes("mtop.taobao.idle.local.home.top")) {
-    // jq: .data.data.components |= map(select(.key == "fish_home_second_stage_top_cardV3"))
     if(body.data?.data?.components){
         body.data.data.components = body.data.data.components.filter(item => item.key === "fish_home_second_stage_top_cardV3");
     }
     console.log("✅ idle.local.home.top");
 } else if (url.includes("mtop.taobao.idle.local.home")) {
-    // jq: .data.sections |= map(select((.template.cardEnum != "ads") and (.cardType == "common")))
     if(body.data?.sections){
         body.data.sections = body.data.sections.filter(item => {
             return item?.template?.cardEnum !== "ads" && item.cardType === "common";
@@ -124,11 +110,9 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
     }
     console.log("✅ idle.local.home");
 } else if (url.includes("mtop.taobao.idlemtopsearch.search.shade")) {
-    // reject-dict 安全写法
     body.data = {};
     console.log("✅ idlemtopsearch.search.shade 清空data");
 } else if (url.includes("mtop.taobao.idlehome.home.circle.list")) {
-    // jq: .data.circleList[]?.showInfo |= del(.titleImage, .atmosphereImageUrl) | .data.next.headList |= map(select(.bizCode == "main" or .bizCode == "market" or .bizCode == "IDLE_CIRCLE")) | del(.data.next.headList[]?.showInfo.rightTagImage)
     if(body.data?.circleList){
         body.data.circleList.forEach(item=>{
             if(item.showInfo){
@@ -145,11 +129,9 @@ if (url.includes("mtop.taobao.idlecommerce.splash.ads")) {
     }
     console.log("✅ idlehome.home.circle.list");
 } else if (url.includes("mtop.taobao.idlehome.magic.home.page.list")) {
-    // response-body-json-del data.topList
     if(body.data?.topList) delete body.data.topList;
     console.log("✅ idlehome.magic.home.page.list del topList");
 } else if (url.includes("mtop.taobao.idlemtopsearch.search") && url.includes("g-acs")) {
-    // jq: .data.resultList |= map(if .data.item.main.exContent.dislikeFeedback.clickParam.args.bizType == "ad" then empty else . end)
     if(body.data?.resultList){
         body.data.resultList = body.data.resultList.filter(item => {
             const bizType = item?.data?.item?.main?.exContent?.dislikeFeedback?.clickParam?.args?.bizType;
